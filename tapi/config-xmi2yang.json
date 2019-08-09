@@ -1,0 +1,51 @@
+{
+  "tapi":{
+    "namespace":"urn:onf:otcc:yang:",
+    "organization":"ONF OTCC (Open Transport Configuration & Control) Project",
+    "contact":"\r\n Project Web: <https://wiki.opennetworking.org/display/OTCC/TAPI>\r\n Project List: <mailto:transport-api@opennetworking.org>\r\n Editor: Karthik Sethuraman\r\n         <mailto:karthik.sethuraman@necam.com>",
+    "withSuffix":false,
+    "revision": [
+        {
+	      "date":"2019-03-31",
+	      "description":"ONF Transport API version 2.2-RC1.\r\n           Changes included in this TAPI release (v2.2) are listed in\r\n          <https://github.com/OpenNetworkingFoundation/TAPI/blob/develop/CHANGE_LOG/change-log.2.2.md>",
+	      "reference":"ONF-TR-527, ONF-TR-512, ONF-TR-531, RFC 7950, RFC 6087 and ONF TAPI UML model\n                  <https://github.com/OpenNetworkingFoundation/TAPI/tree/v2.2.0/UML>"
+	    },
+        {
+	      "date":"2018-12-10",
+	      "description":"ONF Transport API version 2.1.1.\r\n           Changes included in this TAPI release (v2.1.1) are listed in\r\n          <https://github.com/OpenNetworkingFoundation/TAPI/blob/develop/CHANGE_LOG/change-log.2.1.1.md>",
+	      "reference":"ONF-TR-527, ONF-TR-512, ONF-TR-531, RFC 7950, RFC 6087 and ONF TAPI UML model\n                  <https://github.com/OpenNetworkingFoundation/TAPI/tree/v2.1.1/UML>"
+	    },
+        {
+	      "date":"2018-10-16",
+	      "description":"ONF Transport API version 2.1.0.\r\n           Changes included in this TAPI release (v2.1.0) are listed in\r\n          <https://github.com/OpenNetworkingFoundation/TAPI/blob/develop/CHANGE_LOG/change-log.2.1.0.md>",
+	      "reference":"ONF-TR-527, ONF-TR-512, ONF-TR-531, RFC 7950, RFC 6087 and ONF TAPI UML model\n                  <https://github.com/OpenNetworkingFoundation/TAPI/tree/v2.1.0/UML>"
+	    },
+	    {
+	      "date":"2018-03-07",
+	      "description":"ONF Transport API version 2.0.2\n        This YANG module has been generated from the TAPI UML Model using the IISOMI-Eagle xmi2yang mapping tool.\n        Changes in this revision: <https://github.com/OpenNetworkingFoundation/TAPI/blob/develop/CHANGE_LOG/change-log.2.0.2.md>",
+	      "reference":"ONF-TR-527, ONF-TR-512, ONF-TR-531, RFC 6020, RFC 6087 and ONF TAPI UML model\n                  <https://github.com/OpenNetworkingFoundation/TAPI/tree/v2.0.2/UML>"
+	    },
+	    {
+	      "date":"2018-02-16",
+	      "description":"ONF Transport API version 2.0.1\n        This YANG module has been generated from the TAPI UML Model using the IISOMI-Eagle xmi2yang mapping tool.\n        Changes in this revision: <https://github.com/OpenNetworkingFoundation/TAPI/blob/develop/CHANGE_LOG/change-log.2.0.1.md>",
+	      "reference":"ONF-TR-527, ONF-TR-512, ONF-TR-531, RFC 6020, RFC 6087 and ONF TAPI UML model\n                  <https://github.com/OpenNetworkingFoundation/TAPI/tree/v2.0.1/UML>"
+	    },
+	    {
+	      "date":"2018-01-02",
+	      "description":"ONF Transport API version 2.0.0\n        This YANG module has been generated from the TAPI UML Model using the IISOMI-Eagle xmi2yang mapping tool.\n        Changes in this revision: <https://github.com/OpenNetworkingFoundation/TAPI/blob/develop/CHANGE_LOG/change-log.2.0.0.md>",
+	      "reference":"ONF-TR-527, ONF-TR-512, ONF-TR-531, RFC 6020, RFC 6087 and ONF TAPI UML model\n                  <https://github.com/OpenNetworkingFoundation/TAPI/tree/v2.0.0/UML>"
+	    }
+    ],
+    "prefix":{
+      "tapi-common":"com",
+      "tapi-topology":"top",
+      "tapi-connectivity":"con",
+      "tapi-path-computation":"pat",
+      "tapi-virtual-network":"vnw",
+      "tapi-notification":"not",
+      "tapi-oam":"oam",
+      "tapi-odu":"odu",
+      "tapi-och":"och"
+    }
+  }
+}

@@ -1,0 +1,80 @@
+package io.swagger.model;
+
+import java.util.Objects;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import io.swagger.model.TapiCommonGetserviceinterfacepointlistOutputSip;
+import org.springframework.validation.annotation.Validated;
+import javax.validation.Valid;
+import javax.validation.constraints.*;
+
+/**
+ * TapiCommonGetserviceinterfacepointdetailsOutput
+ */
+@Validated
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+public class TapiCommonGetserviceinterfacepointdetailsOutput   {
+  @JsonProperty("sip")
+  private TapiCommonGetserviceinterfacepointlistOutputSip sip = null;
+
+  public TapiCommonGetserviceinterfacepointdetailsOutput sip(TapiCommonGetserviceinterfacepointlistOutputSip sip) {
+    this.sip = sip;
+    return this;
+  }
+
+  /**
+   * Get sip
+   * @return sip
+  **/
+  @ApiModelProperty(value = "")
+
+  @Valid
+  public TapiCommonGetserviceinterfacepointlistOutputSip getSip() {
+    return sip;
+  }
+
+  public void setSip(TapiCommonGetserviceinterfacepointlistOutputSip sip) {
+    this.sip = sip;
+  }
+
+
+  @Override
+  public boolean equals(java.lang.Object o) {
+    if (this == o) {
+      return true;
+    }
+    if (o == null || getClass() != o.getClass()) {
+      return false;
+    }
+    TapiCommonGetserviceinterfacepointdetailsOutput tapiCommonGetserviceinterfacepointdetailsOutput = (TapiCommonGetserviceinterfacepointdetailsOutput) o;
+    return Objects.equals(this.sip, tapiCommonGetserviceinterfacepointdetailsOutput.sip);
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(sip);
+  }
+
+  @Override
+  public String toString() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("class TapiCommonGetserviceinterfacepointdetailsOutput {\n");
+    
+    sb.append("    sip: ").append(toIndentedString(sip)).append("\n");
+    sb.append("}");
+    return sb.toString();
+  }
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(java.lang.Object o) {
+    if (o == null) {
+      return "null";
+    }
+    return o.toString().replace("\n", "\n    ");
+  }
+}
