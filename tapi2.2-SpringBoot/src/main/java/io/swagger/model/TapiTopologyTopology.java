@@ -21,8 +21,12 @@ import javax.validation.constraints.*;
  * TapiTopologyTopology
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiTopologyTopology extends TapiCommonGlobalClass  {
+  @JsonProperty("boundary-node-edge-point")
+  @Valid
+  private List<TapiTopologyNodeEdgePointRef> boundaryNodeEdgePoint = null;
+
   @JsonProperty("layer-protocol-name")
   @Valid
   private List<TapiCommonLayerProtocolName> layerProtocolName = null;
@@ -35,9 +39,32 @@ public class TapiTopologyTopology extends TapiCommonGlobalClass  {
   @Valid
   private List<TapiTopologyNode> node = null;
 
-  @JsonProperty("boundary-node-edge-point")
+  public TapiTopologyTopology boundaryNodeEdgePoint(List<TapiTopologyNodeEdgePointRef> boundaryNodeEdgePoint) {
+    this.boundaryNodeEdgePoint = boundaryNodeEdgePoint;
+    return this;
+  }
+
+  public TapiTopologyTopology addBoundaryNodeEdgePointItem(TapiTopologyNodeEdgePointRef boundaryNodeEdgePointItem) {
+    if (this.boundaryNodeEdgePoint == null) {
+      this.boundaryNodeEdgePoint = new ArrayList<>();
+    }
+    this.boundaryNodeEdgePoint.add(boundaryNodeEdgePointItem);
+    return this;
+  }
+
+  /**
+   * none
+   * @return boundaryNodeEdgePoint
+  **/
+  @ApiModelProperty(value = "none")
   @Valid
-  private List<TapiTopologyNodeEdgePointRef> boundaryNodeEdgePoint = null;
+  public List<TapiTopologyNodeEdgePointRef> getBoundaryNodeEdgePoint() {
+    return boundaryNodeEdgePoint;
+  }
+
+  public void setBoundaryNodeEdgePoint(List<TapiTopologyNodeEdgePointRef> boundaryNodeEdgePoint) {
+    this.boundaryNodeEdgePoint = boundaryNodeEdgePoint;
+  }
 
   public TapiTopologyTopology layerProtocolName(List<TapiCommonLayerProtocolName> layerProtocolName) {
     this.layerProtocolName = layerProtocolName;
@@ -46,7 +73,7 @@ public class TapiTopologyTopology extends TapiCommonGlobalClass  {
 
   public TapiTopologyTopology addLayerProtocolNameItem(TapiCommonLayerProtocolName layerProtocolNameItem) {
     if (this.layerProtocolName == null) {
-      this.layerProtocolName = new ArrayList<TapiCommonLayerProtocolName>();
+      this.layerProtocolName = new ArrayList<>();
     }
     this.layerProtocolName.add(layerProtocolNameItem);
     return this;
@@ -73,7 +100,7 @@ public class TapiTopologyTopology extends TapiCommonGlobalClass  {
 
   public TapiTopologyTopology addLinkItem(TapiTopologyLink linkItem) {
     if (this.link == null) {
-      this.link = new ArrayList<TapiTopologyLink>();
+      this.link = new ArrayList<>();
     }
     this.link.add(linkItem);
     return this;
@@ -100,7 +127,7 @@ public class TapiTopologyTopology extends TapiCommonGlobalClass  {
 
   public TapiTopologyTopology addNodeItem(TapiTopologyNode nodeItem) {
     if (this.node == null) {
-      this.node = new ArrayList<TapiTopologyNode>();
+      this.node = new ArrayList<>();
     }
     this.node.add(nodeItem);
     return this;
@@ -120,33 +147,6 @@ public class TapiTopologyTopology extends TapiCommonGlobalClass  {
     this.node = node;
   }
 
-  public TapiTopologyTopology boundaryNodeEdgePoint(List<TapiTopologyNodeEdgePointRef> boundaryNodeEdgePoint) {
-    this.boundaryNodeEdgePoint = boundaryNodeEdgePoint;
-    return this;
-  }
-
-  public TapiTopologyTopology addBoundaryNodeEdgePointItem(TapiTopologyNodeEdgePointRef boundaryNodeEdgePointItem) {
-    if (this.boundaryNodeEdgePoint == null) {
-      this.boundaryNodeEdgePoint = new ArrayList<TapiTopologyNodeEdgePointRef>();
-    }
-    this.boundaryNodeEdgePoint.add(boundaryNodeEdgePointItem);
-    return this;
-  }
-
-  /**
-   * none
-   * @return boundaryNodeEdgePoint
-  **/
-  @ApiModelProperty(value = "none")
-  @Valid
-  public List<TapiTopologyNodeEdgePointRef> getBoundaryNodeEdgePoint() {
-    return boundaryNodeEdgePoint;
-  }
-
-  public void setBoundaryNodeEdgePoint(List<TapiTopologyNodeEdgePointRef> boundaryNodeEdgePoint) {
-    this.boundaryNodeEdgePoint = boundaryNodeEdgePoint;
-  }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -157,16 +157,16 @@ public class TapiTopologyTopology extends TapiCommonGlobalClass  {
       return false;
     }
     TapiTopologyTopology tapiTopologyTopology = (TapiTopologyTopology) o;
-    return Objects.equals(this.layerProtocolName, tapiTopologyTopology.layerProtocolName) &&
+    return Objects.equals(this.boundaryNodeEdgePoint, tapiTopologyTopology.boundaryNodeEdgePoint) &&
+        Objects.equals(this.layerProtocolName, tapiTopologyTopology.layerProtocolName) &&
         Objects.equals(this.link, tapiTopologyTopology.link) &&
         Objects.equals(this.node, tapiTopologyTopology.node) &&
-        Objects.equals(this.boundaryNodeEdgePoint, tapiTopologyTopology.boundaryNodeEdgePoint) &&
         super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(layerProtocolName, link, node, boundaryNodeEdgePoint, super.hashCode());
+    return Objects.hash(boundaryNodeEdgePoint, layerProtocolName, link, node, super.hashCode());
   }
 
   @Override
@@ -174,10 +174,10 @@ public class TapiTopologyTopology extends TapiCommonGlobalClass  {
     StringBuilder sb = new StringBuilder();
     sb.append("class TapiTopologyTopology {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    boundaryNodeEdgePoint: ").append(toIndentedString(boundaryNodeEdgePoint)).append("\n");
     sb.append("    layerProtocolName: ").append(toIndentedString(layerProtocolName)).append("\n");
     sb.append("    link: ").append(toIndentedString(link)).append("\n");
     sb.append("    node: ").append(toIndentedString(node)).append("\n");
-    sb.append("    boundaryNodeEdgePoint: ").append(toIndentedString(boundaryNodeEdgePoint)).append("\n");
     sb.append("}");
     return sb.toString();
   }

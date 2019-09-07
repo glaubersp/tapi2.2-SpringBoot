@@ -13,32 +13,13 @@ import javax.validation.constraints.*;
  * TapiCommonNameAndValue
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiCommonNameAndValue   {
-  @JsonProperty("value-name")
-  private String valueName = null;
-
   @JsonProperty("value")
   private String value = null;
 
-  public TapiCommonNameAndValue valueName(String valueName) {
-    this.valueName = valueName;
-    return this;
-  }
-
-  /**
-   * The name of the value. The value need not have a name.
-   * @return valueName
-  **/
-  @ApiModelProperty(value = "The name of the value. The value need not have a name.")
-
-  public String getValueName() {
-    return valueName;
-  }
-
-  public void setValueName(String valueName) {
-    this.valueName = valueName;
-  }
+  @JsonProperty("value-name")
+  private String valueName = null;
 
   public TapiCommonNameAndValue value(String value) {
     this.value = value;
@@ -59,6 +40,25 @@ public class TapiCommonNameAndValue   {
     this.value = value;
   }
 
+  public TapiCommonNameAndValue valueName(String valueName) {
+    this.valueName = valueName;
+    return this;
+  }
+
+  /**
+   * The name of the value. The value need not have a name.
+   * @return valueName
+  **/
+  @ApiModelProperty(value = "The name of the value. The value need not have a name.")
+
+  public String getValueName() {
+    return valueName;
+  }
+
+  public void setValueName(String valueName) {
+    this.valueName = valueName;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -69,13 +69,13 @@ public class TapiCommonNameAndValue   {
       return false;
     }
     TapiCommonNameAndValue tapiCommonNameAndValue = (TapiCommonNameAndValue) o;
-    return Objects.equals(this.valueName, tapiCommonNameAndValue.valueName) &&
-        Objects.equals(this.value, tapiCommonNameAndValue.value);
+    return Objects.equals(this.value, tapiCommonNameAndValue.value) &&
+        Objects.equals(this.valueName, tapiCommonNameAndValue.valueName);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(valueName, value);
+    return Objects.hash(value, valueName);
   }
 
   @Override
@@ -83,8 +83,8 @@ public class TapiCommonNameAndValue   {
     StringBuilder sb = new StringBuilder();
     sb.append("class TapiCommonNameAndValue {\n");
     
-    sb.append("    valueName: ").append(toIndentedString(valueName)).append("\n");
     sb.append("    value: ").append(toIndentedString(value)).append("\n");
+    sb.append("    valueName: ").append(toIndentedString(valueName)).append("\n");
     sb.append("}");
     return sb.toString();
   }

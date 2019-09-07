@@ -10,12 +10,9 @@ import io.swagger.model.TapiCommonLayerProtocolName;
 import io.swagger.model.TapiCommonLifecycleState;
 import io.swagger.model.TapiCommonNameAndValue;
 import io.swagger.model.TapiCommonOperationalState;
-import io.swagger.model.TapiCommonOperationalStatePac;
 import io.swagger.model.TapiEthEthMegSpec;
-import io.swagger.model.TapiEthMegAugmentation1;
 import io.swagger.model.TapiOamMegMep;
 import io.swagger.model.TapiOamMegMip;
-import io.swagger.model.TapiOduMegAugmentation2;
 import io.swagger.model.TapiOduOduMegSpec;
 import java.util.ArrayList;
 import java.util.List;
@@ -27,22 +24,16 @@ import javax.validation.constraints.*;
  * TapiOamOamcontextMeg
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiOamOamcontextMeg extends TapiCommonGlobalClass  {
-  @JsonProperty("operational-state")
-  private TapiCommonOperationalState operationalState = null;
-
-  @JsonProperty("lifecycle-state")
-  private TapiCommonLifecycleState lifecycleState = null;
-
   @JsonProperty("eth-meg-spec")
   private TapiEthEthMegSpec ethMegSpec = null;
 
-  @JsonProperty("odu-meg-spec")
-  private TapiOduOduMegSpec oduMegSpec = null;
-
   @JsonProperty("layer-protocol-name")
   private TapiCommonLayerProtocolName layerProtocolName = null;
+
+  @JsonProperty("lifecycle-state")
+  private TapiCommonLifecycleState lifecycleState = null;
 
   @JsonProperty("mep")
   @Valid
@@ -52,45 +43,11 @@ public class TapiOamOamcontextMeg extends TapiCommonGlobalClass  {
   @Valid
   private List<TapiOamMegMip> mip = null;
 
-  public TapiOamOamcontextMeg operationalState(TapiCommonOperationalState operationalState) {
-    this.operationalState = operationalState;
-    return this;
-  }
+  @JsonProperty("odu-meg-spec")
+  private TapiOduOduMegSpec oduMegSpec = null;
 
-  /**
-   * Get operationalState
-   * @return operationalState
-  **/
-  @ApiModelProperty(value = "")
-
-  @Valid
-  public TapiCommonOperationalState getOperationalState() {
-    return operationalState;
-  }
-
-  public void setOperationalState(TapiCommonOperationalState operationalState) {
-    this.operationalState = operationalState;
-  }
-
-  public TapiOamOamcontextMeg lifecycleState(TapiCommonLifecycleState lifecycleState) {
-    this.lifecycleState = lifecycleState;
-    return this;
-  }
-
-  /**
-   * Get lifecycleState
-   * @return lifecycleState
-  **/
-  @ApiModelProperty(value = "")
-
-  @Valid
-  public TapiCommonLifecycleState getLifecycleState() {
-    return lifecycleState;
-  }
-
-  public void setLifecycleState(TapiCommonLifecycleState lifecycleState) {
-    this.lifecycleState = lifecycleState;
-  }
+  @JsonProperty("operational-state")
+  private TapiCommonOperationalState operationalState = null;
 
   public TapiOamOamcontextMeg ethMegSpec(TapiEthEthMegSpec ethMegSpec) {
     this.ethMegSpec = ethMegSpec;
@@ -110,26 +67,6 @@ public class TapiOamOamcontextMeg extends TapiCommonGlobalClass  {
 
   public void setEthMegSpec(TapiEthEthMegSpec ethMegSpec) {
     this.ethMegSpec = ethMegSpec;
-  }
-
-  public TapiOamOamcontextMeg oduMegSpec(TapiOduOduMegSpec oduMegSpec) {
-    this.oduMegSpec = oduMegSpec;
-    return this;
-  }
-
-  /**
-   * Get oduMegSpec
-   * @return oduMegSpec
-  **/
-  @ApiModelProperty(value = "")
-
-  @Valid
-  public TapiOduOduMegSpec getOduMegSpec() {
-    return oduMegSpec;
-  }
-
-  public void setOduMegSpec(TapiOduOduMegSpec oduMegSpec) {
-    this.oduMegSpec = oduMegSpec;
   }
 
   public TapiOamOamcontextMeg layerProtocolName(TapiCommonLayerProtocolName layerProtocolName) {
@@ -152,6 +89,26 @@ public class TapiOamOamcontextMeg extends TapiCommonGlobalClass  {
     this.layerProtocolName = layerProtocolName;
   }
 
+  public TapiOamOamcontextMeg lifecycleState(TapiCommonLifecycleState lifecycleState) {
+    this.lifecycleState = lifecycleState;
+    return this;
+  }
+
+  /**
+   * Get lifecycleState
+   * @return lifecycleState
+  **/
+  @ApiModelProperty(value = "")
+
+  @Valid
+  public TapiCommonLifecycleState getLifecycleState() {
+    return lifecycleState;
+  }
+
+  public void setLifecycleState(TapiCommonLifecycleState lifecycleState) {
+    this.lifecycleState = lifecycleState;
+  }
+
   public TapiOamOamcontextMeg mep(List<TapiOamMegMep> mep) {
     this.mep = mep;
     return this;
@@ -159,7 +116,7 @@ public class TapiOamOamcontextMeg extends TapiCommonGlobalClass  {
 
   public TapiOamOamcontextMeg addMepItem(TapiOamMegMep mepItem) {
     if (this.mep == null) {
-      this.mep = new ArrayList<TapiOamMegMep>();
+      this.mep = new ArrayList<>();
     }
     this.mep.add(mepItem);
     return this;
@@ -186,7 +143,7 @@ public class TapiOamOamcontextMeg extends TapiCommonGlobalClass  {
 
   public TapiOamOamcontextMeg addMipItem(TapiOamMegMip mipItem) {
     if (this.mip == null) {
-      this.mip = new ArrayList<TapiOamMegMip>();
+      this.mip = new ArrayList<>();
     }
     this.mip.add(mipItem);
     return this;
@@ -206,6 +163,46 @@ public class TapiOamOamcontextMeg extends TapiCommonGlobalClass  {
     this.mip = mip;
   }
 
+  public TapiOamOamcontextMeg oduMegSpec(TapiOduOduMegSpec oduMegSpec) {
+    this.oduMegSpec = oduMegSpec;
+    return this;
+  }
+
+  /**
+   * Get oduMegSpec
+   * @return oduMegSpec
+  **/
+  @ApiModelProperty(value = "")
+
+  @Valid
+  public TapiOduOduMegSpec getOduMegSpec() {
+    return oduMegSpec;
+  }
+
+  public void setOduMegSpec(TapiOduOduMegSpec oduMegSpec) {
+    this.oduMegSpec = oduMegSpec;
+  }
+
+  public TapiOamOamcontextMeg operationalState(TapiCommonOperationalState operationalState) {
+    this.operationalState = operationalState;
+    return this;
+  }
+
+  /**
+   * Get operationalState
+   * @return operationalState
+  **/
+  @ApiModelProperty(value = "")
+
+  @Valid
+  public TapiCommonOperationalState getOperationalState() {
+    return operationalState;
+  }
+
+  public void setOperationalState(TapiCommonOperationalState operationalState) {
+    this.operationalState = operationalState;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -216,19 +213,19 @@ public class TapiOamOamcontextMeg extends TapiCommonGlobalClass  {
       return false;
     }
     TapiOamOamcontextMeg tapiOamOamcontextMeg = (TapiOamOamcontextMeg) o;
-    return Objects.equals(this.operationalState, tapiOamOamcontextMeg.operationalState) &&
-        Objects.equals(this.lifecycleState, tapiOamOamcontextMeg.lifecycleState) &&
-        Objects.equals(this.ethMegSpec, tapiOamOamcontextMeg.ethMegSpec) &&
-        Objects.equals(this.oduMegSpec, tapiOamOamcontextMeg.oduMegSpec) &&
+    return Objects.equals(this.ethMegSpec, tapiOamOamcontextMeg.ethMegSpec) &&
         Objects.equals(this.layerProtocolName, tapiOamOamcontextMeg.layerProtocolName) &&
+        Objects.equals(this.lifecycleState, tapiOamOamcontextMeg.lifecycleState) &&
         Objects.equals(this.mep, tapiOamOamcontextMeg.mep) &&
         Objects.equals(this.mip, tapiOamOamcontextMeg.mip) &&
+        Objects.equals(this.oduMegSpec, tapiOamOamcontextMeg.oduMegSpec) &&
+        Objects.equals(this.operationalState, tapiOamOamcontextMeg.operationalState) &&
         super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(operationalState, lifecycleState, ethMegSpec, oduMegSpec, layerProtocolName, mep, mip, super.hashCode());
+    return Objects.hash(ethMegSpec, layerProtocolName, lifecycleState, mep, mip, oduMegSpec, operationalState, super.hashCode());
   }
 
   @Override
@@ -236,13 +233,13 @@ public class TapiOamOamcontextMeg extends TapiCommonGlobalClass  {
     StringBuilder sb = new StringBuilder();
     sb.append("class TapiOamOamcontextMeg {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    operationalState: ").append(toIndentedString(operationalState)).append("\n");
-    sb.append("    lifecycleState: ").append(toIndentedString(lifecycleState)).append("\n");
     sb.append("    ethMegSpec: ").append(toIndentedString(ethMegSpec)).append("\n");
-    sb.append("    oduMegSpec: ").append(toIndentedString(oduMegSpec)).append("\n");
     sb.append("    layerProtocolName: ").append(toIndentedString(layerProtocolName)).append("\n");
+    sb.append("    lifecycleState: ").append(toIndentedString(lifecycleState)).append("\n");
     sb.append("    mep: ").append(toIndentedString(mep)).append("\n");
     sb.append("    mip: ").append(toIndentedString(mip)).append("\n");
+    sb.append("    oduMegSpec: ").append(toIndentedString(oduMegSpec)).append("\n");
+    sb.append("    operationalState: ").append(toIndentedString(operationalState)).append("\n");
     sb.append("}");
     return sb.toString();
   }

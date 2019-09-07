@@ -17,16 +17,35 @@ import javax.validation.constraints.*;
  * TapiOamHistoryData
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiOamHistoryData extends TapiCommonLocalClass  {
+  @JsonProperty("period-end-time")
+  private String periodEndTime = null;
+
   @JsonProperty("period-start-time")
   private String periodStartTime = null;
 
   @JsonProperty("pm-data-pac")
   private TapiOamPmDataPac pmDataPac = null;
 
-  @JsonProperty("period-end-time")
-  private String periodEndTime = null;
+  public TapiOamHistoryData periodEndTime(String periodEndTime) {
+    this.periodEndTime = periodEndTime;
+    return this;
+  }
+
+  /**
+   * none
+   * @return periodEndTime
+  **/
+  @ApiModelProperty(value = "none")
+
+  public String getPeriodEndTime() {
+    return periodEndTime;
+  }
+
+  public void setPeriodEndTime(String periodEndTime) {
+    this.periodEndTime = periodEndTime;
+  }
 
   public TapiOamHistoryData periodStartTime(String periodStartTime) {
     this.periodStartTime = periodStartTime;
@@ -67,25 +86,6 @@ public class TapiOamHistoryData extends TapiCommonLocalClass  {
     this.pmDataPac = pmDataPac;
   }
 
-  public TapiOamHistoryData periodEndTime(String periodEndTime) {
-    this.periodEndTime = periodEndTime;
-    return this;
-  }
-
-  /**
-   * none
-   * @return periodEndTime
-  **/
-  @ApiModelProperty(value = "none")
-
-  public String getPeriodEndTime() {
-    return periodEndTime;
-  }
-
-  public void setPeriodEndTime(String periodEndTime) {
-    this.periodEndTime = periodEndTime;
-  }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -96,15 +96,15 @@ public class TapiOamHistoryData extends TapiCommonLocalClass  {
       return false;
     }
     TapiOamHistoryData tapiOamHistoryData = (TapiOamHistoryData) o;
-    return Objects.equals(this.periodStartTime, tapiOamHistoryData.periodStartTime) &&
+    return Objects.equals(this.periodEndTime, tapiOamHistoryData.periodEndTime) &&
+        Objects.equals(this.periodStartTime, tapiOamHistoryData.periodStartTime) &&
         Objects.equals(this.pmDataPac, tapiOamHistoryData.pmDataPac) &&
-        Objects.equals(this.periodEndTime, tapiOamHistoryData.periodEndTime) &&
         super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(periodStartTime, pmDataPac, periodEndTime, super.hashCode());
+    return Objects.hash(periodEndTime, periodStartTime, pmDataPac, super.hashCode());
   }
 
   @Override
@@ -112,9 +112,9 @@ public class TapiOamHistoryData extends TapiCommonLocalClass  {
     StringBuilder sb = new StringBuilder();
     sb.append("class TapiOamHistoryData {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    periodEndTime: ").append(toIndentedString(periodEndTime)).append("\n");
     sb.append("    periodStartTime: ").append(toIndentedString(periodStartTime)).append("\n");
     sb.append("    pmDataPac: ").append(toIndentedString(pmDataPac)).append("\n");
-    sb.append("    periodEndTime: ").append(toIndentedString(periodEndTime)).append("\n");
     sb.append("}");
     return sb.toString();
   }

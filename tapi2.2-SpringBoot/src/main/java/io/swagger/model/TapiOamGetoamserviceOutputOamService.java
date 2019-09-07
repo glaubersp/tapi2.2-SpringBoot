@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import io.swagger.model.TapiCommonAdminStatePac;
 import io.swagger.model.TapiCommonAdministrativeState;
 import io.swagger.model.TapiCommonGlobalClass;
 import io.swagger.model.TapiCommonLayerProtocolName;
@@ -13,7 +12,6 @@ import io.swagger.model.TapiCommonLifecycleState;
 import io.swagger.model.TapiCommonNameAndValue;
 import io.swagger.model.TapiCommonOperationalState;
 import io.swagger.model.TapiEthEthOamService;
-import io.swagger.model.TapiEthOamServiceAugmentation1;
 import io.swagger.model.TapiOamMegRef;
 import io.swagger.model.TapiOamOamserviceOamServicePoint;
 import java.util.ArrayList;
@@ -26,14 +24,10 @@ import javax.validation.constraints.*;
  * TapiOamGetoamserviceOutputOamService
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
-public class TapiOamGetoamserviceOutputOamService extends TapiCommonAdminStatePac  {
-  @JsonProperty("name")
-  @Valid
-  private List<TapiCommonNameAndValue> name = null;
-
-  @JsonProperty("uuid")
-  private String uuid = null;
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
+public class TapiOamGetoamserviceOutputOamService extends TapiCommonGlobalClass  {
+  @JsonProperty("administrative-state")
+  private TapiCommonAdministrativeState administrativeState = null;
 
   @JsonProperty("eth-oam-service")
   private TapiEthEthOamService ethOamService = null;
@@ -41,57 +35,37 @@ public class TapiOamGetoamserviceOutputOamService extends TapiCommonAdminStatePa
   @JsonProperty("layer-protocol-name")
   private TapiCommonLayerProtocolName layerProtocolName = null;
 
-  @JsonProperty("oam-service-point")
-  @Valid
-  private List<TapiOamOamserviceOamServicePoint> oamServicePoint = null;
+  @JsonProperty("lifecycle-state")
+  private TapiCommonLifecycleState lifecycleState = null;
 
   @JsonProperty("meg")
   private TapiOamMegRef meg = null;
 
-  public TapiOamGetoamserviceOutputOamService name(List<TapiCommonNameAndValue> name) {
-    this.name = name;
-    return this;
-  }
-
-  public TapiOamGetoamserviceOutputOamService addNameItem(TapiCommonNameAndValue nameItem) {
-    if (this.name == null) {
-      this.name = new ArrayList<TapiCommonNameAndValue>();
-    }
-    this.name.add(nameItem);
-    return this;
-  }
-
-  /**
-   * List of names. This value is unique in some namespace but may change during the life of the entity.                  A name carries no semantics with respect to the purpose of the entity.
-   * @return name
-  **/
-  @ApiModelProperty(value = "List of names. This value is unique in some namespace but may change during the life of the entity.                  A name carries no semantics with respect to the purpose of the entity.")
+  @JsonProperty("oam-service-point")
   @Valid
-  public List<TapiCommonNameAndValue> getName() {
-    return name;
-  }
+  private List<TapiOamOamserviceOamServicePoint> oamServicePoint = null;
 
-  public void setName(List<TapiCommonNameAndValue> name) {
-    this.name = name;
-  }
+  @JsonProperty("operational-state")
+  private TapiCommonOperationalState operationalState = null;
 
-  public TapiOamGetoamserviceOutputOamService uuid(String uuid) {
-    this.uuid = uuid;
+  public TapiOamGetoamserviceOutputOamService administrativeState(TapiCommonAdministrativeState administrativeState) {
+    this.administrativeState = administrativeState;
     return this;
   }
 
   /**
-   * UUID: An identifier that is universally unique within an identifier space, where the identifier space is itself globally unique, and immutable.                  An UUID carries no semantics with respect to the purpose or state of the entity.                  UUID here uses string representation as defined in RFC 4122.  The canonical representation uses lowercase characters.                  Pattern: [0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-' + '[0-9a-fA-F]{4}-[0-9a-fA-F]{12}                   Example of a UUID in string representation: f81d4fae-7dec-11d0-a765-00a0c91e6bf6
-   * @return uuid
+   * Get administrativeState
+   * @return administrativeState
   **/
-  @ApiModelProperty(value = "UUID: An identifier that is universally unique within an identifier space, where the identifier space is itself globally unique, and immutable.                  An UUID carries no semantics with respect to the purpose or state of the entity.                  UUID here uses string representation as defined in RFC 4122.  The canonical representation uses lowercase characters.                  Pattern: [0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-' + '[0-9a-fA-F]{4}-[0-9a-fA-F]{12}                   Example of a UUID in string representation: f81d4fae-7dec-11d0-a765-00a0c91e6bf6")
+  @ApiModelProperty(value = "")
 
-  public String getUuid() {
-    return uuid;
+  @Valid
+  public TapiCommonAdministrativeState getAdministrativeState() {
+    return administrativeState;
   }
 
-  public void setUuid(String uuid) {
-    this.uuid = uuid;
+  public void setAdministrativeState(TapiCommonAdministrativeState administrativeState) {
+    this.administrativeState = administrativeState;
   }
 
   public TapiOamGetoamserviceOutputOamService ethOamService(TapiEthEthOamService ethOamService) {
@@ -134,31 +108,24 @@ public class TapiOamGetoamserviceOutputOamService extends TapiCommonAdminStatePa
     this.layerProtocolName = layerProtocolName;
   }
 
-  public TapiOamGetoamserviceOutputOamService oamServicePoint(List<TapiOamOamserviceOamServicePoint> oamServicePoint) {
-    this.oamServicePoint = oamServicePoint;
-    return this;
-  }
-
-  public TapiOamGetoamserviceOutputOamService addOamServicePointItem(TapiOamOamserviceOamServicePoint oamServicePointItem) {
-    if (this.oamServicePoint == null) {
-      this.oamServicePoint = new ArrayList<TapiOamOamserviceOamServicePoint>();
-    }
-    this.oamServicePoint.add(oamServicePointItem);
+  public TapiOamGetoamserviceOutputOamService lifecycleState(TapiCommonLifecycleState lifecycleState) {
+    this.lifecycleState = lifecycleState;
     return this;
   }
 
   /**
-   * none
-   * @return oamServicePoint
+   * Get lifecycleState
+   * @return lifecycleState
   **/
-  @ApiModelProperty(value = "none")
+  @ApiModelProperty(value = "")
+
   @Valid
-  public List<TapiOamOamserviceOamServicePoint> getOamServicePoint() {
-    return oamServicePoint;
+  public TapiCommonLifecycleState getLifecycleState() {
+    return lifecycleState;
   }
 
-  public void setOamServicePoint(List<TapiOamOamserviceOamServicePoint> oamServicePoint) {
-    this.oamServicePoint = oamServicePoint;
+  public void setLifecycleState(TapiCommonLifecycleState lifecycleState) {
+    this.lifecycleState = lifecycleState;
   }
 
   public TapiOamGetoamserviceOutputOamService meg(TapiOamMegRef meg) {
@@ -181,6 +148,53 @@ public class TapiOamGetoamserviceOutputOamService extends TapiCommonAdminStatePa
     this.meg = meg;
   }
 
+  public TapiOamGetoamserviceOutputOamService oamServicePoint(List<TapiOamOamserviceOamServicePoint> oamServicePoint) {
+    this.oamServicePoint = oamServicePoint;
+    return this;
+  }
+
+  public TapiOamGetoamserviceOutputOamService addOamServicePointItem(TapiOamOamserviceOamServicePoint oamServicePointItem) {
+    if (this.oamServicePoint == null) {
+      this.oamServicePoint = new ArrayList<>();
+    }
+    this.oamServicePoint.add(oamServicePointItem);
+    return this;
+  }
+
+  /**
+   * none
+   * @return oamServicePoint
+  **/
+  @ApiModelProperty(value = "none")
+  @Valid
+  public List<TapiOamOamserviceOamServicePoint> getOamServicePoint() {
+    return oamServicePoint;
+  }
+
+  public void setOamServicePoint(List<TapiOamOamserviceOamServicePoint> oamServicePoint) {
+    this.oamServicePoint = oamServicePoint;
+  }
+
+  public TapiOamGetoamserviceOutputOamService operationalState(TapiCommonOperationalState operationalState) {
+    this.operationalState = operationalState;
+    return this;
+  }
+
+  /**
+   * Get operationalState
+   * @return operationalState
+  **/
+  @ApiModelProperty(value = "")
+
+  @Valid
+  public TapiCommonOperationalState getOperationalState() {
+    return operationalState;
+  }
+
+  public void setOperationalState(TapiCommonOperationalState operationalState) {
+    this.operationalState = operationalState;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -191,18 +205,19 @@ public class TapiOamGetoamserviceOutputOamService extends TapiCommonAdminStatePa
       return false;
     }
     TapiOamGetoamserviceOutputOamService tapiOamGetoamserviceOutputOamService = (TapiOamGetoamserviceOutputOamService) o;
-    return Objects.equals(this.name, tapiOamGetoamserviceOutputOamService.name) &&
-        Objects.equals(this.uuid, tapiOamGetoamserviceOutputOamService.uuid) &&
+    return Objects.equals(this.administrativeState, tapiOamGetoamserviceOutputOamService.administrativeState) &&
         Objects.equals(this.ethOamService, tapiOamGetoamserviceOutputOamService.ethOamService) &&
         Objects.equals(this.layerProtocolName, tapiOamGetoamserviceOutputOamService.layerProtocolName) &&
-        Objects.equals(this.oamServicePoint, tapiOamGetoamserviceOutputOamService.oamServicePoint) &&
+        Objects.equals(this.lifecycleState, tapiOamGetoamserviceOutputOamService.lifecycleState) &&
         Objects.equals(this.meg, tapiOamGetoamserviceOutputOamService.meg) &&
+        Objects.equals(this.oamServicePoint, tapiOamGetoamserviceOutputOamService.oamServicePoint) &&
+        Objects.equals(this.operationalState, tapiOamGetoamserviceOutputOamService.operationalState) &&
         super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, uuid, ethOamService, layerProtocolName, oamServicePoint, meg, super.hashCode());
+    return Objects.hash(administrativeState, ethOamService, layerProtocolName, lifecycleState, meg, oamServicePoint, operationalState, super.hashCode());
   }
 
   @Override
@@ -210,12 +225,13 @@ public class TapiOamGetoamserviceOutputOamService extends TapiCommonAdminStatePa
     StringBuilder sb = new StringBuilder();
     sb.append("class TapiOamGetoamserviceOutputOamService {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    uuid: ").append(toIndentedString(uuid)).append("\n");
+    sb.append("    administrativeState: ").append(toIndentedString(administrativeState)).append("\n");
     sb.append("    ethOamService: ").append(toIndentedString(ethOamService)).append("\n");
     sb.append("    layerProtocolName: ").append(toIndentedString(layerProtocolName)).append("\n");
-    sb.append("    oamServicePoint: ").append(toIndentedString(oamServicePoint)).append("\n");
+    sb.append("    lifecycleState: ").append(toIndentedString(lifecycleState)).append("\n");
     sb.append("    meg: ").append(toIndentedString(meg)).append("\n");
+    sb.append("    oamServicePoint: ").append(toIndentedString(oamServicePoint)).append("\n");
+    sb.append("    operationalState: ").append(toIndentedString(operationalState)).append("\n");
     sb.append("}");
     return sb.toString();
   }

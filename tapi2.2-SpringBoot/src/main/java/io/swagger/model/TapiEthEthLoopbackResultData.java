@@ -15,7 +15,7 @@ import javax.validation.constraints.*;
  * TapiEthEthLoopbackResultData
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiEthEthLoopbackResultData   {
   @JsonProperty("ber-lbr-frames")
   private Integer berLbrFrames = null;
@@ -27,14 +27,14 @@ public class TapiEthEthLoopbackResultData   {
   @Valid
   private List<String> detectedPeerMep = null;
 
-  @JsonProperty("sent-lbm-frames")
-  private Integer sentLbmFrames = null;
-
   @JsonProperty("out-of-order-lbr-frames")
   private Integer outOfOrderLbrFrames = null;
 
   @JsonProperty("rec-lbr-frames")
   private Integer recLbrFrames = null;
+
+  @JsonProperty("sent-lbm-frames")
+  private Integer sentLbmFrames = null;
 
   public TapiEthEthLoopbackResultData berLbrFrames(Integer berLbrFrames) {
     this.berLbrFrames = berLbrFrames;
@@ -81,7 +81,7 @@ public class TapiEthEthLoopbackResultData   {
 
   public TapiEthEthLoopbackResultData addDetectedPeerMepItem(String detectedPeerMepItem) {
     if (this.detectedPeerMep == null) {
-      this.detectedPeerMep = new ArrayList<String>();
+      this.detectedPeerMep = new ArrayList<>();
     }
     this.detectedPeerMep.add(detectedPeerMepItem);
     return this;
@@ -99,25 +99,6 @@ public class TapiEthEthLoopbackResultData   {
 
   public void setDetectedPeerMep(List<String> detectedPeerMep) {
     this.detectedPeerMep = detectedPeerMep;
-  }
-
-  public TapiEthEthLoopbackResultData sentLbmFrames(Integer sentLbmFrames) {
-    this.sentLbmFrames = sentLbmFrames;
-    return this;
-  }
-
-  /**
-   * G.8052: This parameter returns the total number of sent LBM frames.
-   * @return sentLbmFrames
-  **/
-  @ApiModelProperty(value = "G.8052: This parameter returns the total number of sent LBM frames.")
-
-  public Integer getSentLbmFrames() {
-    return sentLbmFrames;
-  }
-
-  public void setSentLbmFrames(Integer sentLbmFrames) {
-    this.sentLbmFrames = sentLbmFrames;
   }
 
   public TapiEthEthLoopbackResultData outOfOrderLbrFrames(Integer outOfOrderLbrFrames) {
@@ -158,6 +139,25 @@ public class TapiEthEthLoopbackResultData   {
     this.recLbrFrames = recLbrFrames;
   }
 
+  public TapiEthEthLoopbackResultData sentLbmFrames(Integer sentLbmFrames) {
+    this.sentLbmFrames = sentLbmFrames;
+    return this;
+  }
+
+  /**
+   * G.8052: This parameter returns the total number of sent LBM frames.
+   * @return sentLbmFrames
+  **/
+  @ApiModelProperty(value = "G.8052: This parameter returns the total number of sent LBM frames.")
+
+  public Integer getSentLbmFrames() {
+    return sentLbmFrames;
+  }
+
+  public void setSentLbmFrames(Integer sentLbmFrames) {
+    this.sentLbmFrames = sentLbmFrames;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -171,14 +171,14 @@ public class TapiEthEthLoopbackResultData   {
     return Objects.equals(this.berLbrFrames, tapiEthEthLoopbackResultData.berLbrFrames) &&
         Objects.equals(this.crcLbrFrames, tapiEthEthLoopbackResultData.crcLbrFrames) &&
         Objects.equals(this.detectedPeerMep, tapiEthEthLoopbackResultData.detectedPeerMep) &&
-        Objects.equals(this.sentLbmFrames, tapiEthEthLoopbackResultData.sentLbmFrames) &&
         Objects.equals(this.outOfOrderLbrFrames, tapiEthEthLoopbackResultData.outOfOrderLbrFrames) &&
-        Objects.equals(this.recLbrFrames, tapiEthEthLoopbackResultData.recLbrFrames);
+        Objects.equals(this.recLbrFrames, tapiEthEthLoopbackResultData.recLbrFrames) &&
+        Objects.equals(this.sentLbmFrames, tapiEthEthLoopbackResultData.sentLbmFrames);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(berLbrFrames, crcLbrFrames, detectedPeerMep, sentLbmFrames, outOfOrderLbrFrames, recLbrFrames);
+    return Objects.hash(berLbrFrames, crcLbrFrames, detectedPeerMep, outOfOrderLbrFrames, recLbrFrames, sentLbmFrames);
   }
 
   @Override
@@ -189,9 +189,9 @@ public class TapiEthEthLoopbackResultData   {
     sb.append("    berLbrFrames: ").append(toIndentedString(berLbrFrames)).append("\n");
     sb.append("    crcLbrFrames: ").append(toIndentedString(crcLbrFrames)).append("\n");
     sb.append("    detectedPeerMep: ").append(toIndentedString(detectedPeerMep)).append("\n");
-    sb.append("    sentLbmFrames: ").append(toIndentedString(sentLbmFrames)).append("\n");
     sb.append("    outOfOrderLbrFrames: ").append(toIndentedString(outOfOrderLbrFrames)).append("\n");
     sb.append("    recLbrFrames: ").append(toIndentedString(recLbrFrames)).append("\n");
+    sb.append("    sentLbmFrames: ").append(toIndentedString(sentLbmFrames)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -16,19 +16,19 @@ import javax.validation.constraints.*;
  * TapiEthEthMepSpec
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiEthEthMepSpec   {
   @JsonProperty("eth-mep-common")
   private TapiEthEthMepCommon ethMepCommon = null;
 
-  @JsonProperty("mep-mac")
-  private String mepMac = null;
+  @JsonProperty("eth-mep-sink")
+  private TapiEthEthMepSink ethMepSink = null;
 
   @JsonProperty("eth-mep-source")
   private TapiEthEthMepSource ethMepSource = null;
 
-  @JsonProperty("eth-mep-sink")
-  private TapiEthEthMepSink ethMepSink = null;
+  @JsonProperty("mep-mac")
+  private String mepMac = null;
 
   public TapiEthEthMepSpec ethMepCommon(TapiEthEthMepCommon ethMepCommon) {
     this.ethMepCommon = ethMepCommon;
@@ -48,45 +48,6 @@ public class TapiEthEthMepSpec   {
 
   public void setEthMepCommon(TapiEthEthMepCommon ethMepCommon) {
     this.ethMepCommon = ethMepCommon;
-  }
-
-  public TapiEthEthMepSpec mepMac(String mepMac) {
-    this.mepMac = mepMac;
-    return this;
-  }
-
-  /**
-   * This attribute contains the MAC Address of the MEP.
-   * @return mepMac
-  **/
-  @ApiModelProperty(value = "This attribute contains the MAC Address of the MEP.")
-
-  public String getMepMac() {
-    return mepMac;
-  }
-
-  public void setMepMac(String mepMac) {
-    this.mepMac = mepMac;
-  }
-
-  public TapiEthEthMepSpec ethMepSource(TapiEthEthMepSource ethMepSource) {
-    this.ethMepSource = ethMepSource;
-    return this;
-  }
-
-  /**
-   * Get ethMepSource
-   * @return ethMepSource
-  **/
-  @ApiModelProperty(value = "")
-
-  @Valid
-  public TapiEthEthMepSource getEthMepSource() {
-    return ethMepSource;
-  }
-
-  public void setEthMepSource(TapiEthEthMepSource ethMepSource) {
-    this.ethMepSource = ethMepSource;
   }
 
   public TapiEthEthMepSpec ethMepSink(TapiEthEthMepSink ethMepSink) {
@@ -109,6 +70,45 @@ public class TapiEthEthMepSpec   {
     this.ethMepSink = ethMepSink;
   }
 
+  public TapiEthEthMepSpec ethMepSource(TapiEthEthMepSource ethMepSource) {
+    this.ethMepSource = ethMepSource;
+    return this;
+  }
+
+  /**
+   * Get ethMepSource
+   * @return ethMepSource
+  **/
+  @ApiModelProperty(value = "")
+
+  @Valid
+  public TapiEthEthMepSource getEthMepSource() {
+    return ethMepSource;
+  }
+
+  public void setEthMepSource(TapiEthEthMepSource ethMepSource) {
+    this.ethMepSource = ethMepSource;
+  }
+
+  public TapiEthEthMepSpec mepMac(String mepMac) {
+    this.mepMac = mepMac;
+    return this;
+  }
+
+  /**
+   * This attribute contains the MAC Address of the MEP.
+   * @return mepMac
+  **/
+  @ApiModelProperty(value = "This attribute contains the MAC Address of the MEP.")
+
+  public String getMepMac() {
+    return mepMac;
+  }
+
+  public void setMepMac(String mepMac) {
+    this.mepMac = mepMac;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -120,14 +120,14 @@ public class TapiEthEthMepSpec   {
     }
     TapiEthEthMepSpec tapiEthEthMepSpec = (TapiEthEthMepSpec) o;
     return Objects.equals(this.ethMepCommon, tapiEthEthMepSpec.ethMepCommon) &&
-        Objects.equals(this.mepMac, tapiEthEthMepSpec.mepMac) &&
+        Objects.equals(this.ethMepSink, tapiEthEthMepSpec.ethMepSink) &&
         Objects.equals(this.ethMepSource, tapiEthEthMepSpec.ethMepSource) &&
-        Objects.equals(this.ethMepSink, tapiEthEthMepSpec.ethMepSink);
+        Objects.equals(this.mepMac, tapiEthEthMepSpec.mepMac);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(ethMepCommon, mepMac, ethMepSource, ethMepSink);
+    return Objects.hash(ethMepCommon, ethMepSink, ethMepSource, mepMac);
   }
 
   @Override
@@ -136,9 +136,9 @@ public class TapiEthEthMepSpec   {
     sb.append("class TapiEthEthMepSpec {\n");
     
     sb.append("    ethMepCommon: ").append(toIndentedString(ethMepCommon)).append("\n");
-    sb.append("    mepMac: ").append(toIndentedString(mepMac)).append("\n");
-    sb.append("    ethMepSource: ").append(toIndentedString(ethMepSource)).append("\n");
     sb.append("    ethMepSink: ").append(toIndentedString(ethMepSink)).append("\n");
+    sb.append("    ethMepSource: ").append(toIndentedString(ethMepSource)).append("\n");
+    sb.append("    mepMac: ").append(toIndentedString(mepMac)).append("\n");
     sb.append("}");
     return sb.toString();
   }

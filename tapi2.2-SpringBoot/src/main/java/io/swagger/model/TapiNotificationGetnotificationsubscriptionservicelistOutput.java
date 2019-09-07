@@ -16,7 +16,7 @@ import javax.validation.constraints.*;
  * TapiNotificationGetnotificationsubscriptionservicelistOutput
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiNotificationGetnotificationsubscriptionservicelistOutput   {
   @JsonProperty("subscription-service")
   @Valid
@@ -29,7 +29,7 @@ public class TapiNotificationGetnotificationsubscriptionservicelistOutput   {
 
   public TapiNotificationGetnotificationsubscriptionservicelistOutput addSubscriptionServiceItem(TapiNotificationNotificationSubscriptionService subscriptionServiceItem) {
     if (this.subscriptionService == null) {
-      this.subscriptionService = new ArrayList<TapiNotificationNotificationSubscriptionService>();
+      this.subscriptionService = new ArrayList<>();
     }
     this.subscriptionService.add(subscriptionServiceItem);
     return this;

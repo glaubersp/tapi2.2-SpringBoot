@@ -15,7 +15,7 @@ import javax.validation.constraints.*;
  * TapiTopologyRiskCharacteristic
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiTopologyRiskCharacteristic   {
   @JsonProperty("risk-characteristic-name")
   private String riskCharacteristicName = null;
@@ -50,7 +50,7 @@ public class TapiTopologyRiskCharacteristic   {
 
   public TapiTopologyRiskCharacteristic addRiskIdentifierListItem(String riskIdentifierListItem) {
     if (this.riskIdentifierList == null) {
-      this.riskIdentifierList = new ArrayList<String>();
+      this.riskIdentifierList = new ArrayList<>();
     }
     this.riskIdentifierList.add(riskIdentifierListItem);
     return this;

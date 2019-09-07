@@ -13,59 +13,40 @@ import javax.validation.constraints.*;
  * TapiEquipmentCommonActualProperties
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiEquipmentCommonActualProperties   {
-  @JsonProperty("temperature")
-  private String temperature = null;
-
-  @JsonProperty("manufacture-date")
-  private String manufactureDate = null;
+  @JsonProperty("asset-instance-identifier")
+  private String assetInstanceIdentifier = null;
 
   @JsonProperty("is-powered")
   private Boolean isPowered = false;
 
+  @JsonProperty("manufacture-date")
+  private String manufactureDate = null;
+
   @JsonProperty("serial-number")
   private String serialNumber = null;
 
-  @JsonProperty("asset-instance-identifier")
-  private String assetInstanceIdentifier = null;
+  @JsonProperty("temperature")
+  private String temperature = null;
 
-  public TapiEquipmentCommonActualProperties temperature(String temperature) {
-    this.temperature = temperature;
+  public TapiEquipmentCommonActualProperties assetInstanceIdentifier(String assetInstanceIdentifier) {
+    this.assetInstanceIdentifier = assetInstanceIdentifier;
     return this;
   }
 
   /**
-   * The measured temperature of the Equipment.
-   * @return temperature
+   * This attribute represents the asset identifier of this instance from the manufacturer's perspective.
+   * @return assetInstanceIdentifier
   **/
-  @ApiModelProperty(value = "The measured temperature of the Equipment.")
+  @ApiModelProperty(value = "This attribute represents the asset identifier of this instance from the manufacturer's perspective.")
 
-  public String getTemperature() {
-    return temperature;
+  public String getAssetInstanceIdentifier() {
+    return assetInstanceIdentifier;
   }
 
-  public void setTemperature(String temperature) {
-    this.temperature = temperature;
-  }
-
-  public TapiEquipmentCommonActualProperties manufactureDate(String manufactureDate) {
-    this.manufactureDate = manufactureDate;
-    return this;
-  }
-
-  /**
-   * This attribute represents the date on which this instance is manufactured.
-   * @return manufactureDate
-  **/
-  @ApiModelProperty(value = "This attribute represents the date on which this instance is manufactured.")
-
-  public String getManufactureDate() {
-    return manufactureDate;
-  }
-
-  public void setManufactureDate(String manufactureDate) {
-    this.manufactureDate = manufactureDate;
+  public void setAssetInstanceIdentifier(String assetInstanceIdentifier) {
+    this.assetInstanceIdentifier = assetInstanceIdentifier;
   }
 
   public TapiEquipmentCommonActualProperties isPowered(Boolean isPowered) {
@@ -87,6 +68,25 @@ public class TapiEquipmentCommonActualProperties   {
     this.isPowered = isPowered;
   }
 
+  public TapiEquipmentCommonActualProperties manufactureDate(String manufactureDate) {
+    this.manufactureDate = manufactureDate;
+    return this;
+  }
+
+  /**
+   * This attribute represents the date on which this instance is manufactured.
+   * @return manufactureDate
+  **/
+  @ApiModelProperty(value = "This attribute represents the date on which this instance is manufactured.")
+
+  public String getManufactureDate() {
+    return manufactureDate;
+  }
+
+  public void setManufactureDate(String manufactureDate) {
+    this.manufactureDate = manufactureDate;
+  }
+
   public TapiEquipmentCommonActualProperties serialNumber(String serialNumber) {
     this.serialNumber = serialNumber;
     return this;
@@ -106,23 +106,23 @@ public class TapiEquipmentCommonActualProperties   {
     this.serialNumber = serialNumber;
   }
 
-  public TapiEquipmentCommonActualProperties assetInstanceIdentifier(String assetInstanceIdentifier) {
-    this.assetInstanceIdentifier = assetInstanceIdentifier;
+  public TapiEquipmentCommonActualProperties temperature(String temperature) {
+    this.temperature = temperature;
     return this;
   }
 
   /**
-   * This attribute represents the asset identifier of this instance from the manufacturer's perspective.
-   * @return assetInstanceIdentifier
+   * The measured temperature of the Equipment.
+   * @return temperature
   **/
-  @ApiModelProperty(value = "This attribute represents the asset identifier of this instance from the manufacturer's perspective.")
+  @ApiModelProperty(value = "The measured temperature of the Equipment.")
 
-  public String getAssetInstanceIdentifier() {
-    return assetInstanceIdentifier;
+  public String getTemperature() {
+    return temperature;
   }
 
-  public void setAssetInstanceIdentifier(String assetInstanceIdentifier) {
-    this.assetInstanceIdentifier = assetInstanceIdentifier;
+  public void setTemperature(String temperature) {
+    this.temperature = temperature;
   }
 
 
@@ -135,16 +135,16 @@ public class TapiEquipmentCommonActualProperties   {
       return false;
     }
     TapiEquipmentCommonActualProperties tapiEquipmentCommonActualProperties = (TapiEquipmentCommonActualProperties) o;
-    return Objects.equals(this.temperature, tapiEquipmentCommonActualProperties.temperature) &&
-        Objects.equals(this.manufactureDate, tapiEquipmentCommonActualProperties.manufactureDate) &&
+    return Objects.equals(this.assetInstanceIdentifier, tapiEquipmentCommonActualProperties.assetInstanceIdentifier) &&
         Objects.equals(this.isPowered, tapiEquipmentCommonActualProperties.isPowered) &&
+        Objects.equals(this.manufactureDate, tapiEquipmentCommonActualProperties.manufactureDate) &&
         Objects.equals(this.serialNumber, tapiEquipmentCommonActualProperties.serialNumber) &&
-        Objects.equals(this.assetInstanceIdentifier, tapiEquipmentCommonActualProperties.assetInstanceIdentifier);
+        Objects.equals(this.temperature, tapiEquipmentCommonActualProperties.temperature);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(temperature, manufactureDate, isPowered, serialNumber, assetInstanceIdentifier);
+    return Objects.hash(assetInstanceIdentifier, isPowered, manufactureDate, serialNumber, temperature);
   }
 
   @Override
@@ -152,11 +152,11 @@ public class TapiEquipmentCommonActualProperties   {
     StringBuilder sb = new StringBuilder();
     sb.append("class TapiEquipmentCommonActualProperties {\n");
     
-    sb.append("    temperature: ").append(toIndentedString(temperature)).append("\n");
-    sb.append("    manufactureDate: ").append(toIndentedString(manufactureDate)).append("\n");
-    sb.append("    isPowered: ").append(toIndentedString(isPowered)).append("\n");
-    sb.append("    serialNumber: ").append(toIndentedString(serialNumber)).append("\n");
     sb.append("    assetInstanceIdentifier: ").append(toIndentedString(assetInstanceIdentifier)).append("\n");
+    sb.append("    isPowered: ").append(toIndentedString(isPowered)).append("\n");
+    sb.append("    manufactureDate: ").append(toIndentedString(manufactureDate)).append("\n");
+    sb.append("    serialNumber: ").append(toIndentedString(serialNumber)).append("\n");
+    sb.append("    temperature: ").append(toIndentedString(temperature)).append("\n");
     sb.append("}");
     return sb.toString();
   }

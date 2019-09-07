@@ -17,18 +17,18 @@ import javax.validation.constraints.*;
  * TapiEthTrafficConditioningPac
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiEthTrafficConditioningPac   {
   @JsonProperty("codirectional")
   private Boolean codirectional = false;
 
-  @JsonProperty("prio-config-list")
-  @Valid
-  private List<TapiEthPriorityConfiguration> prioConfigList = null;
-
   @JsonProperty("cond-config-list")
   @Valid
   private List<TapiEthTrafficConditioningConfiguration> condConfigList = null;
+
+  @JsonProperty("prio-config-list")
+  @Valid
+  private List<TapiEthPriorityConfiguration> prioConfigList = null;
 
   public TapiEthTrafficConditioningPac codirectional(Boolean codirectional) {
     this.codirectional = codirectional;
@@ -49,33 +49,6 @@ public class TapiEthTrafficConditioningPac   {
     this.codirectional = codirectional;
   }
 
-  public TapiEthTrafficConditioningPac prioConfigList(List<TapiEthPriorityConfiguration> prioConfigList) {
-    this.prioConfigList = prioConfigList;
-    return this;
-  }
-
-  public TapiEthTrafficConditioningPac addPrioConfigListItem(TapiEthPriorityConfiguration prioConfigListItem) {
-    if (this.prioConfigList == null) {
-      this.prioConfigList = new ArrayList<TapiEthPriorityConfiguration>();
-    }
-    this.prioConfigList.add(prioConfigListItem);
-    return this;
-  }
-
-  /**
-   * This attribute indicates the Priority Splitter function for the mapping of the Ethernet frame priority (ETH_CI_P) values to the output queue.
-   * @return prioConfigList
-  **/
-  @ApiModelProperty(value = "This attribute indicates the Priority Splitter function for the mapping of the Ethernet frame priority (ETH_CI_P) values to the output queue.")
-  @Valid
-  public List<TapiEthPriorityConfiguration> getPrioConfigList() {
-    return prioConfigList;
-  }
-
-  public void setPrioConfigList(List<TapiEthPriorityConfiguration> prioConfigList) {
-    this.prioConfigList = prioConfigList;
-  }
-
   public TapiEthTrafficConditioningPac condConfigList(List<TapiEthTrafficConditioningConfiguration> condConfigList) {
     this.condConfigList = condConfigList;
     return this;
@@ -83,7 +56,7 @@ public class TapiEthTrafficConditioningPac   {
 
   public TapiEthTrafficConditioningPac addCondConfigListItem(TapiEthTrafficConditioningConfiguration condConfigListItem) {
     if (this.condConfigList == null) {
-      this.condConfigList = new ArrayList<TapiEthTrafficConditioningConfiguration>();
+      this.condConfigList = new ArrayList<>();
     }
     this.condConfigList.add(condConfigListItem);
     return this;
@@ -103,6 +76,33 @@ public class TapiEthTrafficConditioningPac   {
     this.condConfigList = condConfigList;
   }
 
+  public TapiEthTrafficConditioningPac prioConfigList(List<TapiEthPriorityConfiguration> prioConfigList) {
+    this.prioConfigList = prioConfigList;
+    return this;
+  }
+
+  public TapiEthTrafficConditioningPac addPrioConfigListItem(TapiEthPriorityConfiguration prioConfigListItem) {
+    if (this.prioConfigList == null) {
+      this.prioConfigList = new ArrayList<>();
+    }
+    this.prioConfigList.add(prioConfigListItem);
+    return this;
+  }
+
+  /**
+   * This attribute indicates the Priority Splitter function for the mapping of the Ethernet frame priority (ETH_CI_P) values to the output queue.
+   * @return prioConfigList
+  **/
+  @ApiModelProperty(value = "This attribute indicates the Priority Splitter function for the mapping of the Ethernet frame priority (ETH_CI_P) values to the output queue.")
+  @Valid
+  public List<TapiEthPriorityConfiguration> getPrioConfigList() {
+    return prioConfigList;
+  }
+
+  public void setPrioConfigList(List<TapiEthPriorityConfiguration> prioConfigList) {
+    this.prioConfigList = prioConfigList;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -114,13 +114,13 @@ public class TapiEthTrafficConditioningPac   {
     }
     TapiEthTrafficConditioningPac tapiEthTrafficConditioningPac = (TapiEthTrafficConditioningPac) o;
     return Objects.equals(this.codirectional, tapiEthTrafficConditioningPac.codirectional) &&
-        Objects.equals(this.prioConfigList, tapiEthTrafficConditioningPac.prioConfigList) &&
-        Objects.equals(this.condConfigList, tapiEthTrafficConditioningPac.condConfigList);
+        Objects.equals(this.condConfigList, tapiEthTrafficConditioningPac.condConfigList) &&
+        Objects.equals(this.prioConfigList, tapiEthTrafficConditioningPac.prioConfigList);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(codirectional, prioConfigList, condConfigList);
+    return Objects.hash(codirectional, condConfigList, prioConfigList);
   }
 
   @Override
@@ -129,8 +129,8 @@ public class TapiEthTrafficConditioningPac   {
     sb.append("class TapiEthTrafficConditioningPac {\n");
     
     sb.append("    codirectional: ").append(toIndentedString(codirectional)).append("\n");
-    sb.append("    prioConfigList: ").append(toIndentedString(prioConfigList)).append("\n");
     sb.append("    condConfigList: ").append(toIndentedString(condConfigList)).append("\n");
+    sb.append("    prioConfigList: ").append(toIndentedString(prioConfigList)).append("\n");
     sb.append("}");
     return sb.toString();
   }

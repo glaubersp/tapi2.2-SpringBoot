@@ -14,32 +14,13 @@ import javax.validation.constraints.*;
  * TapiCommonTimePeriod
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiCommonTimePeriod   {
-  @JsonProperty("value")
-  private Integer value = null;
-
   @JsonProperty("unit")
   private TapiCommonTimeUnit unit = null;
 
-  public TapiCommonTimePeriod value(Integer value) {
-    this.value = value;
-    return this;
-  }
-
-  /**
-   * none
-   * @return value
-  **/
-  @ApiModelProperty(value = "none")
-
-  public Integer getValue() {
-    return value;
-  }
-
-  public void setValue(Integer value) {
-    this.value = value;
-  }
+  @JsonProperty("value")
+  private Integer value = null;
 
   public TapiCommonTimePeriod unit(TapiCommonTimeUnit unit) {
     this.unit = unit;
@@ -61,6 +42,25 @@ public class TapiCommonTimePeriod   {
     this.unit = unit;
   }
 
+  public TapiCommonTimePeriod value(Integer value) {
+    this.value = value;
+    return this;
+  }
+
+  /**
+   * none
+   * @return value
+  **/
+  @ApiModelProperty(value = "none")
+
+  public Integer getValue() {
+    return value;
+  }
+
+  public void setValue(Integer value) {
+    this.value = value;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -71,13 +71,13 @@ public class TapiCommonTimePeriod   {
       return false;
     }
     TapiCommonTimePeriod tapiCommonTimePeriod = (TapiCommonTimePeriod) o;
-    return Objects.equals(this.value, tapiCommonTimePeriod.value) &&
-        Objects.equals(this.unit, tapiCommonTimePeriod.unit);
+    return Objects.equals(this.unit, tapiCommonTimePeriod.unit) &&
+        Objects.equals(this.value, tapiCommonTimePeriod.value);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(value, unit);
+    return Objects.hash(unit, value);
   }
 
   @Override
@@ -85,8 +85,8 @@ public class TapiCommonTimePeriod   {
     StringBuilder sb = new StringBuilder();
     sb.append("class TapiCommonTimePeriod {\n");
     
-    sb.append("    value: ").append(toIndentedString(value)).append("\n");
     sb.append("    unit: ").append(toIndentedString(unit)).append("\n");
+    sb.append("    value: ").append(toIndentedString(value)).append("\n");
     sb.append("}");
     return sb.toString();
   }

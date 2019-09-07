@@ -16,16 +16,16 @@ import javax.validation.constraints.*;
  * TapiEthEthOamService
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiEthEthOamService   {
   @JsonProperty("eth-cfm-maintenance-association")
   private TapiEthEthCfmMaintenanceAssociation ethCfmMaintenanceAssociation = null;
 
-  @JsonProperty("eth-meg-common")
-  private TapiEthEthMegCommon ethMegCommon = null;
-
   @JsonProperty("eth-cfm-maintenance-domain")
   private TapiEthEthCfmMaintenanceDomain ethCfmMaintenanceDomain = null;
+
+  @JsonProperty("eth-meg-common")
+  private TapiEthEthMegCommon ethMegCommon = null;
 
   public TapiEthEthOamService ethCfmMaintenanceAssociation(TapiEthEthCfmMaintenanceAssociation ethCfmMaintenanceAssociation) {
     this.ethCfmMaintenanceAssociation = ethCfmMaintenanceAssociation;
@@ -45,26 +45,6 @@ public class TapiEthEthOamService   {
 
   public void setEthCfmMaintenanceAssociation(TapiEthEthCfmMaintenanceAssociation ethCfmMaintenanceAssociation) {
     this.ethCfmMaintenanceAssociation = ethCfmMaintenanceAssociation;
-  }
-
-  public TapiEthEthOamService ethMegCommon(TapiEthEthMegCommon ethMegCommon) {
-    this.ethMegCommon = ethMegCommon;
-    return this;
-  }
-
-  /**
-   * Get ethMegCommon
-   * @return ethMegCommon
-  **/
-  @ApiModelProperty(value = "")
-
-  @Valid
-  public TapiEthEthMegCommon getEthMegCommon() {
-    return ethMegCommon;
-  }
-
-  public void setEthMegCommon(TapiEthEthMegCommon ethMegCommon) {
-    this.ethMegCommon = ethMegCommon;
   }
 
   public TapiEthEthOamService ethCfmMaintenanceDomain(TapiEthEthCfmMaintenanceDomain ethCfmMaintenanceDomain) {
@@ -87,6 +67,26 @@ public class TapiEthEthOamService   {
     this.ethCfmMaintenanceDomain = ethCfmMaintenanceDomain;
   }
 
+  public TapiEthEthOamService ethMegCommon(TapiEthEthMegCommon ethMegCommon) {
+    this.ethMegCommon = ethMegCommon;
+    return this;
+  }
+
+  /**
+   * Get ethMegCommon
+   * @return ethMegCommon
+  **/
+  @ApiModelProperty(value = "")
+
+  @Valid
+  public TapiEthEthMegCommon getEthMegCommon() {
+    return ethMegCommon;
+  }
+
+  public void setEthMegCommon(TapiEthEthMegCommon ethMegCommon) {
+    this.ethMegCommon = ethMegCommon;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -98,13 +98,13 @@ public class TapiEthEthOamService   {
     }
     TapiEthEthOamService tapiEthEthOamService = (TapiEthEthOamService) o;
     return Objects.equals(this.ethCfmMaintenanceAssociation, tapiEthEthOamService.ethCfmMaintenanceAssociation) &&
-        Objects.equals(this.ethMegCommon, tapiEthEthOamService.ethMegCommon) &&
-        Objects.equals(this.ethCfmMaintenanceDomain, tapiEthEthOamService.ethCfmMaintenanceDomain);
+        Objects.equals(this.ethCfmMaintenanceDomain, tapiEthEthOamService.ethCfmMaintenanceDomain) &&
+        Objects.equals(this.ethMegCommon, tapiEthEthOamService.ethMegCommon);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(ethCfmMaintenanceAssociation, ethMegCommon, ethCfmMaintenanceDomain);
+    return Objects.hash(ethCfmMaintenanceAssociation, ethCfmMaintenanceDomain, ethMegCommon);
   }
 
   @Override
@@ -113,8 +113,8 @@ public class TapiEthEthOamService   {
     sb.append("class TapiEthEthOamService {\n");
     
     sb.append("    ethCfmMaintenanceAssociation: ").append(toIndentedString(ethCfmMaintenanceAssociation)).append("\n");
-    sb.append("    ethMegCommon: ").append(toIndentedString(ethMegCommon)).append("\n");
     sb.append("    ethCfmMaintenanceDomain: ").append(toIndentedString(ethCfmMaintenanceDomain)).append("\n");
+    sb.append("    ethMegCommon: ").append(toIndentedString(ethMegCommon)).append("\n");
     sb.append("}");
     return sb.toString();
   }

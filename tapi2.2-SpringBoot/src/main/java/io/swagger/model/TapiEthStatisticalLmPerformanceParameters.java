@@ -13,13 +13,10 @@ import javax.validation.constraints.*;
  * TapiEthStatisticalLmPerformanceParameters
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiEthStatisticalLmPerformanceParameters   {
   @JsonProperty("average-frame-loss-ratio")
   private String averageFrameLossRatio = null;
-
-  @JsonProperty("unavailable-intervals")
-  private Integer unavailableIntervals = null;
 
   @JsonProperty("hli-count")
   private Integer hliCount = null;
@@ -29,6 +26,9 @@ public class TapiEthStatisticalLmPerformanceParameters   {
 
   @JsonProperty("minimum-frame-loss-ratio")
   private String minimumFrameLossRatio = null;
+
+  @JsonProperty("unavailable-intervals")
+  private Integer unavailableIntervals = null;
 
   public TapiEthStatisticalLmPerformanceParameters averageFrameLossRatio(String averageFrameLossRatio) {
     this.averageFrameLossRatio = averageFrameLossRatio;
@@ -47,25 +47,6 @@ public class TapiEthStatisticalLmPerformanceParameters   {
 
   public void setAverageFrameLossRatio(String averageFrameLossRatio) {
     this.averageFrameLossRatio = averageFrameLossRatio;
-  }
-
-  public TapiEthStatisticalLmPerformanceParameters unavailableIntervals(Integer unavailableIntervals) {
-    this.unavailableIntervals = unavailableIntervals;
-    return this;
-  }
-
-  /**
-   * A generalized UAS.                  MEF 35.1: A 32-bit counter reflecting the number of delta-t intervals evaluated as Unavailable (i.e., for which A<Controller, Responder>(delta-t) = 0).                  range of type : 0..900 for 15min interval or 0..86400 for 24 hr interval.
-   * @return unavailableIntervals
-  **/
-  @ApiModelProperty(value = "A generalized UAS.                  MEF 35.1: A 32-bit counter reflecting the number of delta-t intervals evaluated as Unavailable (i.e., for which A<Controller, Responder>(delta-t) = 0).                  range of type : 0..900 for 15min interval or 0..86400 for 24 hr interval.")
-
-  public Integer getUnavailableIntervals() {
-    return unavailableIntervals;
-  }
-
-  public void setUnavailableIntervals(Integer unavailableIntervals) {
-    this.unavailableIntervals = unavailableIntervals;
   }
 
   public TapiEthStatisticalLmPerformanceParameters hliCount(Integer hliCount) {
@@ -125,6 +106,25 @@ public class TapiEthStatisticalLmPerformanceParameters   {
     this.minimumFrameLossRatio = minimumFrameLossRatio;
   }
 
+  public TapiEthStatisticalLmPerformanceParameters unavailableIntervals(Integer unavailableIntervals) {
+    this.unavailableIntervals = unavailableIntervals;
+    return this;
+  }
+
+  /**
+   * A generalized UAS.                  MEF 35.1: A 32-bit counter reflecting the number of delta-t intervals evaluated as Unavailable (i.e., for which A<Controller, Responder>(delta-t) = 0).                  range of type : 0..900 for 15min interval or 0..86400 for 24 hr interval.
+   * @return unavailableIntervals
+  **/
+  @ApiModelProperty(value = "A generalized UAS.                  MEF 35.1: A 32-bit counter reflecting the number of delta-t intervals evaluated as Unavailable (i.e., for which A<Controller, Responder>(delta-t) = 0).                  range of type : 0..900 for 15min interval or 0..86400 for 24 hr interval.")
+
+  public Integer getUnavailableIntervals() {
+    return unavailableIntervals;
+  }
+
+  public void setUnavailableIntervals(Integer unavailableIntervals) {
+    this.unavailableIntervals = unavailableIntervals;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -136,15 +136,15 @@ public class TapiEthStatisticalLmPerformanceParameters   {
     }
     TapiEthStatisticalLmPerformanceParameters tapiEthStatisticalLmPerformanceParameters = (TapiEthStatisticalLmPerformanceParameters) o;
     return Objects.equals(this.averageFrameLossRatio, tapiEthStatisticalLmPerformanceParameters.averageFrameLossRatio) &&
-        Objects.equals(this.unavailableIntervals, tapiEthStatisticalLmPerformanceParameters.unavailableIntervals) &&
         Objects.equals(this.hliCount, tapiEthStatisticalLmPerformanceParameters.hliCount) &&
         Objects.equals(this.maximumFrameLossRatio, tapiEthStatisticalLmPerformanceParameters.maximumFrameLossRatio) &&
-        Objects.equals(this.minimumFrameLossRatio, tapiEthStatisticalLmPerformanceParameters.minimumFrameLossRatio);
+        Objects.equals(this.minimumFrameLossRatio, tapiEthStatisticalLmPerformanceParameters.minimumFrameLossRatio) &&
+        Objects.equals(this.unavailableIntervals, tapiEthStatisticalLmPerformanceParameters.unavailableIntervals);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(averageFrameLossRatio, unavailableIntervals, hliCount, maximumFrameLossRatio, minimumFrameLossRatio);
+    return Objects.hash(averageFrameLossRatio, hliCount, maximumFrameLossRatio, minimumFrameLossRatio, unavailableIntervals);
   }
 
   @Override
@@ -153,10 +153,10 @@ public class TapiEthStatisticalLmPerformanceParameters   {
     sb.append("class TapiEthStatisticalLmPerformanceParameters {\n");
     
     sb.append("    averageFrameLossRatio: ").append(toIndentedString(averageFrameLossRatio)).append("\n");
-    sb.append("    unavailableIntervals: ").append(toIndentedString(unavailableIntervals)).append("\n");
     sb.append("    hliCount: ").append(toIndentedString(hliCount)).append("\n");
     sb.append("    maximumFrameLossRatio: ").append(toIndentedString(maximumFrameLossRatio)).append("\n");
     sb.append("    minimumFrameLossRatio: ").append(toIndentedString(minimumFrameLossRatio)).append("\n");
+    sb.append("    unavailableIntervals: ").append(toIndentedString(unavailableIntervals)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -13,16 +13,35 @@ import javax.validation.constraints.*;
  * TapiEquipmentCommonHolderProperties
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiEquipmentCommonHolderProperties   {
+  @JsonProperty("holder-category")
+  private String holderCategory = null;
+
   @JsonProperty("holder-location")
   private String holderLocation = null;
 
   @JsonProperty("is-guided")
   private Boolean isGuided = false;
 
-  @JsonProperty("holder-category")
-  private String holderCategory = null;
+  public TapiEquipmentCommonHolderProperties holderCategory(String holderCategory) {
+    this.holderCategory = holderCategory;
+    return this;
+  }
+
+  /**
+   * The type of holder.
+   * @return holderCategory
+  **/
+  @ApiModelProperty(value = "The type of holder.")
+
+  public String getHolderCategory() {
+    return holderCategory;
+  }
+
+  public void setHolderCategory(String holderCategory) {
+    this.holderCategory = holderCategory;
+  }
 
   public TapiEquipmentCommonHolderProperties holderLocation(String holderLocation) {
     this.holderLocation = holderLocation;
@@ -62,25 +81,6 @@ public class TapiEquipmentCommonHolderProperties   {
     this.isGuided = isGuided;
   }
 
-  public TapiEquipmentCommonHolderProperties holderCategory(String holderCategory) {
-    this.holderCategory = holderCategory;
-    return this;
-  }
-
-  /**
-   * The type of holder.
-   * @return holderCategory
-  **/
-  @ApiModelProperty(value = "The type of holder.")
-
-  public String getHolderCategory() {
-    return holderCategory;
-  }
-
-  public void setHolderCategory(String holderCategory) {
-    this.holderCategory = holderCategory;
-  }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -91,14 +91,14 @@ public class TapiEquipmentCommonHolderProperties   {
       return false;
     }
     TapiEquipmentCommonHolderProperties tapiEquipmentCommonHolderProperties = (TapiEquipmentCommonHolderProperties) o;
-    return Objects.equals(this.holderLocation, tapiEquipmentCommonHolderProperties.holderLocation) &&
-        Objects.equals(this.isGuided, tapiEquipmentCommonHolderProperties.isGuided) &&
-        Objects.equals(this.holderCategory, tapiEquipmentCommonHolderProperties.holderCategory);
+    return Objects.equals(this.holderCategory, tapiEquipmentCommonHolderProperties.holderCategory) &&
+        Objects.equals(this.holderLocation, tapiEquipmentCommonHolderProperties.holderLocation) &&
+        Objects.equals(this.isGuided, tapiEquipmentCommonHolderProperties.isGuided);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(holderLocation, isGuided, holderCategory);
+    return Objects.hash(holderCategory, holderLocation, isGuided);
   }
 
   @Override
@@ -106,9 +106,9 @@ public class TapiEquipmentCommonHolderProperties   {
     StringBuilder sb = new StringBuilder();
     sb.append("class TapiEquipmentCommonHolderProperties {\n");
     
+    sb.append("    holderCategory: ").append(toIndentedString(holderCategory)).append("\n");
     sb.append("    holderLocation: ").append(toIndentedString(holderLocation)).append("\n");
     sb.append("    isGuided: ").append(toIndentedString(isGuided)).append("\n");
-    sb.append("    holderCategory: ").append(toIndentedString(holderCategory)).append("\n");
     sb.append("}");
     return sb.toString();
   }

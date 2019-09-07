@@ -10,9 +10,7 @@ import io.swagger.model.TapiCommonLayerProtocolName;
 import io.swagger.model.TapiCommonLifecycleState;
 import io.swagger.model.TapiCommonNameAndValue;
 import io.swagger.model.TapiCommonOperationalState;
-import io.swagger.model.TapiCommonOperationalStatePac;
 import io.swagger.model.TapiEthEthMegSpec;
-import io.swagger.model.TapiEthMegAugmentation1;
 import io.swagger.model.TapiOamGetmegOutputMegMep;
 import io.swagger.model.TapiOamGetmegOutputMegMip;
 import java.util.ArrayList;
@@ -25,19 +23,16 @@ import javax.validation.constraints.*;
  * TapiOamGetmegOutputMeg
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiOamGetmegOutputMeg extends TapiCommonGlobalClass  {
-  @JsonProperty("operational-state")
-  private TapiCommonOperationalState operationalState = null;
-
-  @JsonProperty("lifecycle-state")
-  private TapiCommonLifecycleState lifecycleState = null;
-
   @JsonProperty("eth-meg-spec")
   private TapiEthEthMegSpec ethMegSpec = null;
 
   @JsonProperty("layer-protocol-name")
   private TapiCommonLayerProtocolName layerProtocolName = null;
+
+  @JsonProperty("lifecycle-state")
+  private TapiCommonLifecycleState lifecycleState = null;
 
   @JsonProperty("mep")
   @Valid
@@ -47,45 +42,8 @@ public class TapiOamGetmegOutputMeg extends TapiCommonGlobalClass  {
   @Valid
   private List<TapiOamGetmegOutputMegMip> mip = null;
 
-  public TapiOamGetmegOutputMeg operationalState(TapiCommonOperationalState operationalState) {
-    this.operationalState = operationalState;
-    return this;
-  }
-
-  /**
-   * Get operationalState
-   * @return operationalState
-  **/
-  @ApiModelProperty(value = "")
-
-  @Valid
-  public TapiCommonOperationalState getOperationalState() {
-    return operationalState;
-  }
-
-  public void setOperationalState(TapiCommonOperationalState operationalState) {
-    this.operationalState = operationalState;
-  }
-
-  public TapiOamGetmegOutputMeg lifecycleState(TapiCommonLifecycleState lifecycleState) {
-    this.lifecycleState = lifecycleState;
-    return this;
-  }
-
-  /**
-   * Get lifecycleState
-   * @return lifecycleState
-  **/
-  @ApiModelProperty(value = "")
-
-  @Valid
-  public TapiCommonLifecycleState getLifecycleState() {
-    return lifecycleState;
-  }
-
-  public void setLifecycleState(TapiCommonLifecycleState lifecycleState) {
-    this.lifecycleState = lifecycleState;
-  }
+  @JsonProperty("operational-state")
+  private TapiCommonOperationalState operationalState = null;
 
   public TapiOamGetmegOutputMeg ethMegSpec(TapiEthEthMegSpec ethMegSpec) {
     this.ethMegSpec = ethMegSpec;
@@ -127,6 +85,26 @@ public class TapiOamGetmegOutputMeg extends TapiCommonGlobalClass  {
     this.layerProtocolName = layerProtocolName;
   }
 
+  public TapiOamGetmegOutputMeg lifecycleState(TapiCommonLifecycleState lifecycleState) {
+    this.lifecycleState = lifecycleState;
+    return this;
+  }
+
+  /**
+   * Get lifecycleState
+   * @return lifecycleState
+  **/
+  @ApiModelProperty(value = "")
+
+  @Valid
+  public TapiCommonLifecycleState getLifecycleState() {
+    return lifecycleState;
+  }
+
+  public void setLifecycleState(TapiCommonLifecycleState lifecycleState) {
+    this.lifecycleState = lifecycleState;
+  }
+
   public TapiOamGetmegOutputMeg mep(List<TapiOamGetmegOutputMegMep> mep) {
     this.mep = mep;
     return this;
@@ -134,7 +112,7 @@ public class TapiOamGetmegOutputMeg extends TapiCommonGlobalClass  {
 
   public TapiOamGetmegOutputMeg addMepItem(TapiOamGetmegOutputMegMep mepItem) {
     if (this.mep == null) {
-      this.mep = new ArrayList<TapiOamGetmegOutputMegMep>();
+      this.mep = new ArrayList<>();
     }
     this.mep.add(mepItem);
     return this;
@@ -161,7 +139,7 @@ public class TapiOamGetmegOutputMeg extends TapiCommonGlobalClass  {
 
   public TapiOamGetmegOutputMeg addMipItem(TapiOamGetmegOutputMegMip mipItem) {
     if (this.mip == null) {
-      this.mip = new ArrayList<TapiOamGetmegOutputMegMip>();
+      this.mip = new ArrayList<>();
     }
     this.mip.add(mipItem);
     return this;
@@ -181,6 +159,26 @@ public class TapiOamGetmegOutputMeg extends TapiCommonGlobalClass  {
     this.mip = mip;
   }
 
+  public TapiOamGetmegOutputMeg operationalState(TapiCommonOperationalState operationalState) {
+    this.operationalState = operationalState;
+    return this;
+  }
+
+  /**
+   * Get operationalState
+   * @return operationalState
+  **/
+  @ApiModelProperty(value = "")
+
+  @Valid
+  public TapiCommonOperationalState getOperationalState() {
+    return operationalState;
+  }
+
+  public void setOperationalState(TapiCommonOperationalState operationalState) {
+    this.operationalState = operationalState;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -191,18 +189,18 @@ public class TapiOamGetmegOutputMeg extends TapiCommonGlobalClass  {
       return false;
     }
     TapiOamGetmegOutputMeg tapiOamGetmegOutputMeg = (TapiOamGetmegOutputMeg) o;
-    return Objects.equals(this.operationalState, tapiOamGetmegOutputMeg.operationalState) &&
-        Objects.equals(this.lifecycleState, tapiOamGetmegOutputMeg.lifecycleState) &&
-        Objects.equals(this.ethMegSpec, tapiOamGetmegOutputMeg.ethMegSpec) &&
+    return Objects.equals(this.ethMegSpec, tapiOamGetmegOutputMeg.ethMegSpec) &&
         Objects.equals(this.layerProtocolName, tapiOamGetmegOutputMeg.layerProtocolName) &&
+        Objects.equals(this.lifecycleState, tapiOamGetmegOutputMeg.lifecycleState) &&
         Objects.equals(this.mep, tapiOamGetmegOutputMeg.mep) &&
         Objects.equals(this.mip, tapiOamGetmegOutputMeg.mip) &&
+        Objects.equals(this.operationalState, tapiOamGetmegOutputMeg.operationalState) &&
         super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(operationalState, lifecycleState, ethMegSpec, layerProtocolName, mep, mip, super.hashCode());
+    return Objects.hash(ethMegSpec, layerProtocolName, lifecycleState, mep, mip, operationalState, super.hashCode());
   }
 
   @Override
@@ -210,12 +208,12 @@ public class TapiOamGetmegOutputMeg extends TapiCommonGlobalClass  {
     StringBuilder sb = new StringBuilder();
     sb.append("class TapiOamGetmegOutputMeg {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    operationalState: ").append(toIndentedString(operationalState)).append("\n");
-    sb.append("    lifecycleState: ").append(toIndentedString(lifecycleState)).append("\n");
     sb.append("    ethMegSpec: ").append(toIndentedString(ethMegSpec)).append("\n");
     sb.append("    layerProtocolName: ").append(toIndentedString(layerProtocolName)).append("\n");
+    sb.append("    lifecycleState: ").append(toIndentedString(lifecycleState)).append("\n");
     sb.append("    mep: ").append(toIndentedString(mep)).append("\n");
     sb.append("    mip: ").append(toIndentedString(mip)).append("\n");
+    sb.append("    operationalState: ").append(toIndentedString(operationalState)).append("\n");
     sb.append("}");
     return sb.toString();
   }

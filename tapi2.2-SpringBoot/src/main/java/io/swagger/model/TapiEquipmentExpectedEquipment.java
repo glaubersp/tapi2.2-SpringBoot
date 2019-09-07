@@ -18,8 +18,11 @@ import javax.validation.constraints.*;
  * TapiEquipmentExpectedEquipment
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiEquipmentExpectedEquipment   {
+  @JsonProperty("common-equipment-properties")
+  private TapiEquipmentCommonEquipmentProperties commonEquipmentProperties = null;
+
   @JsonProperty("expected-holder")
   @Valid
   private List<TapiEquipmentExpectedHolder> expectedHolder = null;
@@ -28,8 +31,25 @@ public class TapiEquipmentExpectedEquipment   {
   @Valid
   private List<TapiEquipmentExpectedNonFieldReplaceableModule> expectedNonFieldReplaceableModule = null;
 
-  @JsonProperty("common-equipment-properties")
-  private TapiEquipmentCommonEquipmentProperties commonEquipmentProperties = null;
+  public TapiEquipmentExpectedEquipment commonEquipmentProperties(TapiEquipmentCommonEquipmentProperties commonEquipmentProperties) {
+    this.commonEquipmentProperties = commonEquipmentProperties;
+    return this;
+  }
+
+  /**
+   * Get commonEquipmentProperties
+   * @return commonEquipmentProperties
+  **/
+  @ApiModelProperty(value = "")
+
+  @Valid
+  public TapiEquipmentCommonEquipmentProperties getCommonEquipmentProperties() {
+    return commonEquipmentProperties;
+  }
+
+  public void setCommonEquipmentProperties(TapiEquipmentCommonEquipmentProperties commonEquipmentProperties) {
+    this.commonEquipmentProperties = commonEquipmentProperties;
+  }
 
   public TapiEquipmentExpectedEquipment expectedHolder(List<TapiEquipmentExpectedHolder> expectedHolder) {
     this.expectedHolder = expectedHolder;
@@ -38,7 +58,7 @@ public class TapiEquipmentExpectedEquipment   {
 
   public TapiEquipmentExpectedEquipment addExpectedHolderItem(TapiEquipmentExpectedHolder expectedHolderItem) {
     if (this.expectedHolder == null) {
-      this.expectedHolder = new ArrayList<TapiEquipmentExpectedHolder>();
+      this.expectedHolder = new ArrayList<>();
     }
     this.expectedHolder.add(expectedHolderItem);
     return this;
@@ -65,7 +85,7 @@ public class TapiEquipmentExpectedEquipment   {
 
   public TapiEquipmentExpectedEquipment addExpectedNonFieldReplaceableModuleItem(TapiEquipmentExpectedNonFieldReplaceableModule expectedNonFieldReplaceableModuleItem) {
     if (this.expectedNonFieldReplaceableModule == null) {
-      this.expectedNonFieldReplaceableModule = new ArrayList<TapiEquipmentExpectedNonFieldReplaceableModule>();
+      this.expectedNonFieldReplaceableModule = new ArrayList<>();
     }
     this.expectedNonFieldReplaceableModule.add(expectedNonFieldReplaceableModuleItem);
     return this;
@@ -85,26 +105,6 @@ public class TapiEquipmentExpectedEquipment   {
     this.expectedNonFieldReplaceableModule = expectedNonFieldReplaceableModule;
   }
 
-  public TapiEquipmentExpectedEquipment commonEquipmentProperties(TapiEquipmentCommonEquipmentProperties commonEquipmentProperties) {
-    this.commonEquipmentProperties = commonEquipmentProperties;
-    return this;
-  }
-
-  /**
-   * Get commonEquipmentProperties
-   * @return commonEquipmentProperties
-  **/
-  @ApiModelProperty(value = "")
-
-  @Valid
-  public TapiEquipmentCommonEquipmentProperties getCommonEquipmentProperties() {
-    return commonEquipmentProperties;
-  }
-
-  public void setCommonEquipmentProperties(TapiEquipmentCommonEquipmentProperties commonEquipmentProperties) {
-    this.commonEquipmentProperties = commonEquipmentProperties;
-  }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -115,14 +115,14 @@ public class TapiEquipmentExpectedEquipment   {
       return false;
     }
     TapiEquipmentExpectedEquipment tapiEquipmentExpectedEquipment = (TapiEquipmentExpectedEquipment) o;
-    return Objects.equals(this.expectedHolder, tapiEquipmentExpectedEquipment.expectedHolder) &&
-        Objects.equals(this.expectedNonFieldReplaceableModule, tapiEquipmentExpectedEquipment.expectedNonFieldReplaceableModule) &&
-        Objects.equals(this.commonEquipmentProperties, tapiEquipmentExpectedEquipment.commonEquipmentProperties);
+    return Objects.equals(this.commonEquipmentProperties, tapiEquipmentExpectedEquipment.commonEquipmentProperties) &&
+        Objects.equals(this.expectedHolder, tapiEquipmentExpectedEquipment.expectedHolder) &&
+        Objects.equals(this.expectedNonFieldReplaceableModule, tapiEquipmentExpectedEquipment.expectedNonFieldReplaceableModule);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(expectedHolder, expectedNonFieldReplaceableModule, commonEquipmentProperties);
+    return Objects.hash(commonEquipmentProperties, expectedHolder, expectedNonFieldReplaceableModule);
   }
 
   @Override
@@ -130,9 +130,9 @@ public class TapiEquipmentExpectedEquipment   {
     StringBuilder sb = new StringBuilder();
     sb.append("class TapiEquipmentExpectedEquipment {\n");
     
+    sb.append("    commonEquipmentProperties: ").append(toIndentedString(commonEquipmentProperties)).append("\n");
     sb.append("    expectedHolder: ").append(toIndentedString(expectedHolder)).append("\n");
     sb.append("    expectedNonFieldReplaceableModule: ").append(toIndentedString(expectedNonFieldReplaceableModule)).append("\n");
-    sb.append("    commonEquipmentProperties: ").append(toIndentedString(commonEquipmentProperties)).append("\n");
     sb.append("}");
     return sb.toString();
   }

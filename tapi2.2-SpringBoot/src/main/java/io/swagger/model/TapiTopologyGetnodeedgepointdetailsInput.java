@@ -13,16 +13,35 @@ import javax.validation.constraints.*;
  * TapiTopologyGetnodeedgepointdetailsInput
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiTopologyGetnodeedgepointdetailsInput   {
+  @JsonProperty("node-edge-point-id")
+  private String nodeEdgePointId = null;
+
   @JsonProperty("node-id")
   private String nodeId = null;
 
   @JsonProperty("topology-id")
   private String topologyId = null;
 
-  @JsonProperty("node-edge-point-id")
-  private String nodeEdgePointId = null;
+  public TapiTopologyGetnodeedgepointdetailsInput nodeEdgePointId(String nodeEdgePointId) {
+    this.nodeEdgePointId = nodeEdgePointId;
+    return this;
+  }
+
+  /**
+   * UUID: An identifier that is universally unique within an identifier space, where the identifier space is itself globally unique, and immutable.                      An UUID carries no semantics with respect to the purpose or state of the entity.                      UUID here uses string representation as defined in RFC 4122.  The canonical representation uses lowercase characters.                      Pattern: [0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-' + '[0-9a-fA-F]{4}-[0-9a-fA-F]{12}                       Example of a UUID in string representation: f81d4fae-7dec-11d0-a765-00a0c91e6bf6
+   * @return nodeEdgePointId
+  **/
+  @ApiModelProperty(value = "UUID: An identifier that is universally unique within an identifier space, where the identifier space is itself globally unique, and immutable.                      An UUID carries no semantics with respect to the purpose or state of the entity.                      UUID here uses string representation as defined in RFC 4122.  The canonical representation uses lowercase characters.                      Pattern: [0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-' + '[0-9a-fA-F]{4}-[0-9a-fA-F]{12}                       Example of a UUID in string representation: f81d4fae-7dec-11d0-a765-00a0c91e6bf6")
+
+  public String getNodeEdgePointId() {
+    return nodeEdgePointId;
+  }
+
+  public void setNodeEdgePointId(String nodeEdgePointId) {
+    this.nodeEdgePointId = nodeEdgePointId;
+  }
 
   public TapiTopologyGetnodeedgepointdetailsInput nodeId(String nodeId) {
     this.nodeId = nodeId;
@@ -62,25 +81,6 @@ public class TapiTopologyGetnodeedgepointdetailsInput   {
     this.topologyId = topologyId;
   }
 
-  public TapiTopologyGetnodeedgepointdetailsInput nodeEdgePointId(String nodeEdgePointId) {
-    this.nodeEdgePointId = nodeEdgePointId;
-    return this;
-  }
-
-  /**
-   * UUID: An identifier that is universally unique within an identifier space, where the identifier space is itself globally unique, and immutable.                      An UUID carries no semantics with respect to the purpose or state of the entity.                      UUID here uses string representation as defined in RFC 4122.  The canonical representation uses lowercase characters.                      Pattern: [0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-' + '[0-9a-fA-F]{4}-[0-9a-fA-F]{12}                       Example of a UUID in string representation: f81d4fae-7dec-11d0-a765-00a0c91e6bf6
-   * @return nodeEdgePointId
-  **/
-  @ApiModelProperty(value = "UUID: An identifier that is universally unique within an identifier space, where the identifier space is itself globally unique, and immutable.                      An UUID carries no semantics with respect to the purpose or state of the entity.                      UUID here uses string representation as defined in RFC 4122.  The canonical representation uses lowercase characters.                      Pattern: [0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-' + '[0-9a-fA-F]{4}-[0-9a-fA-F]{12}                       Example of a UUID in string representation: f81d4fae-7dec-11d0-a765-00a0c91e6bf6")
-
-  public String getNodeEdgePointId() {
-    return nodeEdgePointId;
-  }
-
-  public void setNodeEdgePointId(String nodeEdgePointId) {
-    this.nodeEdgePointId = nodeEdgePointId;
-  }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -91,14 +91,14 @@ public class TapiTopologyGetnodeedgepointdetailsInput   {
       return false;
     }
     TapiTopologyGetnodeedgepointdetailsInput tapiTopologyGetnodeedgepointdetailsInput = (TapiTopologyGetnodeedgepointdetailsInput) o;
-    return Objects.equals(this.nodeId, tapiTopologyGetnodeedgepointdetailsInput.nodeId) &&
-        Objects.equals(this.topologyId, tapiTopologyGetnodeedgepointdetailsInput.topologyId) &&
-        Objects.equals(this.nodeEdgePointId, tapiTopologyGetnodeedgepointdetailsInput.nodeEdgePointId);
+    return Objects.equals(this.nodeEdgePointId, tapiTopologyGetnodeedgepointdetailsInput.nodeEdgePointId) &&
+        Objects.equals(this.nodeId, tapiTopologyGetnodeedgepointdetailsInput.nodeId) &&
+        Objects.equals(this.topologyId, tapiTopologyGetnodeedgepointdetailsInput.topologyId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(nodeId, topologyId, nodeEdgePointId);
+    return Objects.hash(nodeEdgePointId, nodeId, topologyId);
   }
 
   @Override
@@ -106,9 +106,9 @@ public class TapiTopologyGetnodeedgepointdetailsInput   {
     StringBuilder sb = new StringBuilder();
     sb.append("class TapiTopologyGetnodeedgepointdetailsInput {\n");
     
+    sb.append("    nodeEdgePointId: ").append(toIndentedString(nodeEdgePointId)).append("\n");
     sb.append("    nodeId: ").append(toIndentedString(nodeId)).append("\n");
     sb.append("    topologyId: ").append(toIndentedString(topologyId)).append("\n");
-    sb.append("    nodeEdgePointId: ").append(toIndentedString(nodeEdgePointId)).append("\n");
     sb.append("}");
     return sb.toString();
   }

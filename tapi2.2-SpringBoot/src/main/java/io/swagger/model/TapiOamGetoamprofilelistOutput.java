@@ -16,7 +16,7 @@ import javax.validation.constraints.*;
  * TapiOamGetoamprofilelistOutput
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiOamGetoamprofilelistOutput   {
   @JsonProperty("oam-profile")
   @Valid
@@ -29,7 +29,7 @@ public class TapiOamGetoamprofilelistOutput   {
 
   public TapiOamGetoamprofilelistOutput addOamProfileItem(TapiOamOamProfile oamProfileItem) {
     if (this.oamProfile == null) {
-      this.oamProfile = new ArrayList<TapiOamOamProfile>();
+      this.oamProfile = new ArrayList<>();
     }
     this.oamProfile.add(oamProfileItem);
     return this;

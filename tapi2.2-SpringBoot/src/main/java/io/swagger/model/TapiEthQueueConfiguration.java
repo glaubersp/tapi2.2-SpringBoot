@@ -13,34 +13,34 @@ import javax.validation.constraints.*;
  * TapiEthQueueConfiguration
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiEthQueueConfiguration   {
-  @JsonProperty("queue-threshold")
-  private Integer queueThreshold = null;
+  @JsonProperty("queue-depth")
+  private Integer queueDepth = null;
 
   @JsonProperty("queue-id")
   private Integer queueId = null;
 
-  @JsonProperty("queue-depth")
-  private Integer queueDepth = null;
+  @JsonProperty("queue-threshold")
+  private Integer queueThreshold = null;
 
-  public TapiEthQueueConfiguration queueThreshold(Integer queueThreshold) {
-    this.queueThreshold = queueThreshold;
+  public TapiEthQueueConfiguration queueDepth(Integer queueDepth) {
+    this.queueDepth = queueDepth;
     return this;
   }
 
   /**
-   * This attribute defines the threshold of the queue in bytes.
-   * @return queueThreshold
+   * This attribute defines the depth of the queue in bytes.
+   * @return queueDepth
   **/
-  @ApiModelProperty(value = "This attribute defines the threshold of the queue in bytes.")
+  @ApiModelProperty(value = "This attribute defines the depth of the queue in bytes.")
 
-  public Integer getQueueThreshold() {
-    return queueThreshold;
+  public Integer getQueueDepth() {
+    return queueDepth;
   }
 
-  public void setQueueThreshold(Integer queueThreshold) {
-    this.queueThreshold = queueThreshold;
+  public void setQueueDepth(Integer queueDepth) {
+    this.queueDepth = queueDepth;
   }
 
   public TapiEthQueueConfiguration queueId(Integer queueId) {
@@ -62,23 +62,23 @@ public class TapiEthQueueConfiguration   {
     this.queueId = queueId;
   }
 
-  public TapiEthQueueConfiguration queueDepth(Integer queueDepth) {
-    this.queueDepth = queueDepth;
+  public TapiEthQueueConfiguration queueThreshold(Integer queueThreshold) {
+    this.queueThreshold = queueThreshold;
     return this;
   }
 
   /**
-   * This attribute defines the depth of the queue in bytes.
-   * @return queueDepth
+   * This attribute defines the threshold of the queue in bytes.
+   * @return queueThreshold
   **/
-  @ApiModelProperty(value = "This attribute defines the depth of the queue in bytes.")
+  @ApiModelProperty(value = "This attribute defines the threshold of the queue in bytes.")
 
-  public Integer getQueueDepth() {
-    return queueDepth;
+  public Integer getQueueThreshold() {
+    return queueThreshold;
   }
 
-  public void setQueueDepth(Integer queueDepth) {
-    this.queueDepth = queueDepth;
+  public void setQueueThreshold(Integer queueThreshold) {
+    this.queueThreshold = queueThreshold;
   }
 
 
@@ -91,14 +91,14 @@ public class TapiEthQueueConfiguration   {
       return false;
     }
     TapiEthQueueConfiguration tapiEthQueueConfiguration = (TapiEthQueueConfiguration) o;
-    return Objects.equals(this.queueThreshold, tapiEthQueueConfiguration.queueThreshold) &&
+    return Objects.equals(this.queueDepth, tapiEthQueueConfiguration.queueDepth) &&
         Objects.equals(this.queueId, tapiEthQueueConfiguration.queueId) &&
-        Objects.equals(this.queueDepth, tapiEthQueueConfiguration.queueDepth);
+        Objects.equals(this.queueThreshold, tapiEthQueueConfiguration.queueThreshold);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(queueThreshold, queueId, queueDepth);
+    return Objects.hash(queueDepth, queueId, queueThreshold);
   }
 
   @Override
@@ -106,9 +106,9 @@ public class TapiEthQueueConfiguration   {
     StringBuilder sb = new StringBuilder();
     sb.append("class TapiEthQueueConfiguration {\n");
     
-    sb.append("    queueThreshold: ").append(toIndentedString(queueThreshold)).append("\n");
-    sb.append("    queueId: ").append(toIndentedString(queueId)).append("\n");
     sb.append("    queueDepth: ").append(toIndentedString(queueDepth)).append("\n");
+    sb.append("    queueId: ").append(toIndentedString(queueId)).append("\n");
+    sb.append("    queueThreshold: ").append(toIndentedString(queueThreshold)).append("\n");
     sb.append("}");
     return sb.toString();
   }

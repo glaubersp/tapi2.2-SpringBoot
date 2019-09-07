@@ -16,16 +16,16 @@ import javax.validation.constraints.*;
  * TapiOamTcaInfo
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiOamTcaInfo   {
-  @JsonProperty("oam-job")
-  private TapiOamOamJobRef oamJob = null;
-
-  @JsonProperty("threshold-parameter")
-  private TapiOamThresholdParameter thresholdParameter = null;
-
   @JsonProperty("is-transient")
   private Boolean isTransient = false;
+
+  @JsonProperty("measurement-interval")
+  private String measurementInterval = null;
+
+  @JsonProperty("oam-job")
+  private TapiOamOamJobRef oamJob = null;
 
   @JsonProperty("perceived-severity")
   private TapiOamPerceivedTcaSeverity perceivedSeverity = null;
@@ -33,8 +33,46 @@ public class TapiOamTcaInfo   {
   @JsonProperty("suspect-interval-flag")
   private Boolean suspectIntervalFlag = false;
 
-  @JsonProperty("measurement-interval")
-  private String measurementInterval = null;
+  @JsonProperty("threshold-parameter")
+  private TapiOamThresholdParameter thresholdParameter = null;
+
+  public TapiOamTcaInfo isTransient(Boolean isTransient) {
+    this.isTransient = isTransient;
+    return this;
+  }
+
+  /**
+   * none
+   * @return isTransient
+  **/
+  @ApiModelProperty(value = "none")
+
+  public Boolean isIsTransient() {
+    return isTransient;
+  }
+
+  public void setIsTransient(Boolean isTransient) {
+    this.isTransient = isTransient;
+  }
+
+  public TapiOamTcaInfo measurementInterval(String measurementInterval) {
+    this.measurementInterval = measurementInterval;
+    return this;
+  }
+
+  /**
+   * none
+   * @return measurementInterval
+  **/
+  @ApiModelProperty(value = "none")
+
+  public String getMeasurementInterval() {
+    return measurementInterval;
+  }
+
+  public void setMeasurementInterval(String measurementInterval) {
+    this.measurementInterval = measurementInterval;
+  }
 
   public TapiOamTcaInfo oamJob(TapiOamOamJobRef oamJob) {
     this.oamJob = oamJob;
@@ -54,45 +92,6 @@ public class TapiOamTcaInfo   {
 
   public void setOamJob(TapiOamOamJobRef oamJob) {
     this.oamJob = oamJob;
-  }
-
-  public TapiOamTcaInfo thresholdParameter(TapiOamThresholdParameter thresholdParameter) {
-    this.thresholdParameter = thresholdParameter;
-    return this;
-  }
-
-  /**
-   * Get thresholdParameter
-   * @return thresholdParameter
-  **/
-  @ApiModelProperty(value = "")
-
-  @Valid
-  public TapiOamThresholdParameter getThresholdParameter() {
-    return thresholdParameter;
-  }
-
-  public void setThresholdParameter(TapiOamThresholdParameter thresholdParameter) {
-    this.thresholdParameter = thresholdParameter;
-  }
-
-  public TapiOamTcaInfo isTransient(Boolean isTransient) {
-    this.isTransient = isTransient;
-    return this;
-  }
-
-  /**
-   * none
-   * @return isTransient
-  **/
-  @ApiModelProperty(value = "none")
-
-  public Boolean isIsTransient() {
-    return isTransient;
-  }
-
-  public void setIsTransient(Boolean isTransient) {
-    this.isTransient = isTransient;
   }
 
   public TapiOamTcaInfo perceivedSeverity(TapiOamPerceivedTcaSeverity perceivedSeverity) {
@@ -134,23 +133,24 @@ public class TapiOamTcaInfo   {
     this.suspectIntervalFlag = suspectIntervalFlag;
   }
 
-  public TapiOamTcaInfo measurementInterval(String measurementInterval) {
-    this.measurementInterval = measurementInterval;
+  public TapiOamTcaInfo thresholdParameter(TapiOamThresholdParameter thresholdParameter) {
+    this.thresholdParameter = thresholdParameter;
     return this;
   }
 
   /**
-   * none
-   * @return measurementInterval
+   * Get thresholdParameter
+   * @return thresholdParameter
   **/
-  @ApiModelProperty(value = "none")
+  @ApiModelProperty(value = "")
 
-  public String getMeasurementInterval() {
-    return measurementInterval;
+  @Valid
+  public TapiOamThresholdParameter getThresholdParameter() {
+    return thresholdParameter;
   }
 
-  public void setMeasurementInterval(String measurementInterval) {
-    this.measurementInterval = measurementInterval;
+  public void setThresholdParameter(TapiOamThresholdParameter thresholdParameter) {
+    this.thresholdParameter = thresholdParameter;
   }
 
 
@@ -163,17 +163,17 @@ public class TapiOamTcaInfo   {
       return false;
     }
     TapiOamTcaInfo tapiOamTcaInfo = (TapiOamTcaInfo) o;
-    return Objects.equals(this.oamJob, tapiOamTcaInfo.oamJob) &&
-        Objects.equals(this.thresholdParameter, tapiOamTcaInfo.thresholdParameter) &&
-        Objects.equals(this.isTransient, tapiOamTcaInfo.isTransient) &&
+    return Objects.equals(this.isTransient, tapiOamTcaInfo.isTransient) &&
+        Objects.equals(this.measurementInterval, tapiOamTcaInfo.measurementInterval) &&
+        Objects.equals(this.oamJob, tapiOamTcaInfo.oamJob) &&
         Objects.equals(this.perceivedSeverity, tapiOamTcaInfo.perceivedSeverity) &&
         Objects.equals(this.suspectIntervalFlag, tapiOamTcaInfo.suspectIntervalFlag) &&
-        Objects.equals(this.measurementInterval, tapiOamTcaInfo.measurementInterval);
+        Objects.equals(this.thresholdParameter, tapiOamTcaInfo.thresholdParameter);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(oamJob, thresholdParameter, isTransient, perceivedSeverity, suspectIntervalFlag, measurementInterval);
+    return Objects.hash(isTransient, measurementInterval, oamJob, perceivedSeverity, suspectIntervalFlag, thresholdParameter);
   }
 
   @Override
@@ -181,12 +181,12 @@ public class TapiOamTcaInfo   {
     StringBuilder sb = new StringBuilder();
     sb.append("class TapiOamTcaInfo {\n");
     
-    sb.append("    oamJob: ").append(toIndentedString(oamJob)).append("\n");
-    sb.append("    thresholdParameter: ").append(toIndentedString(thresholdParameter)).append("\n");
     sb.append("    isTransient: ").append(toIndentedString(isTransient)).append("\n");
+    sb.append("    measurementInterval: ").append(toIndentedString(measurementInterval)).append("\n");
+    sb.append("    oamJob: ").append(toIndentedString(oamJob)).append("\n");
     sb.append("    perceivedSeverity: ").append(toIndentedString(perceivedSeverity)).append("\n");
     sb.append("    suspectIntervalFlag: ").append(toIndentedString(suspectIntervalFlag)).append("\n");
-    sb.append("    measurementInterval: ").append(toIndentedString(measurementInterval)).append("\n");
+    sb.append("    thresholdParameter: ").append(toIndentedString(thresholdParameter)).append("\n");
     sb.append("}");
     return sb.toString();
   }

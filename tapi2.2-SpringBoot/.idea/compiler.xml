@@ -6,8 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="swagger-spring-tapi2.2" />
+        <module name="tapi2.2-SpringBoot" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="tapi2.2-SpringBoot" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

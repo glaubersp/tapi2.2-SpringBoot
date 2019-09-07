@@ -19,7 +19,7 @@ import javax.validation.constraints.*;
  * TapiEquipmentPhysicalContext
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiEquipmentPhysicalContext extends TapiCommonGlobalClass  {
   @JsonProperty("device")
   @Valid
@@ -36,7 +36,7 @@ public class TapiEquipmentPhysicalContext extends TapiCommonGlobalClass  {
 
   public TapiEquipmentPhysicalContext addDeviceItem(TapiEquipmentDevice deviceItem) {
     if (this.device == null) {
-      this.device = new ArrayList<TapiEquipmentDevice>();
+      this.device = new ArrayList<>();
     }
     this.device.add(deviceItem);
     return this;
@@ -63,7 +63,7 @@ public class TapiEquipmentPhysicalContext extends TapiCommonGlobalClass  {
 
   public TapiEquipmentPhysicalContext addPhysicalSpanItem(TapiEquipmentPhysicalSpan physicalSpanItem) {
     if (this.physicalSpan == null) {
-      this.physicalSpan = new ArrayList<TapiEquipmentPhysicalSpan>();
+      this.physicalSpan = new ArrayList<>();
     }
     this.physicalSpan.add(physicalSpanItem);
     return this;

@@ -8,6 +8,10 @@ import io.swagger.model.TapiConnectivityGetConnectionEndPointDetails;
 import io.swagger.model.TapiConnectivityGetConnectivityServiceDetails;
 import io.swagger.model.TapiConnectivityGetConnectivityServiceList;
 import io.swagger.model.TapiConnectivityUpdateConnectivityService;
+import io.swagger.model.TapiEquipmentGetDevice;
+import io.swagger.model.TapiEquipmentGetDeviceList;
+import io.swagger.model.TapiEquipmentGetPhysicalSpan;
+import io.swagger.model.TapiEquipmentGetPhysicalSpanList;
 import io.swagger.model.TapiNotificationCreateNotificationSubscriptionService;
 import io.swagger.model.TapiNotificationGetNotificationList;
 import io.swagger.model.TapiNotificationGetNotificationSubscriptionServiceDetails;
@@ -202,6 +206,19 @@ public class OperationsApiControllerIntegrationTest {
     }
 
     @Test
+    public void operationsGetDeviceListPostTest() throws Exception {
+        ResponseEntity<TapiEquipmentGetDeviceList> responseEntity = api.operationsGetDeviceListPost();
+        assertEquals(HttpStatus.NOT_IMPLEMENTED, responseEntity.getStatusCode());
+    }
+
+    @Test
+    public void operationsGetDevicePostTest() throws Exception {
+        Object body = null;
+        ResponseEntity<TapiEquipmentGetDevice> responseEntity = api.operationsGetDevicePost(body);
+        assertEquals(HttpStatus.NOT_IMPLEMENTED, responseEntity.getStatusCode());
+    }
+
+    @Test
     public void operationsGetLinkDetailsPostTest() throws Exception {
         Object body = null;
         ResponseEntity<TapiTopologyGetLinkDetails> responseEntity = api.operationsGetLinkDetailsPost(body);
@@ -292,6 +309,19 @@ public class OperationsApiControllerIntegrationTest {
     public void operationsGetOamServicePostTest() throws Exception {
         Object body = null;
         ResponseEntity<TapiOamGetOamService> responseEntity = api.operationsGetOamServicePost(body);
+        assertEquals(HttpStatus.NOT_IMPLEMENTED, responseEntity.getStatusCode());
+    }
+
+    @Test
+    public void operationsGetPhysicalSpanListPostTest() throws Exception {
+        ResponseEntity<TapiEquipmentGetPhysicalSpanList> responseEntity = api.operationsGetPhysicalSpanListPost();
+        assertEquals(HttpStatus.NOT_IMPLEMENTED, responseEntity.getStatusCode());
+    }
+
+    @Test
+    public void operationsGetPhysicalSpanPostTest() throws Exception {
+        Object body = null;
+        ResponseEntity<TapiEquipmentGetPhysicalSpan> responseEntity = api.operationsGetPhysicalSpanPost(body);
         assertEquals(HttpStatus.NOT_IMPLEMENTED, responseEntity.getStatusCode());
     }
 

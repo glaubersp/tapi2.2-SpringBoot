@@ -18,7 +18,7 @@ import javax.validation.constraints.*;
  * TapiConnectivityRoute
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiConnectivityRoute extends TapiCommonLocalClass  {
   @JsonProperty("connection-end-point")
   @Valid
@@ -31,7 +31,7 @@ public class TapiConnectivityRoute extends TapiCommonLocalClass  {
 
   public TapiConnectivityRoute addConnectionEndPointItem(TapiConnectivityConnectionEndPointRef connectionEndPointItem) {
     if (this.connectionEndPoint == null) {
-      this.connectionEndPoint = new ArrayList<TapiConnectivityConnectionEndPointRef>();
+      this.connectionEndPoint = new ArrayList<>();
     }
     this.connectionEndPoint.add(connectionEndPointItem);
     return this;

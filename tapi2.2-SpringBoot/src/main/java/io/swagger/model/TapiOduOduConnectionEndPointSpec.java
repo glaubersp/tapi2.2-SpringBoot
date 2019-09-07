@@ -17,11 +17,8 @@ import javax.validation.constraints.*;
  * TapiOduOduConnectionEndPointSpec
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiOduOduConnectionEndPointSpec   {
-  @JsonProperty("odu-term-and-adapter")
-  private TapiOduOduTerminationAndClientAdaptationPac oduTermAndAdapter = null;
-
   @JsonProperty("odu-common")
   private TapiOduOduCommonPac oduCommon = null;
 
@@ -31,25 +28,8 @@ public class TapiOduOduConnectionEndPointSpec   {
   @JsonProperty("odu-protection")
   private TapiOduOduProtectionPac oduProtection = null;
 
-  public TapiOduOduConnectionEndPointSpec oduTermAndAdapter(TapiOduOduTerminationAndClientAdaptationPac oduTermAndAdapter) {
-    this.oduTermAndAdapter = oduTermAndAdapter;
-    return this;
-  }
-
-  /**
-   * Get oduTermAndAdapter
-   * @return oduTermAndAdapter
-  **/
-  @ApiModelProperty(value = "")
-
-  @Valid
-  public TapiOduOduTerminationAndClientAdaptationPac getOduTermAndAdapter() {
-    return oduTermAndAdapter;
-  }
-
-  public void setOduTermAndAdapter(TapiOduOduTerminationAndClientAdaptationPac oduTermAndAdapter) {
-    this.oduTermAndAdapter = oduTermAndAdapter;
-  }
+  @JsonProperty("odu-term-and-adapter")
+  private TapiOduOduTerminationAndClientAdaptationPac oduTermAndAdapter = null;
 
   public TapiOduOduConnectionEndPointSpec oduCommon(TapiOduOduCommonPac oduCommon) {
     this.oduCommon = oduCommon;
@@ -111,6 +91,26 @@ public class TapiOduOduConnectionEndPointSpec   {
     this.oduProtection = oduProtection;
   }
 
+  public TapiOduOduConnectionEndPointSpec oduTermAndAdapter(TapiOduOduTerminationAndClientAdaptationPac oduTermAndAdapter) {
+    this.oduTermAndAdapter = oduTermAndAdapter;
+    return this;
+  }
+
+  /**
+   * Get oduTermAndAdapter
+   * @return oduTermAndAdapter
+  **/
+  @ApiModelProperty(value = "")
+
+  @Valid
+  public TapiOduOduTerminationAndClientAdaptationPac getOduTermAndAdapter() {
+    return oduTermAndAdapter;
+  }
+
+  public void setOduTermAndAdapter(TapiOduOduTerminationAndClientAdaptationPac oduTermAndAdapter) {
+    this.oduTermAndAdapter = oduTermAndAdapter;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -121,15 +121,15 @@ public class TapiOduOduConnectionEndPointSpec   {
       return false;
     }
     TapiOduOduConnectionEndPointSpec tapiOduOduConnectionEndPointSpec = (TapiOduOduConnectionEndPointSpec) o;
-    return Objects.equals(this.oduTermAndAdapter, tapiOduOduConnectionEndPointSpec.oduTermAndAdapter) &&
-        Objects.equals(this.oduCommon, tapiOduOduConnectionEndPointSpec.oduCommon) &&
+    return Objects.equals(this.oduCommon, tapiOduOduConnectionEndPointSpec.oduCommon) &&
         Objects.equals(this.oduCtp, tapiOduOduConnectionEndPointSpec.oduCtp) &&
-        Objects.equals(this.oduProtection, tapiOduOduConnectionEndPointSpec.oduProtection);
+        Objects.equals(this.oduProtection, tapiOduOduConnectionEndPointSpec.oduProtection) &&
+        Objects.equals(this.oduTermAndAdapter, tapiOduOduConnectionEndPointSpec.oduTermAndAdapter);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(oduTermAndAdapter, oduCommon, oduCtp, oduProtection);
+    return Objects.hash(oduCommon, oduCtp, oduProtection, oduTermAndAdapter);
   }
 
   @Override
@@ -137,10 +137,10 @@ public class TapiOduOduConnectionEndPointSpec   {
     StringBuilder sb = new StringBuilder();
     sb.append("class TapiOduOduConnectionEndPointSpec {\n");
     
-    sb.append("    oduTermAndAdapter: ").append(toIndentedString(oduTermAndAdapter)).append("\n");
     sb.append("    oduCommon: ").append(toIndentedString(oduCommon)).append("\n");
     sb.append("    oduCtp: ").append(toIndentedString(oduCtp)).append("\n");
     sb.append("    oduProtection: ").append(toIndentedString(oduProtection)).append("\n");
+    sb.append("    oduTermAndAdapter: ").append(toIndentedString(oduTermAndAdapter)).append("\n");
     sb.append("}");
     return sb.toString();
   }

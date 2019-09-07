@@ -19,36 +19,16 @@ import javax.validation.constraints.*;
  * TapiEquipmentHolder
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiEquipmentHolder extends TapiCommonGlobalClass  {
-  @JsonProperty("expected-holder")
-  private TapiEquipmentExpectedHolder expectedHolder = null;
-
   @JsonProperty("actual-holder")
   private TapiEquipmentActualHolder actualHolder = null;
 
+  @JsonProperty("expected-holder")
+  private TapiEquipmentExpectedHolder expectedHolder = null;
+
   @JsonProperty("occupying-fru")
   private TapiEquipmentEquipmentRef occupyingFru = null;
-
-  public TapiEquipmentHolder expectedHolder(TapiEquipmentExpectedHolder expectedHolder) {
-    this.expectedHolder = expectedHolder;
-    return this;
-  }
-
-  /**
-   * Get expectedHolder
-   * @return expectedHolder
-  **/
-  @ApiModelProperty(value = "")
-
-  @Valid
-  public TapiEquipmentExpectedHolder getExpectedHolder() {
-    return expectedHolder;
-  }
-
-  public void setExpectedHolder(TapiEquipmentExpectedHolder expectedHolder) {
-    this.expectedHolder = expectedHolder;
-  }
 
   public TapiEquipmentHolder actualHolder(TapiEquipmentActualHolder actualHolder) {
     this.actualHolder = actualHolder;
@@ -68,6 +48,26 @@ public class TapiEquipmentHolder extends TapiCommonGlobalClass  {
 
   public void setActualHolder(TapiEquipmentActualHolder actualHolder) {
     this.actualHolder = actualHolder;
+  }
+
+  public TapiEquipmentHolder expectedHolder(TapiEquipmentExpectedHolder expectedHolder) {
+    this.expectedHolder = expectedHolder;
+    return this;
+  }
+
+  /**
+   * Get expectedHolder
+   * @return expectedHolder
+  **/
+  @ApiModelProperty(value = "")
+
+  @Valid
+  public TapiEquipmentExpectedHolder getExpectedHolder() {
+    return expectedHolder;
+  }
+
+  public void setExpectedHolder(TapiEquipmentExpectedHolder expectedHolder) {
+    this.expectedHolder = expectedHolder;
   }
 
   public TapiEquipmentHolder occupyingFru(TapiEquipmentEquipmentRef occupyingFru) {
@@ -100,15 +100,15 @@ public class TapiEquipmentHolder extends TapiCommonGlobalClass  {
       return false;
     }
     TapiEquipmentHolder tapiEquipmentHolder = (TapiEquipmentHolder) o;
-    return Objects.equals(this.expectedHolder, tapiEquipmentHolder.expectedHolder) &&
-        Objects.equals(this.actualHolder, tapiEquipmentHolder.actualHolder) &&
+    return Objects.equals(this.actualHolder, tapiEquipmentHolder.actualHolder) &&
+        Objects.equals(this.expectedHolder, tapiEquipmentHolder.expectedHolder) &&
         Objects.equals(this.occupyingFru, tapiEquipmentHolder.occupyingFru) &&
         super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(expectedHolder, actualHolder, occupyingFru, super.hashCode());
+    return Objects.hash(actualHolder, expectedHolder, occupyingFru, super.hashCode());
   }
 
   @Override
@@ -116,8 +116,8 @@ public class TapiEquipmentHolder extends TapiCommonGlobalClass  {
     StringBuilder sb = new StringBuilder();
     sb.append("class TapiEquipmentHolder {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    expectedHolder: ").append(toIndentedString(expectedHolder)).append("\n");
     sb.append("    actualHolder: ").append(toIndentedString(actualHolder)).append("\n");
+    sb.append("    expectedHolder: ").append(toIndentedString(expectedHolder)).append("\n");
     sb.append("    occupyingFru: ").append(toIndentedString(occupyingFru)).append("\n");
     sb.append("}");
     return sb.toString();

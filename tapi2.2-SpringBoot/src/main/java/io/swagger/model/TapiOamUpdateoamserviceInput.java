@@ -18,7 +18,7 @@ import javax.validation.constraints.*;
  * TapiOamUpdateoamserviceInput
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiOamUpdateoamserviceInput   {
   @JsonProperty("name")
   @Valid
@@ -41,7 +41,7 @@ public class TapiOamUpdateoamserviceInput   {
 
   public TapiOamUpdateoamserviceInput addNameItem(TapiCommonNameAndValue nameItem) {
     if (this.name == null) {
-      this.name = new ArrayList<TapiCommonNameAndValue>();
+      this.name = new ArrayList<>();
     }
     this.name.add(nameItem);
     return this;
@@ -68,7 +68,7 @@ public class TapiOamUpdateoamserviceInput   {
 
   public TapiOamUpdateoamserviceInput addOamServicePointItem(TapiOamCreateoamserviceInputOamServicePoint oamServicePointItem) {
     if (this.oamServicePoint == null) {
-      this.oamServicePoint = new ArrayList<TapiOamCreateoamserviceInputOamServicePoint>();
+      this.oamServicePoint = new ArrayList<>();
     }
     this.oamServicePoint.add(oamServicePointItem);
     return this;

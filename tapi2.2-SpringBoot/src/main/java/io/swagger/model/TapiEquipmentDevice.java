@@ -19,42 +19,15 @@ import javax.validation.constraints.*;
  * TapiEquipmentDevice
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiEquipmentDevice extends TapiCommonGlobalClass  {
-  @JsonProperty("equipment")
-  @Valid
-  private List<TapiEquipmentEquipment> equipment = null;
-
   @JsonProperty("access-port")
   @Valid
   private List<TapiEquipmentAccessPort> accessPort = null;
 
-  public TapiEquipmentDevice equipment(List<TapiEquipmentEquipment> equipment) {
-    this.equipment = equipment;
-    return this;
-  }
-
-  public TapiEquipmentDevice addEquipmentItem(TapiEquipmentEquipment equipmentItem) {
-    if (this.equipment == null) {
-      this.equipment = new ArrayList<TapiEquipmentEquipment>();
-    }
-    this.equipment.add(equipmentItem);
-    return this;
-  }
-
-  /**
-   * none
-   * @return equipment
-  **/
-  @ApiModelProperty(value = "none")
+  @JsonProperty("equipment")
   @Valid
-  public List<TapiEquipmentEquipment> getEquipment() {
-    return equipment;
-  }
-
-  public void setEquipment(List<TapiEquipmentEquipment> equipment) {
-    this.equipment = equipment;
-  }
+  private List<TapiEquipmentEquipment> equipment = null;
 
   public TapiEquipmentDevice accessPort(List<TapiEquipmentAccessPort> accessPort) {
     this.accessPort = accessPort;
@@ -63,7 +36,7 @@ public class TapiEquipmentDevice extends TapiCommonGlobalClass  {
 
   public TapiEquipmentDevice addAccessPortItem(TapiEquipmentAccessPort accessPortItem) {
     if (this.accessPort == null) {
-      this.accessPort = new ArrayList<TapiEquipmentAccessPort>();
+      this.accessPort = new ArrayList<>();
     }
     this.accessPort.add(accessPortItem);
     return this;
@@ -83,6 +56,33 @@ public class TapiEquipmentDevice extends TapiCommonGlobalClass  {
     this.accessPort = accessPort;
   }
 
+  public TapiEquipmentDevice equipment(List<TapiEquipmentEquipment> equipment) {
+    this.equipment = equipment;
+    return this;
+  }
+
+  public TapiEquipmentDevice addEquipmentItem(TapiEquipmentEquipment equipmentItem) {
+    if (this.equipment == null) {
+      this.equipment = new ArrayList<>();
+    }
+    this.equipment.add(equipmentItem);
+    return this;
+  }
+
+  /**
+   * none
+   * @return equipment
+  **/
+  @ApiModelProperty(value = "none")
+  @Valid
+  public List<TapiEquipmentEquipment> getEquipment() {
+    return equipment;
+  }
+
+  public void setEquipment(List<TapiEquipmentEquipment> equipment) {
+    this.equipment = equipment;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -93,14 +93,14 @@ public class TapiEquipmentDevice extends TapiCommonGlobalClass  {
       return false;
     }
     TapiEquipmentDevice tapiEquipmentDevice = (TapiEquipmentDevice) o;
-    return Objects.equals(this.equipment, tapiEquipmentDevice.equipment) &&
-        Objects.equals(this.accessPort, tapiEquipmentDevice.accessPort) &&
+    return Objects.equals(this.accessPort, tapiEquipmentDevice.accessPort) &&
+        Objects.equals(this.equipment, tapiEquipmentDevice.equipment) &&
         super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(equipment, accessPort, super.hashCode());
+    return Objects.hash(accessPort, equipment, super.hashCode());
   }
 
   @Override
@@ -108,8 +108,8 @@ public class TapiEquipmentDevice extends TapiCommonGlobalClass  {
     StringBuilder sb = new StringBuilder();
     sb.append("class TapiEquipmentDevice {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    equipment: ").append(toIndentedString(equipment)).append("\n");
     sb.append("    accessPort: ").append(toIndentedString(accessPort)).append("\n");
+    sb.append("    equipment: ").append(toIndentedString(equipment)).append("\n");
     sb.append("}");
     return sb.toString();
   }

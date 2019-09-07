@@ -15,19 +15,38 @@ import javax.validation.constraints.*;
  * TapiEthEthProActiveMeasurementJobControlSource
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiEthEthProActiveMeasurementJobControlSource extends TapiEthEthMeasurementJobControlCommon  {
+  @JsonProperty("controller-mep-id")
+  private Integer controllerMepId = null;
+
   @JsonProperty("data-tlv-length")
   private Integer dataTlvLength = null;
 
   @JsonProperty("destination-address")
   private String destinationAddress = null;
 
-  @JsonProperty("controller-mep-id")
-  private Integer controllerMepId = null;
-
   @JsonProperty("is-enabled")
   private Boolean isEnabled = true;
+
+  public TapiEthEthProActiveMeasurementJobControlSource controllerMepId(Integer controllerMepId) {
+    this.controllerMepId = controllerMepId;
+    return this;
+  }
+
+  /**
+   * none
+   * @return controllerMepId
+  **/
+  @ApiModelProperty(value = "none")
+
+  public Integer getControllerMepId() {
+    return controllerMepId;
+  }
+
+  public void setControllerMepId(Integer controllerMepId) {
+    this.controllerMepId = controllerMepId;
+  }
 
   public TapiEthEthProActiveMeasurementJobControlSource dataTlvLength(Integer dataTlvLength) {
     this.dataTlvLength = dataTlvLength;
@@ -67,25 +86,6 @@ public class TapiEthEthProActiveMeasurementJobControlSource extends TapiEthEthMe
     this.destinationAddress = destinationAddress;
   }
 
-  public TapiEthEthProActiveMeasurementJobControlSource controllerMepId(Integer controllerMepId) {
-    this.controllerMepId = controllerMepId;
-    return this;
-  }
-
-  /**
-   * none
-   * @return controllerMepId
-  **/
-  @ApiModelProperty(value = "none")
-
-  public Integer getControllerMepId() {
-    return controllerMepId;
-  }
-
-  public void setControllerMepId(Integer controllerMepId) {
-    this.controllerMepId = controllerMepId;
-  }
-
   public TapiEthEthProActiveMeasurementJobControlSource isEnabled(Boolean isEnabled) {
     this.isEnabled = isEnabled;
     return this;
@@ -115,16 +115,16 @@ public class TapiEthEthProActiveMeasurementJobControlSource extends TapiEthEthMe
       return false;
     }
     TapiEthEthProActiveMeasurementJobControlSource tapiEthEthProActiveMeasurementJobControlSource = (TapiEthEthProActiveMeasurementJobControlSource) o;
-    return Objects.equals(this.dataTlvLength, tapiEthEthProActiveMeasurementJobControlSource.dataTlvLength) &&
+    return Objects.equals(this.controllerMepId, tapiEthEthProActiveMeasurementJobControlSource.controllerMepId) &&
+        Objects.equals(this.dataTlvLength, tapiEthEthProActiveMeasurementJobControlSource.dataTlvLength) &&
         Objects.equals(this.destinationAddress, tapiEthEthProActiveMeasurementJobControlSource.destinationAddress) &&
-        Objects.equals(this.controllerMepId, tapiEthEthProActiveMeasurementJobControlSource.controllerMepId) &&
         Objects.equals(this.isEnabled, tapiEthEthProActiveMeasurementJobControlSource.isEnabled) &&
         super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(dataTlvLength, destinationAddress, controllerMepId, isEnabled, super.hashCode());
+    return Objects.hash(controllerMepId, dataTlvLength, destinationAddress, isEnabled, super.hashCode());
   }
 
   @Override
@@ -132,9 +132,9 @@ public class TapiEthEthProActiveMeasurementJobControlSource extends TapiEthEthMe
     StringBuilder sb = new StringBuilder();
     sb.append("class TapiEthEthProActiveMeasurementJobControlSource {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    controllerMepId: ").append(toIndentedString(controllerMepId)).append("\n");
     sb.append("    dataTlvLength: ").append(toIndentedString(dataTlvLength)).append("\n");
     sb.append("    destinationAddress: ").append(toIndentedString(destinationAddress)).append("\n");
-    sb.append("    controllerMepId: ").append(toIndentedString(controllerMepId)).append("\n");
     sb.append("    isEnabled: ").append(toIndentedString(isEnabled)).append("\n");
     sb.append("}");
     return sb.toString();

@@ -17,42 +17,15 @@ import javax.validation.constraints.*;
  * TapiOamMepMipList
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiOamMepMipList   {
-  @JsonProperty("mip")
-  @Valid
-  private List<TapiOamMipRef> mip = null;
-
   @JsonProperty("mep")
   @Valid
   private List<TapiOamMepRef> mep = null;
 
-  public TapiOamMepMipList mip(List<TapiOamMipRef> mip) {
-    this.mip = mip;
-    return this;
-  }
-
-  public TapiOamMepMipList addMipItem(TapiOamMipRef mipItem) {
-    if (this.mip == null) {
-      this.mip = new ArrayList<TapiOamMipRef>();
-    }
-    this.mip.add(mipItem);
-    return this;
-  }
-
-  /**
-   * none
-   * @return mip
-  **/
-  @ApiModelProperty(value = "none")
+  @JsonProperty("mip")
   @Valid
-  public List<TapiOamMipRef> getMip() {
-    return mip;
-  }
-
-  public void setMip(List<TapiOamMipRef> mip) {
-    this.mip = mip;
-  }
+  private List<TapiOamMipRef> mip = null;
 
   public TapiOamMepMipList mep(List<TapiOamMepRef> mep) {
     this.mep = mep;
@@ -61,7 +34,7 @@ public class TapiOamMepMipList   {
 
   public TapiOamMepMipList addMepItem(TapiOamMepRef mepItem) {
     if (this.mep == null) {
-      this.mep = new ArrayList<TapiOamMepRef>();
+      this.mep = new ArrayList<>();
     }
     this.mep.add(mepItem);
     return this;
@@ -81,6 +54,33 @@ public class TapiOamMepMipList   {
     this.mep = mep;
   }
 
+  public TapiOamMepMipList mip(List<TapiOamMipRef> mip) {
+    this.mip = mip;
+    return this;
+  }
+
+  public TapiOamMepMipList addMipItem(TapiOamMipRef mipItem) {
+    if (this.mip == null) {
+      this.mip = new ArrayList<>();
+    }
+    this.mip.add(mipItem);
+    return this;
+  }
+
+  /**
+   * none
+   * @return mip
+  **/
+  @ApiModelProperty(value = "none")
+  @Valid
+  public List<TapiOamMipRef> getMip() {
+    return mip;
+  }
+
+  public void setMip(List<TapiOamMipRef> mip) {
+    this.mip = mip;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -91,13 +91,13 @@ public class TapiOamMepMipList   {
       return false;
     }
     TapiOamMepMipList tapiOamMepMipList = (TapiOamMepMipList) o;
-    return Objects.equals(this.mip, tapiOamMepMipList.mip) &&
-        Objects.equals(this.mep, tapiOamMepMipList.mep);
+    return Objects.equals(this.mep, tapiOamMepMipList.mep) &&
+        Objects.equals(this.mip, tapiOamMepMipList.mip);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(mip, mep);
+    return Objects.hash(mep, mip);
   }
 
   @Override
@@ -105,8 +105,8 @@ public class TapiOamMepMipList   {
     StringBuilder sb = new StringBuilder();
     sb.append("class TapiOamMepMipList {\n");
     
-    sb.append("    mip: ").append(toIndentedString(mip)).append("\n");
     sb.append("    mep: ").append(toIndentedString(mep)).append("\n");
+    sb.append("    mip: ").append(toIndentedString(mip)).append("\n");
     sb.append("}");
     return sb.toString();
   }

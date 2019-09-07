@@ -18,7 +18,7 @@ import javax.validation.constraints.*;
  * TapiEquipmentAccessPort
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiEquipmentAccessPort extends TapiCommonGlobalClass  {
   @JsonProperty("connector-pin")
   @Valid
@@ -31,7 +31,7 @@ public class TapiEquipmentAccessPort extends TapiCommonGlobalClass  {
 
   public TapiEquipmentAccessPort addConnectorPinItem(TapiEquipmentConnectorPinAddress connectorPinItem) {
     if (this.connectorPin == null) {
-      this.connectorPin = new ArrayList<TapiEquipmentConnectorPinAddress>();
+      this.connectorPin = new ArrayList<>();
     }
     this.connectorPin.add(connectorPinItem);
     return this;

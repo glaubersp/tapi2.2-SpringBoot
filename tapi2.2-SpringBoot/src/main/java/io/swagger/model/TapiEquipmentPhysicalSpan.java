@@ -19,7 +19,7 @@ import javax.validation.constraints.*;
  * TapiEquipmentPhysicalSpan
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiEquipmentPhysicalSpan extends TapiCommonGlobalClass  {
   @JsonProperty("abstract-strand")
   @Valid
@@ -36,7 +36,7 @@ public class TapiEquipmentPhysicalSpan extends TapiCommonGlobalClass  {
 
   public TapiEquipmentPhysicalSpan addAbstractStrandItem(TapiEquipmentAbstractStrand abstractStrandItem) {
     if (this.abstractStrand == null) {
-      this.abstractStrand = new ArrayList<TapiEquipmentAbstractStrand>();
+      this.abstractStrand = new ArrayList<>();
     }
     this.abstractStrand.add(abstractStrandItem);
     return this;
@@ -63,7 +63,7 @@ public class TapiEquipmentPhysicalSpan extends TapiCommonGlobalClass  {
 
   public TapiEquipmentPhysicalSpan addAccessPortItem(TapiEquipmentAccessPortRef accessPortItem) {
     if (this.accessPort == null) {
-      this.accessPort = new ArrayList<TapiEquipmentAccessPortRef>();
+      this.accessPort = new ArrayList<>();
     }
     this.accessPort.add(accessPortItem);
     return this;

@@ -14,14 +14,8 @@ import javax.validation.constraints.*;
  * TapiEthEthMegCommon
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiEthEthMegCommon   {
-  @JsonProperty("meg-identifier")
-  private String megIdentifier = null;
-
-  @JsonProperty("meg-level")
-  private Integer megLevel = null;
-
   @JsonProperty("cc-period")
   private TapiEthOamPeriod ccPeriod = null;
 
@@ -31,43 +25,11 @@ public class TapiEthEthMegCommon   {
   @JsonProperty("is-cc-enabled")
   private Boolean isCcEnabled = false;
 
-  public TapiEthEthMegCommon megIdentifier(String megIdentifier) {
-    this.megIdentifier = megIdentifier;
-    return this;
-  }
+  @JsonProperty("meg-identifier")
+  private String megIdentifier = null;
 
-  /**
-   * Optional in case 802.1Q maintenanceAssociationName is used.
-   * @return megIdentifier
-  **/
-  @ApiModelProperty(value = "Optional in case 802.1Q maintenanceAssociationName is used.")
-
-  public String getMegIdentifier() {
-    return megIdentifier;
-  }
-
-  public void setMegIdentifier(String megIdentifier) {
-    this.megIdentifier = megIdentifier;
-  }
-
-  public TapiEthEthMegCommon megLevel(Integer megLevel) {
-    this.megLevel = megLevel;
-    return this;
-  }
-
-  /**
-   * none
-   * @return megLevel
-  **/
-  @ApiModelProperty(value = "none")
-
-  public Integer getMegLevel() {
-    return megLevel;
-  }
-
-  public void setMegLevel(Integer megLevel) {
-    this.megLevel = megLevel;
-  }
+  @JsonProperty("meg-level")
+  private Integer megLevel = null;
 
   public TapiEthEthMegCommon ccPeriod(TapiEthOamPeriod ccPeriod) {
     this.ccPeriod = ccPeriod;
@@ -127,6 +89,44 @@ public class TapiEthEthMegCommon   {
     this.isCcEnabled = isCcEnabled;
   }
 
+  public TapiEthEthMegCommon megIdentifier(String megIdentifier) {
+    this.megIdentifier = megIdentifier;
+    return this;
+  }
+
+  /**
+   * Optional in case 802.1Q maintenanceAssociationName is used.
+   * @return megIdentifier
+  **/
+  @ApiModelProperty(value = "Optional in case 802.1Q maintenanceAssociationName is used.")
+
+  public String getMegIdentifier() {
+    return megIdentifier;
+  }
+
+  public void setMegIdentifier(String megIdentifier) {
+    this.megIdentifier = megIdentifier;
+  }
+
+  public TapiEthEthMegCommon megLevel(Integer megLevel) {
+    this.megLevel = megLevel;
+    return this;
+  }
+
+  /**
+   * none
+   * @return megLevel
+  **/
+  @ApiModelProperty(value = "none")
+
+  public Integer getMegLevel() {
+    return megLevel;
+  }
+
+  public void setMegLevel(Integer megLevel) {
+    this.megLevel = megLevel;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -137,16 +137,16 @@ public class TapiEthEthMegCommon   {
       return false;
     }
     TapiEthEthMegCommon tapiEthEthMegCommon = (TapiEthEthMegCommon) o;
-    return Objects.equals(this.megIdentifier, tapiEthEthMegCommon.megIdentifier) &&
-        Objects.equals(this.megLevel, tapiEthEthMegCommon.megLevel) &&
-        Objects.equals(this.ccPeriod, tapiEthEthMegCommon.ccPeriod) &&
+    return Objects.equals(this.ccPeriod, tapiEthEthMegCommon.ccPeriod) &&
         Objects.equals(this.clientMel, tapiEthEthMegCommon.clientMel) &&
-        Objects.equals(this.isCcEnabled, tapiEthEthMegCommon.isCcEnabled);
+        Objects.equals(this.isCcEnabled, tapiEthEthMegCommon.isCcEnabled) &&
+        Objects.equals(this.megIdentifier, tapiEthEthMegCommon.megIdentifier) &&
+        Objects.equals(this.megLevel, tapiEthEthMegCommon.megLevel);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(megIdentifier, megLevel, ccPeriod, clientMel, isCcEnabled);
+    return Objects.hash(ccPeriod, clientMel, isCcEnabled, megIdentifier, megLevel);
   }
 
   @Override
@@ -154,11 +154,11 @@ public class TapiEthEthMegCommon   {
     StringBuilder sb = new StringBuilder();
     sb.append("class TapiEthEthMegCommon {\n");
     
-    sb.append("    megIdentifier: ").append(toIndentedString(megIdentifier)).append("\n");
-    sb.append("    megLevel: ").append(toIndentedString(megLevel)).append("\n");
     sb.append("    ccPeriod: ").append(toIndentedString(ccPeriod)).append("\n");
     sb.append("    clientMel: ").append(toIndentedString(clientMel)).append("\n");
     sb.append("    isCcEnabled: ").append(toIndentedString(isCcEnabled)).append("\n");
+    sb.append("    megIdentifier: ").append(toIndentedString(megIdentifier)).append("\n");
+    sb.append("    megLevel: ").append(toIndentedString(megLevel)).append("\n");
     sb.append("}");
     return sb.toString();
   }

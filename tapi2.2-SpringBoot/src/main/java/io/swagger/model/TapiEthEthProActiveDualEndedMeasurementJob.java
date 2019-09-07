@@ -15,33 +15,13 @@ import javax.validation.constraints.*;
  * TapiEthEthProActiveDualEndedMeasurementJob
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiEthEthProActiveDualEndedMeasurementJob   {
-  @JsonProperty("eth-pro-active-measurement-job-control-source")
-  private TapiEthEthProActiveMeasurementJobControlSource ethProActiveMeasurementJobControlSource = null;
-
   @JsonProperty("eth-pro-active-measurement-job-control-sink")
   private TapiEthEthProActiveMeasurementJobControlSink ethProActiveMeasurementJobControlSink = null;
 
-  public TapiEthEthProActiveDualEndedMeasurementJob ethProActiveMeasurementJobControlSource(TapiEthEthProActiveMeasurementJobControlSource ethProActiveMeasurementJobControlSource) {
-    this.ethProActiveMeasurementJobControlSource = ethProActiveMeasurementJobControlSource;
-    return this;
-  }
-
-  /**
-   * Get ethProActiveMeasurementJobControlSource
-   * @return ethProActiveMeasurementJobControlSource
-  **/
-  @ApiModelProperty(value = "")
-
-  @Valid
-  public TapiEthEthProActiveMeasurementJobControlSource getEthProActiveMeasurementJobControlSource() {
-    return ethProActiveMeasurementJobControlSource;
-  }
-
-  public void setEthProActiveMeasurementJobControlSource(TapiEthEthProActiveMeasurementJobControlSource ethProActiveMeasurementJobControlSource) {
-    this.ethProActiveMeasurementJobControlSource = ethProActiveMeasurementJobControlSource;
-  }
+  @JsonProperty("eth-pro-active-measurement-job-control-source")
+  private TapiEthEthProActiveMeasurementJobControlSource ethProActiveMeasurementJobControlSource = null;
 
   public TapiEthEthProActiveDualEndedMeasurementJob ethProActiveMeasurementJobControlSink(TapiEthEthProActiveMeasurementJobControlSink ethProActiveMeasurementJobControlSink) {
     this.ethProActiveMeasurementJobControlSink = ethProActiveMeasurementJobControlSink;
@@ -63,6 +43,26 @@ public class TapiEthEthProActiveDualEndedMeasurementJob   {
     this.ethProActiveMeasurementJobControlSink = ethProActiveMeasurementJobControlSink;
   }
 
+  public TapiEthEthProActiveDualEndedMeasurementJob ethProActiveMeasurementJobControlSource(TapiEthEthProActiveMeasurementJobControlSource ethProActiveMeasurementJobControlSource) {
+    this.ethProActiveMeasurementJobControlSource = ethProActiveMeasurementJobControlSource;
+    return this;
+  }
+
+  /**
+   * Get ethProActiveMeasurementJobControlSource
+   * @return ethProActiveMeasurementJobControlSource
+  **/
+  @ApiModelProperty(value = "")
+
+  @Valid
+  public TapiEthEthProActiveMeasurementJobControlSource getEthProActiveMeasurementJobControlSource() {
+    return ethProActiveMeasurementJobControlSource;
+  }
+
+  public void setEthProActiveMeasurementJobControlSource(TapiEthEthProActiveMeasurementJobControlSource ethProActiveMeasurementJobControlSource) {
+    this.ethProActiveMeasurementJobControlSource = ethProActiveMeasurementJobControlSource;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -73,13 +73,13 @@ public class TapiEthEthProActiveDualEndedMeasurementJob   {
       return false;
     }
     TapiEthEthProActiveDualEndedMeasurementJob tapiEthEthProActiveDualEndedMeasurementJob = (TapiEthEthProActiveDualEndedMeasurementJob) o;
-    return Objects.equals(this.ethProActiveMeasurementJobControlSource, tapiEthEthProActiveDualEndedMeasurementJob.ethProActiveMeasurementJobControlSource) &&
-        Objects.equals(this.ethProActiveMeasurementJobControlSink, tapiEthEthProActiveDualEndedMeasurementJob.ethProActiveMeasurementJobControlSink);
+    return Objects.equals(this.ethProActiveMeasurementJobControlSink, tapiEthEthProActiveDualEndedMeasurementJob.ethProActiveMeasurementJobControlSink) &&
+        Objects.equals(this.ethProActiveMeasurementJobControlSource, tapiEthEthProActiveDualEndedMeasurementJob.ethProActiveMeasurementJobControlSource);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(ethProActiveMeasurementJobControlSource, ethProActiveMeasurementJobControlSink);
+    return Objects.hash(ethProActiveMeasurementJobControlSink, ethProActiveMeasurementJobControlSource);
   }
 
   @Override
@@ -87,8 +87,8 @@ public class TapiEthEthProActiveDualEndedMeasurementJob   {
     StringBuilder sb = new StringBuilder();
     sb.append("class TapiEthEthProActiveDualEndedMeasurementJob {\n");
     
-    sb.append("    ethProActiveMeasurementJobControlSource: ").append(toIndentedString(ethProActiveMeasurementJobControlSource)).append("\n");
     sb.append("    ethProActiveMeasurementJobControlSink: ").append(toIndentedString(ethProActiveMeasurementJobControlSink)).append("\n");
+    sb.append("    ethProActiveMeasurementJobControlSource: ").append(toIndentedString(ethProActiveMeasurementJobControlSource)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -13,35 +13,16 @@ import javax.validation.constraints.*;
  * TapiOduOduCommonPac
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiOduOduCommonPac   {
-  @JsonProperty("odu-rate-tolerance")
-  private Integer oduRateTolerance = null;
-
   @JsonProperty("odu-rate")
   private Integer oduRate = null;
 
+  @JsonProperty("odu-rate-tolerance")
+  private Integer oduRateTolerance = null;
+
   @JsonProperty("odu-type")
   private String oduType = null;
-
-  public TapiOduOduCommonPac oduRateTolerance(Integer oduRateTolerance) {
-    this.oduRateTolerance = oduRateTolerance;
-    return this;
-  }
-
-  /**
-   * This attribute indicates the rate tolerance of the ODU termination point.                   Valid values are real value in the unit of ppm.                   Standardized values are defined in Table 7-2/G.709.
-   * @return oduRateTolerance
-  **/
-  @ApiModelProperty(value = "This attribute indicates the rate tolerance of the ODU termination point.                   Valid values are real value in the unit of ppm.                   Standardized values are defined in Table 7-2/G.709.")
-
-  public Integer getOduRateTolerance() {
-    return oduRateTolerance;
-  }
-
-  public void setOduRateTolerance(Integer oduRateTolerance) {
-    this.oduRateTolerance = oduRateTolerance;
-  }
 
   public TapiOduOduCommonPac oduRate(Integer oduRate) {
     this.oduRate = oduRate;
@@ -60,6 +41,25 @@ public class TapiOduOduCommonPac   {
 
   public void setOduRate(Integer oduRate) {
     this.oduRate = oduRate;
+  }
+
+  public TapiOduOduCommonPac oduRateTolerance(Integer oduRateTolerance) {
+    this.oduRateTolerance = oduRateTolerance;
+    return this;
+  }
+
+  /**
+   * This attribute indicates the rate tolerance of the ODU termination point.                   Valid values are real value in the unit of ppm.                   Standardized values are defined in Table 7-2/G.709.
+   * @return oduRateTolerance
+  **/
+  @ApiModelProperty(value = "This attribute indicates the rate tolerance of the ODU termination point.                   Valid values are real value in the unit of ppm.                   Standardized values are defined in Table 7-2/G.709.")
+
+  public Integer getOduRateTolerance() {
+    return oduRateTolerance;
+  }
+
+  public void setOduRateTolerance(Integer oduRateTolerance) {
+    this.oduRateTolerance = oduRateTolerance;
   }
 
   public TapiOduOduCommonPac oduType(String oduType) {
@@ -91,14 +91,14 @@ public class TapiOduOduCommonPac   {
       return false;
     }
     TapiOduOduCommonPac tapiOduOduCommonPac = (TapiOduOduCommonPac) o;
-    return Objects.equals(this.oduRateTolerance, tapiOduOduCommonPac.oduRateTolerance) &&
-        Objects.equals(this.oduRate, tapiOduOduCommonPac.oduRate) &&
+    return Objects.equals(this.oduRate, tapiOduOduCommonPac.oduRate) &&
+        Objects.equals(this.oduRateTolerance, tapiOduOduCommonPac.oduRateTolerance) &&
         Objects.equals(this.oduType, tapiOduOduCommonPac.oduType);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(oduRateTolerance, oduRate, oduType);
+    return Objects.hash(oduRate, oduRateTolerance, oduType);
   }
 
   @Override
@@ -106,8 +106,8 @@ public class TapiOduOduCommonPac   {
     StringBuilder sb = new StringBuilder();
     sb.append("class TapiOduOduCommonPac {\n");
     
-    sb.append("    oduRateTolerance: ").append(toIndentedString(oduRateTolerance)).append("\n");
     sb.append("    oduRate: ").append(toIndentedString(oduRate)).append("\n");
+    sb.append("    oduRateTolerance: ").append(toIndentedString(oduRateTolerance)).append("\n");
     sb.append("    oduType: ").append(toIndentedString(oduType)).append("\n");
     sb.append("}");
     return sb.toString();

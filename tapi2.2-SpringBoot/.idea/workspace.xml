@@ -1,7 +1,599 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="30828402-9338-45ae-be64-b6781690ec1f" name="Default Changelist" comment="" />
+    <list default="true" id="30828402-9338-45ae-be64-b6781690ec1f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_1_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_1_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_3_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_8_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_8_10.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_8_10.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_8_10.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_18_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_core_2_7_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_schema_2_7_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_spi_2_7_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_spring_web_2_7_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger2_2_7_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger_common_2_7_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger_ui_2_7_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_swagger_swagger_annotations_1_5_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_swagger_swagger_models_1_5_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_1_1_0_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_6_14.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_accessors_smart_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_json_smart_2_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_8_5_23.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_8_5_23.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_8_5_23.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_annotations_api_8_5_23.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_assertj_assertj_core_2_6_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_library_1_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_validator_5_3_6_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_21_0_GA.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_1_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mapstruct_mapstruct_1_1_0_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_1_10_19.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_5_0_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_reflections_reflections_0_9_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jcl_over_slf4j_1_7_25.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_25.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_log4j_over_slf4j_1_7_25.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_1_5_9_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_1_5_9_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_1_5_9_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_1_5_9_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_1_5_9_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_1_5_9_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_1_5_9_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_1_5_9_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_1_5_9_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_plugin_spring_plugin_core_1_2_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_plugin_spring_plugin_metadata_1_2_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_4_3_13_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_4_3_13_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_4_3_13_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_4_3_13_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_4_3_13_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_4_3_13_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_4_3_13_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_4_3_13_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_17.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/tapi2.2-SpringBoot.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEquipmentGetdeviceInput.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEquipmentGetdevicelistOutput.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEquipmentGetphysicalspanInput.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEquipmentGetphysicalspanlistOutput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tapi-2.2.json" beforeDir="false" afterPath="$PROJECT_DIR$/../tapi-2.2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.classpath" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.core.resources.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.jdt.apt.core.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.m2e.core.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.swagger-codegen/VERSION" beforeDir="false" afterPath="$PROJECT_DIR$/.swagger-codegen/VERSION" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/.settings/org.eclipse.core.resources.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/api/ApiException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/api/ApiException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/api/ApiOriginFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/api/ApiOriginFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/api/ApiResponseMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/api/ApiResponseMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/api/DataApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/api/DataApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/api/DataApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/api/DataApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/api/NotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/api/NotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/api/OperationsApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/api/OperationsApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/api/OperationsApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/api/OperationsApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/configuration/CustomInstantDeserializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/configuration/JacksonConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/configuration/SwaggerDocumentationConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/configuration/SwaggerDocumentationConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiCommonAdminStatePac.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiCommonAdminStatePac.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiCommonCapacity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiCommonCapacity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiCommonCapacityPac.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiCommonCapacityValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiCommonCapacityValue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiCommonContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiCommonContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiCommonContextServiceInterfacePoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiCommonContextServiceInterfacePoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiCommonGetServiceInterfacePointDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiCommonGetServiceInterfacePointDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiCommonGetServiceInterfacePointList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiCommonGetServiceInterfacePointList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiCommonGetserviceinterfacepointdetailsInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiCommonGetserviceinterfacepointdetailsInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiCommonGetserviceinterfacepointdetailsOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiCommonGetserviceinterfacepointdetailsOutput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiCommonGetserviceinterfacepointlistOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiCommonGetserviceinterfacepointlistOutput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiCommonGetserviceinterfacepointlistOutputSip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiCommonGetserviceinterfacepointlistOutputSip.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiCommonGlobalClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiCommonGlobalClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiCommonLocalClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiCommonLocalClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiCommonNameAndValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiCommonNameAndValue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiCommonOperationalStatePac.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiCommonServiceInterfacePoint.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiCommonServiceInterfacePointRef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiCommonServiceInterfacePointRef.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiCommonTerminationPac.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiCommonTimeInterval.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiCommonTimeInterval.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiCommonTimePeriod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiCommonTimePeriod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiCommonTimeRange.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiCommonTimeRange.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiCommonUpdateserviceinterfacepointInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiCommonUpdateserviceinterfacepointInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiConnectivityCeplistConnectionEndPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiConnectivityCeplistConnectionEndPoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiConnectivityConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiConnectivityConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiConnectivityConnectionEndPoint.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiConnectivityConnectionEndPointRef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiConnectivityConnectionEndPointRef.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiConnectivityConnectionRef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiConnectivityConnectionRef.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiConnectivityConnectivityConstraint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiConnectivityConnectivityConstraint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiConnectivityConnectivityServiceEndPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiConnectivityConnectivityServiceEndPoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiConnectivityConnectivityServiceEndPointRef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiConnectivityConnectivityServiceEndPointRef.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiConnectivityConnectivityServiceRef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiConnectivityConnectivityServiceRef.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiConnectivityConnectivitycontextConnectivityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiConnectivityConnectivitycontextConnectivityService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiConnectivityContextAugmentation5.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiConnectivityContextConnectivityContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiConnectivityContextConnectivityContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiConnectivityContextTopologycontextTopologyNodeNodeedgepointCepList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiConnectivityContextTopologycontextTopologyNodeNodeedgepointCepList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiConnectivityCreateConnectivityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiConnectivityCreateConnectivityService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiConnectivityCreateconnectivityserviceInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiConnectivityCreateconnectivityserviceInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiConnectivityCreateconnectivityserviceInputEndPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiConnectivityCreateconnectivityserviceInputEndPoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiConnectivityCreateconnectivityserviceOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiConnectivityCreateconnectivityserviceOutput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiConnectivityCreateconnectivityserviceOutputService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiConnectivityCreateconnectivityserviceOutputService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiConnectivityDeleteconnectivityserviceInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiConnectivityDeleteconnectivityserviceInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiConnectivityGetConnectionDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiConnectivityGetConnectionDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiConnectivityGetConnectionEndPointDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiConnectivityGetConnectionEndPointDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiConnectivityGetConnectivityServiceDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiConnectivityGetConnectivityServiceDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiConnectivityGetConnectivityServiceList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiConnectivityGetConnectivityServiceList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiConnectivityGetconnectiondetailsInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiConnectivityGetconnectiondetailsInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiConnectivityGetconnectiondetailsOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiConnectivityGetconnectiondetailsOutput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiConnectivityGetconnectionendpointdetailsInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiConnectivityGetconnectionendpointdetailsInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiConnectivityGetconnectionendpointdetailsOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiConnectivityGetconnectionendpointdetailsOutput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiConnectivityGetconnectionendpointdetailsOutputConnectionEndPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiConnectivityGetconnectionendpointdetailsOutputConnectionEndPoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiConnectivityGetconnectivityservicedetailsInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiConnectivityGetconnectivityservicedetailsInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiConnectivityGetconnectivityservicedetailsOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiConnectivityGetconnectivityservicedetailsOutput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiConnectivityGetconnectivityservicedetailsOutputService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiConnectivityGetconnectivityservicedetailsOutputService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiConnectivityGetconnectivityservicelistOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiConnectivityGetconnectivityservicelistOutput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiConnectivityGetconnectivityservicelistOutputService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiConnectivityGetconnectivityservicelistOutputService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiConnectivityNodeEdgePointAugmentation1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiConnectivityResilienceConstraint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiConnectivityResilienceConstraint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiConnectivityRoute.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiConnectivityRoute.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiConnectivityRouteRef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiConnectivityRouteRef.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiConnectivitySwitch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiConnectivitySwitch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiConnectivitySwitchControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiConnectivitySwitchControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiConnectivitySwitchControlRef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiConnectivitySwitchControlRef.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiConnectivityUpdateConnectivityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiConnectivityUpdateConnectivityService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiConnectivityUpdateconnectivityserviceInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiConnectivityUpdateconnectivityserviceInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiConnectivityUpdateconnectivityserviceOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiConnectivityUpdateconnectivityserviceOutput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiConnectivityUpdateconnectivityserviceOutputService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiConnectivityUpdateconnectivityserviceOutputService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEquipmentAbstractStrand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEquipmentAbstractStrand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEquipmentAbstractStrandRef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEquipmentAbstractStrandRef.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEquipmentAccessPort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEquipmentAccessPort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEquipmentAccessPortRef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEquipmentAccessPortRef.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEquipmentActualEquipment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEquipmentActualEquipment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEquipmentActualHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEquipmentActualHolder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEquipmentActualNonFieldReplaceableModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEquipmentActualNonFieldReplaceableModule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEquipmentCommonActualProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEquipmentCommonActualProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEquipmentCommonEquipmentProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEquipmentCommonEquipmentProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEquipmentCommonHolderProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEquipmentCommonHolderProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEquipmentConnectorPinAddress.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEquipmentConnectorPinAddress.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEquipmentContextAugmentation6.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEquipmentDevice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEquipmentDevice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEquipmentDeviceRef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEquipmentDeviceRef.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEquipmentEquipment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEquipmentEquipment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEquipmentEquipmentRef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEquipmentEquipmentRef.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEquipmentExpectedEquipment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEquipmentExpectedEquipment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEquipmentExpectedHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEquipmentExpectedHolder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEquipmentExpectedNonFieldReplaceableModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEquipmentExpectedNonFieldReplaceableModule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEquipmentHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEquipmentHolder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEquipmentNodeAugmentation1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEquipmentNodeEdgePointAugmentation3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEquipmentPhysicalContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEquipmentPhysicalContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEquipmentPhysicalSpan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEquipmentPhysicalSpan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEquipmentPhysicalSpanRef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEquipmentPhysicalSpanRef.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEquipmentSupportingAccessPort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEquipmentSupportingAccessPort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEquipmentSupportingPhysicalSpan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEquipmentSupportingPhysicalSpan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthBandwidthReport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthBandwidthReport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthConnectionEndPointAugmentation6.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthConnectivityServiceAugmentation1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthControlFrameFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthControlFrameFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthCurrentDataAugmentation1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthCurrentDataAugmentation10.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthCurrentDataAugmentation11.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthCurrentDataAugmentation12.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthCurrentDataAugmentation13.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthCurrentDataAugmentation14.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthCurrentDataAugmentation15.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthCurrentDataAugmentation2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthCurrentDataAugmentation3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthCurrentDataAugmentation4.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthCurrentDataAugmentation5.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthCurrentDataAugmentation6.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthCurrentDataAugmentation7.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthCurrentDataAugmentation8.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthCurrentDataAugmentation9.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEndPointAugmentation1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEndPointAugmentation4.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthCfmLinkTracePac.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthCfmLinkTracePac.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthCfmLinkTraceResultData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthCfmLinkTraceResultData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthCfmMaintenanceAssociation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthCfmMaintenanceAssociation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthCfmMaintenanceDomain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthCfmMaintenanceDomain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthConnectionEndPointSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthConnectionEndPointSpec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthConnectivityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthConnectivityService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthConnectivityServiceEndPointSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthConnectivityServiceEndPointSpec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthCtpCommonPac.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthCtpCommonPac.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthCtpPac.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthCtpPac.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthLinkTraceJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthLinkTraceJob.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthLinkTraceResultData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthLinkTraceResultData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthLoopbackJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthLoopbackJob.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthLoopbackResultData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthLoopbackResultData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthMeasurementJobControlCommon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthMeasurementJobControlCommon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthMegCommon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthMegCommon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthMegSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthMegSpec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthMepCommon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthMepCommon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthMepSink.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthMepSink.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthMepSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthMepSource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthMepSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthMepSpec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthMipCommon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthMipCommon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthMipSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthMipSpec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthOamMepServicePoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthOamMepServicePoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthOamMipServicePoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthOamMipServicePoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthOamService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthOamService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthOamTestLoopbackCommonPac.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthOamTestLoopbackCommonPac.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthOnDemand1DmPerformanceData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthOnDemand1DmPerformanceData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthOnDemand1DmSourcePerformanceData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthOnDemand1DmSourcePerformanceData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthOnDemand1LmPerformanceData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthOnDemand1LmPerformanceData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthOnDemand1LmSourcePerformanceData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthOnDemand1LmSourcePerformanceData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthOnDemandDmPerformanceData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthOnDemandDmPerformanceData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthOnDemandDualEndedMeasurementJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthOnDemandDualEndedMeasurementJob.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthOnDemandLmPerformanceData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthOnDemandLmPerformanceData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthOnDemandMeasurementJobControlSink.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthOnDemandMeasurementJobControlSink.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthOnDemandMeasurementJobControlSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthOnDemandMeasurementJobControlSource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthOnDemandSingleEndedMeasurementJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthOnDemandSingleEndedMeasurementJob.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthProActive1DmPerformanceData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthProActive1DmPerformanceData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthProActive1DmSourcePerformanceData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthProActive1DmSourcePerformanceData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthProActive1LmPerformanceData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthProActive1LmPerformanceData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthProActive1LmSourcePerformanceData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthProActive1LmSourcePerformanceData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthProActiveDmPerformanceData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthProActiveDmPerformanceData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthProActiveDualEndedMeasurementJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthProActiveDualEndedMeasurementJob.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthProActiveLmPerformanceData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthProActiveLmPerformanceData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthProActiveMeasurementJobControlSink.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthProActiveMeasurementJobControlSink.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthProActiveMeasurementJobControlSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthProActiveMeasurementJobControlSource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthProActiveSingleEndedMeasurementJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthProActiveSingleEndedMeasurementJob.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthServiceIntefacePointSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthServiceIntefacePointSpec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthTerminationCommonPac.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthTerminationCommonPac.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthTerminationPac.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthTerminationPac.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthTestJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthTestJob.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthTestJobSinkPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthTestJobSinkPoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthTestResultData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEthTestResultData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEtyPac.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEtyPac.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEtyTerminationCommonPac.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEtyTerminationCommonPac.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEtyTerminationPac.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthEtyTerminationPac.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthHistoryDataAugmentation1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthHistoryDataAugmentation10.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthHistoryDataAugmentation11.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthHistoryDataAugmentation12.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthHistoryDataAugmentation2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthHistoryDataAugmentation3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthHistoryDataAugmentation4.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthHistoryDataAugmentation5.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthHistoryDataAugmentation6.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthHistoryDataAugmentation7.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthHistoryDataAugmentation8.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthHistoryDataAugmentation9.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthInputAugmentation1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthInputAugmentation2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthInputAugmentation2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthInputAugmentation3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEquipmentGetphysicalspanOutput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthInputAugmentation4.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthInputAugmentation5.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthInputAugmentation6.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthInputAugmentation7.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthLinkTraceResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthLinkTraceResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthLldpChassisIdSubtype.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthLldpChassisIdSubtype.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthLldpPortIdSubtype.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthLldpPortIdSubtype.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthMaintenanceAssociationName.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthMaintenanceAssociationName.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthMegAugmentation1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEquipmentGetDeviceList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthMepAugmentation1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEquipmentGetPhysicalSpan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthMipAugmentation1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEquipmentGetdeviceOutput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthOamJobAugmentation1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthOamJobAugmentation2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthOamJobAugmentation3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthOamJobAugmentation4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEquipmentGetPhysicalSpanList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthOamJobAugmentation5.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthOamJobAugmentation6.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthOamJobAugmentation7.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthOamServiceAugmentation1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthOamServicePointAugmentation1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthOamServicePointAugmentation2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthOamServicePointAugmentation3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthPriorityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthPriorityConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthPriorityMapping.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthPriorityMapping.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthQueueConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthQueueConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthSamplesDmPerformanceParameters.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthSamplesDmPerformanceParameters.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthServiceAugmentation1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthServiceInterfacePointAugmentation3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthSipAugmentation1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthStatisticalDmPerformanceParameters.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthStatisticalDmPerformanceParameters.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthStatisticalLmPerformanceParameters.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthStatisticalLmPerformanceParameters.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthTotalCountersLmPerformanceParameters.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthTotalCountersLmPerformanceParameters.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthTrafficConditioningConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthTrafficConditioningConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthTrafficConditioningPac.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthTrafficConditioningPac.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthTrafficShapingPac.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEthTrafficShapingPac.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiNotificationContextAugmentation2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiNotificationContextNotificationContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiNotificationContextNotificationContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiNotificationCreateNotificationSubscriptionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiNotificationCreateNotificationSubscriptionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiNotificationCreatenotificationsubscriptionserviceInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiNotificationCreatenotificationsubscriptionserviceInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiNotificationCreatenotificationsubscriptionserviceOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiNotificationCreatenotificationsubscriptionserviceOutput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiNotificationDeletenotificationsubscriptionserviceInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiNotificationDeletenotificationsubscriptionserviceInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiNotificationGetNotificationList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiNotificationGetNotificationList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiNotificationGetNotificationSubscriptionServiceDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiNotificationGetNotificationSubscriptionServiceDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiNotificationGetNotificationSubscriptionServiceList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiNotificationGetNotificationSubscriptionServiceList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiNotificationGetSupportedNotificationTypes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiNotificationGetSupportedNotificationTypes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiNotificationGetnotificationlistInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiNotificationGetnotificationlistInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiNotificationGetnotificationlistOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiNotificationGetnotificationlistOutput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiNotificationGetnotificationsubscriptionservicedetailsInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiNotificationGetnotificationsubscriptionservicedetailsInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiNotificationGetnotificationsubscriptionservicedetailsOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiNotificationGetnotificationsubscriptionservicedetailsOutput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiNotificationGetnotificationsubscriptionservicelistOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiNotificationGetnotificationsubscriptionservicelistOutput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiNotificationGetsupportednotificationtypesOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiNotificationGetsupportednotificationtypesOutput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiNotificationNameAndValueChange.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiNotificationNameAndValueChange.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiNotificationNotification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiNotificationNotification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiNotificationNotificationChannel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiNotificationNotificationChannel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiNotificationNotificationSubscriptionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiNotificationNotificationSubscriptionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiNotificationNotificationcontextNotification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiNotificationNotificationcontextNotification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiNotificationSubscriptionFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiNotificationSubscriptionFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiNotificationUpdateNotificationSubscriptionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiNotificationUpdateNotificationSubscriptionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiNotificationUpdatenotificationsubscriptionserviceInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiNotificationUpdatenotificationsubscriptionserviceInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiNotificationUpdatenotificationsubscriptionserviceOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiNotificationUpdatenotificationsubscriptionserviceOutput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamAlarmInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamAlarmInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamConnectionEndPointAugmentation5.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamContextAugmentation4.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamContextOamContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamContextOamContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamCreateOamJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamCreateOamJob.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamCreateOamProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamCreateOamProfile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamCreateOamService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamCreateOamService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamCreateOamServicePoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamCreateOamServicePoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamCreateoamjobInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamCreateoamjobInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamCreateoamjobOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamCreateoamjobOutput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamCreateoamprofileInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamCreateoamprofileInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamCreateoamprofileOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamCreateoamprofileOutput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamCreateoamserviceInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamCreateoamserviceInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamCreateoamserviceInputOamServicePoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamCreateoamserviceInputOamServicePoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamCreateoamserviceOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamCreateoamserviceOutput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamCreateoamserviceOutputOamService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamCreateoamserviceOutputOamService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamCreateoamservicepointInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamCreateoamservicepointInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamCreateoamservicepointOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamCreateoamservicepointOutput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamCurrentData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamCurrentData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamCurrentdataHistoryData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamCurrentdataHistoryData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamDeleteoamjobInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamDeleteoamjobInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamDeleteoamprofileInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamDeleteoamprofileInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamDeleteoamserviceInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamDeleteoamserviceInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamDeleteoamservicepointInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamDeleteoamservicepointInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamGetMeg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamGetMeg.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamGetOamJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamGetOamJob.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamGetOamJobList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamGetOamJobList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamGetOamProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamGetOamProfile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamGetOamProfileList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamGetOamProfileList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamGetOamService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamGetOamService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamGetOamServiceList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamGetOamServiceList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamGetOamServicePoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamGetOamServicePoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamGetmegInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamGetmegInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamGetmegOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamGetmegOutput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamGetmegOutputMeg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamGetmegOutputMeg.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamGetmegOutputMegMep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamGetmegOutputMegMep.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamGetmegOutputMegMip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamGetmegOutputMegMip.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamGetoamjobInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamGetoamjobInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamGetoamjobOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamGetoamjobOutput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamGetoamjobOutputOamJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamGetoamjobOutputOamJob.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamGetoamjoblistOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamGetoamjoblistOutput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamGetoamprofileInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamGetoamprofileInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamGetoamprofileOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamGetoamprofileOutput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamGetoamprofilelistOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamGetoamprofilelistOutput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamGetoamserviceInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamGetoamserviceInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamGetoamserviceOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamGetoamserviceOutput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamGetoamserviceOutputOamService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamGetoamserviceOutputOamService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamGetoamservicelistOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamGetoamservicelistOutput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamGetoamservicelistOutputOamService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamGetoamservicelistOutputOamService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamGetoamservicepointInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamGetoamservicepointInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamGetoamservicepointOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamGetoamservicepointOutput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamHistoryData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamHistoryData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamMegMep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamMegMep.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamMegMip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamMegMip.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamMegRef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamMegRef.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamMep.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamMepMipList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamMepMipList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamMepRef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamMepRef.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamMip.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamMipRef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamMipRef.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamNotificationAugmentation1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiEquipmentGetDevice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamNotificationAugmentation2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamOamJob.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamOamJobRef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamOamJobRef.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamOamProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamOamProfile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamOamProfileRef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamOamProfileRef.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamOamServicePoint.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamOamServicePointRef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamOamServicePointRef.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamOamServiceRef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamOamServiceRef.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamOamcontextMeg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamOamcontextMeg.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamOamcontextOamJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamOamcontextOamJob.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamOamcontextOamService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamOamcontextOamService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamOamjobCurrentData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamOamjobCurrentData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamOamserviceOamServicePoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamOamserviceOamServicePoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamPmDataPac.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamPmDataPac.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamPmParameterValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamPmParameterValue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamPmThresholdData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamPmThresholdData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamTcaInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamTcaInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamThresholdParameter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamThresholdParameter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamUpdateOamJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamUpdateOamJob.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamUpdateOamProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamUpdateOamProfile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamUpdateOamService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamUpdateOamService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamUpdateOamServicePoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamUpdateOamServicePoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamUpdateoamjobInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamUpdateoamjobInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamUpdateoamjobOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamUpdateoamjobOutput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamUpdateoamprofileInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamUpdateoamprofileInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamUpdateoamprofileOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamUpdateoamprofileOutput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamUpdateoamserviceInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamUpdateoamserviceInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamUpdateoamserviceOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamUpdateoamserviceOutput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamUpdateoamserviceOutputOamService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamUpdateoamserviceOutputOamService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamUpdateoamservicepointInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamUpdateoamservicepointInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamUpdateoamservicepointOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOamUpdateoamservicepointOutput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOduConnectionEndPointAugmentation1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOduDegThr.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOduDegThr.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOduEndPointAugmentation1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOduMegAugmentation2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOduMepAugmentation2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOduMipAugmentation2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOduNodeEdgePointAugmentation2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOduOduCommonPac.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOduOduCommonPac.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOduOduConnectionEndPointSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOduOduConnectionEndPointSpec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOduOduConnectivityServiceEndPointSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOduOduConnectivityServiceEndPointSpec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOduOduCtpPac.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOduOduCtpPac.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOduOduDefectPac.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOduOduDefectPac.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOduOduMegSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOduOduMegSpec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOduOduMepPac.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOduOduMepPac.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOduOduMepSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOduOduMepSpec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOduOduMipPac.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOduOduMipPac.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOduOduMipSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOduOduMipSpec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOduOduNcmPac.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOduOduNcmPac.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOduOduNodeEdgePointSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOduOduNodeEdgePointSpec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOduOduPayloadType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOduOduPayloadType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOduOduPmPac.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOduOduPmPac.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOduOduPoolPac.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOduOduPoolPac.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOduOduProtectionPac.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOduOduProtectionPac.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOduOduTcmMepPac.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOduOduTcmMepPac.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOduOduTcmMipPac.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOduOduTcmMipPac.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOduOduTerminationAndClientAdaptationPac.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOduOduTerminationAndClientAdaptationPac.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOduUasChoice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiOduUasChoice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPathComputationComputeP2PPath.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPathComputationComputeP2PPath.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPathComputationComputep2ppathInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPathComputationComputep2ppathInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPathComputationComputep2ppathOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPathComputationComputep2ppathOutput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPathComputationContextAugmentation1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPathComputationDeleteP2PPath.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPathComputationDeleteP2PPath.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPathComputationDeletep2ppathInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPathComputationDeletep2ppathInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPathComputationDeletep2ppathOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPathComputationDeletep2ppathOutput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPathComputationOptimizeP2PPath.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPathComputationOptimizeP2PPath.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPathComputationOptimizep2ppathInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPathComputationOptimizep2ppathInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPathComputationOptimizep2ppathOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPathComputationOptimizep2ppathOutput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPathComputationPath.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPathComputationPath.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPathComputationPathComputationContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPathComputationPathComputationContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPathComputationPathComputationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPathComputationPathComputationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPathComputationPathObjectiveFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPathComputationPathObjectiveFunction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPathComputationPathOptimizationConstraint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPathComputationPathOptimizationConstraint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPathComputationPathRef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPathComputationPathRef.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPathComputationPathServiceEndPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPathComputationPathServiceEndPoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPathComputationRoutingConstraint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPathComputationRoutingConstraint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPathComputationTopologyConstraint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPathComputationTopologyConstraint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPhotonicMediaApplicationIdentifier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPhotonicMediaApplicationIdentifier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPhotonicMediaCentralFrequency.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPhotonicMediaCentralFrequency.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPhotonicMediaCentralFrequencyBand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPhotonicMediaCentralFrequencyBand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPhotonicMediaConnectionEndPointAugmentation1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPhotonicMediaConnectionEndPointAugmentation2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPhotonicMediaConnectionEndPointAugmentation3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPhotonicMediaConnectionEndPointAugmentation4.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPhotonicMediaEndPointAugmentation2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPhotonicMediaEndPointAugmentation3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPhotonicMediaFecProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPhotonicMediaFecProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPhotonicMediaFrequencyConstraint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPhotonicMediaFrequencyConstraint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPhotonicMediaLaserProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPhotonicMediaLaserProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPhotonicMediaMediaChannelConfigPac.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPhotonicMediaMediaChannelConfigPac.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPhotonicMediaMediaChannelConnectionEndPointSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPhotonicMediaMediaChannelConnectionEndPointSpec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPhotonicMediaMediaChannelConnectivityServiceEndPointSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPhotonicMediaMediaChannelConnectivityServiceEndPointSpec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPhotonicMediaMediaChannelNodeEdgePointSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPhotonicMediaMediaChannelNodeEdgePointSpec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPhotonicMediaMediaChannelPoolCapabilityPac.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPhotonicMediaMediaChannelPoolCapabilityPac.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPhotonicMediaMediaChannelPropertiesPac.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPhotonicMediaMediaChannelPropertiesPac.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPhotonicMediaMediaChannelServiceInterfacePointSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPhotonicMediaMediaChannelServiceInterfacePointSpec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPhotonicMediaNodeEdgePointAugmentation1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPhotonicMediaNodeEdgePointAugmentation4.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPhotonicMediaOtsiAssemblyConnectionEndPointSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPhotonicMediaOtsiAssemblyConnectionEndPointSpec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPhotonicMediaOtsiCapabilityPac.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPhotonicMediaOtsiCapabilityPac.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPhotonicMediaOtsiConnectionEndPointSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPhotonicMediaOtsiConnectionEndPointSpec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPhotonicMediaOtsiConnectivityServiceEndPointSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPhotonicMediaOtsiConnectivityServiceEndPointSpec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPhotonicMediaOtsiServerAdaptationPac.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPhotonicMediaOtsiServerAdaptationPac.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPhotonicMediaOtsiServiceInterfacePointSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPhotonicMediaOtsiServiceInterfacePointSpec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPhotonicMediaOtsiTerminationConfigPac.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPhotonicMediaOtsiTerminationConfigPac.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPhotonicMediaOtsiTerminationPac.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPhotonicMediaOtsiTerminationPac.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPhotonicMediaPowerManagementCapabilityPac.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPhotonicMediaPowerManagementCapabilityPac.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPhotonicMediaPowerManagementConfigPac.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPhotonicMediaPowerManagementConfigPac.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPhotonicMediaPowerProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPhotonicMediaPowerProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPhotonicMediaServiceInterfacePointAugmentation1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPhotonicMediaServiceInterfacePointAugmentation2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPhotonicMediaSipAugmentation2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPhotonicMediaSipAugmentation3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPhotonicMediaSpectrumBand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPhotonicMediaSpectrumBand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPhotonicMediaTotalPowerThresholdPac.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiPhotonicMediaTotalPowerThresholdPac.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiTopologyContextAugmentation7.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiTopologyCostCharacteristic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiTopologyCostCharacteristic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiTopologyGetLinkDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiTopologyGetLinkDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiTopologyGetNodeDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiTopologyGetNodeDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiTopologyGetNodeEdgePointDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiTopologyGetNodeEdgePointDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiTopologyGetTopologyDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiTopologyGetTopologyDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiTopologyGetTopologyList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiTopologyGetTopologyList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiTopologyGetlinkdetailsInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiTopologyGetlinkdetailsInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiTopologyGetlinkdetailsOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiTopologyGetlinkdetailsOutput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiTopologyGetnodedetailsInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiTopologyGetnodedetailsInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiTopologyGetnodedetailsOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiTopologyGetnodedetailsOutput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiTopologyGetnodeedgepointdetailsInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiTopologyGetnodeedgepointdetailsInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiTopologyGetnodeedgepointdetailsOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiTopologyGetnodeedgepointdetailsOutput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiTopologyGetnodeedgepointdetailsOutputNodeEdgePoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiTopologyGetnodeedgepointdetailsOutputNodeEdgePoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiTopologyGettopologydetailsInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiTopologyGettopologydetailsInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiTopologyGettopologydetailsOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiTopologyGettopologydetailsOutput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiTopologyGettopologylistOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiTopologyGettopologylistOutput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiTopologyInterRuleGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiTopologyInterRuleGroup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiTopologyLatencyCharacteristic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiTopologyLatencyCharacteristic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiTopologyLayerProtocolTransitionPac.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiTopologyLink.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiTopologyLink.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiTopologyLinkRef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiTopologyLinkRef.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiTopologyNepLayerProtocolCapability.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiTopologyNepLayerProtocolCapability.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiTopologyNetworkTopologyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiTopologyNetworkTopologyService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiTopologyNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiTopologyNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiTopologyNodeEdgePoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiTopologyNodeEdgePoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiTopologyNodeEdgePointRef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiTopologyNodeEdgePointRef.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiTopologyNodeNodeEdgePoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiTopologyNodeNodeEdgePoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiTopologyNodeRef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiTopologyNodeRef.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiTopologyNodeRuleGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiTopologyNodeRuleGroup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiTopologyNodeRuleGroupRef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiTopologyNodeRuleGroupRef.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiTopologyRiskCharacteristic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiTopologyRiskCharacteristic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiTopologyRiskParameterPac.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiTopologyRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiTopologyRule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiTopologyTopology.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiTopologyTopology.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiTopologyTopologyContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiTopologyTopologyContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiTopologyTopologyNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiTopologyTopologyNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiTopologyTopologyRef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiTopologyTopologyRef.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiTopologyTopologycontextTopology.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiTopologyTopologycontextTopology.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiTopologyTransferCostPac.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiTopologyTransferIntegrityPac.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiTopologyTransferTimingPac.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiTopologyValidationMechanism.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiTopologyValidationMechanism.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiTopologyValidationPac.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiVirtualNetworkContextAugmentation3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiVirtualNetworkCreateVirtualNetworkService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiVirtualNetworkCreateVirtualNetworkService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiVirtualNetworkCreatevirtualnetworkserviceInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiVirtualNetworkCreatevirtualnetworkserviceInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiVirtualNetworkCreatevirtualnetworkserviceOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiVirtualNetworkCreatevirtualnetworkserviceOutput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiVirtualNetworkDeleteVirtualNetworkService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiVirtualNetworkDeleteVirtualNetworkService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiVirtualNetworkDeletevirtualnetworkserviceInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiVirtualNetworkDeletevirtualnetworkserviceInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiVirtualNetworkDeletevirtualnetworkserviceOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiVirtualNetworkDeletevirtualnetworkserviceOutput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiVirtualNetworkGetVirtualNetworkServiceDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiVirtualNetworkGetVirtualNetworkServiceDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiVirtualNetworkGetVirtualNetworkServiceList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiVirtualNetworkGetVirtualNetworkServiceList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiVirtualNetworkGetvirtualnetworkservicedetailsInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiVirtualNetworkGetvirtualnetworkservicedetailsInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiVirtualNetworkGetvirtualnetworkservicedetailsOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiVirtualNetworkGetvirtualnetworkservicedetailsOutput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiVirtualNetworkGetvirtualnetworkservicelistOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiVirtualNetworkGetvirtualnetworkservicelistOutput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiVirtualNetworkVirtualNetworkConstraint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiVirtualNetworkVirtualNetworkConstraint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiVirtualNetworkVirtualNetworkContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiVirtualNetworkVirtualNetworkContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiVirtualNetworkVirtualNetworkService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiVirtualNetworkVirtualNetworkService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiVirtualNetworkVirtualNetworkServiceEndPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiVirtualNetworkVirtualNetworkServiceEndPoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiVirtualNetworkVirtualNwServiceRef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/model/TapiVirtualNetworkVirtualNwServiceRef.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/io/swagger/api/DataApiControllerIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/io/swagger/api/DataApiControllerIntegrationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/io/swagger/api/OperationsApiControllerIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/io/swagger/api/OperationsApiControllerIntegrationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -10,6 +602,9 @@
   </component>
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -23,14 +618,28 @@
     <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="1PADu0yMhQpm7CXyfMk1FhTW1nT" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelOrder2" value="2" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RequestMappingsPanelWidth2" value="75" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.17664377" />
+    <property name="project.structure.side.proportion" value="0.23576158" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -46,8 +655,9 @@
   </component>
   <component name="RunManager">
     <configuration name="Swagger2SpringBoot" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="swagger-spring-tapi2.2" />
+      <module name="tapi2.2-SpringBoot" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="io.swagger.Swagger2SpringBoot" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -55,6 +665,9 @@
   </component>
   <component name="SQLPlugin.ProjectConfiguration">
     <queries />
+  </component>
+  <component name="SpringBeansView">
+    <option name="beanDetailsProportion" value="0.3" />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -64,11 +677,26 @@
       <option name="presentableId" value="Default" />
       <updated>1565308225418</updated>
       <workItem from="1565308228453" duration="480000" />
+      <workItem from="1567869428231" duration="1399000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

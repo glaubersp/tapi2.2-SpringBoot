@@ -16,8 +16,11 @@ import javax.validation.constraints.*;
  * TapiEthEthOnDemandMeasurementJobControlSource
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiEthEthOnDemandMeasurementJobControlSource extends TapiEthEthMeasurementJobControlCommon  {
+  @JsonProperty("controller-mep-id")
+  private Integer controllerMepId = null;
+
   @JsonProperty("data-tlv-length")
   private Integer dataTlvLength = null;
 
@@ -27,8 +30,24 @@ public class TapiEthEthOnDemandMeasurementJobControlSource extends TapiEthEthMea
   @JsonProperty("oam-pdu-generation-type")
   private TapiEthOamPduGenerationType oamPduGenerationType = null;
 
-  @JsonProperty("controller-mep-id")
-  private Integer controllerMepId = null;
+  public TapiEthEthOnDemandMeasurementJobControlSource controllerMepId(Integer controllerMepId) {
+    this.controllerMepId = controllerMepId;
+    return this;
+  }
+
+  /**
+   * none
+   * @return controllerMepId
+  **/
+  @ApiModelProperty(value = "none")
+
+  public Integer getControllerMepId() {
+    return controllerMepId;
+  }
+
+  public void setControllerMepId(Integer controllerMepId) {
+    this.controllerMepId = controllerMepId;
+  }
 
   public TapiEthEthOnDemandMeasurementJobControlSource dataTlvLength(Integer dataTlvLength) {
     this.dataTlvLength = dataTlvLength;
@@ -88,25 +107,6 @@ public class TapiEthEthOnDemandMeasurementJobControlSource extends TapiEthEthMea
     this.oamPduGenerationType = oamPduGenerationType;
   }
 
-  public TapiEthEthOnDemandMeasurementJobControlSource controllerMepId(Integer controllerMepId) {
-    this.controllerMepId = controllerMepId;
-    return this;
-  }
-
-  /**
-   * none
-   * @return controllerMepId
-  **/
-  @ApiModelProperty(value = "none")
-
-  public Integer getControllerMepId() {
-    return controllerMepId;
-  }
-
-  public void setControllerMepId(Integer controllerMepId) {
-    this.controllerMepId = controllerMepId;
-  }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -117,16 +117,16 @@ public class TapiEthEthOnDemandMeasurementJobControlSource extends TapiEthEthMea
       return false;
     }
     TapiEthEthOnDemandMeasurementJobControlSource tapiEthEthOnDemandMeasurementJobControlSource = (TapiEthEthOnDemandMeasurementJobControlSource) o;
-    return Objects.equals(this.dataTlvLength, tapiEthEthOnDemandMeasurementJobControlSource.dataTlvLength) &&
+    return Objects.equals(this.controllerMepId, tapiEthEthOnDemandMeasurementJobControlSource.controllerMepId) &&
+        Objects.equals(this.dataTlvLength, tapiEthEthOnDemandMeasurementJobControlSource.dataTlvLength) &&
         Objects.equals(this.destinationAddress, tapiEthEthOnDemandMeasurementJobControlSource.destinationAddress) &&
         Objects.equals(this.oamPduGenerationType, tapiEthEthOnDemandMeasurementJobControlSource.oamPduGenerationType) &&
-        Objects.equals(this.controllerMepId, tapiEthEthOnDemandMeasurementJobControlSource.controllerMepId) &&
         super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(dataTlvLength, destinationAddress, oamPduGenerationType, controllerMepId, super.hashCode());
+    return Objects.hash(controllerMepId, dataTlvLength, destinationAddress, oamPduGenerationType, super.hashCode());
   }
 
   @Override
@@ -134,10 +134,10 @@ public class TapiEthEthOnDemandMeasurementJobControlSource extends TapiEthEthMea
     StringBuilder sb = new StringBuilder();
     sb.append("class TapiEthEthOnDemandMeasurementJobControlSource {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    controllerMepId: ").append(toIndentedString(controllerMepId)).append("\n");
     sb.append("    dataTlvLength: ").append(toIndentedString(dataTlvLength)).append("\n");
     sb.append("    destinationAddress: ").append(toIndentedString(destinationAddress)).append("\n");
     sb.append("    oamPduGenerationType: ").append(toIndentedString(oamPduGenerationType)).append("\n");
-    sb.append("    controllerMepId: ").append(toIndentedString(controllerMepId)).append("\n");
     sb.append("}");
     return sb.toString();
   }

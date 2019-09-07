@@ -19,11 +19,15 @@ import javax.validation.constraints.*;
  * TapiPhotonicMediaOtsiCapabilityPac
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiPhotonicMediaOtsiCapabilityPac   {
   @JsonProperty("supportable-application-identifier")
   @Valid
   private List<TapiPhotonicMediaApplicationIdentifier> supportableApplicationIdentifier = null;
+
+  @JsonProperty("supportable-central-frequency-band")
+  @Valid
+  private List<TapiPhotonicMediaCentralFrequencyBand> supportableCentralFrequencyBand = null;
 
   @JsonProperty("supportable-modulation")
   @Valid
@@ -32,10 +36,6 @@ public class TapiPhotonicMediaOtsiCapabilityPac   {
   @JsonProperty("total-power-warn-threshold")
   private TapiPhotonicMediaTotalPowerThresholdPac totalPowerWarnThreshold = null;
 
-  @JsonProperty("supportable-central-frequency-band")
-  @Valid
-  private List<TapiPhotonicMediaCentralFrequencyBand> supportableCentralFrequencyBand = null;
-
   public TapiPhotonicMediaOtsiCapabilityPac supportableApplicationIdentifier(List<TapiPhotonicMediaApplicationIdentifier> supportableApplicationIdentifier) {
     this.supportableApplicationIdentifier = supportableApplicationIdentifier;
     return this;
@@ -43,7 +43,7 @@ public class TapiPhotonicMediaOtsiCapabilityPac   {
 
   public TapiPhotonicMediaOtsiCapabilityPac addSupportableApplicationIdentifierItem(TapiPhotonicMediaApplicationIdentifier supportableApplicationIdentifierItem) {
     if (this.supportableApplicationIdentifier == null) {
-      this.supportableApplicationIdentifier = new ArrayList<TapiPhotonicMediaApplicationIdentifier>();
+      this.supportableApplicationIdentifier = new ArrayList<>();
     }
     this.supportableApplicationIdentifier.add(supportableApplicationIdentifierItem);
     return this;
@@ -63,6 +63,33 @@ public class TapiPhotonicMediaOtsiCapabilityPac   {
     this.supportableApplicationIdentifier = supportableApplicationIdentifier;
   }
 
+  public TapiPhotonicMediaOtsiCapabilityPac supportableCentralFrequencyBand(List<TapiPhotonicMediaCentralFrequencyBand> supportableCentralFrequencyBand) {
+    this.supportableCentralFrequencyBand = supportableCentralFrequencyBand;
+    return this;
+  }
+
+  public TapiPhotonicMediaOtsiCapabilityPac addSupportableCentralFrequencyBandItem(TapiPhotonicMediaCentralFrequencyBand supportableCentralFrequencyBandItem) {
+    if (this.supportableCentralFrequencyBand == null) {
+      this.supportableCentralFrequencyBand = new ArrayList<>();
+    }
+    this.supportableCentralFrequencyBand.add(supportableCentralFrequencyBandItem);
+    return this;
+  }
+
+  /**
+   * Each spectrum band supported for otsi trasmitter to be tuned on, is specified                  as per it's lower and upper central frequencies supported and its frequency constraints,                  consisting in the frequency Grid and the AdjustmentGranularity, used to uniquely identify all                  central frequencies supported within the band.
+   * @return supportableCentralFrequencyBand
+  **/
+  @ApiModelProperty(value = "Each spectrum band supported for otsi trasmitter to be tuned on, is specified                  as per it's lower and upper central frequencies supported and its frequency constraints,                  consisting in the frequency Grid and the AdjustmentGranularity, used to uniquely identify all                  central frequencies supported within the band.")
+  @Valid
+  public List<TapiPhotonicMediaCentralFrequencyBand> getSupportableCentralFrequencyBand() {
+    return supportableCentralFrequencyBand;
+  }
+
+  public void setSupportableCentralFrequencyBand(List<TapiPhotonicMediaCentralFrequencyBand> supportableCentralFrequencyBand) {
+    this.supportableCentralFrequencyBand = supportableCentralFrequencyBand;
+  }
+
   public TapiPhotonicMediaOtsiCapabilityPac supportableModulation(List<TapiPhotonicMediaModulationTechnique> supportableModulation) {
     this.supportableModulation = supportableModulation;
     return this;
@@ -70,7 +97,7 @@ public class TapiPhotonicMediaOtsiCapabilityPac   {
 
   public TapiPhotonicMediaOtsiCapabilityPac addSupportableModulationItem(TapiPhotonicMediaModulationTechnique supportableModulationItem) {
     if (this.supportableModulation == null) {
-      this.supportableModulation = new ArrayList<TapiPhotonicMediaModulationTechnique>();
+      this.supportableModulation = new ArrayList<>();
     }
     this.supportableModulation.add(supportableModulationItem);
     return this;
@@ -110,33 +137,6 @@ public class TapiPhotonicMediaOtsiCapabilityPac   {
     this.totalPowerWarnThreshold = totalPowerWarnThreshold;
   }
 
-  public TapiPhotonicMediaOtsiCapabilityPac supportableCentralFrequencyBand(List<TapiPhotonicMediaCentralFrequencyBand> supportableCentralFrequencyBand) {
-    this.supportableCentralFrequencyBand = supportableCentralFrequencyBand;
-    return this;
-  }
-
-  public TapiPhotonicMediaOtsiCapabilityPac addSupportableCentralFrequencyBandItem(TapiPhotonicMediaCentralFrequencyBand supportableCentralFrequencyBandItem) {
-    if (this.supportableCentralFrequencyBand == null) {
-      this.supportableCentralFrequencyBand = new ArrayList<TapiPhotonicMediaCentralFrequencyBand>();
-    }
-    this.supportableCentralFrequencyBand.add(supportableCentralFrequencyBandItem);
-    return this;
-  }
-
-  /**
-   * Each spectrum band supported for otsi trasmitter to be tuned on, is specified                  as per it's lower and upper central frequencies supported and its frequency constraints,                  consisting in the frequency Grid and the AdjustmentGranularity, used to uniquely identify all                  central frequencies supported within the band.
-   * @return supportableCentralFrequencyBand
-  **/
-  @ApiModelProperty(value = "Each spectrum band supported for otsi trasmitter to be tuned on, is specified                  as per it's lower and upper central frequencies supported and its frequency constraints,                  consisting in the frequency Grid and the AdjustmentGranularity, used to uniquely identify all                  central frequencies supported within the band.")
-  @Valid
-  public List<TapiPhotonicMediaCentralFrequencyBand> getSupportableCentralFrequencyBand() {
-    return supportableCentralFrequencyBand;
-  }
-
-  public void setSupportableCentralFrequencyBand(List<TapiPhotonicMediaCentralFrequencyBand> supportableCentralFrequencyBand) {
-    this.supportableCentralFrequencyBand = supportableCentralFrequencyBand;
-  }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -148,14 +148,14 @@ public class TapiPhotonicMediaOtsiCapabilityPac   {
     }
     TapiPhotonicMediaOtsiCapabilityPac tapiPhotonicMediaOtsiCapabilityPac = (TapiPhotonicMediaOtsiCapabilityPac) o;
     return Objects.equals(this.supportableApplicationIdentifier, tapiPhotonicMediaOtsiCapabilityPac.supportableApplicationIdentifier) &&
+        Objects.equals(this.supportableCentralFrequencyBand, tapiPhotonicMediaOtsiCapabilityPac.supportableCentralFrequencyBand) &&
         Objects.equals(this.supportableModulation, tapiPhotonicMediaOtsiCapabilityPac.supportableModulation) &&
-        Objects.equals(this.totalPowerWarnThreshold, tapiPhotonicMediaOtsiCapabilityPac.totalPowerWarnThreshold) &&
-        Objects.equals(this.supportableCentralFrequencyBand, tapiPhotonicMediaOtsiCapabilityPac.supportableCentralFrequencyBand);
+        Objects.equals(this.totalPowerWarnThreshold, tapiPhotonicMediaOtsiCapabilityPac.totalPowerWarnThreshold);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(supportableApplicationIdentifier, supportableModulation, totalPowerWarnThreshold, supportableCentralFrequencyBand);
+    return Objects.hash(supportableApplicationIdentifier, supportableCentralFrequencyBand, supportableModulation, totalPowerWarnThreshold);
   }
 
   @Override
@@ -164,9 +164,9 @@ public class TapiPhotonicMediaOtsiCapabilityPac   {
     sb.append("class TapiPhotonicMediaOtsiCapabilityPac {\n");
     
     sb.append("    supportableApplicationIdentifier: ").append(toIndentedString(supportableApplicationIdentifier)).append("\n");
+    sb.append("    supportableCentralFrequencyBand: ").append(toIndentedString(supportableCentralFrequencyBand)).append("\n");
     sb.append("    supportableModulation: ").append(toIndentedString(supportableModulation)).append("\n");
     sb.append("    totalPowerWarnThreshold: ").append(toIndentedString(totalPowerWarnThreshold)).append("\n");
-    sb.append("    supportableCentralFrequencyBand: ").append(toIndentedString(supportableCentralFrequencyBand)).append("\n");
     sb.append("}");
     return sb.toString();
   }

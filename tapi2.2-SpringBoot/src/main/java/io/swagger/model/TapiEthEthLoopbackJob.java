@@ -14,35 +14,16 @@ import javax.validation.constraints.*;
  * TapiEthEthLoopbackJob
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiEthEthLoopbackJob   {
-  @JsonProperty("number")
-  private Integer number = null;
-
   @JsonProperty("eth-oam-test-loopback-common-pac")
   private TapiEthEthOamTestLoopbackCommonPac ethOamTestLoopbackCommonPac = null;
 
   @JsonProperty("lbm-data-tlv")
   private String lbmDataTlv = null;
 
-  public TapiEthEthLoopbackJob number(Integer number) {
-    this.number = number;
-    return this;
-  }
-
-  /**
-   * G.8052: This parameter specifies how many LB messages to be sent for the LB_Series process.
-   * @return number
-  **/
-  @ApiModelProperty(value = "G.8052: This parameter specifies how many LB messages to be sent for the LB_Series process.")
-
-  public Integer getNumber() {
-    return number;
-  }
-
-  public void setNumber(Integer number) {
-    this.number = number;
-  }
+  @JsonProperty("number")
+  private Integer number = null;
 
   public TapiEthEthLoopbackJob ethOamTestLoopbackCommonPac(TapiEthEthOamTestLoopbackCommonPac ethOamTestLoopbackCommonPac) {
     this.ethOamTestLoopbackCommonPac = ethOamTestLoopbackCommonPac;
@@ -83,6 +64,25 @@ public class TapiEthEthLoopbackJob   {
     this.lbmDataTlv = lbmDataTlv;
   }
 
+  public TapiEthEthLoopbackJob number(Integer number) {
+    this.number = number;
+    return this;
+  }
+
+  /**
+   * G.8052: This parameter specifies how many LB messages to be sent for the LB_Series process.
+   * @return number
+  **/
+  @ApiModelProperty(value = "G.8052: This parameter specifies how many LB messages to be sent for the LB_Series process.")
+
+  public Integer getNumber() {
+    return number;
+  }
+
+  public void setNumber(Integer number) {
+    this.number = number;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -93,14 +93,14 @@ public class TapiEthEthLoopbackJob   {
       return false;
     }
     TapiEthEthLoopbackJob tapiEthEthLoopbackJob = (TapiEthEthLoopbackJob) o;
-    return Objects.equals(this.number, tapiEthEthLoopbackJob.number) &&
-        Objects.equals(this.ethOamTestLoopbackCommonPac, tapiEthEthLoopbackJob.ethOamTestLoopbackCommonPac) &&
-        Objects.equals(this.lbmDataTlv, tapiEthEthLoopbackJob.lbmDataTlv);
+    return Objects.equals(this.ethOamTestLoopbackCommonPac, tapiEthEthLoopbackJob.ethOamTestLoopbackCommonPac) &&
+        Objects.equals(this.lbmDataTlv, tapiEthEthLoopbackJob.lbmDataTlv) &&
+        Objects.equals(this.number, tapiEthEthLoopbackJob.number);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(number, ethOamTestLoopbackCommonPac, lbmDataTlv);
+    return Objects.hash(ethOamTestLoopbackCommonPac, lbmDataTlv, number);
   }
 
   @Override
@@ -108,9 +108,9 @@ public class TapiEthEthLoopbackJob   {
     StringBuilder sb = new StringBuilder();
     sb.append("class TapiEthEthLoopbackJob {\n");
     
-    sb.append("    number: ").append(toIndentedString(number)).append("\n");
     sb.append("    ethOamTestLoopbackCommonPac: ").append(toIndentedString(ethOamTestLoopbackCommonPac)).append("\n");
     sb.append("    lbmDataTlv: ").append(toIndentedString(lbmDataTlv)).append("\n");
+    sb.append("    number: ").append(toIndentedString(number)).append("\n");
     sb.append("}");
     return sb.toString();
   }

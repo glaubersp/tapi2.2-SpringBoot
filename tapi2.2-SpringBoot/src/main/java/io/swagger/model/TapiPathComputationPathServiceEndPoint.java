@@ -21,13 +21,13 @@ import javax.validation.constraints.*;
  * TapiPathComputationPathServiceEndPoint
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiPathComputationPathServiceEndPoint extends TapiCommonLocalClass  {
-  @JsonProperty("role")
-  private TapiCommonPortRole role = null;
+  @JsonProperty("capacity")
+  private TapiCommonCapacity capacity = null;
 
-  @JsonProperty("service-interface-point")
-  private TapiCommonServiceInterfacePointRef serviceInterfacePoint = null;
+  @JsonProperty("direction")
+  private TapiCommonPortDirection direction = null;
 
   @JsonProperty("layer-protocol-name")
   private TapiCommonLayerProtocolName layerProtocolName = null;
@@ -35,50 +35,50 @@ public class TapiPathComputationPathServiceEndPoint extends TapiCommonLocalClass
   @JsonProperty("layer-protocol-qualifier")
   private String layerProtocolQualifier = null;
 
-  @JsonProperty("direction")
-  private TapiCommonPortDirection direction = null;
+  @JsonProperty("role")
+  private TapiCommonPortRole role = null;
 
-  @JsonProperty("capacity")
-  private TapiCommonCapacity capacity = null;
+  @JsonProperty("service-interface-point")
+  private TapiCommonServiceInterfacePointRef serviceInterfacePoint = null;
 
-  public TapiPathComputationPathServiceEndPoint role(TapiCommonPortRole role) {
-    this.role = role;
+  public TapiPathComputationPathServiceEndPoint capacity(TapiCommonCapacity capacity) {
+    this.capacity = capacity;
     return this;
   }
 
   /**
-   * Get role
-   * @return role
+   * Get capacity
+   * @return capacity
   **/
   @ApiModelProperty(value = "")
 
   @Valid
-  public TapiCommonPortRole getRole() {
-    return role;
+  public TapiCommonCapacity getCapacity() {
+    return capacity;
   }
 
-  public void setRole(TapiCommonPortRole role) {
-    this.role = role;
+  public void setCapacity(TapiCommonCapacity capacity) {
+    this.capacity = capacity;
   }
 
-  public TapiPathComputationPathServiceEndPoint serviceInterfacePoint(TapiCommonServiceInterfacePointRef serviceInterfacePoint) {
-    this.serviceInterfacePoint = serviceInterfacePoint;
+  public TapiPathComputationPathServiceEndPoint direction(TapiCommonPortDirection direction) {
+    this.direction = direction;
     return this;
   }
 
   /**
-   * Get serviceInterfacePoint
-   * @return serviceInterfacePoint
+   * Get direction
+   * @return direction
   **/
   @ApiModelProperty(value = "")
 
   @Valid
-  public TapiCommonServiceInterfacePointRef getServiceInterfacePoint() {
-    return serviceInterfacePoint;
+  public TapiCommonPortDirection getDirection() {
+    return direction;
   }
 
-  public void setServiceInterfacePoint(TapiCommonServiceInterfacePointRef serviceInterfacePoint) {
-    this.serviceInterfacePoint = serviceInterfacePoint;
+  public void setDirection(TapiCommonPortDirection direction) {
+    this.direction = direction;
   }
 
   public TapiPathComputationPathServiceEndPoint layerProtocolName(TapiCommonLayerProtocolName layerProtocolName) {
@@ -120,44 +120,44 @@ public class TapiPathComputationPathServiceEndPoint extends TapiCommonLocalClass
     this.layerProtocolQualifier = layerProtocolQualifier;
   }
 
-  public TapiPathComputationPathServiceEndPoint direction(TapiCommonPortDirection direction) {
-    this.direction = direction;
+  public TapiPathComputationPathServiceEndPoint role(TapiCommonPortRole role) {
+    this.role = role;
     return this;
   }
 
   /**
-   * Get direction
-   * @return direction
+   * Get role
+   * @return role
   **/
   @ApiModelProperty(value = "")
 
   @Valid
-  public TapiCommonPortDirection getDirection() {
-    return direction;
+  public TapiCommonPortRole getRole() {
+    return role;
   }
 
-  public void setDirection(TapiCommonPortDirection direction) {
-    this.direction = direction;
+  public void setRole(TapiCommonPortRole role) {
+    this.role = role;
   }
 
-  public TapiPathComputationPathServiceEndPoint capacity(TapiCommonCapacity capacity) {
-    this.capacity = capacity;
+  public TapiPathComputationPathServiceEndPoint serviceInterfacePoint(TapiCommonServiceInterfacePointRef serviceInterfacePoint) {
+    this.serviceInterfacePoint = serviceInterfacePoint;
     return this;
   }
 
   /**
-   * Get capacity
-   * @return capacity
+   * Get serviceInterfacePoint
+   * @return serviceInterfacePoint
   **/
   @ApiModelProperty(value = "")
 
   @Valid
-  public TapiCommonCapacity getCapacity() {
-    return capacity;
+  public TapiCommonServiceInterfacePointRef getServiceInterfacePoint() {
+    return serviceInterfacePoint;
   }
 
-  public void setCapacity(TapiCommonCapacity capacity) {
-    this.capacity = capacity;
+  public void setServiceInterfacePoint(TapiCommonServiceInterfacePointRef serviceInterfacePoint) {
+    this.serviceInterfacePoint = serviceInterfacePoint;
   }
 
 
@@ -170,18 +170,18 @@ public class TapiPathComputationPathServiceEndPoint extends TapiCommonLocalClass
       return false;
     }
     TapiPathComputationPathServiceEndPoint tapiPathComputationPathServiceEndPoint = (TapiPathComputationPathServiceEndPoint) o;
-    return Objects.equals(this.role, tapiPathComputationPathServiceEndPoint.role) &&
-        Objects.equals(this.serviceInterfacePoint, tapiPathComputationPathServiceEndPoint.serviceInterfacePoint) &&
+    return Objects.equals(this.capacity, tapiPathComputationPathServiceEndPoint.capacity) &&
+        Objects.equals(this.direction, tapiPathComputationPathServiceEndPoint.direction) &&
         Objects.equals(this.layerProtocolName, tapiPathComputationPathServiceEndPoint.layerProtocolName) &&
         Objects.equals(this.layerProtocolQualifier, tapiPathComputationPathServiceEndPoint.layerProtocolQualifier) &&
-        Objects.equals(this.direction, tapiPathComputationPathServiceEndPoint.direction) &&
-        Objects.equals(this.capacity, tapiPathComputationPathServiceEndPoint.capacity) &&
+        Objects.equals(this.role, tapiPathComputationPathServiceEndPoint.role) &&
+        Objects.equals(this.serviceInterfacePoint, tapiPathComputationPathServiceEndPoint.serviceInterfacePoint) &&
         super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(role, serviceInterfacePoint, layerProtocolName, layerProtocolQualifier, direction, capacity, super.hashCode());
+    return Objects.hash(capacity, direction, layerProtocolName, layerProtocolQualifier, role, serviceInterfacePoint, super.hashCode());
   }
 
   @Override
@@ -189,12 +189,12 @@ public class TapiPathComputationPathServiceEndPoint extends TapiCommonLocalClass
     StringBuilder sb = new StringBuilder();
     sb.append("class TapiPathComputationPathServiceEndPoint {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    role: ").append(toIndentedString(role)).append("\n");
-    sb.append("    serviceInterfacePoint: ").append(toIndentedString(serviceInterfacePoint)).append("\n");
+    sb.append("    capacity: ").append(toIndentedString(capacity)).append("\n");
+    sb.append("    direction: ").append(toIndentedString(direction)).append("\n");
     sb.append("    layerProtocolName: ").append(toIndentedString(layerProtocolName)).append("\n");
     sb.append("    layerProtocolQualifier: ").append(toIndentedString(layerProtocolQualifier)).append("\n");
-    sb.append("    direction: ").append(toIndentedString(direction)).append("\n");
-    sb.append("    capacity: ").append(toIndentedString(capacity)).append("\n");
+    sb.append("    role: ").append(toIndentedString(role)).append("\n");
+    sb.append("    serviceInterfacePoint: ").append(toIndentedString(serviceInterfacePoint)).append("\n");
     sb.append("}");
     return sb.toString();
   }

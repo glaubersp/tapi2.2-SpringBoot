@@ -18,8 +18,11 @@ import javax.validation.constraints.*;
  * TapiOamCreateoamservicepointInput
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiOamCreateoamservicepointInput   {
+  @JsonProperty("connectivity-service-end-point-id")
+  private String connectivityServiceEndPointId = null;
+
   @JsonProperty("layer-protocol-name")
   private TapiCommonLayerProtocolName layerProtocolName = null;
 
@@ -27,20 +30,36 @@ public class TapiOamCreateoamservicepointInput   {
   @Valid
   private List<TapiCommonNameAndValue> name = null;
 
-  @JsonProperty("state")
-  private TapiCommonAdministrativeState state = null;
-
-  @JsonProperty("connectivity-service-end-point-id")
-  private String connectivityServiceEndPointId = null;
+  @JsonProperty("oam-service-id")
+  private String oamServiceId = null;
 
   @JsonProperty("service-interface-point-id")
   private String serviceInterfacePointId = null;
 
-  @JsonProperty("oam-service-id")
-  private String oamServiceId = null;
+  @JsonProperty("state")
+  private TapiCommonAdministrativeState state = null;
 
   @JsonProperty("uuid")
   private String uuid = null;
+
+  public TapiOamCreateoamservicepointInput connectivityServiceEndPointId(String connectivityServiceEndPointId) {
+    this.connectivityServiceEndPointId = connectivityServiceEndPointId;
+    return this;
+  }
+
+  /**
+   * UUID of the CSEP to be monitored: An identifier that is universally unique within an identifier space, where the identifier space is itself globally unique, and immutable.                      An UUID carries no semantics with respect to the purpose or state of the entity.                      UUID here uses string representation as defined in RFC 4122.  The canonical representation uses lowercase characters.                      Pattern: [0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-' + '[0-9a-fA-F]{4}-[0-9a-fA-F]{12}                       Example of a UUID in string representation: f81d4fae-7dec-11d0-a765-00a0c91e6bf6
+   * @return connectivityServiceEndPointId
+  **/
+  @ApiModelProperty(value = "UUID of the CSEP to be monitored: An identifier that is universally unique within an identifier space, where the identifier space is itself globally unique, and immutable.                      An UUID carries no semantics with respect to the purpose or state of the entity.                      UUID here uses string representation as defined in RFC 4122.  The canonical representation uses lowercase characters.                      Pattern: [0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-' + '[0-9a-fA-F]{4}-[0-9a-fA-F]{12}                       Example of a UUID in string representation: f81d4fae-7dec-11d0-a765-00a0c91e6bf6")
+
+  public String getConnectivityServiceEndPointId() {
+    return connectivityServiceEndPointId;
+  }
+
+  public void setConnectivityServiceEndPointId(String connectivityServiceEndPointId) {
+    this.connectivityServiceEndPointId = connectivityServiceEndPointId;
+  }
 
   public TapiOamCreateoamservicepointInput layerProtocolName(TapiCommonLayerProtocolName layerProtocolName) {
     this.layerProtocolName = layerProtocolName;
@@ -69,7 +88,7 @@ public class TapiOamCreateoamservicepointInput   {
 
   public TapiOamCreateoamservicepointInput addNameItem(TapiCommonNameAndValue nameItem) {
     if (this.name == null) {
-      this.name = new ArrayList<TapiCommonNameAndValue>();
+      this.name = new ArrayList<>();
     }
     this.name.add(nameItem);
     return this;
@@ -89,43 +108,23 @@ public class TapiOamCreateoamservicepointInput   {
     this.name = name;
   }
 
-  public TapiOamCreateoamservicepointInput state(TapiCommonAdministrativeState state) {
-    this.state = state;
+  public TapiOamCreateoamservicepointInput oamServiceId(String oamServiceId) {
+    this.oamServiceId = oamServiceId;
     return this;
   }
 
   /**
-   * Get state
-   * @return state
+   * UUID of the parent OamService: An identifier that is universally unique within an identifier space, where the identifier space is itself globally unique, and immutable.                      An UUID carries no semantics with respect to the purpose or state of the entity.                      UUID here uses string representation as defined in RFC 4122.  The canonical representation uses lowercase characters.                      Pattern: [0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-' + '[0-9a-fA-F]{4}-[0-9a-fA-F]{12}                       Example of a UUID in string representation: f81d4fae-7dec-11d0-a765-00a0c91e6bf6
+   * @return oamServiceId
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "UUID of the parent OamService: An identifier that is universally unique within an identifier space, where the identifier space is itself globally unique, and immutable.                      An UUID carries no semantics with respect to the purpose or state of the entity.                      UUID here uses string representation as defined in RFC 4122.  The canonical representation uses lowercase characters.                      Pattern: [0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-' + '[0-9a-fA-F]{4}-[0-9a-fA-F]{12}                       Example of a UUID in string representation: f81d4fae-7dec-11d0-a765-00a0c91e6bf6")
 
-  @Valid
-  public TapiCommonAdministrativeState getState() {
-    return state;
+  public String getOamServiceId() {
+    return oamServiceId;
   }
 
-  public void setState(TapiCommonAdministrativeState state) {
-    this.state = state;
-  }
-
-  public TapiOamCreateoamservicepointInput connectivityServiceEndPointId(String connectivityServiceEndPointId) {
-    this.connectivityServiceEndPointId = connectivityServiceEndPointId;
-    return this;
-  }
-
-  /**
-   * UUID of the CSEP to be monitored: An identifier that is universally unique within an identifier space, where the identifier space is itself globally unique, and immutable.                      An UUID carries no semantics with respect to the purpose or state of the entity.                      UUID here uses string representation as defined in RFC 4122.  The canonical representation uses lowercase characters.                      Pattern: [0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-' + '[0-9a-fA-F]{4}-[0-9a-fA-F]{12}                       Example of a UUID in string representation: f81d4fae-7dec-11d0-a765-00a0c91e6bf6
-   * @return connectivityServiceEndPointId
-  **/
-  @ApiModelProperty(value = "UUID of the CSEP to be monitored: An identifier that is universally unique within an identifier space, where the identifier space is itself globally unique, and immutable.                      An UUID carries no semantics with respect to the purpose or state of the entity.                      UUID here uses string representation as defined in RFC 4122.  The canonical representation uses lowercase characters.                      Pattern: [0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-' + '[0-9a-fA-F]{4}-[0-9a-fA-F]{12}                       Example of a UUID in string representation: f81d4fae-7dec-11d0-a765-00a0c91e6bf6")
-
-  public String getConnectivityServiceEndPointId() {
-    return connectivityServiceEndPointId;
-  }
-
-  public void setConnectivityServiceEndPointId(String connectivityServiceEndPointId) {
-    this.connectivityServiceEndPointId = connectivityServiceEndPointId;
+  public void setOamServiceId(String oamServiceId) {
+    this.oamServiceId = oamServiceId;
   }
 
   public TapiOamCreateoamservicepointInput serviceInterfacePointId(String serviceInterfacePointId) {
@@ -147,23 +146,24 @@ public class TapiOamCreateoamservicepointInput   {
     this.serviceInterfacePointId = serviceInterfacePointId;
   }
 
-  public TapiOamCreateoamservicepointInput oamServiceId(String oamServiceId) {
-    this.oamServiceId = oamServiceId;
+  public TapiOamCreateoamservicepointInput state(TapiCommonAdministrativeState state) {
+    this.state = state;
     return this;
   }
 
   /**
-   * UUID of the parent OamService: An identifier that is universally unique within an identifier space, where the identifier space is itself globally unique, and immutable.                      An UUID carries no semantics with respect to the purpose or state of the entity.                      UUID here uses string representation as defined in RFC 4122.  The canonical representation uses lowercase characters.                      Pattern: [0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-' + '[0-9a-fA-F]{4}-[0-9a-fA-F]{12}                       Example of a UUID in string representation: f81d4fae-7dec-11d0-a765-00a0c91e6bf6
-   * @return oamServiceId
+   * Get state
+   * @return state
   **/
-  @ApiModelProperty(value = "UUID of the parent OamService: An identifier that is universally unique within an identifier space, where the identifier space is itself globally unique, and immutable.                      An UUID carries no semantics with respect to the purpose or state of the entity.                      UUID here uses string representation as defined in RFC 4122.  The canonical representation uses lowercase characters.                      Pattern: [0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-' + '[0-9a-fA-F]{4}-[0-9a-fA-F]{12}                       Example of a UUID in string representation: f81d4fae-7dec-11d0-a765-00a0c91e6bf6")
+  @ApiModelProperty(value = "")
 
-  public String getOamServiceId() {
-    return oamServiceId;
+  @Valid
+  public TapiCommonAdministrativeState getState() {
+    return state;
   }
 
-  public void setOamServiceId(String oamServiceId) {
-    this.oamServiceId = oamServiceId;
+  public void setState(TapiCommonAdministrativeState state) {
+    this.state = state;
   }
 
   public TapiOamCreateoamservicepointInput uuid(String uuid) {
@@ -195,18 +195,18 @@ public class TapiOamCreateoamservicepointInput   {
       return false;
     }
     TapiOamCreateoamservicepointInput tapiOamCreateoamservicepointInput = (TapiOamCreateoamservicepointInput) o;
-    return Objects.equals(this.layerProtocolName, tapiOamCreateoamservicepointInput.layerProtocolName) &&
+    return Objects.equals(this.connectivityServiceEndPointId, tapiOamCreateoamservicepointInput.connectivityServiceEndPointId) &&
+        Objects.equals(this.layerProtocolName, tapiOamCreateoamservicepointInput.layerProtocolName) &&
         Objects.equals(this.name, tapiOamCreateoamservicepointInput.name) &&
-        Objects.equals(this.state, tapiOamCreateoamservicepointInput.state) &&
-        Objects.equals(this.connectivityServiceEndPointId, tapiOamCreateoamservicepointInput.connectivityServiceEndPointId) &&
-        Objects.equals(this.serviceInterfacePointId, tapiOamCreateoamservicepointInput.serviceInterfacePointId) &&
         Objects.equals(this.oamServiceId, tapiOamCreateoamservicepointInput.oamServiceId) &&
+        Objects.equals(this.serviceInterfacePointId, tapiOamCreateoamservicepointInput.serviceInterfacePointId) &&
+        Objects.equals(this.state, tapiOamCreateoamservicepointInput.state) &&
         Objects.equals(this.uuid, tapiOamCreateoamservicepointInput.uuid);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(layerProtocolName, name, state, connectivityServiceEndPointId, serviceInterfacePointId, oamServiceId, uuid);
+    return Objects.hash(connectivityServiceEndPointId, layerProtocolName, name, oamServiceId, serviceInterfacePointId, state, uuid);
   }
 
   @Override
@@ -214,12 +214,12 @@ public class TapiOamCreateoamservicepointInput   {
     StringBuilder sb = new StringBuilder();
     sb.append("class TapiOamCreateoamservicepointInput {\n");
     
+    sb.append("    connectivityServiceEndPointId: ").append(toIndentedString(connectivityServiceEndPointId)).append("\n");
     sb.append("    layerProtocolName: ").append(toIndentedString(layerProtocolName)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    state: ").append(toIndentedString(state)).append("\n");
-    sb.append("    connectivityServiceEndPointId: ").append(toIndentedString(connectivityServiceEndPointId)).append("\n");
-    sb.append("    serviceInterfacePointId: ").append(toIndentedString(serviceInterfacePointId)).append("\n");
     sb.append("    oamServiceId: ").append(toIndentedString(oamServiceId)).append("\n");
+    sb.append("    serviceInterfacePointId: ").append(toIndentedString(serviceInterfacePointId)).append("\n");
+    sb.append("    state: ").append(toIndentedString(state)).append("\n");
     sb.append("    uuid: ").append(toIndentedString(uuid)).append("\n");
     sb.append("}");
     return sb.toString();

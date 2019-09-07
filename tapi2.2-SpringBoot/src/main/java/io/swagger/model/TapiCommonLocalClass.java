@@ -16,41 +16,14 @@ import javax.validation.constraints.*;
  * TapiCommonLocalClass
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiCommonLocalClass   {
-  @JsonProperty("name")
-  @Valid
-  private List<TapiCommonNameAndValue> name = null;
-
   @JsonProperty("local-id")
   private String localId = null;
 
-  public TapiCommonLocalClass name(List<TapiCommonNameAndValue> name) {
-    this.name = name;
-    return this;
-  }
-
-  public TapiCommonLocalClass addNameItem(TapiCommonNameAndValue nameItem) {
-    if (this.name == null) {
-      this.name = new ArrayList<TapiCommonNameAndValue>();
-    }
-    this.name.add(nameItem);
-    return this;
-  }
-
-  /**
-   * List of names. This value is unique in some namespace but may change during the life of the entity.                  A name carries no semantics with respect to the purpose of the entity.
-   * @return name
-  **/
-  @ApiModelProperty(value = "List of names. This value is unique in some namespace but may change during the life of the entity.                  A name carries no semantics with respect to the purpose of the entity.")
+  @JsonProperty("name")
   @Valid
-  public List<TapiCommonNameAndValue> getName() {
-    return name;
-  }
-
-  public void setName(List<TapiCommonNameAndValue> name) {
-    this.name = name;
-  }
+  private List<TapiCommonNameAndValue> name = null;
 
   public TapiCommonLocalClass localId(String localId) {
     this.localId = localId;
@@ -71,6 +44,33 @@ public class TapiCommonLocalClass   {
     this.localId = localId;
   }
 
+  public TapiCommonLocalClass name(List<TapiCommonNameAndValue> name) {
+    this.name = name;
+    return this;
+  }
+
+  public TapiCommonLocalClass addNameItem(TapiCommonNameAndValue nameItem) {
+    if (this.name == null) {
+      this.name = new ArrayList<>();
+    }
+    this.name.add(nameItem);
+    return this;
+  }
+
+  /**
+   * List of names. This value is unique in some namespace but may change during the life of the entity.                  A name carries no semantics with respect to the purpose of the entity.
+   * @return name
+  **/
+  @ApiModelProperty(value = "List of names. This value is unique in some namespace but may change during the life of the entity.                  A name carries no semantics with respect to the purpose of the entity.")
+  @Valid
+  public List<TapiCommonNameAndValue> getName() {
+    return name;
+  }
+
+  public void setName(List<TapiCommonNameAndValue> name) {
+    this.name = name;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -81,13 +81,13 @@ public class TapiCommonLocalClass   {
       return false;
     }
     TapiCommonLocalClass tapiCommonLocalClass = (TapiCommonLocalClass) o;
-    return Objects.equals(this.name, tapiCommonLocalClass.name) &&
-        Objects.equals(this.localId, tapiCommonLocalClass.localId);
+    return Objects.equals(this.localId, tapiCommonLocalClass.localId) &&
+        Objects.equals(this.name, tapiCommonLocalClass.name);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, localId);
+    return Objects.hash(localId, name);
   }
 
   @Override
@@ -95,8 +95,8 @@ public class TapiCommonLocalClass   {
     StringBuilder sb = new StringBuilder();
     sb.append("class TapiCommonLocalClass {\n");
     
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    localId: ").append(toIndentedString(localId)).append("\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("}");
     return sb.toString();
   }

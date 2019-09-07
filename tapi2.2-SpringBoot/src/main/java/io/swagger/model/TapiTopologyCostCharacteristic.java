@@ -13,35 +13,16 @@ import javax.validation.constraints.*;
  * TapiTopologyCostCharacteristic
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiTopologyCostCharacteristic   {
-  @JsonProperty("cost-value")
-  private String costValue = null;
-
   @JsonProperty("cost-algorithm")
   private String costAlgorithm = null;
 
   @JsonProperty("cost-name")
   private String costName = null;
 
-  public TapiTopologyCostCharacteristic costValue(String costValue) {
-    this.costValue = costValue;
-    return this;
-  }
-
-  /**
-   * The specific cost.
-   * @return costValue
-  **/
-  @ApiModelProperty(value = "The specific cost.")
-
-  public String getCostValue() {
-    return costValue;
-  }
-
-  public void setCostValue(String costValue) {
-    this.costValue = costValue;
-  }
+  @JsonProperty("cost-value")
+  private String costValue = null;
 
   public TapiTopologyCostCharacteristic costAlgorithm(String costAlgorithm) {
     this.costAlgorithm = costAlgorithm;
@@ -81,6 +62,25 @@ public class TapiTopologyCostCharacteristic   {
     this.costName = costName;
   }
 
+  public TapiTopologyCostCharacteristic costValue(String costValue) {
+    this.costValue = costValue;
+    return this;
+  }
+
+  /**
+   * The specific cost.
+   * @return costValue
+  **/
+  @ApiModelProperty(value = "The specific cost.")
+
+  public String getCostValue() {
+    return costValue;
+  }
+
+  public void setCostValue(String costValue) {
+    this.costValue = costValue;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -91,14 +91,14 @@ public class TapiTopologyCostCharacteristic   {
       return false;
     }
     TapiTopologyCostCharacteristic tapiTopologyCostCharacteristic = (TapiTopologyCostCharacteristic) o;
-    return Objects.equals(this.costValue, tapiTopologyCostCharacteristic.costValue) &&
-        Objects.equals(this.costAlgorithm, tapiTopologyCostCharacteristic.costAlgorithm) &&
-        Objects.equals(this.costName, tapiTopologyCostCharacteristic.costName);
+    return Objects.equals(this.costAlgorithm, tapiTopologyCostCharacteristic.costAlgorithm) &&
+        Objects.equals(this.costName, tapiTopologyCostCharacteristic.costName) &&
+        Objects.equals(this.costValue, tapiTopologyCostCharacteristic.costValue);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(costValue, costAlgorithm, costName);
+    return Objects.hash(costAlgorithm, costName, costValue);
   }
 
   @Override
@@ -106,9 +106,9 @@ public class TapiTopologyCostCharacteristic   {
     StringBuilder sb = new StringBuilder();
     sb.append("class TapiTopologyCostCharacteristic {\n");
     
-    sb.append("    costValue: ").append(toIndentedString(costValue)).append("\n");
     sb.append("    costAlgorithm: ").append(toIndentedString(costAlgorithm)).append("\n");
     sb.append("    costName: ").append(toIndentedString(costName)).append("\n");
+    sb.append("    costValue: ").append(toIndentedString(costValue)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -13,16 +13,16 @@ import javax.validation.constraints.*;
  * TapiEthLinkTraceResult
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiEthLinkTraceResult   {
   @JsonProperty("data-tlv-length")
   private Integer dataTlvLength = null;
 
-  @JsonProperty("time-to-live")
-  private Integer timeToLive = null;
-
   @JsonProperty("source-address")
   private String sourceAddress = null;
+
+  @JsonProperty("time-to-live")
+  private Integer timeToLive = null;
 
   public TapiEthLinkTraceResult dataTlvLength(Integer dataTlvLength) {
     this.dataTlvLength = dataTlvLength;
@@ -41,25 +41,6 @@ public class TapiEthLinkTraceResult   {
 
   public void setDataTlvLength(Integer dataTlvLength) {
     this.dataTlvLength = dataTlvLength;
-  }
-
-  public TapiEthLinkTraceResult timeToLive(Integer timeToLive) {
-    this.timeToLive = timeToLive;
-    return this;
-  }
-
-  /**
-   * G.8052: This attribute contains the Time To Live (TTL) value of an individual LTR frame result.
-   * @return timeToLive
-  **/
-  @ApiModelProperty(value = "G.8052: This attribute contains the Time To Live (TTL) value of an individual LTR frame result.")
-
-  public Integer getTimeToLive() {
-    return timeToLive;
-  }
-
-  public void setTimeToLive(Integer timeToLive) {
-    this.timeToLive = timeToLive;
   }
 
   public TapiEthLinkTraceResult sourceAddress(String sourceAddress) {
@@ -81,6 +62,25 @@ public class TapiEthLinkTraceResult   {
     this.sourceAddress = sourceAddress;
   }
 
+  public TapiEthLinkTraceResult timeToLive(Integer timeToLive) {
+    this.timeToLive = timeToLive;
+    return this;
+  }
+
+  /**
+   * G.8052: This attribute contains the Time To Live (TTL) value of an individual LTR frame result.
+   * @return timeToLive
+  **/
+  @ApiModelProperty(value = "G.8052: This attribute contains the Time To Live (TTL) value of an individual LTR frame result.")
+
+  public Integer getTimeToLive() {
+    return timeToLive;
+  }
+
+  public void setTimeToLive(Integer timeToLive) {
+    this.timeToLive = timeToLive;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -92,13 +92,13 @@ public class TapiEthLinkTraceResult   {
     }
     TapiEthLinkTraceResult tapiEthLinkTraceResult = (TapiEthLinkTraceResult) o;
     return Objects.equals(this.dataTlvLength, tapiEthLinkTraceResult.dataTlvLength) &&
-        Objects.equals(this.timeToLive, tapiEthLinkTraceResult.timeToLive) &&
-        Objects.equals(this.sourceAddress, tapiEthLinkTraceResult.sourceAddress);
+        Objects.equals(this.sourceAddress, tapiEthLinkTraceResult.sourceAddress) &&
+        Objects.equals(this.timeToLive, tapiEthLinkTraceResult.timeToLive);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(dataTlvLength, timeToLive, sourceAddress);
+    return Objects.hash(dataTlvLength, sourceAddress, timeToLive);
   }
 
   @Override
@@ -107,8 +107,8 @@ public class TapiEthLinkTraceResult   {
     sb.append("class TapiEthLinkTraceResult {\n");
     
     sb.append("    dataTlvLength: ").append(toIndentedString(dataTlvLength)).append("\n");
-    sb.append("    timeToLive: ").append(toIndentedString(timeToLive)).append("\n");
     sb.append("    sourceAddress: ").append(toIndentedString(sourceAddress)).append("\n");
+    sb.append("    timeToLive: ").append(toIndentedString(timeToLive)).append("\n");
     sb.append("}");
     return sb.toString();
   }

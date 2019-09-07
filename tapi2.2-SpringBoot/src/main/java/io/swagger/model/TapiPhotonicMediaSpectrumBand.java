@@ -14,16 +14,36 @@ import javax.validation.constraints.*;
  * TapiPhotonicMediaSpectrumBand
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiPhotonicMediaSpectrumBand   {
+  @JsonProperty("frequency-constraint")
+  private TapiPhotonicMediaFrequencyConstraint frequencyConstraint = null;
+
   @JsonProperty("lower-frequency")
   private Integer lowerFrequency = null;
 
   @JsonProperty("upper-frequency")
   private Integer upperFrequency = null;
 
-  @JsonProperty("frequency-constraint")
-  private TapiPhotonicMediaFrequencyConstraint frequencyConstraint = null;
+  public TapiPhotonicMediaSpectrumBand frequencyConstraint(TapiPhotonicMediaFrequencyConstraint frequencyConstraint) {
+    this.frequencyConstraint = frequencyConstraint;
+    return this;
+  }
+
+  /**
+   * Get frequencyConstraint
+   * @return frequencyConstraint
+  **/
+  @ApiModelProperty(value = "")
+
+  @Valid
+  public TapiPhotonicMediaFrequencyConstraint getFrequencyConstraint() {
+    return frequencyConstraint;
+  }
+
+  public void setFrequencyConstraint(TapiPhotonicMediaFrequencyConstraint frequencyConstraint) {
+    this.frequencyConstraint = frequencyConstraint;
+  }
 
   public TapiPhotonicMediaSpectrumBand lowerFrequency(Integer lowerFrequency) {
     this.lowerFrequency = lowerFrequency;
@@ -63,26 +83,6 @@ public class TapiPhotonicMediaSpectrumBand   {
     this.upperFrequency = upperFrequency;
   }
 
-  public TapiPhotonicMediaSpectrumBand frequencyConstraint(TapiPhotonicMediaFrequencyConstraint frequencyConstraint) {
-    this.frequencyConstraint = frequencyConstraint;
-    return this;
-  }
-
-  /**
-   * Get frequencyConstraint
-   * @return frequencyConstraint
-  **/
-  @ApiModelProperty(value = "")
-
-  @Valid
-  public TapiPhotonicMediaFrequencyConstraint getFrequencyConstraint() {
-    return frequencyConstraint;
-  }
-
-  public void setFrequencyConstraint(TapiPhotonicMediaFrequencyConstraint frequencyConstraint) {
-    this.frequencyConstraint = frequencyConstraint;
-  }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -93,14 +93,14 @@ public class TapiPhotonicMediaSpectrumBand   {
       return false;
     }
     TapiPhotonicMediaSpectrumBand tapiPhotonicMediaSpectrumBand = (TapiPhotonicMediaSpectrumBand) o;
-    return Objects.equals(this.lowerFrequency, tapiPhotonicMediaSpectrumBand.lowerFrequency) &&
-        Objects.equals(this.upperFrequency, tapiPhotonicMediaSpectrumBand.upperFrequency) &&
-        Objects.equals(this.frequencyConstraint, tapiPhotonicMediaSpectrumBand.frequencyConstraint);
+    return Objects.equals(this.frequencyConstraint, tapiPhotonicMediaSpectrumBand.frequencyConstraint) &&
+        Objects.equals(this.lowerFrequency, tapiPhotonicMediaSpectrumBand.lowerFrequency) &&
+        Objects.equals(this.upperFrequency, tapiPhotonicMediaSpectrumBand.upperFrequency);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(lowerFrequency, upperFrequency, frequencyConstraint);
+    return Objects.hash(frequencyConstraint, lowerFrequency, upperFrequency);
   }
 
   @Override
@@ -108,9 +108,9 @@ public class TapiPhotonicMediaSpectrumBand   {
     StringBuilder sb = new StringBuilder();
     sb.append("class TapiPhotonicMediaSpectrumBand {\n");
     
+    sb.append("    frequencyConstraint: ").append(toIndentedString(frequencyConstraint)).append("\n");
     sb.append("    lowerFrequency: ").append(toIndentedString(lowerFrequency)).append("\n");
     sb.append("    upperFrequency: ").append(toIndentedString(upperFrequency)).append("\n");
-    sb.append("    frequencyConstraint: ").append(toIndentedString(frequencyConstraint)).append("\n");
     sb.append("}");
     return sb.toString();
   }

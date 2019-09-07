@@ -13,38 +13,19 @@ import javax.validation.constraints.*;
  * TapiOduUasChoice
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiOduUasChoice   {
-  @JsonProperty("fuas")
-  private Integer fuas = null;
-
   @JsonProperty("bidirectional")
   private Boolean bidirectional = true;
+
+  @JsonProperty("fuas")
+  private Integer fuas = null;
 
   @JsonProperty("nuas")
   private Integer nuas = null;
 
   @JsonProperty("uas")
   private Integer uas = null;
-
-  public TapiOduUasChoice fuas(Integer fuas) {
-    this.fuas = fuas;
-    return this;
-  }
-
-  /**
-   * none
-   * @return fuas
-  **/
-  @ApiModelProperty(value = "none")
-
-  public Integer getFuas() {
-    return fuas;
-  }
-
-  public void setFuas(Integer fuas) {
-    this.fuas = fuas;
-  }
 
   public TapiOduUasChoice bidirectional(Boolean bidirectional) {
     this.bidirectional = bidirectional;
@@ -63,6 +44,25 @@ public class TapiOduUasChoice   {
 
   public void setBidirectional(Boolean bidirectional) {
     this.bidirectional = bidirectional;
+  }
+
+  public TapiOduUasChoice fuas(Integer fuas) {
+    this.fuas = fuas;
+    return this;
+  }
+
+  /**
+   * none
+   * @return fuas
+  **/
+  @ApiModelProperty(value = "none")
+
+  public Integer getFuas() {
+    return fuas;
+  }
+
+  public void setFuas(Integer fuas) {
+    this.fuas = fuas;
   }
 
   public TapiOduUasChoice nuas(Integer nuas) {
@@ -113,15 +113,15 @@ public class TapiOduUasChoice   {
       return false;
     }
     TapiOduUasChoice tapiOduUasChoice = (TapiOduUasChoice) o;
-    return Objects.equals(this.fuas, tapiOduUasChoice.fuas) &&
-        Objects.equals(this.bidirectional, tapiOduUasChoice.bidirectional) &&
+    return Objects.equals(this.bidirectional, tapiOduUasChoice.bidirectional) &&
+        Objects.equals(this.fuas, tapiOduUasChoice.fuas) &&
         Objects.equals(this.nuas, tapiOduUasChoice.nuas) &&
         Objects.equals(this.uas, tapiOduUasChoice.uas);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(fuas, bidirectional, nuas, uas);
+    return Objects.hash(bidirectional, fuas, nuas, uas);
   }
 
   @Override
@@ -129,8 +129,8 @@ public class TapiOduUasChoice   {
     StringBuilder sb = new StringBuilder();
     sb.append("class TapiOduUasChoice {\n");
     
-    sb.append("    fuas: ").append(toIndentedString(fuas)).append("\n");
     sb.append("    bidirectional: ").append(toIndentedString(bidirectional)).append("\n");
+    sb.append("    fuas: ").append(toIndentedString(fuas)).append("\n");
     sb.append("    nuas: ").append(toIndentedString(nuas)).append("\n");
     sb.append("    uas: ").append(toIndentedString(uas)).append("\n");
     sb.append("}");

@@ -14,22 +14,41 @@ import javax.validation.constraints.*;
  * TapiOduOduPmPac
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiOduOduPmPac   {
+  @JsonProperty("f-bbe")
+  private Integer fBbe = null;
+
   @JsonProperty("f-ses")
   private Integer fSes = null;
 
   @JsonProperty("n-bbe")
   private Integer nBbe = null;
 
-  @JsonProperty("f-bbe")
-  private Integer fBbe = null;
+  @JsonProperty("n-ses")
+  private Integer nSes = null;
 
   @JsonProperty("uas")
   private TapiOduUasChoice uas = null;
 
-  @JsonProperty("n-ses")
-  private Integer nSes = null;
+  public TapiOduOduPmPac fBbe(Integer fBbe) {
+    this.fBbe = fBbe;
+    return this;
+  }
+
+  /**
+   * Far-end Background Block Error
+   * @return fBbe
+  **/
+  @ApiModelProperty(value = "Far-end Background Block Error")
+
+  public Integer getFBbe() {
+    return fBbe;
+  }
+
+  public void setFBbe(Integer fBbe) {
+    this.fBbe = fBbe;
+  }
 
   public TapiOduOduPmPac fSes(Integer fSes) {
     this.fSes = fSes;
@@ -69,23 +88,23 @@ public class TapiOduOduPmPac   {
     this.nBbe = nBbe;
   }
 
-  public TapiOduOduPmPac fBbe(Integer fBbe) {
-    this.fBbe = fBbe;
+  public TapiOduOduPmPac nSes(Integer nSes) {
+    this.nSes = nSes;
     return this;
   }
 
   /**
-   * Far-end Background Block Error
-   * @return fBbe
+   * Near-end Severely Errored Second
+   * @return nSes
   **/
-  @ApiModelProperty(value = "Far-end Background Block Error")
+  @ApiModelProperty(value = "Near-end Severely Errored Second")
 
-  public Integer getFBbe() {
-    return fBbe;
+  public Integer getNSes() {
+    return nSes;
   }
 
-  public void setFBbe(Integer fBbe) {
-    this.fBbe = fBbe;
+  public void setNSes(Integer nSes) {
+    this.nSes = nSes;
   }
 
   public TapiOduOduPmPac uas(TapiOduUasChoice uas) {
@@ -108,25 +127,6 @@ public class TapiOduOduPmPac   {
     this.uas = uas;
   }
 
-  public TapiOduOduPmPac nSes(Integer nSes) {
-    this.nSes = nSes;
-    return this;
-  }
-
-  /**
-   * Near-end Severely Errored Second
-   * @return nSes
-  **/
-  @ApiModelProperty(value = "Near-end Severely Errored Second")
-
-  public Integer getNSes() {
-    return nSes;
-  }
-
-  public void setNSes(Integer nSes) {
-    this.nSes = nSes;
-  }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -137,16 +137,16 @@ public class TapiOduOduPmPac   {
       return false;
     }
     TapiOduOduPmPac tapiOduOduPmPac = (TapiOduOduPmPac) o;
-    return Objects.equals(this.fSes, tapiOduOduPmPac.fSes) &&
+    return Objects.equals(this.fBbe, tapiOduOduPmPac.fBbe) &&
+        Objects.equals(this.fSes, tapiOduOduPmPac.fSes) &&
         Objects.equals(this.nBbe, tapiOduOduPmPac.nBbe) &&
-        Objects.equals(this.fBbe, tapiOduOduPmPac.fBbe) &&
-        Objects.equals(this.uas, tapiOduOduPmPac.uas) &&
-        Objects.equals(this.nSes, tapiOduOduPmPac.nSes);
+        Objects.equals(this.nSes, tapiOduOduPmPac.nSes) &&
+        Objects.equals(this.uas, tapiOduOduPmPac.uas);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(fSes, nBbe, fBbe, uas, nSes);
+    return Objects.hash(fBbe, fSes, nBbe, nSes, uas);
   }
 
   @Override
@@ -154,11 +154,11 @@ public class TapiOduOduPmPac   {
     StringBuilder sb = new StringBuilder();
     sb.append("class TapiOduOduPmPac {\n");
     
+    sb.append("    fBbe: ").append(toIndentedString(fBbe)).append("\n");
     sb.append("    fSes: ").append(toIndentedString(fSes)).append("\n");
     sb.append("    nBbe: ").append(toIndentedString(nBbe)).append("\n");
-    sb.append("    fBbe: ").append(toIndentedString(fBbe)).append("\n");
-    sb.append("    uas: ").append(toIndentedString(uas)).append("\n");
     sb.append("    nSes: ").append(toIndentedString(nSes)).append("\n");
+    sb.append("    uas: ").append(toIndentedString(uas)).append("\n");
     sb.append("}");
     return sb.toString();
   }

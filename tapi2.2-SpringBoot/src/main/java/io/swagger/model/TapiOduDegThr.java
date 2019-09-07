@@ -15,16 +15,36 @@ import javax.validation.constraints.*;
  * TapiOduDegThr
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiOduDegThr   {
+  @JsonProperty("deg-thr-type")
+  private TapiOduDegThrType degThrType = null;
+
   @JsonProperty("deg-thr-value")
   private Integer degThrValue = null;
 
   @JsonProperty("percentage-granularity")
   private TapiOduPercentageGranularity percentageGranularity = null;
 
-  @JsonProperty("deg-thr-type")
-  private TapiOduDegThrType degThrType = null;
+  public TapiOduDegThr degThrType(TapiOduDegThrType degThrType) {
+    this.degThrType = degThrType;
+    return this;
+  }
+
+  /**
+   * Get degThrType
+   * @return degThrType
+  **/
+  @ApiModelProperty(value = "")
+
+  @Valid
+  public TapiOduDegThrType getDegThrType() {
+    return degThrType;
+  }
+
+  public void setDegThrType(TapiOduDegThrType degThrType) {
+    this.degThrType = degThrType;
+  }
 
   public TapiOduDegThr degThrValue(Integer degThrValue) {
     this.degThrValue = degThrValue;
@@ -65,26 +85,6 @@ public class TapiOduDegThr   {
     this.percentageGranularity = percentageGranularity;
   }
 
-  public TapiOduDegThr degThrType(TapiOduDegThrType degThrType) {
-    this.degThrType = degThrType;
-    return this;
-  }
-
-  /**
-   * Get degThrType
-   * @return degThrType
-  **/
-  @ApiModelProperty(value = "")
-
-  @Valid
-  public TapiOduDegThrType getDegThrType() {
-    return degThrType;
-  }
-
-  public void setDegThrType(TapiOduDegThrType degThrType) {
-    this.degThrType = degThrType;
-  }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -95,14 +95,14 @@ public class TapiOduDegThr   {
       return false;
     }
     TapiOduDegThr tapiOduDegThr = (TapiOduDegThr) o;
-    return Objects.equals(this.degThrValue, tapiOduDegThr.degThrValue) &&
-        Objects.equals(this.percentageGranularity, tapiOduDegThr.percentageGranularity) &&
-        Objects.equals(this.degThrType, tapiOduDegThr.degThrType);
+    return Objects.equals(this.degThrType, tapiOduDegThr.degThrType) &&
+        Objects.equals(this.degThrValue, tapiOduDegThr.degThrValue) &&
+        Objects.equals(this.percentageGranularity, tapiOduDegThr.percentageGranularity);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(degThrValue, percentageGranularity, degThrType);
+    return Objects.hash(degThrType, degThrValue, percentageGranularity);
   }
 
   @Override
@@ -110,9 +110,9 @@ public class TapiOduDegThr   {
     StringBuilder sb = new StringBuilder();
     sb.append("class TapiOduDegThr {\n");
     
+    sb.append("    degThrType: ").append(toIndentedString(degThrType)).append("\n");
     sb.append("    degThrValue: ").append(toIndentedString(degThrValue)).append("\n");
     sb.append("    percentageGranularity: ").append(toIndentedString(percentageGranularity)).append("\n");
-    sb.append("    degThrType: ").append(toIndentedString(degThrType)).append("\n");
     sb.append("}");
     return sb.toString();
   }

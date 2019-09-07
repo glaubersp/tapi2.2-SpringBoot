@@ -15,41 +15,22 @@ import javax.validation.constraints.*;
  * TapiEthEthTestJob
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiEthEthTestJob   {
-  @JsonProperty("number")
-  private Integer number = null;
-
   @JsonProperty("destination-address")
   private String destinationAddress = null;
-
-  @JsonProperty("test-pattern")
-  private String testPattern = null;
-
-  @JsonProperty("eth-test-job-sink-point")
-  private TapiEthEthTestJobSinkPoint ethTestJobSinkPoint = null;
 
   @JsonProperty("eth-oam-test-loopback-common-pac")
   private TapiEthEthOamTestLoopbackCommonPac ethOamTestLoopbackCommonPac = null;
 
-  public TapiEthEthTestJob number(Integer number) {
-    this.number = number;
-    return this;
-  }
+  @JsonProperty("eth-test-job-sink-point")
+  private TapiEthEthTestJobSinkPoint ethTestJobSinkPoint = null;
 
-  /**
-   * This parameter specifies how many TST messages to be sent.
-   * @return number
-  **/
-  @ApiModelProperty(value = "This parameter specifies how many TST messages to be sent.")
+  @JsonProperty("number")
+  private Integer number = null;
 
-  public Integer getNumber() {
-    return number;
-  }
-
-  public void setNumber(Integer number) {
-    this.number = number;
-  }
+  @JsonProperty("test-pattern")
+  private String testPattern = null;
 
   public TapiEthEthTestJob destinationAddress(String destinationAddress) {
     this.destinationAddress = destinationAddress;
@@ -68,45 +49,6 @@ public class TapiEthEthTestJob   {
 
   public void setDestinationAddress(String destinationAddress) {
     this.destinationAddress = destinationAddress;
-  }
-
-  public TapiEthEthTestJob testPattern(String testPattern) {
-    this.testPattern = testPattern;
-    return this;
-  }
-
-  /**
-   * G.8052: This parameter provides the test pattern to be used in the optional Data TLV.                  Examples of test patterns include pseudo-random bit sequence (PRBS) 2^31-1 as specified in clause 5.8 of [ITU-T O.150], all '0' pattern, etc.
-   * @return testPattern
-  **/
-  @ApiModelProperty(value = "G.8052: This parameter provides the test pattern to be used in the optional Data TLV.                  Examples of test patterns include pseudo-random bit sequence (PRBS) 2^31-1 as specified in clause 5.8 of [ITU-T O.150], all '0' pattern, etc.")
-
-  public String getTestPattern() {
-    return testPattern;
-  }
-
-  public void setTestPattern(String testPattern) {
-    this.testPattern = testPattern;
-  }
-
-  public TapiEthEthTestJob ethTestJobSinkPoint(TapiEthEthTestJobSinkPoint ethTestJobSinkPoint) {
-    this.ethTestJobSinkPoint = ethTestJobSinkPoint;
-    return this;
-  }
-
-  /**
-   * Get ethTestJobSinkPoint
-   * @return ethTestJobSinkPoint
-  **/
-  @ApiModelProperty(value = "")
-
-  @Valid
-  public TapiEthEthTestJobSinkPoint getEthTestJobSinkPoint() {
-    return ethTestJobSinkPoint;
-  }
-
-  public void setEthTestJobSinkPoint(TapiEthEthTestJobSinkPoint ethTestJobSinkPoint) {
-    this.ethTestJobSinkPoint = ethTestJobSinkPoint;
   }
 
   public TapiEthEthTestJob ethOamTestLoopbackCommonPac(TapiEthEthOamTestLoopbackCommonPac ethOamTestLoopbackCommonPac) {
@@ -129,6 +71,64 @@ public class TapiEthEthTestJob   {
     this.ethOamTestLoopbackCommonPac = ethOamTestLoopbackCommonPac;
   }
 
+  public TapiEthEthTestJob ethTestJobSinkPoint(TapiEthEthTestJobSinkPoint ethTestJobSinkPoint) {
+    this.ethTestJobSinkPoint = ethTestJobSinkPoint;
+    return this;
+  }
+
+  /**
+   * Get ethTestJobSinkPoint
+   * @return ethTestJobSinkPoint
+  **/
+  @ApiModelProperty(value = "")
+
+  @Valid
+  public TapiEthEthTestJobSinkPoint getEthTestJobSinkPoint() {
+    return ethTestJobSinkPoint;
+  }
+
+  public void setEthTestJobSinkPoint(TapiEthEthTestJobSinkPoint ethTestJobSinkPoint) {
+    this.ethTestJobSinkPoint = ethTestJobSinkPoint;
+  }
+
+  public TapiEthEthTestJob number(Integer number) {
+    this.number = number;
+    return this;
+  }
+
+  /**
+   * This parameter specifies how many TST messages to be sent.
+   * @return number
+  **/
+  @ApiModelProperty(value = "This parameter specifies how many TST messages to be sent.")
+
+  public Integer getNumber() {
+    return number;
+  }
+
+  public void setNumber(Integer number) {
+    this.number = number;
+  }
+
+  public TapiEthEthTestJob testPattern(String testPattern) {
+    this.testPattern = testPattern;
+    return this;
+  }
+
+  /**
+   * G.8052: This parameter provides the test pattern to be used in the optional Data TLV.                  Examples of test patterns include pseudo-random bit sequence (PRBS) 2^31-1 as specified in clause 5.8 of [ITU-T O.150], all '0' pattern, etc.
+   * @return testPattern
+  **/
+  @ApiModelProperty(value = "G.8052: This parameter provides the test pattern to be used in the optional Data TLV.                  Examples of test patterns include pseudo-random bit sequence (PRBS) 2^31-1 as specified in clause 5.8 of [ITU-T O.150], all '0' pattern, etc.")
+
+  public String getTestPattern() {
+    return testPattern;
+  }
+
+  public void setTestPattern(String testPattern) {
+    this.testPattern = testPattern;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -139,16 +139,16 @@ public class TapiEthEthTestJob   {
       return false;
     }
     TapiEthEthTestJob tapiEthEthTestJob = (TapiEthEthTestJob) o;
-    return Objects.equals(this.number, tapiEthEthTestJob.number) &&
-        Objects.equals(this.destinationAddress, tapiEthEthTestJob.destinationAddress) &&
-        Objects.equals(this.testPattern, tapiEthEthTestJob.testPattern) &&
+    return Objects.equals(this.destinationAddress, tapiEthEthTestJob.destinationAddress) &&
+        Objects.equals(this.ethOamTestLoopbackCommonPac, tapiEthEthTestJob.ethOamTestLoopbackCommonPac) &&
         Objects.equals(this.ethTestJobSinkPoint, tapiEthEthTestJob.ethTestJobSinkPoint) &&
-        Objects.equals(this.ethOamTestLoopbackCommonPac, tapiEthEthTestJob.ethOamTestLoopbackCommonPac);
+        Objects.equals(this.number, tapiEthEthTestJob.number) &&
+        Objects.equals(this.testPattern, tapiEthEthTestJob.testPattern);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(number, destinationAddress, testPattern, ethTestJobSinkPoint, ethOamTestLoopbackCommonPac);
+    return Objects.hash(destinationAddress, ethOamTestLoopbackCommonPac, ethTestJobSinkPoint, number, testPattern);
   }
 
   @Override
@@ -156,11 +156,11 @@ public class TapiEthEthTestJob   {
     StringBuilder sb = new StringBuilder();
     sb.append("class TapiEthEthTestJob {\n");
     
-    sb.append("    number: ").append(toIndentedString(number)).append("\n");
     sb.append("    destinationAddress: ").append(toIndentedString(destinationAddress)).append("\n");
-    sb.append("    testPattern: ").append(toIndentedString(testPattern)).append("\n");
-    sb.append("    ethTestJobSinkPoint: ").append(toIndentedString(ethTestJobSinkPoint)).append("\n");
     sb.append("    ethOamTestLoopbackCommonPac: ").append(toIndentedString(ethOamTestLoopbackCommonPac)).append("\n");
+    sb.append("    ethTestJobSinkPoint: ").append(toIndentedString(ethTestJobSinkPoint)).append("\n");
+    sb.append("    number: ").append(toIndentedString(number)).append("\n");
+    sb.append("    testPattern: ").append(toIndentedString(testPattern)).append("\n");
     sb.append("}");
     return sb.toString();
   }

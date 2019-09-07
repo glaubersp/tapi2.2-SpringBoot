@@ -13,40 +13,40 @@ import javax.validation.constraints.*;
  * TapiTopologyLatencyCharacteristic
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiTopologyLatencyCharacteristic   {
-  @JsonProperty("traffic-property-name")
-  private String trafficPropertyName = null;
+  @JsonProperty("fixed-latency-characteristic")
+  private String fixedLatencyCharacteristic = null;
 
   @JsonProperty("jitter-characteristic")
   private String jitterCharacteristic = null;
 
-  @JsonProperty("fixed-latency-characteristic")
-  private String fixedLatencyCharacteristic = null;
+  @JsonProperty("queing-latency-characteristic")
+  private String queingLatencyCharacteristic = null;
+
+  @JsonProperty("traffic-property-name")
+  private String trafficPropertyName = null;
 
   @JsonProperty("wander-characteristic")
   private String wanderCharacteristic = null;
 
-  @JsonProperty("queing-latency-characteristic")
-  private String queingLatencyCharacteristic = null;
-
-  public TapiTopologyLatencyCharacteristic trafficPropertyName(String trafficPropertyName) {
-    this.trafficPropertyName = trafficPropertyName;
+  public TapiTopologyLatencyCharacteristic fixedLatencyCharacteristic(String fixedLatencyCharacteristic) {
+    this.fixedLatencyCharacteristic = fixedLatencyCharacteristic;
     return this;
   }
 
   /**
-   * The identifier of the specific traffic property to which the queuing latency applies.
-   * @return trafficPropertyName
+   * A TopologicalEntity suffers delay caused by the realization of the servers (e.g. distance related; FEC encoding etc.) along with some client specific processing. This is the total average latency effect of the TopologicalEntity
+   * @return fixedLatencyCharacteristic
   **/
-  @ApiModelProperty(value = "The identifier of the specific traffic property to which the queuing latency applies.")
+  @ApiModelProperty(value = "A TopologicalEntity suffers delay caused by the realization of the servers (e.g. distance related; FEC encoding etc.) along with some client specific processing. This is the total average latency effect of the TopologicalEntity")
 
-  public String getTrafficPropertyName() {
-    return trafficPropertyName;
+  public String getFixedLatencyCharacteristic() {
+    return fixedLatencyCharacteristic;
   }
 
-  public void setTrafficPropertyName(String trafficPropertyName) {
-    this.trafficPropertyName = trafficPropertyName;
+  public void setFixedLatencyCharacteristic(String fixedLatencyCharacteristic) {
+    this.fixedLatencyCharacteristic = fixedLatencyCharacteristic;
   }
 
   public TapiTopologyLatencyCharacteristic jitterCharacteristic(String jitterCharacteristic) {
@@ -68,23 +68,42 @@ public class TapiTopologyLatencyCharacteristic   {
     this.jitterCharacteristic = jitterCharacteristic;
   }
 
-  public TapiTopologyLatencyCharacteristic fixedLatencyCharacteristic(String fixedLatencyCharacteristic) {
-    this.fixedLatencyCharacteristic = fixedLatencyCharacteristic;
+  public TapiTopologyLatencyCharacteristic queingLatencyCharacteristic(String queingLatencyCharacteristic) {
+    this.queingLatencyCharacteristic = queingLatencyCharacteristic;
     return this;
   }
 
   /**
-   * A TopologicalEntity suffers delay caused by the realization of the servers (e.g. distance related; FEC encoding etc.) along with some client specific processing. This is the total average latency effect of the TopologicalEntity
-   * @return fixedLatencyCharacteristic
+   * The specific queuing latency for the traffic property.
+   * @return queingLatencyCharacteristic
   **/
-  @ApiModelProperty(value = "A TopologicalEntity suffers delay caused by the realization of the servers (e.g. distance related; FEC encoding etc.) along with some client specific processing. This is the total average latency effect of the TopologicalEntity")
+  @ApiModelProperty(value = "The specific queuing latency for the traffic property.")
 
-  public String getFixedLatencyCharacteristic() {
-    return fixedLatencyCharacteristic;
+  public String getQueingLatencyCharacteristic() {
+    return queingLatencyCharacteristic;
   }
 
-  public void setFixedLatencyCharacteristic(String fixedLatencyCharacteristic) {
-    this.fixedLatencyCharacteristic = fixedLatencyCharacteristic;
+  public void setQueingLatencyCharacteristic(String queingLatencyCharacteristic) {
+    this.queingLatencyCharacteristic = queingLatencyCharacteristic;
+  }
+
+  public TapiTopologyLatencyCharacteristic trafficPropertyName(String trafficPropertyName) {
+    this.trafficPropertyName = trafficPropertyName;
+    return this;
+  }
+
+  /**
+   * The identifier of the specific traffic property to which the queuing latency applies.
+   * @return trafficPropertyName
+  **/
+  @ApiModelProperty(value = "The identifier of the specific traffic property to which the queuing latency applies.")
+
+  public String getTrafficPropertyName() {
+    return trafficPropertyName;
+  }
+
+  public void setTrafficPropertyName(String trafficPropertyName) {
+    this.trafficPropertyName = trafficPropertyName;
   }
 
   public TapiTopologyLatencyCharacteristic wanderCharacteristic(String wanderCharacteristic) {
@@ -106,25 +125,6 @@ public class TapiTopologyLatencyCharacteristic   {
     this.wanderCharacteristic = wanderCharacteristic;
   }
 
-  public TapiTopologyLatencyCharacteristic queingLatencyCharacteristic(String queingLatencyCharacteristic) {
-    this.queingLatencyCharacteristic = queingLatencyCharacteristic;
-    return this;
-  }
-
-  /**
-   * The specific queuing latency for the traffic property.
-   * @return queingLatencyCharacteristic
-  **/
-  @ApiModelProperty(value = "The specific queuing latency for the traffic property.")
-
-  public String getQueingLatencyCharacteristic() {
-    return queingLatencyCharacteristic;
-  }
-
-  public void setQueingLatencyCharacteristic(String queingLatencyCharacteristic) {
-    this.queingLatencyCharacteristic = queingLatencyCharacteristic;
-  }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -135,16 +135,16 @@ public class TapiTopologyLatencyCharacteristic   {
       return false;
     }
     TapiTopologyLatencyCharacteristic tapiTopologyLatencyCharacteristic = (TapiTopologyLatencyCharacteristic) o;
-    return Objects.equals(this.trafficPropertyName, tapiTopologyLatencyCharacteristic.trafficPropertyName) &&
+    return Objects.equals(this.fixedLatencyCharacteristic, tapiTopologyLatencyCharacteristic.fixedLatencyCharacteristic) &&
         Objects.equals(this.jitterCharacteristic, tapiTopologyLatencyCharacteristic.jitterCharacteristic) &&
-        Objects.equals(this.fixedLatencyCharacteristic, tapiTopologyLatencyCharacteristic.fixedLatencyCharacteristic) &&
-        Objects.equals(this.wanderCharacteristic, tapiTopologyLatencyCharacteristic.wanderCharacteristic) &&
-        Objects.equals(this.queingLatencyCharacteristic, tapiTopologyLatencyCharacteristic.queingLatencyCharacteristic);
+        Objects.equals(this.queingLatencyCharacteristic, tapiTopologyLatencyCharacteristic.queingLatencyCharacteristic) &&
+        Objects.equals(this.trafficPropertyName, tapiTopologyLatencyCharacteristic.trafficPropertyName) &&
+        Objects.equals(this.wanderCharacteristic, tapiTopologyLatencyCharacteristic.wanderCharacteristic);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(trafficPropertyName, jitterCharacteristic, fixedLatencyCharacteristic, wanderCharacteristic, queingLatencyCharacteristic);
+    return Objects.hash(fixedLatencyCharacteristic, jitterCharacteristic, queingLatencyCharacteristic, trafficPropertyName, wanderCharacteristic);
   }
 
   @Override
@@ -152,11 +152,11 @@ public class TapiTopologyLatencyCharacteristic   {
     StringBuilder sb = new StringBuilder();
     sb.append("class TapiTopologyLatencyCharacteristic {\n");
     
-    sb.append("    trafficPropertyName: ").append(toIndentedString(trafficPropertyName)).append("\n");
-    sb.append("    jitterCharacteristic: ").append(toIndentedString(jitterCharacteristic)).append("\n");
     sb.append("    fixedLatencyCharacteristic: ").append(toIndentedString(fixedLatencyCharacteristic)).append("\n");
-    sb.append("    wanderCharacteristic: ").append(toIndentedString(wanderCharacteristic)).append("\n");
+    sb.append("    jitterCharacteristic: ").append(toIndentedString(jitterCharacteristic)).append("\n");
     sb.append("    queingLatencyCharacteristic: ").append(toIndentedString(queingLatencyCharacteristic)).append("\n");
+    sb.append("    trafficPropertyName: ").append(toIndentedString(trafficPropertyName)).append("\n");
+    sb.append("    wanderCharacteristic: ").append(toIndentedString(wanderCharacteristic)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -14,37 +14,37 @@ import javax.validation.constraints.*;
  * TapiEthEthLinkTraceJob
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiEthEthLinkTraceJob   {
-  @JsonProperty("time-to-live")
-  private Integer timeToLive = null;
+  @JsonProperty("destination-address")
+  private String destinationAddress = null;
 
   @JsonProperty("eth-cfm-link-trace-pac")
   private TapiEthEthCfmLinkTracePac ethCfmLinkTracePac = null;
 
-  @JsonProperty("destination-address")
-  private String destinationAddress = null;
-
   @JsonProperty("priority")
   private Integer priority = 7;
 
-  public TapiEthEthLinkTraceJob timeToLive(Integer timeToLive) {
-    this.timeToLive = timeToLive;
+  @JsonProperty("time-to-live")
+  private Integer timeToLive = null;
+
+  public TapiEthEthLinkTraceJob destinationAddress(String destinationAddress) {
+    this.destinationAddress = destinationAddress;
     return this;
   }
 
   /**
-   * G.8052: This parameter provides the Time To Live (TTL) parameter of the Link Track protocol.                  The TTL parameter allows the receiver (MIP or MEP) of the LTM frame to determine if the frame can be terminated. TTL is decremented every time the LTM frame is relayed. LTM frame with TTL<=1 is terminated and not relayed.                  IEEE P802.1Qcx/D0.3:                  MEF 38:                  An initial value for the LTM TTL field.
-   * @return timeToLive
+   * G.8052: This parameter provides the destination address, i.e., the MAC Address of the target MEP or MIP.
+   * @return destinationAddress
   **/
-  @ApiModelProperty(value = "G.8052: This parameter provides the Time To Live (TTL) parameter of the Link Track protocol.                  The TTL parameter allows the receiver (MIP or MEP) of the LTM frame to determine if the frame can be terminated. TTL is decremented every time the LTM frame is relayed. LTM frame with TTL<=1 is terminated and not relayed.                  IEEE P802.1Qcx/D0.3:                  MEF 38:                  An initial value for the LTM TTL field.")
+  @ApiModelProperty(value = "G.8052: This parameter provides the destination address, i.e., the MAC Address of the target MEP or MIP.")
 
-  public Integer getTimeToLive() {
-    return timeToLive;
+  public String getDestinationAddress() {
+    return destinationAddress;
   }
 
-  public void setTimeToLive(Integer timeToLive) {
-    this.timeToLive = timeToLive;
+  public void setDestinationAddress(String destinationAddress) {
+    this.destinationAddress = destinationAddress;
   }
 
   public TapiEthEthLinkTraceJob ethCfmLinkTracePac(TapiEthEthCfmLinkTracePac ethCfmLinkTracePac) {
@@ -67,25 +67,6 @@ public class TapiEthEthLinkTraceJob   {
     this.ethCfmLinkTracePac = ethCfmLinkTracePac;
   }
 
-  public TapiEthEthLinkTraceJob destinationAddress(String destinationAddress) {
-    this.destinationAddress = destinationAddress;
-    return this;
-  }
-
-  /**
-   * G.8052: This parameter provides the destination address, i.e., the MAC Address of the target MEP or MIP.
-   * @return destinationAddress
-  **/
-  @ApiModelProperty(value = "G.8052: This parameter provides the destination address, i.e., the MAC Address of the target MEP or MIP.")
-
-  public String getDestinationAddress() {
-    return destinationAddress;
-  }
-
-  public void setDestinationAddress(String destinationAddress) {
-    this.destinationAddress = destinationAddress;
-  }
-
   public TapiEthEthLinkTraceJob priority(Integer priority) {
     this.priority = priority;
     return this;
@@ -105,6 +86,25 @@ public class TapiEthEthLinkTraceJob   {
     this.priority = priority;
   }
 
+  public TapiEthEthLinkTraceJob timeToLive(Integer timeToLive) {
+    this.timeToLive = timeToLive;
+    return this;
+  }
+
+  /**
+   * G.8052: This parameter provides the Time To Live (TTL) parameter of the Link Track protocol.                  The TTL parameter allows the receiver (MIP or MEP) of the LTM frame to determine if the frame can be terminated. TTL is decremented every time the LTM frame is relayed. LTM frame with TTL<=1 is terminated and not relayed.                  IEEE P802.1Qcx/D0.3:                  MEF 38:                  An initial value for the LTM TTL field.
+   * @return timeToLive
+  **/
+  @ApiModelProperty(value = "G.8052: This parameter provides the Time To Live (TTL) parameter of the Link Track protocol.                  The TTL parameter allows the receiver (MIP or MEP) of the LTM frame to determine if the frame can be terminated. TTL is decremented every time the LTM frame is relayed. LTM frame with TTL<=1 is terminated and not relayed.                  IEEE P802.1Qcx/D0.3:                  MEF 38:                  An initial value for the LTM TTL field.")
+
+  public Integer getTimeToLive() {
+    return timeToLive;
+  }
+
+  public void setTimeToLive(Integer timeToLive) {
+    this.timeToLive = timeToLive;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -115,15 +115,15 @@ public class TapiEthEthLinkTraceJob   {
       return false;
     }
     TapiEthEthLinkTraceJob tapiEthEthLinkTraceJob = (TapiEthEthLinkTraceJob) o;
-    return Objects.equals(this.timeToLive, tapiEthEthLinkTraceJob.timeToLive) &&
+    return Objects.equals(this.destinationAddress, tapiEthEthLinkTraceJob.destinationAddress) &&
         Objects.equals(this.ethCfmLinkTracePac, tapiEthEthLinkTraceJob.ethCfmLinkTracePac) &&
-        Objects.equals(this.destinationAddress, tapiEthEthLinkTraceJob.destinationAddress) &&
-        Objects.equals(this.priority, tapiEthEthLinkTraceJob.priority);
+        Objects.equals(this.priority, tapiEthEthLinkTraceJob.priority) &&
+        Objects.equals(this.timeToLive, tapiEthEthLinkTraceJob.timeToLive);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(timeToLive, ethCfmLinkTracePac, destinationAddress, priority);
+    return Objects.hash(destinationAddress, ethCfmLinkTracePac, priority, timeToLive);
   }
 
   @Override
@@ -131,10 +131,10 @@ public class TapiEthEthLinkTraceJob   {
     StringBuilder sb = new StringBuilder();
     sb.append("class TapiEthEthLinkTraceJob {\n");
     
-    sb.append("    timeToLive: ").append(toIndentedString(timeToLive)).append("\n");
-    sb.append("    ethCfmLinkTracePac: ").append(toIndentedString(ethCfmLinkTracePac)).append("\n");
     sb.append("    destinationAddress: ").append(toIndentedString(destinationAddress)).append("\n");
+    sb.append("    ethCfmLinkTracePac: ").append(toIndentedString(ethCfmLinkTracePac)).append("\n");
     sb.append("    priority: ").append(toIndentedString(priority)).append("\n");
+    sb.append("    timeToLive: ").append(toIndentedString(timeToLive)).append("\n");
     sb.append("}");
     return sb.toString();
   }

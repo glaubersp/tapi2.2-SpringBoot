@@ -13,57 +13,19 @@ import javax.validation.constraints.*;
  * TapiEthBandwidthReport
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiEthBandwidthReport   {
-  @JsonProperty("port-id")
-  private Integer portId = null;
-
-  @JsonProperty("source-mac-address")
-  private String sourceMacAddress = null;
-
   @JsonProperty("current-bandwidth")
   private Integer currentBandwidth = null;
 
   @JsonProperty("nominal-bandwidth")
   private Integer nominalBandwidth = null;
 
-  public TapiEthBandwidthReport portId(Integer portId) {
-    this.portId = portId;
-    return this;
-  }
+  @JsonProperty("port-id")
+  private Integer portId = null;
 
-  /**
-   * This attribute returns the far end port identifier.
-   * @return portId
-  **/
-  @ApiModelProperty(value = "This attribute returns the far end port identifier.")
-
-  public Integer getPortId() {
-    return portId;
-  }
-
-  public void setPortId(Integer portId) {
-    this.portId = portId;
-  }
-
-  public TapiEthBandwidthReport sourceMacAddress(String sourceMacAddress) {
-    this.sourceMacAddress = sourceMacAddress;
-    return this;
-  }
-
-  /**
-   * The sourceMacAddress is the address from the far end.
-   * @return sourceMacAddress
-  **/
-  @ApiModelProperty(value = "The sourceMacAddress is the address from the far end.")
-
-  public String getSourceMacAddress() {
-    return sourceMacAddress;
-  }
-
-  public void setSourceMacAddress(String sourceMacAddress) {
-    this.sourceMacAddress = sourceMacAddress;
-  }
+  @JsonProperty("source-mac-address")
+  private String sourceMacAddress = null;
 
   public TapiEthBandwidthReport currentBandwidth(Integer currentBandwidth) {
     this.currentBandwidth = currentBandwidth;
@@ -103,6 +65,44 @@ public class TapiEthBandwidthReport   {
     this.nominalBandwidth = nominalBandwidth;
   }
 
+  public TapiEthBandwidthReport portId(Integer portId) {
+    this.portId = portId;
+    return this;
+  }
+
+  /**
+   * This attribute returns the far end port identifier.
+   * @return portId
+  **/
+  @ApiModelProperty(value = "This attribute returns the far end port identifier.")
+
+  public Integer getPortId() {
+    return portId;
+  }
+
+  public void setPortId(Integer portId) {
+    this.portId = portId;
+  }
+
+  public TapiEthBandwidthReport sourceMacAddress(String sourceMacAddress) {
+    this.sourceMacAddress = sourceMacAddress;
+    return this;
+  }
+
+  /**
+   * The sourceMacAddress is the address from the far end.
+   * @return sourceMacAddress
+  **/
+  @ApiModelProperty(value = "The sourceMacAddress is the address from the far end.")
+
+  public String getSourceMacAddress() {
+    return sourceMacAddress;
+  }
+
+  public void setSourceMacAddress(String sourceMacAddress) {
+    this.sourceMacAddress = sourceMacAddress;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -113,15 +113,15 @@ public class TapiEthBandwidthReport   {
       return false;
     }
     TapiEthBandwidthReport tapiEthBandwidthReport = (TapiEthBandwidthReport) o;
-    return Objects.equals(this.portId, tapiEthBandwidthReport.portId) &&
-        Objects.equals(this.sourceMacAddress, tapiEthBandwidthReport.sourceMacAddress) &&
-        Objects.equals(this.currentBandwidth, tapiEthBandwidthReport.currentBandwidth) &&
-        Objects.equals(this.nominalBandwidth, tapiEthBandwidthReport.nominalBandwidth);
+    return Objects.equals(this.currentBandwidth, tapiEthBandwidthReport.currentBandwidth) &&
+        Objects.equals(this.nominalBandwidth, tapiEthBandwidthReport.nominalBandwidth) &&
+        Objects.equals(this.portId, tapiEthBandwidthReport.portId) &&
+        Objects.equals(this.sourceMacAddress, tapiEthBandwidthReport.sourceMacAddress);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(portId, sourceMacAddress, currentBandwidth, nominalBandwidth);
+    return Objects.hash(currentBandwidth, nominalBandwidth, portId, sourceMacAddress);
   }
 
   @Override
@@ -129,10 +129,10 @@ public class TapiEthBandwidthReport   {
     StringBuilder sb = new StringBuilder();
     sb.append("class TapiEthBandwidthReport {\n");
     
-    sb.append("    portId: ").append(toIndentedString(portId)).append("\n");
-    sb.append("    sourceMacAddress: ").append(toIndentedString(sourceMacAddress)).append("\n");
     sb.append("    currentBandwidth: ").append(toIndentedString(currentBandwidth)).append("\n");
     sb.append("    nominalBandwidth: ").append(toIndentedString(nominalBandwidth)).append("\n");
+    sb.append("    portId: ").append(toIndentedString(portId)).append("\n");
+    sb.append("    sourceMacAddress: ").append(toIndentedString(sourceMacAddress)).append("\n");
     sb.append("}");
     return sb.toString();
   }

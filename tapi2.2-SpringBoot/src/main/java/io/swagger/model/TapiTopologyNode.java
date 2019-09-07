@@ -5,10 +5,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import io.swagger.model.TapiCommonAdminStatePac;
 import io.swagger.model.TapiCommonAdministrativeState;
 import io.swagger.model.TapiCommonCapacity;
-import io.swagger.model.TapiCommonCapacityPac;
 import io.swagger.model.TapiCommonGlobalClass;
 import io.swagger.model.TapiCommonLayerProtocolName;
 import io.swagger.model.TapiCommonLifecycleState;
@@ -20,9 +18,6 @@ import io.swagger.model.TapiTopologyNodeEdgePoint;
 import io.swagger.model.TapiTopologyNodeEdgePointRef;
 import io.swagger.model.TapiTopologyNodeRuleGroup;
 import io.swagger.model.TapiTopologyTopologyRef;
-import io.swagger.model.TapiTopologyTransferCostPac;
-import io.swagger.model.TapiTopologyTransferIntegrityPac;
-import io.swagger.model.TapiTopologyTransferTimingPac;
 import java.util.ArrayList;
 import java.util.List;
 import org.springframework.validation.annotation.Validated;
@@ -33,42 +28,30 @@ import javax.validation.constraints.*;
  * TapiTopologyNode
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
-public class TapiTopologyNode extends TapiCommonAdminStatePac  {
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
+public class TapiTopologyNode extends TapiCommonGlobalClass  {
+  @JsonProperty("administrative-state")
+  private TapiCommonAdministrativeState administrativeState = null;
+
+  @JsonProperty("aggregated-node-edge-point")
+  @Valid
+  private List<TapiTopologyNodeEdgePointRef> aggregatedNodeEdgePoint = null;
+
   @JsonProperty("available-capacity")
   private TapiCommonCapacity availableCapacity = null;
-
-  @JsonProperty("total-potential-capacity")
-  private TapiCommonCapacity totalPotentialCapacity = null;
-
-  @JsonProperty("name")
-  @Valid
-  private List<TapiCommonNameAndValue> name = null;
-
-  @JsonProperty("uuid")
-  private String uuid = null;
 
   @JsonProperty("cost-characteristic")
   @Valid
   private List<TapiTopologyCostCharacteristic> costCharacteristic = null;
 
-  @JsonProperty("error-characteristic")
-  private String errorCharacteristic = null;
-
-  @JsonProperty("unavailable-time-characteristic")
-  private String unavailableTimeCharacteristic = null;
-
-  @JsonProperty("server-integrity-process-characteristic")
-  private String serverIntegrityProcessCharacteristic = null;
-
   @JsonProperty("delivery-order-characteristic")
   private String deliveryOrderCharacteristic = null;
 
-  @JsonProperty("repeat-delivery-characteristic")
-  private String repeatDeliveryCharacteristic = null;
+  @JsonProperty("encap-topology")
+  private TapiTopologyTopologyRef encapTopology = null;
 
-  @JsonProperty("loss-characteristic")
-  private String lossCharacteristic = null;
+  @JsonProperty("error-characteristic")
+  private String errorCharacteristic = null;
 
   @JsonProperty("latency-characteristic")
   @Valid
@@ -78,20 +61,81 @@ public class TapiTopologyNode extends TapiCommonAdminStatePac  {
   @Valid
   private List<TapiCommonLayerProtocolName> layerProtocolName = null;
 
-  @JsonProperty("encap-topology")
-  private TapiTopologyTopologyRef encapTopology = null;
+  @JsonProperty("lifecycle-state")
+  private TapiCommonLifecycleState lifecycleState = null;
 
-  @JsonProperty("node-rule-group")
-  @Valid
-  private List<TapiTopologyNodeRuleGroup> nodeRuleGroup = null;
+  @JsonProperty("loss-characteristic")
+  private String lossCharacteristic = null;
 
   @JsonProperty("node-edge-point")
   @Valid
   private List<TapiTopologyNodeEdgePoint> nodeEdgePoint = null;
 
-  @JsonProperty("aggregated-node-edge-point")
+  @JsonProperty("node-rule-group")
   @Valid
-  private List<TapiTopologyNodeEdgePointRef> aggregatedNodeEdgePoint = null;
+  private List<TapiTopologyNodeRuleGroup> nodeRuleGroup = null;
+
+  @JsonProperty("operational-state")
+  private TapiCommonOperationalState operationalState = null;
+
+  @JsonProperty("repeat-delivery-characteristic")
+  private String repeatDeliveryCharacteristic = null;
+
+  @JsonProperty("server-integrity-process-characteristic")
+  private String serverIntegrityProcessCharacteristic = null;
+
+  @JsonProperty("total-potential-capacity")
+  private TapiCommonCapacity totalPotentialCapacity = null;
+
+  @JsonProperty("unavailable-time-characteristic")
+  private String unavailableTimeCharacteristic = null;
+
+  public TapiTopologyNode administrativeState(TapiCommonAdministrativeState administrativeState) {
+    this.administrativeState = administrativeState;
+    return this;
+  }
+
+  /**
+   * Get administrativeState
+   * @return administrativeState
+  **/
+  @ApiModelProperty(value = "")
+
+  @Valid
+  public TapiCommonAdministrativeState getAdministrativeState() {
+    return administrativeState;
+  }
+
+  public void setAdministrativeState(TapiCommonAdministrativeState administrativeState) {
+    this.administrativeState = administrativeState;
+  }
+
+  public TapiTopologyNode aggregatedNodeEdgePoint(List<TapiTopologyNodeEdgePointRef> aggregatedNodeEdgePoint) {
+    this.aggregatedNodeEdgePoint = aggregatedNodeEdgePoint;
+    return this;
+  }
+
+  public TapiTopologyNode addAggregatedNodeEdgePointItem(TapiTopologyNodeEdgePointRef aggregatedNodeEdgePointItem) {
+    if (this.aggregatedNodeEdgePoint == null) {
+      this.aggregatedNodeEdgePoint = new ArrayList<>();
+    }
+    this.aggregatedNodeEdgePoint.add(aggregatedNodeEdgePointItem);
+    return this;
+  }
+
+  /**
+   * none
+   * @return aggregatedNodeEdgePoint
+  **/
+  @ApiModelProperty(value = "none")
+  @Valid
+  public List<TapiTopologyNodeEdgePointRef> getAggregatedNodeEdgePoint() {
+    return aggregatedNodeEdgePoint;
+  }
+
+  public void setAggregatedNodeEdgePoint(List<TapiTopologyNodeEdgePointRef> aggregatedNodeEdgePoint) {
+    this.aggregatedNodeEdgePoint = aggregatedNodeEdgePoint;
+  }
 
   public TapiTopologyNode availableCapacity(TapiCommonCapacity availableCapacity) {
     this.availableCapacity = availableCapacity;
@@ -113,72 +157,6 @@ public class TapiTopologyNode extends TapiCommonAdminStatePac  {
     this.availableCapacity = availableCapacity;
   }
 
-  public TapiTopologyNode totalPotentialCapacity(TapiCommonCapacity totalPotentialCapacity) {
-    this.totalPotentialCapacity = totalPotentialCapacity;
-    return this;
-  }
-
-  /**
-   * Get totalPotentialCapacity
-   * @return totalPotentialCapacity
-  **/
-  @ApiModelProperty(value = "")
-
-  @Valid
-  public TapiCommonCapacity getTotalPotentialCapacity() {
-    return totalPotentialCapacity;
-  }
-
-  public void setTotalPotentialCapacity(TapiCommonCapacity totalPotentialCapacity) {
-    this.totalPotentialCapacity = totalPotentialCapacity;
-  }
-
-  public TapiTopologyNode name(List<TapiCommonNameAndValue> name) {
-    this.name = name;
-    return this;
-  }
-
-  public TapiTopologyNode addNameItem(TapiCommonNameAndValue nameItem) {
-    if (this.name == null) {
-      this.name = new ArrayList<TapiCommonNameAndValue>();
-    }
-    this.name.add(nameItem);
-    return this;
-  }
-
-  /**
-   * List of names. This value is unique in some namespace but may change during the life of the entity.                  A name carries no semantics with respect to the purpose of the entity.
-   * @return name
-  **/
-  @ApiModelProperty(value = "List of names. This value is unique in some namespace but may change during the life of the entity.                  A name carries no semantics with respect to the purpose of the entity.")
-  @Valid
-  public List<TapiCommonNameAndValue> getName() {
-    return name;
-  }
-
-  public void setName(List<TapiCommonNameAndValue> name) {
-    this.name = name;
-  }
-
-  public TapiTopologyNode uuid(String uuid) {
-    this.uuid = uuid;
-    return this;
-  }
-
-  /**
-   * UUID: An identifier that is universally unique within an identifier space, where the identifier space is itself globally unique, and immutable.                  An UUID carries no semantics with respect to the purpose or state of the entity.                  UUID here uses string representation as defined in RFC 4122.  The canonical representation uses lowercase characters.                  Pattern: [0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-' + '[0-9a-fA-F]{4}-[0-9a-fA-F]{12}                   Example of a UUID in string representation: f81d4fae-7dec-11d0-a765-00a0c91e6bf6
-   * @return uuid
-  **/
-  @ApiModelProperty(value = "UUID: An identifier that is universally unique within an identifier space, where the identifier space is itself globally unique, and immutable.                  An UUID carries no semantics with respect to the purpose or state of the entity.                  UUID here uses string representation as defined in RFC 4122.  The canonical representation uses lowercase characters.                  Pattern: [0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-' + '[0-9a-fA-F]{4}-[0-9a-fA-F]{12}                   Example of a UUID in string representation: f81d4fae-7dec-11d0-a765-00a0c91e6bf6")
-
-  public String getUuid() {
-    return uuid;
-  }
-
-  public void setUuid(String uuid) {
-    this.uuid = uuid;
-  }
-
   public TapiTopologyNode costCharacteristic(List<TapiTopologyCostCharacteristic> costCharacteristic) {
     this.costCharacteristic = costCharacteristic;
     return this;
@@ -186,7 +164,7 @@ public class TapiTopologyNode extends TapiCommonAdminStatePac  {
 
   public TapiTopologyNode addCostCharacteristicItem(TapiTopologyCostCharacteristic costCharacteristicItem) {
     if (this.costCharacteristic == null) {
-      this.costCharacteristic = new ArrayList<TapiTopologyCostCharacteristic>();
+      this.costCharacteristic = new ArrayList<>();
     }
     this.costCharacteristic.add(costCharacteristicItem);
     return this;
@@ -204,63 +182,6 @@ public class TapiTopologyNode extends TapiCommonAdminStatePac  {
 
   public void setCostCharacteristic(List<TapiTopologyCostCharacteristic> costCharacteristic) {
     this.costCharacteristic = costCharacteristic;
-  }
-
-  public TapiTopologyNode errorCharacteristic(String errorCharacteristic) {
-    this.errorCharacteristic = errorCharacteristic;
-    return this;
-  }
-
-  /**
-   * Describes the degree to which the signal propagated can be errored.                   Applies to TDM systems as the errored signal will be propagated and not packet as errored packets will be discarded.
-   * @return errorCharacteristic
-  **/
-  @ApiModelProperty(value = "Describes the degree to which the signal propagated can be errored.                   Applies to TDM systems as the errored signal will be propagated and not packet as errored packets will be discarded.")
-
-  public String getErrorCharacteristic() {
-    return errorCharacteristic;
-  }
-
-  public void setErrorCharacteristic(String errorCharacteristic) {
-    this.errorCharacteristic = errorCharacteristic;
-  }
-
-  public TapiTopologyNode unavailableTimeCharacteristic(String unavailableTimeCharacteristic) {
-    this.unavailableTimeCharacteristic = unavailableTimeCharacteristic;
-    return this;
-  }
-
-  /**
-   * Describes the duration for which there may be no valid signal propagated.
-   * @return unavailableTimeCharacteristic
-  **/
-  @ApiModelProperty(value = "Describes the duration for which there may be no valid signal propagated.")
-
-  public String getUnavailableTimeCharacteristic() {
-    return unavailableTimeCharacteristic;
-  }
-
-  public void setUnavailableTimeCharacteristic(String unavailableTimeCharacteristic) {
-    this.unavailableTimeCharacteristic = unavailableTimeCharacteristic;
-  }
-
-  public TapiTopologyNode serverIntegrityProcessCharacteristic(String serverIntegrityProcessCharacteristic) {
-    this.serverIntegrityProcessCharacteristic = serverIntegrityProcessCharacteristic;
-    return this;
-  }
-
-  /**
-   * Describes the effect of any server integrity enhancement process on the characteristics of the TopologicalEntity.
-   * @return serverIntegrityProcessCharacteristic
-  **/
-  @ApiModelProperty(value = "Describes the effect of any server integrity enhancement process on the characteristics of the TopologicalEntity.")
-
-  public String getServerIntegrityProcessCharacteristic() {
-    return serverIntegrityProcessCharacteristic;
-  }
-
-  public void setServerIntegrityProcessCharacteristic(String serverIntegrityProcessCharacteristic) {
-    this.serverIntegrityProcessCharacteristic = serverIntegrityProcessCharacteristic;
   }
 
   public TapiTopologyNode deliveryOrderCharacteristic(String deliveryOrderCharacteristic) {
@@ -282,42 +203,43 @@ public class TapiTopologyNode extends TapiCommonAdminStatePac  {
     this.deliveryOrderCharacteristic = deliveryOrderCharacteristic;
   }
 
-  public TapiTopologyNode repeatDeliveryCharacteristic(String repeatDeliveryCharacteristic) {
-    this.repeatDeliveryCharacteristic = repeatDeliveryCharacteristic;
+  public TapiTopologyNode encapTopology(TapiTopologyTopologyRef encapTopology) {
+    this.encapTopology = encapTopology;
     return this;
   }
 
   /**
-   * Primarily applies to packet systems where a packet may be delivered more than once (in fault recovery for example).                   It can also apply to TDM where several frames may be received twice due to switching in a system with a large differential propagation delay.
-   * @return repeatDeliveryCharacteristic
+   * Get encapTopology
+   * @return encapTopology
   **/
-  @ApiModelProperty(value = "Primarily applies to packet systems where a packet may be delivered more than once (in fault recovery for example).                   It can also apply to TDM where several frames may be received twice due to switching in a system with a large differential propagation delay.")
+  @ApiModelProperty(value = "")
 
-  public String getRepeatDeliveryCharacteristic() {
-    return repeatDeliveryCharacteristic;
+  @Valid
+  public TapiTopologyTopologyRef getEncapTopology() {
+    return encapTopology;
   }
 
-  public void setRepeatDeliveryCharacteristic(String repeatDeliveryCharacteristic) {
-    this.repeatDeliveryCharacteristic = repeatDeliveryCharacteristic;
+  public void setEncapTopology(TapiTopologyTopologyRef encapTopology) {
+    this.encapTopology = encapTopology;
   }
 
-  public TapiTopologyNode lossCharacteristic(String lossCharacteristic) {
-    this.lossCharacteristic = lossCharacteristic;
+  public TapiTopologyNode errorCharacteristic(String errorCharacteristic) {
+    this.errorCharacteristic = errorCharacteristic;
     return this;
   }
 
   /**
-   * Describes the acceptable characteristic of lost packets where loss may result from discard due to errors or overflow.                  Applies to packet systems and not TDM (as for TDM errored signals are propagated unless grossly errored and overflow/underflow turns into timing slips).
-   * @return lossCharacteristic
+   * Describes the degree to which the signal propagated can be errored.                   Applies to TDM systems as the errored signal will be propagated and not packet as errored packets will be discarded.
+   * @return errorCharacteristic
   **/
-  @ApiModelProperty(value = "Describes the acceptable characteristic of lost packets where loss may result from discard due to errors or overflow.                  Applies to packet systems and not TDM (as for TDM errored signals are propagated unless grossly errored and overflow/underflow turns into timing slips).")
+  @ApiModelProperty(value = "Describes the degree to which the signal propagated can be errored.                   Applies to TDM systems as the errored signal will be propagated and not packet as errored packets will be discarded.")
 
-  public String getLossCharacteristic() {
-    return lossCharacteristic;
+  public String getErrorCharacteristic() {
+    return errorCharacteristic;
   }
 
-  public void setLossCharacteristic(String lossCharacteristic) {
-    this.lossCharacteristic = lossCharacteristic;
+  public void setErrorCharacteristic(String errorCharacteristic) {
+    this.errorCharacteristic = errorCharacteristic;
   }
 
   public TapiTopologyNode latencyCharacteristic(List<TapiTopologyLatencyCharacteristic> latencyCharacteristic) {
@@ -327,7 +249,7 @@ public class TapiTopologyNode extends TapiCommonAdminStatePac  {
 
   public TapiTopologyNode addLatencyCharacteristicItem(TapiTopologyLatencyCharacteristic latencyCharacteristicItem) {
     if (this.latencyCharacteristic == null) {
-      this.latencyCharacteristic = new ArrayList<TapiTopologyLatencyCharacteristic>();
+      this.latencyCharacteristic = new ArrayList<>();
     }
     this.latencyCharacteristic.add(latencyCharacteristicItem);
     return this;
@@ -354,7 +276,7 @@ public class TapiTopologyNode extends TapiCommonAdminStatePac  {
 
   public TapiTopologyNode addLayerProtocolNameItem(TapiCommonLayerProtocolName layerProtocolNameItem) {
     if (this.layerProtocolName == null) {
-      this.layerProtocolName = new ArrayList<TapiCommonLayerProtocolName>();
+      this.layerProtocolName = new ArrayList<>();
     }
     this.layerProtocolName.add(layerProtocolNameItem);
     return this;
@@ -374,51 +296,43 @@ public class TapiTopologyNode extends TapiCommonAdminStatePac  {
     this.layerProtocolName = layerProtocolName;
   }
 
-  public TapiTopologyNode encapTopology(TapiTopologyTopologyRef encapTopology) {
-    this.encapTopology = encapTopology;
+  public TapiTopologyNode lifecycleState(TapiCommonLifecycleState lifecycleState) {
+    this.lifecycleState = lifecycleState;
     return this;
   }
 
   /**
-   * Get encapTopology
-   * @return encapTopology
+   * Get lifecycleState
+   * @return lifecycleState
   **/
   @ApiModelProperty(value = "")
 
   @Valid
-  public TapiTopologyTopologyRef getEncapTopology() {
-    return encapTopology;
+  public TapiCommonLifecycleState getLifecycleState() {
+    return lifecycleState;
   }
 
-  public void setEncapTopology(TapiTopologyTopologyRef encapTopology) {
-    this.encapTopology = encapTopology;
+  public void setLifecycleState(TapiCommonLifecycleState lifecycleState) {
+    this.lifecycleState = lifecycleState;
   }
 
-  public TapiTopologyNode nodeRuleGroup(List<TapiTopologyNodeRuleGroup> nodeRuleGroup) {
-    this.nodeRuleGroup = nodeRuleGroup;
-    return this;
-  }
-
-  public TapiTopologyNode addNodeRuleGroupItem(TapiTopologyNodeRuleGroup nodeRuleGroupItem) {
-    if (this.nodeRuleGroup == null) {
-      this.nodeRuleGroup = new ArrayList<TapiTopologyNodeRuleGroup>();
-    }
-    this.nodeRuleGroup.add(nodeRuleGroupItem);
+  public TapiTopologyNode lossCharacteristic(String lossCharacteristic) {
+    this.lossCharacteristic = lossCharacteristic;
     return this;
   }
 
   /**
-   * none
-   * @return nodeRuleGroup
+   * Describes the acceptable characteristic of lost packets where loss may result from discard due to errors or overflow.                  Applies to packet systems and not TDM (as for TDM errored signals are propagated unless grossly errored and overflow/underflow turns into timing slips).
+   * @return lossCharacteristic
   **/
-  @ApiModelProperty(value = "none")
-  @Valid
-  public List<TapiTopologyNodeRuleGroup> getNodeRuleGroup() {
-    return nodeRuleGroup;
+  @ApiModelProperty(value = "Describes the acceptable characteristic of lost packets where loss may result from discard due to errors or overflow.                  Applies to packet systems and not TDM (as for TDM errored signals are propagated unless grossly errored and overflow/underflow turns into timing slips).")
+
+  public String getLossCharacteristic() {
+    return lossCharacteristic;
   }
 
-  public void setNodeRuleGroup(List<TapiTopologyNodeRuleGroup> nodeRuleGroup) {
-    this.nodeRuleGroup = nodeRuleGroup;
+  public void setLossCharacteristic(String lossCharacteristic) {
+    this.lossCharacteristic = lossCharacteristic;
   }
 
   public TapiTopologyNode nodeEdgePoint(List<TapiTopologyNodeEdgePoint> nodeEdgePoint) {
@@ -428,7 +342,7 @@ public class TapiTopologyNode extends TapiCommonAdminStatePac  {
 
   public TapiTopologyNode addNodeEdgePointItem(TapiTopologyNodeEdgePoint nodeEdgePointItem) {
     if (this.nodeEdgePoint == null) {
-      this.nodeEdgePoint = new ArrayList<TapiTopologyNodeEdgePoint>();
+      this.nodeEdgePoint = new ArrayList<>();
     }
     this.nodeEdgePoint.add(nodeEdgePointItem);
     return this;
@@ -448,31 +362,128 @@ public class TapiTopologyNode extends TapiCommonAdminStatePac  {
     this.nodeEdgePoint = nodeEdgePoint;
   }
 
-  public TapiTopologyNode aggregatedNodeEdgePoint(List<TapiTopologyNodeEdgePointRef> aggregatedNodeEdgePoint) {
-    this.aggregatedNodeEdgePoint = aggregatedNodeEdgePoint;
+  public TapiTopologyNode nodeRuleGroup(List<TapiTopologyNodeRuleGroup> nodeRuleGroup) {
+    this.nodeRuleGroup = nodeRuleGroup;
     return this;
   }
 
-  public TapiTopologyNode addAggregatedNodeEdgePointItem(TapiTopologyNodeEdgePointRef aggregatedNodeEdgePointItem) {
-    if (this.aggregatedNodeEdgePoint == null) {
-      this.aggregatedNodeEdgePoint = new ArrayList<TapiTopologyNodeEdgePointRef>();
+  public TapiTopologyNode addNodeRuleGroupItem(TapiTopologyNodeRuleGroup nodeRuleGroupItem) {
+    if (this.nodeRuleGroup == null) {
+      this.nodeRuleGroup = new ArrayList<>();
     }
-    this.aggregatedNodeEdgePoint.add(aggregatedNodeEdgePointItem);
+    this.nodeRuleGroup.add(nodeRuleGroupItem);
     return this;
   }
 
   /**
    * none
-   * @return aggregatedNodeEdgePoint
+   * @return nodeRuleGroup
   **/
   @ApiModelProperty(value = "none")
   @Valid
-  public List<TapiTopologyNodeEdgePointRef> getAggregatedNodeEdgePoint() {
-    return aggregatedNodeEdgePoint;
+  public List<TapiTopologyNodeRuleGroup> getNodeRuleGroup() {
+    return nodeRuleGroup;
   }
 
-  public void setAggregatedNodeEdgePoint(List<TapiTopologyNodeEdgePointRef> aggregatedNodeEdgePoint) {
-    this.aggregatedNodeEdgePoint = aggregatedNodeEdgePoint;
+  public void setNodeRuleGroup(List<TapiTopologyNodeRuleGroup> nodeRuleGroup) {
+    this.nodeRuleGroup = nodeRuleGroup;
+  }
+
+  public TapiTopologyNode operationalState(TapiCommonOperationalState operationalState) {
+    this.operationalState = operationalState;
+    return this;
+  }
+
+  /**
+   * Get operationalState
+   * @return operationalState
+  **/
+  @ApiModelProperty(value = "")
+
+  @Valid
+  public TapiCommonOperationalState getOperationalState() {
+    return operationalState;
+  }
+
+  public void setOperationalState(TapiCommonOperationalState operationalState) {
+    this.operationalState = operationalState;
+  }
+
+  public TapiTopologyNode repeatDeliveryCharacteristic(String repeatDeliveryCharacteristic) {
+    this.repeatDeliveryCharacteristic = repeatDeliveryCharacteristic;
+    return this;
+  }
+
+  /**
+   * Primarily applies to packet systems where a packet may be delivered more than once (in fault recovery for example).                   It can also apply to TDM where several frames may be received twice due to switching in a system with a large differential propagation delay.
+   * @return repeatDeliveryCharacteristic
+  **/
+  @ApiModelProperty(value = "Primarily applies to packet systems where a packet may be delivered more than once (in fault recovery for example).                   It can also apply to TDM where several frames may be received twice due to switching in a system with a large differential propagation delay.")
+
+  public String getRepeatDeliveryCharacteristic() {
+    return repeatDeliveryCharacteristic;
+  }
+
+  public void setRepeatDeliveryCharacteristic(String repeatDeliveryCharacteristic) {
+    this.repeatDeliveryCharacteristic = repeatDeliveryCharacteristic;
+  }
+
+  public TapiTopologyNode serverIntegrityProcessCharacteristic(String serverIntegrityProcessCharacteristic) {
+    this.serverIntegrityProcessCharacteristic = serverIntegrityProcessCharacteristic;
+    return this;
+  }
+
+  /**
+   * Describes the effect of any server integrity enhancement process on the characteristics of the TopologicalEntity.
+   * @return serverIntegrityProcessCharacteristic
+  **/
+  @ApiModelProperty(value = "Describes the effect of any server integrity enhancement process on the characteristics of the TopologicalEntity.")
+
+  public String getServerIntegrityProcessCharacteristic() {
+    return serverIntegrityProcessCharacteristic;
+  }
+
+  public void setServerIntegrityProcessCharacteristic(String serverIntegrityProcessCharacteristic) {
+    this.serverIntegrityProcessCharacteristic = serverIntegrityProcessCharacteristic;
+  }
+
+  public TapiTopologyNode totalPotentialCapacity(TapiCommonCapacity totalPotentialCapacity) {
+    this.totalPotentialCapacity = totalPotentialCapacity;
+    return this;
+  }
+
+  /**
+   * Get totalPotentialCapacity
+   * @return totalPotentialCapacity
+  **/
+  @ApiModelProperty(value = "")
+
+  @Valid
+  public TapiCommonCapacity getTotalPotentialCapacity() {
+    return totalPotentialCapacity;
+  }
+
+  public void setTotalPotentialCapacity(TapiCommonCapacity totalPotentialCapacity) {
+    this.totalPotentialCapacity = totalPotentialCapacity;
+  }
+
+  public TapiTopologyNode unavailableTimeCharacteristic(String unavailableTimeCharacteristic) {
+    this.unavailableTimeCharacteristic = unavailableTimeCharacteristic;
+    return this;
+  }
+
+  /**
+   * Describes the duration for which there may be no valid signal propagated.
+   * @return unavailableTimeCharacteristic
+  **/
+  @ApiModelProperty(value = "Describes the duration for which there may be no valid signal propagated.")
+
+  public String getUnavailableTimeCharacteristic() {
+    return unavailableTimeCharacteristic;
+  }
+
+  public void setUnavailableTimeCharacteristic(String unavailableTimeCharacteristic) {
+    this.unavailableTimeCharacteristic = unavailableTimeCharacteristic;
   }
 
 
@@ -485,29 +496,30 @@ public class TapiTopologyNode extends TapiCommonAdminStatePac  {
       return false;
     }
     TapiTopologyNode tapiTopologyNode = (TapiTopologyNode) o;
-    return Objects.equals(this.availableCapacity, tapiTopologyNode.availableCapacity) &&
-        Objects.equals(this.totalPotentialCapacity, tapiTopologyNode.totalPotentialCapacity) &&
-        Objects.equals(this.name, tapiTopologyNode.name) &&
-        Objects.equals(this.uuid, tapiTopologyNode.uuid) &&
+    return Objects.equals(this.administrativeState, tapiTopologyNode.administrativeState) &&
+        Objects.equals(this.aggregatedNodeEdgePoint, tapiTopologyNode.aggregatedNodeEdgePoint) &&
+        Objects.equals(this.availableCapacity, tapiTopologyNode.availableCapacity) &&
         Objects.equals(this.costCharacteristic, tapiTopologyNode.costCharacteristic) &&
-        Objects.equals(this.errorCharacteristic, tapiTopologyNode.errorCharacteristic) &&
-        Objects.equals(this.unavailableTimeCharacteristic, tapiTopologyNode.unavailableTimeCharacteristic) &&
-        Objects.equals(this.serverIntegrityProcessCharacteristic, tapiTopologyNode.serverIntegrityProcessCharacteristic) &&
         Objects.equals(this.deliveryOrderCharacteristic, tapiTopologyNode.deliveryOrderCharacteristic) &&
-        Objects.equals(this.repeatDeliveryCharacteristic, tapiTopologyNode.repeatDeliveryCharacteristic) &&
-        Objects.equals(this.lossCharacteristic, tapiTopologyNode.lossCharacteristic) &&
+        Objects.equals(this.encapTopology, tapiTopologyNode.encapTopology) &&
+        Objects.equals(this.errorCharacteristic, tapiTopologyNode.errorCharacteristic) &&
         Objects.equals(this.latencyCharacteristic, tapiTopologyNode.latencyCharacteristic) &&
         Objects.equals(this.layerProtocolName, tapiTopologyNode.layerProtocolName) &&
-        Objects.equals(this.encapTopology, tapiTopologyNode.encapTopology) &&
-        Objects.equals(this.nodeRuleGroup, tapiTopologyNode.nodeRuleGroup) &&
+        Objects.equals(this.lifecycleState, tapiTopologyNode.lifecycleState) &&
+        Objects.equals(this.lossCharacteristic, tapiTopologyNode.lossCharacteristic) &&
         Objects.equals(this.nodeEdgePoint, tapiTopologyNode.nodeEdgePoint) &&
-        Objects.equals(this.aggregatedNodeEdgePoint, tapiTopologyNode.aggregatedNodeEdgePoint) &&
+        Objects.equals(this.nodeRuleGroup, tapiTopologyNode.nodeRuleGroup) &&
+        Objects.equals(this.operationalState, tapiTopologyNode.operationalState) &&
+        Objects.equals(this.repeatDeliveryCharacteristic, tapiTopologyNode.repeatDeliveryCharacteristic) &&
+        Objects.equals(this.serverIntegrityProcessCharacteristic, tapiTopologyNode.serverIntegrityProcessCharacteristic) &&
+        Objects.equals(this.totalPotentialCapacity, tapiTopologyNode.totalPotentialCapacity) &&
+        Objects.equals(this.unavailableTimeCharacteristic, tapiTopologyNode.unavailableTimeCharacteristic) &&
         super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(availableCapacity, totalPotentialCapacity, name, uuid, costCharacteristic, errorCharacteristic, unavailableTimeCharacteristic, serverIntegrityProcessCharacteristic, deliveryOrderCharacteristic, repeatDeliveryCharacteristic, lossCharacteristic, latencyCharacteristic, layerProtocolName, encapTopology, nodeRuleGroup, nodeEdgePoint, aggregatedNodeEdgePoint, super.hashCode());
+    return Objects.hash(administrativeState, aggregatedNodeEdgePoint, availableCapacity, costCharacteristic, deliveryOrderCharacteristic, encapTopology, errorCharacteristic, latencyCharacteristic, layerProtocolName, lifecycleState, lossCharacteristic, nodeEdgePoint, nodeRuleGroup, operationalState, repeatDeliveryCharacteristic, serverIntegrityProcessCharacteristic, totalPotentialCapacity, unavailableTimeCharacteristic, super.hashCode());
   }
 
   @Override
@@ -515,23 +527,24 @@ public class TapiTopologyNode extends TapiCommonAdminStatePac  {
     StringBuilder sb = new StringBuilder();
     sb.append("class TapiTopologyNode {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    administrativeState: ").append(toIndentedString(administrativeState)).append("\n");
+    sb.append("    aggregatedNodeEdgePoint: ").append(toIndentedString(aggregatedNodeEdgePoint)).append("\n");
     sb.append("    availableCapacity: ").append(toIndentedString(availableCapacity)).append("\n");
-    sb.append("    totalPotentialCapacity: ").append(toIndentedString(totalPotentialCapacity)).append("\n");
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    uuid: ").append(toIndentedString(uuid)).append("\n");
     sb.append("    costCharacteristic: ").append(toIndentedString(costCharacteristic)).append("\n");
-    sb.append("    errorCharacteristic: ").append(toIndentedString(errorCharacteristic)).append("\n");
-    sb.append("    unavailableTimeCharacteristic: ").append(toIndentedString(unavailableTimeCharacteristic)).append("\n");
-    sb.append("    serverIntegrityProcessCharacteristic: ").append(toIndentedString(serverIntegrityProcessCharacteristic)).append("\n");
     sb.append("    deliveryOrderCharacteristic: ").append(toIndentedString(deliveryOrderCharacteristic)).append("\n");
-    sb.append("    repeatDeliveryCharacteristic: ").append(toIndentedString(repeatDeliveryCharacteristic)).append("\n");
-    sb.append("    lossCharacteristic: ").append(toIndentedString(lossCharacteristic)).append("\n");
+    sb.append("    encapTopology: ").append(toIndentedString(encapTopology)).append("\n");
+    sb.append("    errorCharacteristic: ").append(toIndentedString(errorCharacteristic)).append("\n");
     sb.append("    latencyCharacteristic: ").append(toIndentedString(latencyCharacteristic)).append("\n");
     sb.append("    layerProtocolName: ").append(toIndentedString(layerProtocolName)).append("\n");
-    sb.append("    encapTopology: ").append(toIndentedString(encapTopology)).append("\n");
-    sb.append("    nodeRuleGroup: ").append(toIndentedString(nodeRuleGroup)).append("\n");
+    sb.append("    lifecycleState: ").append(toIndentedString(lifecycleState)).append("\n");
+    sb.append("    lossCharacteristic: ").append(toIndentedString(lossCharacteristic)).append("\n");
     sb.append("    nodeEdgePoint: ").append(toIndentedString(nodeEdgePoint)).append("\n");
-    sb.append("    aggregatedNodeEdgePoint: ").append(toIndentedString(aggregatedNodeEdgePoint)).append("\n");
+    sb.append("    nodeRuleGroup: ").append(toIndentedString(nodeRuleGroup)).append("\n");
+    sb.append("    operationalState: ").append(toIndentedString(operationalState)).append("\n");
+    sb.append("    repeatDeliveryCharacteristic: ").append(toIndentedString(repeatDeliveryCharacteristic)).append("\n");
+    sb.append("    serverIntegrityProcessCharacteristic: ").append(toIndentedString(serverIntegrityProcessCharacteristic)).append("\n");
+    sb.append("    totalPotentialCapacity: ").append(toIndentedString(totalPotentialCapacity)).append("\n");
+    sb.append("    unavailableTimeCharacteristic: ").append(toIndentedString(unavailableTimeCharacteristic)).append("\n");
     sb.append("}");
     return sb.toString();
   }

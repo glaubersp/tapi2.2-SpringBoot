@@ -15,42 +15,15 @@ import javax.validation.constraints.*;
  * TapiNotificationGetsupportednotificationtypesOutput
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiNotificationGetsupportednotificationtypesOutput   {
-  @JsonProperty("supported-object-types")
-  @Valid
-  private List<String> supportedObjectTypes = null;
-
   @JsonProperty("supported-notification-types")
   @Valid
   private List<String> supportedNotificationTypes = null;
 
-  public TapiNotificationGetsupportednotificationtypesOutput supportedObjectTypes(List<String> supportedObjectTypes) {
-    this.supportedObjectTypes = supportedObjectTypes;
-    return this;
-  }
-
-  public TapiNotificationGetsupportednotificationtypesOutput addSupportedObjectTypesItem(String supportedObjectTypesItem) {
-    if (this.supportedObjectTypes == null) {
-      this.supportedObjectTypes = new ArrayList<String>();
-    }
-    this.supportedObjectTypes.add(supportedObjectTypesItem);
-    return this;
-  }
-
-  /**
-   * none
-   * @return supportedObjectTypes
-  **/
-  @ApiModelProperty(value = "none")
-
-  public List<String> getSupportedObjectTypes() {
-    return supportedObjectTypes;
-  }
-
-  public void setSupportedObjectTypes(List<String> supportedObjectTypes) {
-    this.supportedObjectTypes = supportedObjectTypes;
-  }
+  @JsonProperty("supported-object-types")
+  @Valid
+  private List<String> supportedObjectTypes = null;
 
   public TapiNotificationGetsupportednotificationtypesOutput supportedNotificationTypes(List<String> supportedNotificationTypes) {
     this.supportedNotificationTypes = supportedNotificationTypes;
@@ -59,7 +32,7 @@ public class TapiNotificationGetsupportednotificationtypesOutput   {
 
   public TapiNotificationGetsupportednotificationtypesOutput addSupportedNotificationTypesItem(String supportedNotificationTypesItem) {
     if (this.supportedNotificationTypes == null) {
-      this.supportedNotificationTypes = new ArrayList<String>();
+      this.supportedNotificationTypes = new ArrayList<>();
     }
     this.supportedNotificationTypes.add(supportedNotificationTypesItem);
     return this;
@@ -79,6 +52,33 @@ public class TapiNotificationGetsupportednotificationtypesOutput   {
     this.supportedNotificationTypes = supportedNotificationTypes;
   }
 
+  public TapiNotificationGetsupportednotificationtypesOutput supportedObjectTypes(List<String> supportedObjectTypes) {
+    this.supportedObjectTypes = supportedObjectTypes;
+    return this;
+  }
+
+  public TapiNotificationGetsupportednotificationtypesOutput addSupportedObjectTypesItem(String supportedObjectTypesItem) {
+    if (this.supportedObjectTypes == null) {
+      this.supportedObjectTypes = new ArrayList<>();
+    }
+    this.supportedObjectTypes.add(supportedObjectTypesItem);
+    return this;
+  }
+
+  /**
+   * none
+   * @return supportedObjectTypes
+  **/
+  @ApiModelProperty(value = "none")
+
+  public List<String> getSupportedObjectTypes() {
+    return supportedObjectTypes;
+  }
+
+  public void setSupportedObjectTypes(List<String> supportedObjectTypes) {
+    this.supportedObjectTypes = supportedObjectTypes;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -89,13 +89,13 @@ public class TapiNotificationGetsupportednotificationtypesOutput   {
       return false;
     }
     TapiNotificationGetsupportednotificationtypesOutput tapiNotificationGetsupportednotificationtypesOutput = (TapiNotificationGetsupportednotificationtypesOutput) o;
-    return Objects.equals(this.supportedObjectTypes, tapiNotificationGetsupportednotificationtypesOutput.supportedObjectTypes) &&
-        Objects.equals(this.supportedNotificationTypes, tapiNotificationGetsupportednotificationtypesOutput.supportedNotificationTypes);
+    return Objects.equals(this.supportedNotificationTypes, tapiNotificationGetsupportednotificationtypesOutput.supportedNotificationTypes) &&
+        Objects.equals(this.supportedObjectTypes, tapiNotificationGetsupportednotificationtypesOutput.supportedObjectTypes);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(supportedObjectTypes, supportedNotificationTypes);
+    return Objects.hash(supportedNotificationTypes, supportedObjectTypes);
   }
 
   @Override
@@ -103,8 +103,8 @@ public class TapiNotificationGetsupportednotificationtypesOutput   {
     StringBuilder sb = new StringBuilder();
     sb.append("class TapiNotificationGetsupportednotificationtypesOutput {\n");
     
-    sb.append("    supportedObjectTypes: ").append(toIndentedString(supportedObjectTypes)).append("\n");
     sb.append("    supportedNotificationTypes: ").append(toIndentedString(supportedNotificationTypes)).append("\n");
+    sb.append("    supportedObjectTypes: ").append(toIndentedString(supportedObjectTypes)).append("\n");
     sb.append("}");
     return sb.toString();
   }

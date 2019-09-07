@@ -25,18 +25,10 @@ import javax.validation.constraints.*;
  * TapiPathComputationPathComputationService
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiPathComputationPathComputationService extends TapiCommonGlobalClass  {
-  @JsonProperty("topology-constraint")
-  @Valid
-  private List<TapiPathComputationTopologyConstraint> topologyConstraint = null;
-
-  @JsonProperty("path")
-  @Valid
-  private List<TapiPathComputationPathRef> path = null;
-
-  @JsonProperty("objective-function")
-  private TapiPathComputationPathObjectiveFunction objectiveFunction = null;
+  @JsonProperty("direction")
+  private TapiCommonForwardingDirection direction = null;
 
   @JsonProperty("end-point")
   @Valid
@@ -45,87 +37,41 @@ public class TapiPathComputationPathComputationService extends TapiCommonGlobalC
   @JsonProperty("layer-protocol-name")
   private TapiCommonLayerProtocolName layerProtocolName = null;
 
-  @JsonProperty("routing-constraint")
-  private TapiPathComputationRoutingConstraint routingConstraint = null;
+  @JsonProperty("objective-function")
+  private TapiPathComputationPathObjectiveFunction objectiveFunction = null;
 
   @JsonProperty("optimization-constraint")
   private TapiPathComputationPathOptimizationConstraint optimizationConstraint = null;
 
-  @JsonProperty("direction")
-  private TapiCommonForwardingDirection direction = null;
-
-  public TapiPathComputationPathComputationService topologyConstraint(List<TapiPathComputationTopologyConstraint> topologyConstraint) {
-    this.topologyConstraint = topologyConstraint;
-    return this;
-  }
-
-  public TapiPathComputationPathComputationService addTopologyConstraintItem(TapiPathComputationTopologyConstraint topologyConstraintItem) {
-    if (this.topologyConstraint == null) {
-      this.topologyConstraint = new ArrayList<TapiPathComputationTopologyConstraint>();
-    }
-    this.topologyConstraint.add(topologyConstraintItem);
-    return this;
-  }
-
-  /**
-   * none
-   * @return topologyConstraint
-  **/
-  @ApiModelProperty(value = "none")
+  @JsonProperty("path")
   @Valid
-  public List<TapiPathComputationTopologyConstraint> getTopologyConstraint() {
-    return topologyConstraint;
-  }
+  private List<TapiPathComputationPathRef> path = null;
 
-  public void setTopologyConstraint(List<TapiPathComputationTopologyConstraint> topologyConstraint) {
-    this.topologyConstraint = topologyConstraint;
-  }
+  @JsonProperty("routing-constraint")
+  private TapiPathComputationRoutingConstraint routingConstraint = null;
 
-  public TapiPathComputationPathComputationService path(List<TapiPathComputationPathRef> path) {
-    this.path = path;
-    return this;
-  }
-
-  public TapiPathComputationPathComputationService addPathItem(TapiPathComputationPathRef pathItem) {
-    if (this.path == null) {
-      this.path = new ArrayList<TapiPathComputationPathRef>();
-    }
-    this.path.add(pathItem);
-    return this;
-  }
-
-  /**
-   * none
-   * @return path
-  **/
-  @ApiModelProperty(value = "none")
+  @JsonProperty("topology-constraint")
   @Valid
-  public List<TapiPathComputationPathRef> getPath() {
-    return path;
-  }
+  private List<TapiPathComputationTopologyConstraint> topologyConstraint = null;
 
-  public void setPath(List<TapiPathComputationPathRef> path) {
-    this.path = path;
-  }
-
-  public TapiPathComputationPathComputationService objectiveFunction(TapiPathComputationPathObjectiveFunction objectiveFunction) {
-    this.objectiveFunction = objectiveFunction;
+  public TapiPathComputationPathComputationService direction(TapiCommonForwardingDirection direction) {
+    this.direction = direction;
     return this;
   }
 
   /**
-   * Get objectiveFunction
-   * @return objectiveFunction
+   * Get direction
+   * @return direction
   **/
   @ApiModelProperty(value = "")
 
   @Valid
-  public TapiPathComputationPathObjectiveFunction getObjectiveFunction() {
-    return objectiveFunction;
+  public TapiCommonForwardingDirection getDirection() {
+    return direction;
   }
 
-  public void setObjectiveFunction(TapiPathComputationPathObjectiveFunction objectiveFunction) {
-    this.objectiveFunction = objectiveFunction;
+  public void setDirection(TapiCommonForwardingDirection direction) {
+    this.direction = direction;
   }
 
   public TapiPathComputationPathComputationService endPoint(List<TapiPathComputationPathServiceEndPoint> endPoint) {
@@ -135,7 +81,7 @@ public class TapiPathComputationPathComputationService extends TapiCommonGlobalC
 
   public TapiPathComputationPathComputationService addEndPointItem(TapiPathComputationPathServiceEndPoint endPointItem) {
     if (this.endPoint == null) {
-      this.endPoint = new ArrayList<TapiPathComputationPathServiceEndPoint>();
+      this.endPoint = new ArrayList<>();
     }
     this.endPoint.add(endPointItem);
     return this;
@@ -175,24 +121,24 @@ public class TapiPathComputationPathComputationService extends TapiCommonGlobalC
     this.layerProtocolName = layerProtocolName;
   }
 
-  public TapiPathComputationPathComputationService routingConstraint(TapiPathComputationRoutingConstraint routingConstraint) {
-    this.routingConstraint = routingConstraint;
+  public TapiPathComputationPathComputationService objectiveFunction(TapiPathComputationPathObjectiveFunction objectiveFunction) {
+    this.objectiveFunction = objectiveFunction;
     return this;
   }
 
   /**
-   * Get routingConstraint
-   * @return routingConstraint
+   * Get objectiveFunction
+   * @return objectiveFunction
   **/
   @ApiModelProperty(value = "")
 
   @Valid
-  public TapiPathComputationRoutingConstraint getRoutingConstraint() {
-    return routingConstraint;
+  public TapiPathComputationPathObjectiveFunction getObjectiveFunction() {
+    return objectiveFunction;
   }
 
-  public void setRoutingConstraint(TapiPathComputationRoutingConstraint routingConstraint) {
-    this.routingConstraint = routingConstraint;
+  public void setObjectiveFunction(TapiPathComputationPathObjectiveFunction objectiveFunction) {
+    this.objectiveFunction = objectiveFunction;
   }
 
   public TapiPathComputationPathComputationService optimizationConstraint(TapiPathComputationPathOptimizationConstraint optimizationConstraint) {
@@ -215,24 +161,78 @@ public class TapiPathComputationPathComputationService extends TapiCommonGlobalC
     this.optimizationConstraint = optimizationConstraint;
   }
 
-  public TapiPathComputationPathComputationService direction(TapiCommonForwardingDirection direction) {
-    this.direction = direction;
+  public TapiPathComputationPathComputationService path(List<TapiPathComputationPathRef> path) {
+    this.path = path;
+    return this;
+  }
+
+  public TapiPathComputationPathComputationService addPathItem(TapiPathComputationPathRef pathItem) {
+    if (this.path == null) {
+      this.path = new ArrayList<>();
+    }
+    this.path.add(pathItem);
     return this;
   }
 
   /**
-   * Get direction
-   * @return direction
+   * none
+   * @return path
+  **/
+  @ApiModelProperty(value = "none")
+  @Valid
+  public List<TapiPathComputationPathRef> getPath() {
+    return path;
+  }
+
+  public void setPath(List<TapiPathComputationPathRef> path) {
+    this.path = path;
+  }
+
+  public TapiPathComputationPathComputationService routingConstraint(TapiPathComputationRoutingConstraint routingConstraint) {
+    this.routingConstraint = routingConstraint;
+    return this;
+  }
+
+  /**
+   * Get routingConstraint
+   * @return routingConstraint
   **/
   @ApiModelProperty(value = "")
 
   @Valid
-  public TapiCommonForwardingDirection getDirection() {
-    return direction;
+  public TapiPathComputationRoutingConstraint getRoutingConstraint() {
+    return routingConstraint;
   }
 
-  public void setDirection(TapiCommonForwardingDirection direction) {
-    this.direction = direction;
+  public void setRoutingConstraint(TapiPathComputationRoutingConstraint routingConstraint) {
+    this.routingConstraint = routingConstraint;
+  }
+
+  public TapiPathComputationPathComputationService topologyConstraint(List<TapiPathComputationTopologyConstraint> topologyConstraint) {
+    this.topologyConstraint = topologyConstraint;
+    return this;
+  }
+
+  public TapiPathComputationPathComputationService addTopologyConstraintItem(TapiPathComputationTopologyConstraint topologyConstraintItem) {
+    if (this.topologyConstraint == null) {
+      this.topologyConstraint = new ArrayList<>();
+    }
+    this.topologyConstraint.add(topologyConstraintItem);
+    return this;
+  }
+
+  /**
+   * none
+   * @return topologyConstraint
+  **/
+  @ApiModelProperty(value = "none")
+  @Valid
+  public List<TapiPathComputationTopologyConstraint> getTopologyConstraint() {
+    return topologyConstraint;
+  }
+
+  public void setTopologyConstraint(List<TapiPathComputationTopologyConstraint> topologyConstraint) {
+    this.topologyConstraint = topologyConstraint;
   }
 
 
@@ -245,20 +245,20 @@ public class TapiPathComputationPathComputationService extends TapiCommonGlobalC
       return false;
     }
     TapiPathComputationPathComputationService tapiPathComputationPathComputationService = (TapiPathComputationPathComputationService) o;
-    return Objects.equals(this.topologyConstraint, tapiPathComputationPathComputationService.topologyConstraint) &&
-        Objects.equals(this.path, tapiPathComputationPathComputationService.path) &&
-        Objects.equals(this.objectiveFunction, tapiPathComputationPathComputationService.objectiveFunction) &&
+    return Objects.equals(this.direction, tapiPathComputationPathComputationService.direction) &&
         Objects.equals(this.endPoint, tapiPathComputationPathComputationService.endPoint) &&
         Objects.equals(this.layerProtocolName, tapiPathComputationPathComputationService.layerProtocolName) &&
-        Objects.equals(this.routingConstraint, tapiPathComputationPathComputationService.routingConstraint) &&
+        Objects.equals(this.objectiveFunction, tapiPathComputationPathComputationService.objectiveFunction) &&
         Objects.equals(this.optimizationConstraint, tapiPathComputationPathComputationService.optimizationConstraint) &&
-        Objects.equals(this.direction, tapiPathComputationPathComputationService.direction) &&
+        Objects.equals(this.path, tapiPathComputationPathComputationService.path) &&
+        Objects.equals(this.routingConstraint, tapiPathComputationPathComputationService.routingConstraint) &&
+        Objects.equals(this.topologyConstraint, tapiPathComputationPathComputationService.topologyConstraint) &&
         super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(topologyConstraint, path, objectiveFunction, endPoint, layerProtocolName, routingConstraint, optimizationConstraint, direction, super.hashCode());
+    return Objects.hash(direction, endPoint, layerProtocolName, objectiveFunction, optimizationConstraint, path, routingConstraint, topologyConstraint, super.hashCode());
   }
 
   @Override
@@ -266,14 +266,14 @@ public class TapiPathComputationPathComputationService extends TapiCommonGlobalC
     StringBuilder sb = new StringBuilder();
     sb.append("class TapiPathComputationPathComputationService {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    topologyConstraint: ").append(toIndentedString(topologyConstraint)).append("\n");
-    sb.append("    path: ").append(toIndentedString(path)).append("\n");
-    sb.append("    objectiveFunction: ").append(toIndentedString(objectiveFunction)).append("\n");
+    sb.append("    direction: ").append(toIndentedString(direction)).append("\n");
     sb.append("    endPoint: ").append(toIndentedString(endPoint)).append("\n");
     sb.append("    layerProtocolName: ").append(toIndentedString(layerProtocolName)).append("\n");
-    sb.append("    routingConstraint: ").append(toIndentedString(routingConstraint)).append("\n");
+    sb.append("    objectiveFunction: ").append(toIndentedString(objectiveFunction)).append("\n");
     sb.append("    optimizationConstraint: ").append(toIndentedString(optimizationConstraint)).append("\n");
-    sb.append("    direction: ").append(toIndentedString(direction)).append("\n");
+    sb.append("    path: ").append(toIndentedString(path)).append("\n");
+    sb.append("    routingConstraint: ").append(toIndentedString(routingConstraint)).append("\n");
+    sb.append("    topologyConstraint: ").append(toIndentedString(topologyConstraint)).append("\n");
     sb.append("}");
     return sb.toString();
   }

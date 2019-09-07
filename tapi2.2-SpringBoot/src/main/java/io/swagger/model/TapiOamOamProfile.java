@@ -18,7 +18,7 @@ import javax.validation.constraints.*;
  * TapiOamOamProfile
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiOamOamProfile extends TapiCommonGlobalClass  {
   @JsonProperty("pm-threshold-data")
   @Valid
@@ -31,7 +31,7 @@ public class TapiOamOamProfile extends TapiCommonGlobalClass  {
 
   public TapiOamOamProfile addPmThresholdDataItem(TapiOamPmThresholdData pmThresholdDataItem) {
     if (this.pmThresholdData == null) {
-      this.pmThresholdData = new ArrayList<TapiOamPmThresholdData>();
+      this.pmThresholdData = new ArrayList<>();
     }
     this.pmThresholdData.add(pmThresholdDataItem);
     return this;

@@ -6,17 +6,13 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import io.swagger.model.TapiCommonCapacity;
-import io.swagger.model.TapiCommonCapacityPac;
 import io.swagger.model.TapiCommonGlobalClass;
 import io.swagger.model.TapiCommonNameAndValue;
 import io.swagger.model.TapiTopologyCostCharacteristic;
 import io.swagger.model.TapiTopologyLatencyCharacteristic;
 import io.swagger.model.TapiTopologyNodeRuleGroupRef;
 import io.swagger.model.TapiTopologyRiskCharacteristic;
-import io.swagger.model.TapiTopologyRiskParameterPac;
 import io.swagger.model.TapiTopologyRule;
-import io.swagger.model.TapiTopologyTransferCostPac;
-import io.swagger.model.TapiTopologyTransferTimingPac;
 import java.util.ArrayList;
 import java.util.List;
 import org.springframework.validation.annotation.Validated;
@@ -27,18 +23,14 @@ import javax.validation.constraints.*;
  * TapiTopologyInterRuleGroup
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
-public class TapiTopologyInterRuleGroup extends TapiCommonCapacityPac  {
-  @JsonProperty("name")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
+public class TapiTopologyInterRuleGroup extends TapiCommonGlobalClass  {
+  @JsonProperty("associated-node-rule-group")
   @Valid
-  private List<TapiCommonNameAndValue> name = null;
+  private List<TapiTopologyNodeRuleGroupRef> associatedNodeRuleGroup = null;
 
-  @JsonProperty("uuid")
-  private String uuid = null;
-
-  @JsonProperty("risk-characteristic")
-  @Valid
-  private List<TapiTopologyRiskCharacteristic> riskCharacteristic = null;
+  @JsonProperty("available-capacity")
+  private TapiCommonCapacity availableCapacity = null;
 
   @JsonProperty("cost-characteristic")
   @Valid
@@ -48,85 +40,62 @@ public class TapiTopologyInterRuleGroup extends TapiCommonCapacityPac  {
   @Valid
   private List<TapiTopologyLatencyCharacteristic> latencyCharacteristic = null;
 
-  @JsonProperty("associated-node-rule-group")
+  @JsonProperty("risk-characteristic")
   @Valid
-  private List<TapiTopologyNodeRuleGroupRef> associatedNodeRuleGroup = null;
+  private List<TapiTopologyRiskCharacteristic> riskCharacteristic = null;
 
   @JsonProperty("rule")
   @Valid
   private List<TapiTopologyRule> rule = null;
 
-  public TapiTopologyInterRuleGroup name(List<TapiCommonNameAndValue> name) {
-    this.name = name;
+  @JsonProperty("total-potential-capacity")
+  private TapiCommonCapacity totalPotentialCapacity = null;
+
+  public TapiTopologyInterRuleGroup associatedNodeRuleGroup(List<TapiTopologyNodeRuleGroupRef> associatedNodeRuleGroup) {
+    this.associatedNodeRuleGroup = associatedNodeRuleGroup;
     return this;
   }
 
-  public TapiTopologyInterRuleGroup addNameItem(TapiCommonNameAndValue nameItem) {
-    if (this.name == null) {
-      this.name = new ArrayList<TapiCommonNameAndValue>();
+  public TapiTopologyInterRuleGroup addAssociatedNodeRuleGroupItem(TapiTopologyNodeRuleGroupRef associatedNodeRuleGroupItem) {
+    if (this.associatedNodeRuleGroup == null) {
+      this.associatedNodeRuleGroup = new ArrayList<>();
     }
-    this.name.add(nameItem);
+    this.associatedNodeRuleGroup.add(associatedNodeRuleGroupItem);
     return this;
   }
 
   /**
-   * List of names. This value is unique in some namespace but may change during the life of the entity.                  A name carries no semantics with respect to the purpose of the entity.
-   * @return name
+   * none
+   * @return associatedNodeRuleGroup
   **/
-  @ApiModelProperty(value = "List of names. This value is unique in some namespace but may change during the life of the entity.                  A name carries no semantics with respect to the purpose of the entity.")
+  @ApiModelProperty(value = "none")
   @Valid
-  public List<TapiCommonNameAndValue> getName() {
-    return name;
+  public List<TapiTopologyNodeRuleGroupRef> getAssociatedNodeRuleGroup() {
+    return associatedNodeRuleGroup;
   }
 
-  public void setName(List<TapiCommonNameAndValue> name) {
-    this.name = name;
+  public void setAssociatedNodeRuleGroup(List<TapiTopologyNodeRuleGroupRef> associatedNodeRuleGroup) {
+    this.associatedNodeRuleGroup = associatedNodeRuleGroup;
   }
 
-  public TapiTopologyInterRuleGroup uuid(String uuid) {
-    this.uuid = uuid;
+  public TapiTopologyInterRuleGroup availableCapacity(TapiCommonCapacity availableCapacity) {
+    this.availableCapacity = availableCapacity;
     return this;
   }
 
   /**
-   * UUID: An identifier that is universally unique within an identifier space, where the identifier space is itself globally unique, and immutable.                  An UUID carries no semantics with respect to the purpose or state of the entity.                  UUID here uses string representation as defined in RFC 4122.  The canonical representation uses lowercase characters.                  Pattern: [0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-' + '[0-9a-fA-F]{4}-[0-9a-fA-F]{12}                   Example of a UUID in string representation: f81d4fae-7dec-11d0-a765-00a0c91e6bf6
-   * @return uuid
+   * Get availableCapacity
+   * @return availableCapacity
   **/
-  @ApiModelProperty(value = "UUID: An identifier that is universally unique within an identifier space, where the identifier space is itself globally unique, and immutable.                  An UUID carries no semantics with respect to the purpose or state of the entity.                  UUID here uses string representation as defined in RFC 4122.  The canonical representation uses lowercase characters.                  Pattern: [0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-' + '[0-9a-fA-F]{4}-[0-9a-fA-F]{12}                   Example of a UUID in string representation: f81d4fae-7dec-11d0-a765-00a0c91e6bf6")
+  @ApiModelProperty(value = "")
 
-  public String getUuid() {
-    return uuid;
-  }
-
-  public void setUuid(String uuid) {
-    this.uuid = uuid;
-  }
-
-  public TapiTopologyInterRuleGroup riskCharacteristic(List<TapiTopologyRiskCharacteristic> riskCharacteristic) {
-    this.riskCharacteristic = riskCharacteristic;
-    return this;
-  }
-
-  public TapiTopologyInterRuleGroup addRiskCharacteristicItem(TapiTopologyRiskCharacteristic riskCharacteristicItem) {
-    if (this.riskCharacteristic == null) {
-      this.riskCharacteristic = new ArrayList<TapiTopologyRiskCharacteristic>();
-    }
-    this.riskCharacteristic.add(riskCharacteristicItem);
-    return this;
-  }
-
-  /**
-   * A list of risk characteristics for consideration in an analysis of shared risk. Each element of the list represents a specific risk consideration.
-   * @return riskCharacteristic
-  **/
-  @ApiModelProperty(value = "A list of risk characteristics for consideration in an analysis of shared risk. Each element of the list represents a specific risk consideration.")
   @Valid
-  public List<TapiTopologyRiskCharacteristic> getRiskCharacteristic() {
-    return riskCharacteristic;
+  public TapiCommonCapacity getAvailableCapacity() {
+    return availableCapacity;
   }
 
-  public void setRiskCharacteristic(List<TapiTopologyRiskCharacteristic> riskCharacteristic) {
-    this.riskCharacteristic = riskCharacteristic;
+  public void setAvailableCapacity(TapiCommonCapacity availableCapacity) {
+    this.availableCapacity = availableCapacity;
   }
 
   public TapiTopologyInterRuleGroup costCharacteristic(List<TapiTopologyCostCharacteristic> costCharacteristic) {
@@ -136,7 +105,7 @@ public class TapiTopologyInterRuleGroup extends TapiCommonCapacityPac  {
 
   public TapiTopologyInterRuleGroup addCostCharacteristicItem(TapiTopologyCostCharacteristic costCharacteristicItem) {
     if (this.costCharacteristic == null) {
-      this.costCharacteristic = new ArrayList<TapiTopologyCostCharacteristic>();
+      this.costCharacteristic = new ArrayList<>();
     }
     this.costCharacteristic.add(costCharacteristicItem);
     return this;
@@ -163,7 +132,7 @@ public class TapiTopologyInterRuleGroup extends TapiCommonCapacityPac  {
 
   public TapiTopologyInterRuleGroup addLatencyCharacteristicItem(TapiTopologyLatencyCharacteristic latencyCharacteristicItem) {
     if (this.latencyCharacteristic == null) {
-      this.latencyCharacteristic = new ArrayList<TapiTopologyLatencyCharacteristic>();
+      this.latencyCharacteristic = new ArrayList<>();
     }
     this.latencyCharacteristic.add(latencyCharacteristicItem);
     return this;
@@ -183,31 +152,31 @@ public class TapiTopologyInterRuleGroup extends TapiCommonCapacityPac  {
     this.latencyCharacteristic = latencyCharacteristic;
   }
 
-  public TapiTopologyInterRuleGroup associatedNodeRuleGroup(List<TapiTopologyNodeRuleGroupRef> associatedNodeRuleGroup) {
-    this.associatedNodeRuleGroup = associatedNodeRuleGroup;
+  public TapiTopologyInterRuleGroup riskCharacteristic(List<TapiTopologyRiskCharacteristic> riskCharacteristic) {
+    this.riskCharacteristic = riskCharacteristic;
     return this;
   }
 
-  public TapiTopologyInterRuleGroup addAssociatedNodeRuleGroupItem(TapiTopologyNodeRuleGroupRef associatedNodeRuleGroupItem) {
-    if (this.associatedNodeRuleGroup == null) {
-      this.associatedNodeRuleGroup = new ArrayList<TapiTopologyNodeRuleGroupRef>();
+  public TapiTopologyInterRuleGroup addRiskCharacteristicItem(TapiTopologyRiskCharacteristic riskCharacteristicItem) {
+    if (this.riskCharacteristic == null) {
+      this.riskCharacteristic = new ArrayList<>();
     }
-    this.associatedNodeRuleGroup.add(associatedNodeRuleGroupItem);
+    this.riskCharacteristic.add(riskCharacteristicItem);
     return this;
   }
 
   /**
-   * none
-   * @return associatedNodeRuleGroup
+   * A list of risk characteristics for consideration in an analysis of shared risk. Each element of the list represents a specific risk consideration.
+   * @return riskCharacteristic
   **/
-  @ApiModelProperty(value = "none")
+  @ApiModelProperty(value = "A list of risk characteristics for consideration in an analysis of shared risk. Each element of the list represents a specific risk consideration.")
   @Valid
-  public List<TapiTopologyNodeRuleGroupRef> getAssociatedNodeRuleGroup() {
-    return associatedNodeRuleGroup;
+  public List<TapiTopologyRiskCharacteristic> getRiskCharacteristic() {
+    return riskCharacteristic;
   }
 
-  public void setAssociatedNodeRuleGroup(List<TapiTopologyNodeRuleGroupRef> associatedNodeRuleGroup) {
-    this.associatedNodeRuleGroup = associatedNodeRuleGroup;
+  public void setRiskCharacteristic(List<TapiTopologyRiskCharacteristic> riskCharacteristic) {
+    this.riskCharacteristic = riskCharacteristic;
   }
 
   public TapiTopologyInterRuleGroup rule(List<TapiTopologyRule> rule) {
@@ -217,7 +186,7 @@ public class TapiTopologyInterRuleGroup extends TapiCommonCapacityPac  {
 
   public TapiTopologyInterRuleGroup addRuleItem(TapiTopologyRule ruleItem) {
     if (this.rule == null) {
-      this.rule = new ArrayList<TapiTopologyRule>();
+      this.rule = new ArrayList<>();
     }
     this.rule.add(ruleItem);
     return this;
@@ -237,6 +206,26 @@ public class TapiTopologyInterRuleGroup extends TapiCommonCapacityPac  {
     this.rule = rule;
   }
 
+  public TapiTopologyInterRuleGroup totalPotentialCapacity(TapiCommonCapacity totalPotentialCapacity) {
+    this.totalPotentialCapacity = totalPotentialCapacity;
+    return this;
+  }
+
+  /**
+   * Get totalPotentialCapacity
+   * @return totalPotentialCapacity
+  **/
+  @ApiModelProperty(value = "")
+
+  @Valid
+  public TapiCommonCapacity getTotalPotentialCapacity() {
+    return totalPotentialCapacity;
+  }
+
+  public void setTotalPotentialCapacity(TapiCommonCapacity totalPotentialCapacity) {
+    this.totalPotentialCapacity = totalPotentialCapacity;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -247,19 +236,19 @@ public class TapiTopologyInterRuleGroup extends TapiCommonCapacityPac  {
       return false;
     }
     TapiTopologyInterRuleGroup tapiTopologyInterRuleGroup = (TapiTopologyInterRuleGroup) o;
-    return Objects.equals(this.name, tapiTopologyInterRuleGroup.name) &&
-        Objects.equals(this.uuid, tapiTopologyInterRuleGroup.uuid) &&
-        Objects.equals(this.riskCharacteristic, tapiTopologyInterRuleGroup.riskCharacteristic) &&
+    return Objects.equals(this.associatedNodeRuleGroup, tapiTopologyInterRuleGroup.associatedNodeRuleGroup) &&
+        Objects.equals(this.availableCapacity, tapiTopologyInterRuleGroup.availableCapacity) &&
         Objects.equals(this.costCharacteristic, tapiTopologyInterRuleGroup.costCharacteristic) &&
         Objects.equals(this.latencyCharacteristic, tapiTopologyInterRuleGroup.latencyCharacteristic) &&
-        Objects.equals(this.associatedNodeRuleGroup, tapiTopologyInterRuleGroup.associatedNodeRuleGroup) &&
+        Objects.equals(this.riskCharacteristic, tapiTopologyInterRuleGroup.riskCharacteristic) &&
         Objects.equals(this.rule, tapiTopologyInterRuleGroup.rule) &&
+        Objects.equals(this.totalPotentialCapacity, tapiTopologyInterRuleGroup.totalPotentialCapacity) &&
         super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, uuid, riskCharacteristic, costCharacteristic, latencyCharacteristic, associatedNodeRuleGroup, rule, super.hashCode());
+    return Objects.hash(associatedNodeRuleGroup, availableCapacity, costCharacteristic, latencyCharacteristic, riskCharacteristic, rule, totalPotentialCapacity, super.hashCode());
   }
 
   @Override
@@ -267,13 +256,13 @@ public class TapiTopologyInterRuleGroup extends TapiCommonCapacityPac  {
     StringBuilder sb = new StringBuilder();
     sb.append("class TapiTopologyInterRuleGroup {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    uuid: ").append(toIndentedString(uuid)).append("\n");
-    sb.append("    riskCharacteristic: ").append(toIndentedString(riskCharacteristic)).append("\n");
+    sb.append("    associatedNodeRuleGroup: ").append(toIndentedString(associatedNodeRuleGroup)).append("\n");
+    sb.append("    availableCapacity: ").append(toIndentedString(availableCapacity)).append("\n");
     sb.append("    costCharacteristic: ").append(toIndentedString(costCharacteristic)).append("\n");
     sb.append("    latencyCharacteristic: ").append(toIndentedString(latencyCharacteristic)).append("\n");
-    sb.append("    associatedNodeRuleGroup: ").append(toIndentedString(associatedNodeRuleGroup)).append("\n");
+    sb.append("    riskCharacteristic: ").append(toIndentedString(riskCharacteristic)).append("\n");
     sb.append("    rule: ").append(toIndentedString(rule)).append("\n");
+    sb.append("    totalPotentialCapacity: ").append(toIndentedString(totalPotentialCapacity)).append("\n");
     sb.append("}");
     return sb.toString();
   }

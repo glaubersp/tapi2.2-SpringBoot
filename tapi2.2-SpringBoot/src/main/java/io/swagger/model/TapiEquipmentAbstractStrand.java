@@ -19,11 +19,11 @@ import javax.validation.constraints.*;
  * TapiEquipmentAbstractStrand
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiEquipmentAbstractStrand extends TapiCommonLocalClass  {
-  @JsonProperty("strand-media-characteristics")
+  @JsonProperty("adjacent-strand")
   @Valid
-  private List<TapiCommonNameAndValue> strandMediaCharacteristics = null;
+  private List<TapiEquipmentAbstractStrandRef> adjacentStrand = null;
 
   @JsonProperty("connector-pin")
   @Valid
@@ -33,35 +33,35 @@ public class TapiEquipmentAbstractStrand extends TapiCommonLocalClass  {
   @Valid
   private List<TapiEquipmentAbstractStrandRef> splicedStrand = null;
 
-  @JsonProperty("adjacent-strand")
+  @JsonProperty("strand-media-characteristics")
   @Valid
-  private List<TapiEquipmentAbstractStrandRef> adjacentStrand = null;
+  private List<TapiCommonNameAndValue> strandMediaCharacteristics = null;
 
-  public TapiEquipmentAbstractStrand strandMediaCharacteristics(List<TapiCommonNameAndValue> strandMediaCharacteristics) {
-    this.strandMediaCharacteristics = strandMediaCharacteristics;
+  public TapiEquipmentAbstractStrand adjacentStrand(List<TapiEquipmentAbstractStrandRef> adjacentStrand) {
+    this.adjacentStrand = adjacentStrand;
     return this;
   }
 
-  public TapiEquipmentAbstractStrand addStrandMediaCharacteristicsItem(TapiCommonNameAndValue strandMediaCharacteristicsItem) {
-    if (this.strandMediaCharacteristics == null) {
-      this.strandMediaCharacteristics = new ArrayList<TapiCommonNameAndValue>();
+  public TapiEquipmentAbstractStrand addAdjacentStrandItem(TapiEquipmentAbstractStrandRef adjacentStrandItem) {
+    if (this.adjacentStrand == null) {
+      this.adjacentStrand = new ArrayList<>();
     }
-    this.strandMediaCharacteristics.add(strandMediaCharacteristicsItem);
+    this.adjacentStrand.add(adjacentStrandItem);
     return this;
   }
 
   /**
-   * Relevant physical properties of the abstract strand.
-   * @return strandMediaCharacteristics
+   * none
+   * @return adjacentStrand
   **/
-  @ApiModelProperty(value = "Relevant physical properties of the abstract strand.")
+  @ApiModelProperty(value = "none")
   @Valid
-  public List<TapiCommonNameAndValue> getStrandMediaCharacteristics() {
-    return strandMediaCharacteristics;
+  public List<TapiEquipmentAbstractStrandRef> getAdjacentStrand() {
+    return adjacentStrand;
   }
 
-  public void setStrandMediaCharacteristics(List<TapiCommonNameAndValue> strandMediaCharacteristics) {
-    this.strandMediaCharacteristics = strandMediaCharacteristics;
+  public void setAdjacentStrand(List<TapiEquipmentAbstractStrandRef> adjacentStrand) {
+    this.adjacentStrand = adjacentStrand;
   }
 
   public TapiEquipmentAbstractStrand connectorPin(List<TapiEquipmentConnectorPinAddress> connectorPin) {
@@ -71,7 +71,7 @@ public class TapiEquipmentAbstractStrand extends TapiCommonLocalClass  {
 
   public TapiEquipmentAbstractStrand addConnectorPinItem(TapiEquipmentConnectorPinAddress connectorPinItem) {
     if (this.connectorPin == null) {
-      this.connectorPin = new ArrayList<TapiEquipmentConnectorPinAddress>();
+      this.connectorPin = new ArrayList<>();
     }
     this.connectorPin.add(connectorPinItem);
     return this;
@@ -98,7 +98,7 @@ public class TapiEquipmentAbstractStrand extends TapiCommonLocalClass  {
 
   public TapiEquipmentAbstractStrand addSplicedStrandItem(TapiEquipmentAbstractStrandRef splicedStrandItem) {
     if (this.splicedStrand == null) {
-      this.splicedStrand = new ArrayList<TapiEquipmentAbstractStrandRef>();
+      this.splicedStrand = new ArrayList<>();
     }
     this.splicedStrand.add(splicedStrandItem);
     return this;
@@ -118,31 +118,31 @@ public class TapiEquipmentAbstractStrand extends TapiCommonLocalClass  {
     this.splicedStrand = splicedStrand;
   }
 
-  public TapiEquipmentAbstractStrand adjacentStrand(List<TapiEquipmentAbstractStrandRef> adjacentStrand) {
-    this.adjacentStrand = adjacentStrand;
+  public TapiEquipmentAbstractStrand strandMediaCharacteristics(List<TapiCommonNameAndValue> strandMediaCharacteristics) {
+    this.strandMediaCharacteristics = strandMediaCharacteristics;
     return this;
   }
 
-  public TapiEquipmentAbstractStrand addAdjacentStrandItem(TapiEquipmentAbstractStrandRef adjacentStrandItem) {
-    if (this.adjacentStrand == null) {
-      this.adjacentStrand = new ArrayList<TapiEquipmentAbstractStrandRef>();
+  public TapiEquipmentAbstractStrand addStrandMediaCharacteristicsItem(TapiCommonNameAndValue strandMediaCharacteristicsItem) {
+    if (this.strandMediaCharacteristics == null) {
+      this.strandMediaCharacteristics = new ArrayList<>();
     }
-    this.adjacentStrand.add(adjacentStrandItem);
+    this.strandMediaCharacteristics.add(strandMediaCharacteristicsItem);
     return this;
   }
 
   /**
-   * none
-   * @return adjacentStrand
+   * Relevant physical properties of the abstract strand.
+   * @return strandMediaCharacteristics
   **/
-  @ApiModelProperty(value = "none")
+  @ApiModelProperty(value = "Relevant physical properties of the abstract strand.")
   @Valid
-  public List<TapiEquipmentAbstractStrandRef> getAdjacentStrand() {
-    return adjacentStrand;
+  public List<TapiCommonNameAndValue> getStrandMediaCharacteristics() {
+    return strandMediaCharacteristics;
   }
 
-  public void setAdjacentStrand(List<TapiEquipmentAbstractStrandRef> adjacentStrand) {
-    this.adjacentStrand = adjacentStrand;
+  public void setStrandMediaCharacteristics(List<TapiCommonNameAndValue> strandMediaCharacteristics) {
+    this.strandMediaCharacteristics = strandMediaCharacteristics;
   }
 
 
@@ -155,16 +155,16 @@ public class TapiEquipmentAbstractStrand extends TapiCommonLocalClass  {
       return false;
     }
     TapiEquipmentAbstractStrand tapiEquipmentAbstractStrand = (TapiEquipmentAbstractStrand) o;
-    return Objects.equals(this.strandMediaCharacteristics, tapiEquipmentAbstractStrand.strandMediaCharacteristics) &&
+    return Objects.equals(this.adjacentStrand, tapiEquipmentAbstractStrand.adjacentStrand) &&
         Objects.equals(this.connectorPin, tapiEquipmentAbstractStrand.connectorPin) &&
         Objects.equals(this.splicedStrand, tapiEquipmentAbstractStrand.splicedStrand) &&
-        Objects.equals(this.adjacentStrand, tapiEquipmentAbstractStrand.adjacentStrand) &&
+        Objects.equals(this.strandMediaCharacteristics, tapiEquipmentAbstractStrand.strandMediaCharacteristics) &&
         super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(strandMediaCharacteristics, connectorPin, splicedStrand, adjacentStrand, super.hashCode());
+    return Objects.hash(adjacentStrand, connectorPin, splicedStrand, strandMediaCharacteristics, super.hashCode());
   }
 
   @Override
@@ -172,10 +172,10 @@ public class TapiEquipmentAbstractStrand extends TapiCommonLocalClass  {
     StringBuilder sb = new StringBuilder();
     sb.append("class TapiEquipmentAbstractStrand {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    strandMediaCharacteristics: ").append(toIndentedString(strandMediaCharacteristics)).append("\n");
+    sb.append("    adjacentStrand: ").append(toIndentedString(adjacentStrand)).append("\n");
     sb.append("    connectorPin: ").append(toIndentedString(connectorPin)).append("\n");
     sb.append("    splicedStrand: ").append(toIndentedString(splicedStrand)).append("\n");
-    sb.append("    adjacentStrand: ").append(toIndentedString(adjacentStrand)).append("\n");
+    sb.append("    strandMediaCharacteristics: ").append(toIndentedString(strandMediaCharacteristics)).append("\n");
     sb.append("}");
     return sb.toString();
   }

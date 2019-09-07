@@ -18,35 +18,16 @@ import javax.validation.constraints.*;
  * TapiTopologyRule
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiTopologyRule extends TapiCommonLocalClass  {
-  @JsonProperty("override-priority")
-  private Integer overridePriority = null;
-
   @JsonProperty("forwarding-rule")
   private TapiTopologyForwardingRule forwardingRule = null;
 
+  @JsonProperty("override-priority")
+  private Integer overridePriority = null;
+
   @JsonProperty("rule-type")
   private TapiTopologyRuleType ruleType = null;
-
-  public TapiTopologyRule overridePriority(Integer overridePriority) {
-    this.overridePriority = overridePriority;
-    return this;
-  }
-
-  /**
-   * none
-   * @return overridePriority
-  **/
-  @ApiModelProperty(value = "none")
-
-  public Integer getOverridePriority() {
-    return overridePriority;
-  }
-
-  public void setOverridePriority(Integer overridePriority) {
-    this.overridePriority = overridePriority;
-  }
 
   public TapiTopologyRule forwardingRule(TapiTopologyForwardingRule forwardingRule) {
     this.forwardingRule = forwardingRule;
@@ -66,6 +47,25 @@ public class TapiTopologyRule extends TapiCommonLocalClass  {
 
   public void setForwardingRule(TapiTopologyForwardingRule forwardingRule) {
     this.forwardingRule = forwardingRule;
+  }
+
+  public TapiTopologyRule overridePriority(Integer overridePriority) {
+    this.overridePriority = overridePriority;
+    return this;
+  }
+
+  /**
+   * none
+   * @return overridePriority
+  **/
+  @ApiModelProperty(value = "none")
+
+  public Integer getOverridePriority() {
+    return overridePriority;
+  }
+
+  public void setOverridePriority(Integer overridePriority) {
+    this.overridePriority = overridePriority;
   }
 
   public TapiTopologyRule ruleType(TapiTopologyRuleType ruleType) {
@@ -98,15 +98,15 @@ public class TapiTopologyRule extends TapiCommonLocalClass  {
       return false;
     }
     TapiTopologyRule tapiTopologyRule = (TapiTopologyRule) o;
-    return Objects.equals(this.overridePriority, tapiTopologyRule.overridePriority) &&
-        Objects.equals(this.forwardingRule, tapiTopologyRule.forwardingRule) &&
+    return Objects.equals(this.forwardingRule, tapiTopologyRule.forwardingRule) &&
+        Objects.equals(this.overridePriority, tapiTopologyRule.overridePriority) &&
         Objects.equals(this.ruleType, tapiTopologyRule.ruleType) &&
         super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(overridePriority, forwardingRule, ruleType, super.hashCode());
+    return Objects.hash(forwardingRule, overridePriority, ruleType, super.hashCode());
   }
 
   @Override
@@ -114,8 +114,8 @@ public class TapiTopologyRule extends TapiCommonLocalClass  {
     StringBuilder sb = new StringBuilder();
     sb.append("class TapiTopologyRule {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    overridePriority: ").append(toIndentedString(overridePriority)).append("\n");
     sb.append("    forwardingRule: ").append(toIndentedString(forwardingRule)).append("\n");
+    sb.append("    overridePriority: ").append(toIndentedString(overridePriority)).append("\n");
     sb.append("    ruleType: ").append(toIndentedString(ruleType)).append("\n");
     sb.append("}");
     return sb.toString();

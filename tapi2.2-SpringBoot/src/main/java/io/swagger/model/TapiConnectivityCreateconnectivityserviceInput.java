@@ -23,18 +23,14 @@ import javax.validation.constraints.*;
  * TapiConnectivityCreateconnectivityserviceInput
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiConnectivityCreateconnectivityserviceInput   {
-  @JsonProperty("topology-constraint")
-  @Valid
-  private List<TapiPathComputationTopologyConstraint> topologyConstraint = null;
+  @JsonProperty("connectivity-constraint")
+  private TapiConnectivityConnectivityConstraint connectivityConstraint = null;
 
   @JsonProperty("end-point")
   @Valid
   private List<TapiConnectivityCreateconnectivityserviceInputEndPoint> endPoint = null;
-
-  @JsonProperty("resilience-constraint")
-  private TapiConnectivityResilienceConstraint resilienceConstraint = null;
 
   @JsonProperty("layer-protocol-name")
   private TapiCommonLayerProtocolName layerProtocolName = null;
@@ -43,43 +39,40 @@ public class TapiConnectivityCreateconnectivityserviceInput   {
   @Valid
   private List<TapiCommonNameAndValue> name = null;
 
+  @JsonProperty("resilience-constraint")
+  private TapiConnectivityResilienceConstraint resilienceConstraint = null;
+
   @JsonProperty("routing-constraint")
   private TapiPathComputationRoutingConstraint routingConstraint = null;
 
   @JsonProperty("state")
   private TapiCommonAdministrativeState state = null;
 
-  @JsonProperty("connectivity-constraint")
-  private TapiConnectivityConnectivityConstraint connectivityConstraint = null;
+  @JsonProperty("topology-constraint")
+  @Valid
+  private List<TapiPathComputationTopologyConstraint> topologyConstraint = null;
 
   @JsonProperty("uuid")
   private String uuid = null;
 
-  public TapiConnectivityCreateconnectivityserviceInput topologyConstraint(List<TapiPathComputationTopologyConstraint> topologyConstraint) {
-    this.topologyConstraint = topologyConstraint;
-    return this;
-  }
-
-  public TapiConnectivityCreateconnectivityserviceInput addTopologyConstraintItem(TapiPathComputationTopologyConstraint topologyConstraintItem) {
-    if (this.topologyConstraint == null) {
-      this.topologyConstraint = new ArrayList<TapiPathComputationTopologyConstraint>();
-    }
-    this.topologyConstraint.add(topologyConstraintItem);
+  public TapiConnectivityCreateconnectivityserviceInput connectivityConstraint(TapiConnectivityConnectivityConstraint connectivityConstraint) {
+    this.connectivityConstraint = connectivityConstraint;
     return this;
   }
 
   /**
-   * none
-   * @return topologyConstraint
+   * Get connectivityConstraint
+   * @return connectivityConstraint
   **/
-  @ApiModelProperty(value = "none")
+  @ApiModelProperty(value = "")
+
   @Valid
-  public List<TapiPathComputationTopologyConstraint> getTopologyConstraint() {
-    return topologyConstraint;
+  public TapiConnectivityConnectivityConstraint getConnectivityConstraint() {
+    return connectivityConstraint;
   }
 
-  public void setTopologyConstraint(List<TapiPathComputationTopologyConstraint> topologyConstraint) {
-    this.topologyConstraint = topologyConstraint;
+  public void setConnectivityConstraint(TapiConnectivityConnectivityConstraint connectivityConstraint) {
+    this.connectivityConstraint = connectivityConstraint;
   }
 
   public TapiConnectivityCreateconnectivityserviceInput endPoint(List<TapiConnectivityCreateconnectivityserviceInputEndPoint> endPoint) {
@@ -89,7 +82,7 @@ public class TapiConnectivityCreateconnectivityserviceInput   {
 
   public TapiConnectivityCreateconnectivityserviceInput addEndPointItem(TapiConnectivityCreateconnectivityserviceInputEndPoint endPointItem) {
     if (this.endPoint == null) {
-      this.endPoint = new ArrayList<TapiConnectivityCreateconnectivityserviceInputEndPoint>();
+      this.endPoint = new ArrayList<>();
     }
     this.endPoint.add(endPointItem);
     return this;
@@ -107,26 +100,6 @@ public class TapiConnectivityCreateconnectivityserviceInput   {
 
   public void setEndPoint(List<TapiConnectivityCreateconnectivityserviceInputEndPoint> endPoint) {
     this.endPoint = endPoint;
-  }
-
-  public TapiConnectivityCreateconnectivityserviceInput resilienceConstraint(TapiConnectivityResilienceConstraint resilienceConstraint) {
-    this.resilienceConstraint = resilienceConstraint;
-    return this;
-  }
-
-  /**
-   * Get resilienceConstraint
-   * @return resilienceConstraint
-  **/
-  @ApiModelProperty(value = "")
-
-  @Valid
-  public TapiConnectivityResilienceConstraint getResilienceConstraint() {
-    return resilienceConstraint;
-  }
-
-  public void setResilienceConstraint(TapiConnectivityResilienceConstraint resilienceConstraint) {
-    this.resilienceConstraint = resilienceConstraint;
   }
 
   public TapiConnectivityCreateconnectivityserviceInput layerProtocolName(TapiCommonLayerProtocolName layerProtocolName) {
@@ -156,7 +129,7 @@ public class TapiConnectivityCreateconnectivityserviceInput   {
 
   public TapiConnectivityCreateconnectivityserviceInput addNameItem(TapiCommonNameAndValue nameItem) {
     if (this.name == null) {
-      this.name = new ArrayList<TapiCommonNameAndValue>();
+      this.name = new ArrayList<>();
     }
     this.name.add(nameItem);
     return this;
@@ -174,6 +147,26 @@ public class TapiConnectivityCreateconnectivityserviceInput   {
 
   public void setName(List<TapiCommonNameAndValue> name) {
     this.name = name;
+  }
+
+  public TapiConnectivityCreateconnectivityserviceInput resilienceConstraint(TapiConnectivityResilienceConstraint resilienceConstraint) {
+    this.resilienceConstraint = resilienceConstraint;
+    return this;
+  }
+
+  /**
+   * Get resilienceConstraint
+   * @return resilienceConstraint
+  **/
+  @ApiModelProperty(value = "")
+
+  @Valid
+  public TapiConnectivityResilienceConstraint getResilienceConstraint() {
+    return resilienceConstraint;
+  }
+
+  public void setResilienceConstraint(TapiConnectivityResilienceConstraint resilienceConstraint) {
+    this.resilienceConstraint = resilienceConstraint;
   }
 
   public TapiConnectivityCreateconnectivityserviceInput routingConstraint(TapiPathComputationRoutingConstraint routingConstraint) {
@@ -216,24 +209,31 @@ public class TapiConnectivityCreateconnectivityserviceInput   {
     this.state = state;
   }
 
-  public TapiConnectivityCreateconnectivityserviceInput connectivityConstraint(TapiConnectivityConnectivityConstraint connectivityConstraint) {
-    this.connectivityConstraint = connectivityConstraint;
+  public TapiConnectivityCreateconnectivityserviceInput topologyConstraint(List<TapiPathComputationTopologyConstraint> topologyConstraint) {
+    this.topologyConstraint = topologyConstraint;
+    return this;
+  }
+
+  public TapiConnectivityCreateconnectivityserviceInput addTopologyConstraintItem(TapiPathComputationTopologyConstraint topologyConstraintItem) {
+    if (this.topologyConstraint == null) {
+      this.topologyConstraint = new ArrayList<>();
+    }
+    this.topologyConstraint.add(topologyConstraintItem);
     return this;
   }
 
   /**
-   * Get connectivityConstraint
-   * @return connectivityConstraint
+   * none
+   * @return topologyConstraint
   **/
-  @ApiModelProperty(value = "")
-
+  @ApiModelProperty(value = "none")
   @Valid
-  public TapiConnectivityConnectivityConstraint getConnectivityConstraint() {
-    return connectivityConstraint;
+  public List<TapiPathComputationTopologyConstraint> getTopologyConstraint() {
+    return topologyConstraint;
   }
 
-  public void setConnectivityConstraint(TapiConnectivityConnectivityConstraint connectivityConstraint) {
-    this.connectivityConstraint = connectivityConstraint;
+  public void setTopologyConstraint(List<TapiPathComputationTopologyConstraint> topologyConstraint) {
+    this.topologyConstraint = topologyConstraint;
   }
 
   public TapiConnectivityCreateconnectivityserviceInput uuid(String uuid) {
@@ -265,20 +265,20 @@ public class TapiConnectivityCreateconnectivityserviceInput   {
       return false;
     }
     TapiConnectivityCreateconnectivityserviceInput tapiConnectivityCreateconnectivityserviceInput = (TapiConnectivityCreateconnectivityserviceInput) o;
-    return Objects.equals(this.topologyConstraint, tapiConnectivityCreateconnectivityserviceInput.topologyConstraint) &&
+    return Objects.equals(this.connectivityConstraint, tapiConnectivityCreateconnectivityserviceInput.connectivityConstraint) &&
         Objects.equals(this.endPoint, tapiConnectivityCreateconnectivityserviceInput.endPoint) &&
-        Objects.equals(this.resilienceConstraint, tapiConnectivityCreateconnectivityserviceInput.resilienceConstraint) &&
         Objects.equals(this.layerProtocolName, tapiConnectivityCreateconnectivityserviceInput.layerProtocolName) &&
         Objects.equals(this.name, tapiConnectivityCreateconnectivityserviceInput.name) &&
+        Objects.equals(this.resilienceConstraint, tapiConnectivityCreateconnectivityserviceInput.resilienceConstraint) &&
         Objects.equals(this.routingConstraint, tapiConnectivityCreateconnectivityserviceInput.routingConstraint) &&
         Objects.equals(this.state, tapiConnectivityCreateconnectivityserviceInput.state) &&
-        Objects.equals(this.connectivityConstraint, tapiConnectivityCreateconnectivityserviceInput.connectivityConstraint) &&
+        Objects.equals(this.topologyConstraint, tapiConnectivityCreateconnectivityserviceInput.topologyConstraint) &&
         Objects.equals(this.uuid, tapiConnectivityCreateconnectivityserviceInput.uuid);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(topologyConstraint, endPoint, resilienceConstraint, layerProtocolName, name, routingConstraint, state, connectivityConstraint, uuid);
+    return Objects.hash(connectivityConstraint, endPoint, layerProtocolName, name, resilienceConstraint, routingConstraint, state, topologyConstraint, uuid);
   }
 
   @Override
@@ -286,14 +286,14 @@ public class TapiConnectivityCreateconnectivityserviceInput   {
     StringBuilder sb = new StringBuilder();
     sb.append("class TapiConnectivityCreateconnectivityserviceInput {\n");
     
-    sb.append("    topologyConstraint: ").append(toIndentedString(topologyConstraint)).append("\n");
+    sb.append("    connectivityConstraint: ").append(toIndentedString(connectivityConstraint)).append("\n");
     sb.append("    endPoint: ").append(toIndentedString(endPoint)).append("\n");
-    sb.append("    resilienceConstraint: ").append(toIndentedString(resilienceConstraint)).append("\n");
     sb.append("    layerProtocolName: ").append(toIndentedString(layerProtocolName)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    resilienceConstraint: ").append(toIndentedString(resilienceConstraint)).append("\n");
     sb.append("    routingConstraint: ").append(toIndentedString(routingConstraint)).append("\n");
     sb.append("    state: ").append(toIndentedString(state)).append("\n");
-    sb.append("    connectivityConstraint: ").append(toIndentedString(connectivityConstraint)).append("\n");
+    sb.append("    topologyConstraint: ").append(toIndentedString(topologyConstraint)).append("\n");
     sb.append("    uuid: ").append(toIndentedString(uuid)).append("\n");
     sb.append("}");
     return sb.toString();

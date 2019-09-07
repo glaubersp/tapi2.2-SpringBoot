@@ -16,41 +16,41 @@ import javax.validation.constraints.*;
  * TapiOduOduTerminationAndClientAdaptationPac
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiOduOduTerminationAndClientAdaptationPac   {
-  @JsonProperty("configured-mapping-type")
-  private TapiOduMappingType configuredMappingType = null;
+  @JsonProperty("accepted-payload-type")
+  private TapiOduOduPayloadType acceptedPayloadType = null;
 
   @JsonProperty("auto-payload-type")
   private Boolean autoPayloadType = false;
 
-  @JsonProperty("accepted-payload-type")
-  private TapiOduOduPayloadType acceptedPayloadType = null;
+  @JsonProperty("configured-client-type")
+  private String configuredClientType = null;
+
+  @JsonProperty("configured-mapping-type")
+  private TapiOduMappingType configuredMappingType = null;
 
   @JsonProperty("opu-tributary-slot-size")
   private TapiOduOduSlotSize opuTributarySlotSize = null;
 
-  @JsonProperty("configured-client-type")
-  private String configuredClientType = null;
-
-  public TapiOduOduTerminationAndClientAdaptationPac configuredMappingType(TapiOduMappingType configuredMappingType) {
-    this.configuredMappingType = configuredMappingType;
+  public TapiOduOduTerminationAndClientAdaptationPac acceptedPayloadType(TapiOduOduPayloadType acceptedPayloadType) {
+    this.acceptedPayloadType = acceptedPayloadType;
     return this;
   }
 
   /**
-   * Get configuredMappingType
-   * @return configuredMappingType
+   * Get acceptedPayloadType
+   * @return acceptedPayloadType
   **/
   @ApiModelProperty(value = "")
 
   @Valid
-  public TapiOduMappingType getConfiguredMappingType() {
-    return configuredMappingType;
+  public TapiOduOduPayloadType getAcceptedPayloadType() {
+    return acceptedPayloadType;
   }
 
-  public void setConfiguredMappingType(TapiOduMappingType configuredMappingType) {
-    this.configuredMappingType = configuredMappingType;
+  public void setAcceptedPayloadType(TapiOduOduPayloadType acceptedPayloadType) {
+    this.acceptedPayloadType = acceptedPayloadType;
   }
 
   public TapiOduOduTerminationAndClientAdaptationPac autoPayloadType(Boolean autoPayloadType) {
@@ -72,24 +72,43 @@ public class TapiOduOduTerminationAndClientAdaptationPac   {
     this.autoPayloadType = autoPayloadType;
   }
 
-  public TapiOduOduTerminationAndClientAdaptationPac acceptedPayloadType(TapiOduOduPayloadType acceptedPayloadType) {
-    this.acceptedPayloadType = acceptedPayloadType;
+  public TapiOduOduTerminationAndClientAdaptationPac configuredClientType(String configuredClientType) {
+    this.configuredClientType = configuredClientType;
     return this;
   }
 
   /**
-   * Get acceptedPayloadType
-   * @return acceptedPayloadType
+   * This attribute configures the type of the client CTP of the server ODU TTP.
+   * @return configuredClientType
+  **/
+  @ApiModelProperty(value = "This attribute configures the type of the client CTP of the server ODU TTP.")
+
+  public String getConfiguredClientType() {
+    return configuredClientType;
+  }
+
+  public void setConfiguredClientType(String configuredClientType) {
+    this.configuredClientType = configuredClientType;
+  }
+
+  public TapiOduOduTerminationAndClientAdaptationPac configuredMappingType(TapiOduMappingType configuredMappingType) {
+    this.configuredMappingType = configuredMappingType;
+    return this;
+  }
+
+  /**
+   * Get configuredMappingType
+   * @return configuredMappingType
   **/
   @ApiModelProperty(value = "")
 
   @Valid
-  public TapiOduOduPayloadType getAcceptedPayloadType() {
-    return acceptedPayloadType;
+  public TapiOduMappingType getConfiguredMappingType() {
+    return configuredMappingType;
   }
 
-  public void setAcceptedPayloadType(TapiOduOduPayloadType acceptedPayloadType) {
-    this.acceptedPayloadType = acceptedPayloadType;
+  public void setConfiguredMappingType(TapiOduMappingType configuredMappingType) {
+    this.configuredMappingType = configuredMappingType;
   }
 
   public TapiOduOduTerminationAndClientAdaptationPac opuTributarySlotSize(TapiOduOduSlotSize opuTributarySlotSize) {
@@ -112,25 +131,6 @@ public class TapiOduOduTerminationAndClientAdaptationPac   {
     this.opuTributarySlotSize = opuTributarySlotSize;
   }
 
-  public TapiOduOduTerminationAndClientAdaptationPac configuredClientType(String configuredClientType) {
-    this.configuredClientType = configuredClientType;
-    return this;
-  }
-
-  /**
-   * This attribute configures the type of the client CTP of the server ODU TTP.
-   * @return configuredClientType
-  **/
-  @ApiModelProperty(value = "This attribute configures the type of the client CTP of the server ODU TTP.")
-
-  public String getConfiguredClientType() {
-    return configuredClientType;
-  }
-
-  public void setConfiguredClientType(String configuredClientType) {
-    this.configuredClientType = configuredClientType;
-  }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -141,16 +141,16 @@ public class TapiOduOduTerminationAndClientAdaptationPac   {
       return false;
     }
     TapiOduOduTerminationAndClientAdaptationPac tapiOduOduTerminationAndClientAdaptationPac = (TapiOduOduTerminationAndClientAdaptationPac) o;
-    return Objects.equals(this.configuredMappingType, tapiOduOduTerminationAndClientAdaptationPac.configuredMappingType) &&
+    return Objects.equals(this.acceptedPayloadType, tapiOduOduTerminationAndClientAdaptationPac.acceptedPayloadType) &&
         Objects.equals(this.autoPayloadType, tapiOduOduTerminationAndClientAdaptationPac.autoPayloadType) &&
-        Objects.equals(this.acceptedPayloadType, tapiOduOduTerminationAndClientAdaptationPac.acceptedPayloadType) &&
-        Objects.equals(this.opuTributarySlotSize, tapiOduOduTerminationAndClientAdaptationPac.opuTributarySlotSize) &&
-        Objects.equals(this.configuredClientType, tapiOduOduTerminationAndClientAdaptationPac.configuredClientType);
+        Objects.equals(this.configuredClientType, tapiOduOduTerminationAndClientAdaptationPac.configuredClientType) &&
+        Objects.equals(this.configuredMappingType, tapiOduOduTerminationAndClientAdaptationPac.configuredMappingType) &&
+        Objects.equals(this.opuTributarySlotSize, tapiOduOduTerminationAndClientAdaptationPac.opuTributarySlotSize);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(configuredMappingType, autoPayloadType, acceptedPayloadType, opuTributarySlotSize, configuredClientType);
+    return Objects.hash(acceptedPayloadType, autoPayloadType, configuredClientType, configuredMappingType, opuTributarySlotSize);
   }
 
   @Override
@@ -158,11 +158,11 @@ public class TapiOduOduTerminationAndClientAdaptationPac   {
     StringBuilder sb = new StringBuilder();
     sb.append("class TapiOduOduTerminationAndClientAdaptationPac {\n");
     
-    sb.append("    configuredMappingType: ").append(toIndentedString(configuredMappingType)).append("\n");
-    sb.append("    autoPayloadType: ").append(toIndentedString(autoPayloadType)).append("\n");
     sb.append("    acceptedPayloadType: ").append(toIndentedString(acceptedPayloadType)).append("\n");
-    sb.append("    opuTributarySlotSize: ").append(toIndentedString(opuTributarySlotSize)).append("\n");
+    sb.append("    autoPayloadType: ").append(toIndentedString(autoPayloadType)).append("\n");
     sb.append("    configuredClientType: ").append(toIndentedString(configuredClientType)).append("\n");
+    sb.append("    configuredMappingType: ").append(toIndentedString(configuredMappingType)).append("\n");
+    sb.append("    opuTributarySlotSize: ").append(toIndentedString(opuTributarySlotSize)).append("\n");
     sb.append("}");
     return sb.toString();
   }

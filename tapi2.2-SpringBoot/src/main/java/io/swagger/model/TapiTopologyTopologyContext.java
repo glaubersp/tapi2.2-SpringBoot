@@ -17,7 +17,7 @@ import javax.validation.constraints.*;
  * TapiTopologyTopologyContext
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiTopologyTopologyContext   {
   @JsonProperty("nw-topology-service")
   private TapiTopologyNetworkTopologyService nwTopologyService = null;
@@ -53,7 +53,7 @@ public class TapiTopologyTopologyContext   {
 
   public TapiTopologyTopologyContext addTopologyItem(TapiTopologyTopology topologyItem) {
     if (this.topology == null) {
-      this.topology = new ArrayList<TapiTopologyTopology>();
+      this.topology = new ArrayList<>();
     }
     this.topology.add(topologyItem);
     return this;

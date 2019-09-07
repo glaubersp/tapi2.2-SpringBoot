@@ -14,7 +14,7 @@ import javax.validation.constraints.*;
  * TapiPhotonicMediaPowerManagementConfigPac
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiPhotonicMediaPowerManagementConfigPac   {
   @JsonProperty("expected-maximum-input-power")
   private TapiPhotonicMediaPowerProperties expectedMaximumInputPower = null;
@@ -22,11 +22,11 @@ public class TapiPhotonicMediaPowerManagementConfigPac   {
   @JsonProperty("expected-minimum-input-power")
   private TapiPhotonicMediaPowerProperties expectedMinimumInputPower = null;
 
-  @JsonProperty("intended-minimum-output-power")
-  private TapiPhotonicMediaPowerProperties intendedMinimumOutputPower = null;
-
   @JsonProperty("intended-maximum-output-power")
   private TapiPhotonicMediaPowerProperties intendedMaximumOutputPower = null;
+
+  @JsonProperty("intended-minimum-output-power")
+  private TapiPhotonicMediaPowerProperties intendedMinimumOutputPower = null;
 
   public TapiPhotonicMediaPowerManagementConfigPac expectedMaximumInputPower(TapiPhotonicMediaPowerProperties expectedMaximumInputPower) {
     this.expectedMaximumInputPower = expectedMaximumInputPower;
@@ -68,26 +68,6 @@ public class TapiPhotonicMediaPowerManagementConfigPac   {
     this.expectedMinimumInputPower = expectedMinimumInputPower;
   }
 
-  public TapiPhotonicMediaPowerManagementConfigPac intendedMinimumOutputPower(TapiPhotonicMediaPowerProperties intendedMinimumOutputPower) {
-    this.intendedMinimumOutputPower = intendedMinimumOutputPower;
-    return this;
-  }
-
-  /**
-   * Get intendedMinimumOutputPower
-   * @return intendedMinimumOutputPower
-  **/
-  @ApiModelProperty(value = "")
-
-  @Valid
-  public TapiPhotonicMediaPowerProperties getIntendedMinimumOutputPower() {
-    return intendedMinimumOutputPower;
-  }
-
-  public void setIntendedMinimumOutputPower(TapiPhotonicMediaPowerProperties intendedMinimumOutputPower) {
-    this.intendedMinimumOutputPower = intendedMinimumOutputPower;
-  }
-
   public TapiPhotonicMediaPowerManagementConfigPac intendedMaximumOutputPower(TapiPhotonicMediaPowerProperties intendedMaximumOutputPower) {
     this.intendedMaximumOutputPower = intendedMaximumOutputPower;
     return this;
@@ -108,6 +88,26 @@ public class TapiPhotonicMediaPowerManagementConfigPac   {
     this.intendedMaximumOutputPower = intendedMaximumOutputPower;
   }
 
+  public TapiPhotonicMediaPowerManagementConfigPac intendedMinimumOutputPower(TapiPhotonicMediaPowerProperties intendedMinimumOutputPower) {
+    this.intendedMinimumOutputPower = intendedMinimumOutputPower;
+    return this;
+  }
+
+  /**
+   * Get intendedMinimumOutputPower
+   * @return intendedMinimumOutputPower
+  **/
+  @ApiModelProperty(value = "")
+
+  @Valid
+  public TapiPhotonicMediaPowerProperties getIntendedMinimumOutputPower() {
+    return intendedMinimumOutputPower;
+  }
+
+  public void setIntendedMinimumOutputPower(TapiPhotonicMediaPowerProperties intendedMinimumOutputPower) {
+    this.intendedMinimumOutputPower = intendedMinimumOutputPower;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -120,13 +120,13 @@ public class TapiPhotonicMediaPowerManagementConfigPac   {
     TapiPhotonicMediaPowerManagementConfigPac tapiPhotonicMediaPowerManagementConfigPac = (TapiPhotonicMediaPowerManagementConfigPac) o;
     return Objects.equals(this.expectedMaximumInputPower, tapiPhotonicMediaPowerManagementConfigPac.expectedMaximumInputPower) &&
         Objects.equals(this.expectedMinimumInputPower, tapiPhotonicMediaPowerManagementConfigPac.expectedMinimumInputPower) &&
-        Objects.equals(this.intendedMinimumOutputPower, tapiPhotonicMediaPowerManagementConfigPac.intendedMinimumOutputPower) &&
-        Objects.equals(this.intendedMaximumOutputPower, tapiPhotonicMediaPowerManagementConfigPac.intendedMaximumOutputPower);
+        Objects.equals(this.intendedMaximumOutputPower, tapiPhotonicMediaPowerManagementConfigPac.intendedMaximumOutputPower) &&
+        Objects.equals(this.intendedMinimumOutputPower, tapiPhotonicMediaPowerManagementConfigPac.intendedMinimumOutputPower);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(expectedMaximumInputPower, expectedMinimumInputPower, intendedMinimumOutputPower, intendedMaximumOutputPower);
+    return Objects.hash(expectedMaximumInputPower, expectedMinimumInputPower, intendedMaximumOutputPower, intendedMinimumOutputPower);
   }
 
   @Override
@@ -136,8 +136,8 @@ public class TapiPhotonicMediaPowerManagementConfigPac   {
     
     sb.append("    expectedMaximumInputPower: ").append(toIndentedString(expectedMaximumInputPower)).append("\n");
     sb.append("    expectedMinimumInputPower: ").append(toIndentedString(expectedMinimumInputPower)).append("\n");
-    sb.append("    intendedMinimumOutputPower: ").append(toIndentedString(intendedMinimumOutputPower)).append("\n");
     sb.append("    intendedMaximumOutputPower: ").append(toIndentedString(intendedMaximumOutputPower)).append("\n");
+    sb.append("    intendedMinimumOutputPower: ").append(toIndentedString(intendedMinimumOutputPower)).append("\n");
     sb.append("}");
     return sb.toString();
   }

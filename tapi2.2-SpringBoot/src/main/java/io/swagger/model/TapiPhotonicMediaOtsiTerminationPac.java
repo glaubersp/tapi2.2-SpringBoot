@@ -19,47 +19,47 @@ import javax.validation.constraints.*;
  * TapiPhotonicMediaOtsiTerminationPac
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiPhotonicMediaOtsiTerminationPac   {
-  @JsonProperty("selected-application-identifier")
-  private TapiPhotonicMediaApplicationIdentifier selectedApplicationIdentifier = null;
+  @JsonProperty("laser-properties")
+  private TapiPhotonicMediaLaserProperties laserProperties = null;
 
   @JsonProperty("received-power")
   private TapiPhotonicMediaPowerProperties receivedPower = null;
 
+  @JsonProperty("selected-application-identifier")
+  private TapiPhotonicMediaApplicationIdentifier selectedApplicationIdentifier = null;
+
   @JsonProperty("selected-central-frequency")
   private TapiPhotonicMediaCentralFrequency selectedCentralFrequency = null;
-
-  @JsonProperty("transmited-power")
-  private TapiPhotonicMediaPowerProperties transmitedPower = null;
 
   @JsonProperty("selected-modulation")
   private TapiPhotonicMediaSelectedModulation selectedModulation = null;
 
-  @JsonProperty("laser-properties")
-  private TapiPhotonicMediaLaserProperties laserProperties = null;
-
   @JsonProperty("selected-spectrum")
   private TapiPhotonicMediaSpectrumBand selectedSpectrum = null;
 
-  public TapiPhotonicMediaOtsiTerminationPac selectedApplicationIdentifier(TapiPhotonicMediaApplicationIdentifier selectedApplicationIdentifier) {
-    this.selectedApplicationIdentifier = selectedApplicationIdentifier;
+  @JsonProperty("transmited-power")
+  private TapiPhotonicMediaPowerProperties transmitedPower = null;
+
+  public TapiPhotonicMediaOtsiTerminationPac laserProperties(TapiPhotonicMediaLaserProperties laserProperties) {
+    this.laserProperties = laserProperties;
     return this;
   }
 
   /**
-   * Get selectedApplicationIdentifier
-   * @return selectedApplicationIdentifier
+   * Get laserProperties
+   * @return laserProperties
   **/
   @ApiModelProperty(value = "")
 
   @Valid
-  public TapiPhotonicMediaApplicationIdentifier getSelectedApplicationIdentifier() {
-    return selectedApplicationIdentifier;
+  public TapiPhotonicMediaLaserProperties getLaserProperties() {
+    return laserProperties;
   }
 
-  public void setSelectedApplicationIdentifier(TapiPhotonicMediaApplicationIdentifier selectedApplicationIdentifier) {
-    this.selectedApplicationIdentifier = selectedApplicationIdentifier;
+  public void setLaserProperties(TapiPhotonicMediaLaserProperties laserProperties) {
+    this.laserProperties = laserProperties;
   }
 
   public TapiPhotonicMediaOtsiTerminationPac receivedPower(TapiPhotonicMediaPowerProperties receivedPower) {
@@ -82,6 +82,26 @@ public class TapiPhotonicMediaOtsiTerminationPac   {
     this.receivedPower = receivedPower;
   }
 
+  public TapiPhotonicMediaOtsiTerminationPac selectedApplicationIdentifier(TapiPhotonicMediaApplicationIdentifier selectedApplicationIdentifier) {
+    this.selectedApplicationIdentifier = selectedApplicationIdentifier;
+    return this;
+  }
+
+  /**
+   * Get selectedApplicationIdentifier
+   * @return selectedApplicationIdentifier
+  **/
+  @ApiModelProperty(value = "")
+
+  @Valid
+  public TapiPhotonicMediaApplicationIdentifier getSelectedApplicationIdentifier() {
+    return selectedApplicationIdentifier;
+  }
+
+  public void setSelectedApplicationIdentifier(TapiPhotonicMediaApplicationIdentifier selectedApplicationIdentifier) {
+    this.selectedApplicationIdentifier = selectedApplicationIdentifier;
+  }
+
   public TapiPhotonicMediaOtsiTerminationPac selectedCentralFrequency(TapiPhotonicMediaCentralFrequency selectedCentralFrequency) {
     this.selectedCentralFrequency = selectedCentralFrequency;
     return this;
@@ -100,26 +120,6 @@ public class TapiPhotonicMediaOtsiTerminationPac   {
 
   public void setSelectedCentralFrequency(TapiPhotonicMediaCentralFrequency selectedCentralFrequency) {
     this.selectedCentralFrequency = selectedCentralFrequency;
-  }
-
-  public TapiPhotonicMediaOtsiTerminationPac transmitedPower(TapiPhotonicMediaPowerProperties transmitedPower) {
-    this.transmitedPower = transmitedPower;
-    return this;
-  }
-
-  /**
-   * Get transmitedPower
-   * @return transmitedPower
-  **/
-  @ApiModelProperty(value = "")
-
-  @Valid
-  public TapiPhotonicMediaPowerProperties getTransmitedPower() {
-    return transmitedPower;
-  }
-
-  public void setTransmitedPower(TapiPhotonicMediaPowerProperties transmitedPower) {
-    this.transmitedPower = transmitedPower;
   }
 
   public TapiPhotonicMediaOtsiTerminationPac selectedModulation(TapiPhotonicMediaSelectedModulation selectedModulation) {
@@ -142,26 +142,6 @@ public class TapiPhotonicMediaOtsiTerminationPac   {
     this.selectedModulation = selectedModulation;
   }
 
-  public TapiPhotonicMediaOtsiTerminationPac laserProperties(TapiPhotonicMediaLaserProperties laserProperties) {
-    this.laserProperties = laserProperties;
-    return this;
-  }
-
-  /**
-   * Get laserProperties
-   * @return laserProperties
-  **/
-  @ApiModelProperty(value = "")
-
-  @Valid
-  public TapiPhotonicMediaLaserProperties getLaserProperties() {
-    return laserProperties;
-  }
-
-  public void setLaserProperties(TapiPhotonicMediaLaserProperties laserProperties) {
-    this.laserProperties = laserProperties;
-  }
-
   public TapiPhotonicMediaOtsiTerminationPac selectedSpectrum(TapiPhotonicMediaSpectrumBand selectedSpectrum) {
     this.selectedSpectrum = selectedSpectrum;
     return this;
@@ -182,6 +162,26 @@ public class TapiPhotonicMediaOtsiTerminationPac   {
     this.selectedSpectrum = selectedSpectrum;
   }
 
+  public TapiPhotonicMediaOtsiTerminationPac transmitedPower(TapiPhotonicMediaPowerProperties transmitedPower) {
+    this.transmitedPower = transmitedPower;
+    return this;
+  }
+
+  /**
+   * Get transmitedPower
+   * @return transmitedPower
+  **/
+  @ApiModelProperty(value = "")
+
+  @Valid
+  public TapiPhotonicMediaPowerProperties getTransmitedPower() {
+    return transmitedPower;
+  }
+
+  public void setTransmitedPower(TapiPhotonicMediaPowerProperties transmitedPower) {
+    this.transmitedPower = transmitedPower;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -192,18 +192,18 @@ public class TapiPhotonicMediaOtsiTerminationPac   {
       return false;
     }
     TapiPhotonicMediaOtsiTerminationPac tapiPhotonicMediaOtsiTerminationPac = (TapiPhotonicMediaOtsiTerminationPac) o;
-    return Objects.equals(this.selectedApplicationIdentifier, tapiPhotonicMediaOtsiTerminationPac.selectedApplicationIdentifier) &&
+    return Objects.equals(this.laserProperties, tapiPhotonicMediaOtsiTerminationPac.laserProperties) &&
         Objects.equals(this.receivedPower, tapiPhotonicMediaOtsiTerminationPac.receivedPower) &&
+        Objects.equals(this.selectedApplicationIdentifier, tapiPhotonicMediaOtsiTerminationPac.selectedApplicationIdentifier) &&
         Objects.equals(this.selectedCentralFrequency, tapiPhotonicMediaOtsiTerminationPac.selectedCentralFrequency) &&
-        Objects.equals(this.transmitedPower, tapiPhotonicMediaOtsiTerminationPac.transmitedPower) &&
         Objects.equals(this.selectedModulation, tapiPhotonicMediaOtsiTerminationPac.selectedModulation) &&
-        Objects.equals(this.laserProperties, tapiPhotonicMediaOtsiTerminationPac.laserProperties) &&
-        Objects.equals(this.selectedSpectrum, tapiPhotonicMediaOtsiTerminationPac.selectedSpectrum);
+        Objects.equals(this.selectedSpectrum, tapiPhotonicMediaOtsiTerminationPac.selectedSpectrum) &&
+        Objects.equals(this.transmitedPower, tapiPhotonicMediaOtsiTerminationPac.transmitedPower);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(selectedApplicationIdentifier, receivedPower, selectedCentralFrequency, transmitedPower, selectedModulation, laserProperties, selectedSpectrum);
+    return Objects.hash(laserProperties, receivedPower, selectedApplicationIdentifier, selectedCentralFrequency, selectedModulation, selectedSpectrum, transmitedPower);
   }
 
   @Override
@@ -211,13 +211,13 @@ public class TapiPhotonicMediaOtsiTerminationPac   {
     StringBuilder sb = new StringBuilder();
     sb.append("class TapiPhotonicMediaOtsiTerminationPac {\n");
     
-    sb.append("    selectedApplicationIdentifier: ").append(toIndentedString(selectedApplicationIdentifier)).append("\n");
-    sb.append("    receivedPower: ").append(toIndentedString(receivedPower)).append("\n");
-    sb.append("    selectedCentralFrequency: ").append(toIndentedString(selectedCentralFrequency)).append("\n");
-    sb.append("    transmitedPower: ").append(toIndentedString(transmitedPower)).append("\n");
-    sb.append("    selectedModulation: ").append(toIndentedString(selectedModulation)).append("\n");
     sb.append("    laserProperties: ").append(toIndentedString(laserProperties)).append("\n");
+    sb.append("    receivedPower: ").append(toIndentedString(receivedPower)).append("\n");
+    sb.append("    selectedApplicationIdentifier: ").append(toIndentedString(selectedApplicationIdentifier)).append("\n");
+    sb.append("    selectedCentralFrequency: ").append(toIndentedString(selectedCentralFrequency)).append("\n");
+    sb.append("    selectedModulation: ").append(toIndentedString(selectedModulation)).append("\n");
     sb.append("    selectedSpectrum: ").append(toIndentedString(selectedSpectrum)).append("\n");
+    sb.append("    transmitedPower: ").append(toIndentedString(transmitedPower)).append("\n");
     sb.append("}");
     return sb.toString();
   }

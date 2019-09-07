@@ -13,19 +13,10 @@ import javax.validation.constraints.*;
  * TapiPhotonicMediaFecProperties
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiPhotonicMediaFecProperties   {
-  @JsonProperty("uncorrectable-bytes")
-  private Integer uncorrectableBytes = null;
-
   @JsonProperty("corrected-bits")
   private Integer correctedBits = null;
-
-  @JsonProperty("pre-fec-ber")
-  private Integer preFecBer = null;
-
-  @JsonProperty("uncorrectable-bits")
-  private Integer uncorrectableBits = null;
 
   @JsonProperty("corrected-bytes")
   private Integer correctedBytes = null;
@@ -33,24 +24,14 @@ public class TapiPhotonicMediaFecProperties   {
   @JsonProperty("post-fec-ber")
   private Integer postFecBer = null;
 
-  public TapiPhotonicMediaFecProperties uncorrectableBytes(Integer uncorrectableBytes) {
-    this.uncorrectableBytes = uncorrectableBytes;
-    return this;
-  }
+  @JsonProperty("pre-fec-ber")
+  private Integer preFecBer = null;
 
-  /**
-   * Bytes that could not be corrected by FEC
-   * @return uncorrectableBytes
-  **/
-  @ApiModelProperty(value = "Bytes that could not be corrected by FEC")
+  @JsonProperty("uncorrectable-bits")
+  private Integer uncorrectableBits = null;
 
-  public Integer getUncorrectableBytes() {
-    return uncorrectableBytes;
-  }
-
-  public void setUncorrectableBytes(Integer uncorrectableBytes) {
-    this.uncorrectableBytes = uncorrectableBytes;
-  }
+  @JsonProperty("uncorrectable-bytes")
+  private Integer uncorrectableBytes = null;
 
   public TapiPhotonicMediaFecProperties correctedBits(Integer correctedBits) {
     this.correctedBits = correctedBits;
@@ -69,44 +50,6 @@ public class TapiPhotonicMediaFecProperties   {
 
   public void setCorrectedBits(Integer correctedBits) {
     this.correctedBits = correctedBits;
-  }
-
-  public TapiPhotonicMediaFecProperties preFecBer(Integer preFecBer) {
-    this.preFecBer = preFecBer;
-    return this;
-  }
-
-  /**
-   * counter: bit error rate before correction by FEC
-   * @return preFecBer
-  **/
-  @ApiModelProperty(value = "counter: bit error rate before correction by FEC")
-
-  public Integer getPreFecBer() {
-    return preFecBer;
-  }
-
-  public void setPreFecBer(Integer preFecBer) {
-    this.preFecBer = preFecBer;
-  }
-
-  public TapiPhotonicMediaFecProperties uncorrectableBits(Integer uncorrectableBits) {
-    this.uncorrectableBits = uncorrectableBits;
-    return this;
-  }
-
-  /**
-   * Bits that could not be corrected by FEC
-   * @return uncorrectableBits
-  **/
-  @ApiModelProperty(value = "Bits that could not be corrected by FEC")
-
-  public Integer getUncorrectableBits() {
-    return uncorrectableBits;
-  }
-
-  public void setUncorrectableBits(Integer uncorrectableBits) {
-    this.uncorrectableBits = uncorrectableBits;
   }
 
   public TapiPhotonicMediaFecProperties correctedBytes(Integer correctedBytes) {
@@ -147,6 +90,63 @@ public class TapiPhotonicMediaFecProperties   {
     this.postFecBer = postFecBer;
   }
 
+  public TapiPhotonicMediaFecProperties preFecBer(Integer preFecBer) {
+    this.preFecBer = preFecBer;
+    return this;
+  }
+
+  /**
+   * counter: bit error rate before correction by FEC
+   * @return preFecBer
+  **/
+  @ApiModelProperty(value = "counter: bit error rate before correction by FEC")
+
+  public Integer getPreFecBer() {
+    return preFecBer;
+  }
+
+  public void setPreFecBer(Integer preFecBer) {
+    this.preFecBer = preFecBer;
+  }
+
+  public TapiPhotonicMediaFecProperties uncorrectableBits(Integer uncorrectableBits) {
+    this.uncorrectableBits = uncorrectableBits;
+    return this;
+  }
+
+  /**
+   * Bits that could not be corrected by FEC
+   * @return uncorrectableBits
+  **/
+  @ApiModelProperty(value = "Bits that could not be corrected by FEC")
+
+  public Integer getUncorrectableBits() {
+    return uncorrectableBits;
+  }
+
+  public void setUncorrectableBits(Integer uncorrectableBits) {
+    this.uncorrectableBits = uncorrectableBits;
+  }
+
+  public TapiPhotonicMediaFecProperties uncorrectableBytes(Integer uncorrectableBytes) {
+    this.uncorrectableBytes = uncorrectableBytes;
+    return this;
+  }
+
+  /**
+   * Bytes that could not be corrected by FEC
+   * @return uncorrectableBytes
+  **/
+  @ApiModelProperty(value = "Bytes that could not be corrected by FEC")
+
+  public Integer getUncorrectableBytes() {
+    return uncorrectableBytes;
+  }
+
+  public void setUncorrectableBytes(Integer uncorrectableBytes) {
+    this.uncorrectableBytes = uncorrectableBytes;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -157,17 +157,17 @@ public class TapiPhotonicMediaFecProperties   {
       return false;
     }
     TapiPhotonicMediaFecProperties tapiPhotonicMediaFecProperties = (TapiPhotonicMediaFecProperties) o;
-    return Objects.equals(this.uncorrectableBytes, tapiPhotonicMediaFecProperties.uncorrectableBytes) &&
-        Objects.equals(this.correctedBits, tapiPhotonicMediaFecProperties.correctedBits) &&
+    return Objects.equals(this.correctedBits, tapiPhotonicMediaFecProperties.correctedBits) &&
+        Objects.equals(this.correctedBytes, tapiPhotonicMediaFecProperties.correctedBytes) &&
+        Objects.equals(this.postFecBer, tapiPhotonicMediaFecProperties.postFecBer) &&
         Objects.equals(this.preFecBer, tapiPhotonicMediaFecProperties.preFecBer) &&
         Objects.equals(this.uncorrectableBits, tapiPhotonicMediaFecProperties.uncorrectableBits) &&
-        Objects.equals(this.correctedBytes, tapiPhotonicMediaFecProperties.correctedBytes) &&
-        Objects.equals(this.postFecBer, tapiPhotonicMediaFecProperties.postFecBer);
+        Objects.equals(this.uncorrectableBytes, tapiPhotonicMediaFecProperties.uncorrectableBytes);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(uncorrectableBytes, correctedBits, preFecBer, uncorrectableBits, correctedBytes, postFecBer);
+    return Objects.hash(correctedBits, correctedBytes, postFecBer, preFecBer, uncorrectableBits, uncorrectableBytes);
   }
 
   @Override
@@ -175,12 +175,12 @@ public class TapiPhotonicMediaFecProperties   {
     StringBuilder sb = new StringBuilder();
     sb.append("class TapiPhotonicMediaFecProperties {\n");
     
-    sb.append("    uncorrectableBytes: ").append(toIndentedString(uncorrectableBytes)).append("\n");
     sb.append("    correctedBits: ").append(toIndentedString(correctedBits)).append("\n");
-    sb.append("    preFecBer: ").append(toIndentedString(preFecBer)).append("\n");
-    sb.append("    uncorrectableBits: ").append(toIndentedString(uncorrectableBits)).append("\n");
     sb.append("    correctedBytes: ").append(toIndentedString(correctedBytes)).append("\n");
     sb.append("    postFecBer: ").append(toIndentedString(postFecBer)).append("\n");
+    sb.append("    preFecBer: ").append(toIndentedString(preFecBer)).append("\n");
+    sb.append("    uncorrectableBits: ").append(toIndentedString(uncorrectableBits)).append("\n");
+    sb.append("    uncorrectableBytes: ").append(toIndentedString(uncorrectableBytes)).append("\n");
     sb.append("}");
     return sb.toString();
   }

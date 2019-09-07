@@ -15,7 +15,7 @@ import javax.validation.constraints.*;
  * TapiOduOduNcmPac
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiOduOduNcmPac   {
   @JsonProperty("tcm-fields-in-use")
   @Valid
@@ -28,7 +28,7 @@ public class TapiOduOduNcmPac   {
 
   public TapiOduOduNcmPac addTcmFieldsInUseItem(Integer tcmFieldsInUseItem) {
     if (this.tcmFieldsInUse == null) {
-      this.tcmFieldsInUse = new ArrayList<Integer>();
+      this.tcmFieldsInUse = new ArrayList<>();
     }
     this.tcmFieldsInUse.add(tcmFieldsInUseItem);
     return this;

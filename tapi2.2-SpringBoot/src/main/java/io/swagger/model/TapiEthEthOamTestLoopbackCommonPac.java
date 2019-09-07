@@ -14,16 +14,16 @@ import javax.validation.constraints.*;
  * TapiEthEthOamTestLoopbackCommonPac
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiEthEthOamTestLoopbackCommonPac   {
   @JsonProperty("data-tlv-length")
   private Integer dataTlvLength = null;
 
-  @JsonProperty("period")
-  private TapiEthOamPeriod period = null;
-
   @JsonProperty("drop-eligibility")
   private Boolean dropEligibility = false;
+
+  @JsonProperty("period")
+  private TapiEthOamPeriod period = null;
 
   public TapiEthEthOamTestLoopbackCommonPac dataTlvLength(Integer dataTlvLength) {
     this.dataTlvLength = dataTlvLength;
@@ -42,6 +42,25 @@ public class TapiEthEthOamTestLoopbackCommonPac   {
 
   public void setDataTlvLength(Integer dataTlvLength) {
     this.dataTlvLength = dataTlvLength;
+  }
+
+  public TapiEthEthOamTestLoopbackCommonPac dropEligibility(Boolean dropEligibility) {
+    this.dropEligibility = dropEligibility;
+    return this;
+  }
+
+  /**
+   * G.8052: This parameter provides the eligibility of frames with unicast ETH-TST information to be discarded when congestion conditions are encountered.                  G.8052: This parameter provides the eligibility of frames with unicast ETH-LB information to be discarded when congestion conditions are encountered.
+   * @return dropEligibility
+  **/
+  @ApiModelProperty(value = "G.8052: This parameter provides the eligibility of frames with unicast ETH-TST information to be discarded when congestion conditions are encountered.                  G.8052: This parameter provides the eligibility of frames with unicast ETH-LB information to be discarded when congestion conditions are encountered.")
+
+  public Boolean isDropEligibility() {
+    return dropEligibility;
+  }
+
+  public void setDropEligibility(Boolean dropEligibility) {
+    this.dropEligibility = dropEligibility;
   }
 
   public TapiEthEthOamTestLoopbackCommonPac period(TapiEthOamPeriod period) {
@@ -64,25 +83,6 @@ public class TapiEthEthOamTestLoopbackCommonPac   {
     this.period = period;
   }
 
-  public TapiEthEthOamTestLoopbackCommonPac dropEligibility(Boolean dropEligibility) {
-    this.dropEligibility = dropEligibility;
-    return this;
-  }
-
-  /**
-   * G.8052: This parameter provides the eligibility of frames with unicast ETH-TST information to be discarded when congestion conditions are encountered.                  G.8052: This parameter provides the eligibility of frames with unicast ETH-LB information to be discarded when congestion conditions are encountered.
-   * @return dropEligibility
-  **/
-  @ApiModelProperty(value = "G.8052: This parameter provides the eligibility of frames with unicast ETH-TST information to be discarded when congestion conditions are encountered.                  G.8052: This parameter provides the eligibility of frames with unicast ETH-LB information to be discarded when congestion conditions are encountered.")
-
-  public Boolean isDropEligibility() {
-    return dropEligibility;
-  }
-
-  public void setDropEligibility(Boolean dropEligibility) {
-    this.dropEligibility = dropEligibility;
-  }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -94,13 +94,13 @@ public class TapiEthEthOamTestLoopbackCommonPac   {
     }
     TapiEthEthOamTestLoopbackCommonPac tapiEthEthOamTestLoopbackCommonPac = (TapiEthEthOamTestLoopbackCommonPac) o;
     return Objects.equals(this.dataTlvLength, tapiEthEthOamTestLoopbackCommonPac.dataTlvLength) &&
-        Objects.equals(this.period, tapiEthEthOamTestLoopbackCommonPac.period) &&
-        Objects.equals(this.dropEligibility, tapiEthEthOamTestLoopbackCommonPac.dropEligibility);
+        Objects.equals(this.dropEligibility, tapiEthEthOamTestLoopbackCommonPac.dropEligibility) &&
+        Objects.equals(this.period, tapiEthEthOamTestLoopbackCommonPac.period);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(dataTlvLength, period, dropEligibility);
+    return Objects.hash(dataTlvLength, dropEligibility, period);
   }
 
   @Override
@@ -109,8 +109,8 @@ public class TapiEthEthOamTestLoopbackCommonPac   {
     sb.append("class TapiEthEthOamTestLoopbackCommonPac {\n");
     
     sb.append("    dataTlvLength: ").append(toIndentedString(dataTlvLength)).append("\n");
-    sb.append("    period: ").append(toIndentedString(period)).append("\n");
     sb.append("    dropEligibility: ").append(toIndentedString(dropEligibility)).append("\n");
+    sb.append("    period: ").append(toIndentedString(period)).append("\n");
     sb.append("}");
     return sb.toString();
   }

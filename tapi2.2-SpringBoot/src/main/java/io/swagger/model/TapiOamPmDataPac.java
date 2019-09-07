@@ -14,32 +14,13 @@ import javax.validation.constraints.*;
  * TapiOamPmDataPac
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiOamPmDataPac   {
-  @JsonProperty("suspect-interval-flag")
-  private Boolean suspectIntervalFlag = false;
-
   @JsonProperty("granularity-period")
   private TapiCommonTimePeriod granularityPeriod = null;
 
-  public TapiOamPmDataPac suspectIntervalFlag(Boolean suspectIntervalFlag) {
-    this.suspectIntervalFlag = suspectIntervalFlag;
-    return this;
-  }
-
-  /**
-   * This attribute is used to indicate that the performance data for the current period may not be reliable. Some reasons for this to occur are:                  – Suspect data were detected by the actual resource doing data collection.                  – Transition of the administrativeState attribute to/from the 'lock' state.                  – Transition of the operationalState to/from the 'disabled' state.                  – Scheduler setting that inhibits the collection function.                  – The performance counters were reset during the interval.                  – The currentData (or subclass) object instance was created during the monitoring period.
-   * @return suspectIntervalFlag
-  **/
-  @ApiModelProperty(value = "This attribute is used to indicate that the performance data for the current period may not be reliable. Some reasons for this to occur are:                  – Suspect data were detected by the actual resource doing data collection.                  – Transition of the administrativeState attribute to/from the 'lock' state.                  – Transition of the operationalState to/from the 'disabled' state.                  – Scheduler setting that inhibits the collection function.                  – The performance counters were reset during the interval.                  – The currentData (or subclass) object instance was created during the monitoring period.")
-
-  public Boolean isSuspectIntervalFlag() {
-    return suspectIntervalFlag;
-  }
-
-  public void setSuspectIntervalFlag(Boolean suspectIntervalFlag) {
-    this.suspectIntervalFlag = suspectIntervalFlag;
-  }
+  @JsonProperty("suspect-interval-flag")
+  private Boolean suspectIntervalFlag = false;
 
   public TapiOamPmDataPac granularityPeriod(TapiCommonTimePeriod granularityPeriod) {
     this.granularityPeriod = granularityPeriod;
@@ -61,6 +42,25 @@ public class TapiOamPmDataPac   {
     this.granularityPeriod = granularityPeriod;
   }
 
+  public TapiOamPmDataPac suspectIntervalFlag(Boolean suspectIntervalFlag) {
+    this.suspectIntervalFlag = suspectIntervalFlag;
+    return this;
+  }
+
+  /**
+   * This attribute is used to indicate that the performance data for the current period may not be reliable. Some reasons for this to occur are:                  – Suspect data were detected by the actual resource doing data collection.                  – Transition of the administrativeState attribute to/from the 'lock' state.                  – Transition of the operationalState to/from the 'disabled' state.                  – Scheduler setting that inhibits the collection function.                  – The performance counters were reset during the interval.                  – The currentData (or subclass) object instance was created during the monitoring period.
+   * @return suspectIntervalFlag
+  **/
+  @ApiModelProperty(value = "This attribute is used to indicate that the performance data for the current period may not be reliable. Some reasons for this to occur are:                  – Suspect data were detected by the actual resource doing data collection.                  – Transition of the administrativeState attribute to/from the 'lock' state.                  – Transition of the operationalState to/from the 'disabled' state.                  – Scheduler setting that inhibits the collection function.                  – The performance counters were reset during the interval.                  – The currentData (or subclass) object instance was created during the monitoring period.")
+
+  public Boolean isSuspectIntervalFlag() {
+    return suspectIntervalFlag;
+  }
+
+  public void setSuspectIntervalFlag(Boolean suspectIntervalFlag) {
+    this.suspectIntervalFlag = suspectIntervalFlag;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -71,13 +71,13 @@ public class TapiOamPmDataPac   {
       return false;
     }
     TapiOamPmDataPac tapiOamPmDataPac = (TapiOamPmDataPac) o;
-    return Objects.equals(this.suspectIntervalFlag, tapiOamPmDataPac.suspectIntervalFlag) &&
-        Objects.equals(this.granularityPeriod, tapiOamPmDataPac.granularityPeriod);
+    return Objects.equals(this.granularityPeriod, tapiOamPmDataPac.granularityPeriod) &&
+        Objects.equals(this.suspectIntervalFlag, tapiOamPmDataPac.suspectIntervalFlag);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(suspectIntervalFlag, granularityPeriod);
+    return Objects.hash(granularityPeriod, suspectIntervalFlag);
   }
 
   @Override
@@ -85,8 +85,8 @@ public class TapiOamPmDataPac   {
     StringBuilder sb = new StringBuilder();
     sb.append("class TapiOamPmDataPac {\n");
     
-    sb.append("    suspectIntervalFlag: ").append(toIndentedString(suspectIntervalFlag)).append("\n");
     sb.append("    granularityPeriod: ").append(toIndentedString(granularityPeriod)).append("\n");
+    sb.append("    suspectIntervalFlag: ").append(toIndentedString(suspectIntervalFlag)).append("\n");
     sb.append("}");
     return sb.toString();
   }

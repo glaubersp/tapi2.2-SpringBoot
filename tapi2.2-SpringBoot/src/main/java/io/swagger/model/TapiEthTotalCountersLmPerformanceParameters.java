@@ -13,35 +13,16 @@ import javax.validation.constraints.*;
  * TapiEthTotalCountersLmPerformanceParameters
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiEthTotalCountersLmPerformanceParameters   {
-  @JsonProperty("total-transmitted-frames")
-  private Integer totalTransmittedFrames = null;
-
   @JsonProperty("total-frame-loss-ratio")
   private String totalFrameLossRatio = null;
 
   @JsonProperty("total-lost-frames")
   private Integer totalLostFrames = null;
 
-  public TapiEthTotalCountersLmPerformanceParameters totalTransmittedFrames(Integer totalTransmittedFrames) {
-    this.totalTransmittedFrames = totalTransmittedFrames;
-    return this;
-  }
-
-  /**
-   * This attribute contains the total number of frames transmitted.
-   * @return totalTransmittedFrames
-  **/
-  @ApiModelProperty(value = "This attribute contains the total number of frames transmitted.")
-
-  public Integer getTotalTransmittedFrames() {
-    return totalTransmittedFrames;
-  }
-
-  public void setTotalTransmittedFrames(Integer totalTransmittedFrames) {
-    this.totalTransmittedFrames = totalTransmittedFrames;
-  }
+  @JsonProperty("total-transmitted-frames")
+  private Integer totalTransmittedFrames = null;
 
   public TapiEthTotalCountersLmPerformanceParameters totalFrameLossRatio(String totalFrameLossRatio) {
     this.totalFrameLossRatio = totalFrameLossRatio;
@@ -81,6 +62,25 @@ public class TapiEthTotalCountersLmPerformanceParameters   {
     this.totalLostFrames = totalLostFrames;
   }
 
+  public TapiEthTotalCountersLmPerformanceParameters totalTransmittedFrames(Integer totalTransmittedFrames) {
+    this.totalTransmittedFrames = totalTransmittedFrames;
+    return this;
+  }
+
+  /**
+   * This attribute contains the total number of frames transmitted.
+   * @return totalTransmittedFrames
+  **/
+  @ApiModelProperty(value = "This attribute contains the total number of frames transmitted.")
+
+  public Integer getTotalTransmittedFrames() {
+    return totalTransmittedFrames;
+  }
+
+  public void setTotalTransmittedFrames(Integer totalTransmittedFrames) {
+    this.totalTransmittedFrames = totalTransmittedFrames;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -91,14 +91,14 @@ public class TapiEthTotalCountersLmPerformanceParameters   {
       return false;
     }
     TapiEthTotalCountersLmPerformanceParameters tapiEthTotalCountersLmPerformanceParameters = (TapiEthTotalCountersLmPerformanceParameters) o;
-    return Objects.equals(this.totalTransmittedFrames, tapiEthTotalCountersLmPerformanceParameters.totalTransmittedFrames) &&
-        Objects.equals(this.totalFrameLossRatio, tapiEthTotalCountersLmPerformanceParameters.totalFrameLossRatio) &&
-        Objects.equals(this.totalLostFrames, tapiEthTotalCountersLmPerformanceParameters.totalLostFrames);
+    return Objects.equals(this.totalFrameLossRatio, tapiEthTotalCountersLmPerformanceParameters.totalFrameLossRatio) &&
+        Objects.equals(this.totalLostFrames, tapiEthTotalCountersLmPerformanceParameters.totalLostFrames) &&
+        Objects.equals(this.totalTransmittedFrames, tapiEthTotalCountersLmPerformanceParameters.totalTransmittedFrames);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(totalTransmittedFrames, totalFrameLossRatio, totalLostFrames);
+    return Objects.hash(totalFrameLossRatio, totalLostFrames, totalTransmittedFrames);
   }
 
   @Override
@@ -106,9 +106,9 @@ public class TapiEthTotalCountersLmPerformanceParameters   {
     StringBuilder sb = new StringBuilder();
     sb.append("class TapiEthTotalCountersLmPerformanceParameters {\n");
     
-    sb.append("    totalTransmittedFrames: ").append(toIndentedString(totalTransmittedFrames)).append("\n");
     sb.append("    totalFrameLossRatio: ").append(toIndentedString(totalFrameLossRatio)).append("\n");
     sb.append("    totalLostFrames: ").append(toIndentedString(totalLostFrames)).append("\n");
+    sb.append("    totalTransmittedFrames: ").append(toIndentedString(totalTransmittedFrames)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -19,8 +19,12 @@ import javax.validation.constraints.*;
  * TapiVirtualNetworkCreatevirtualnetworkserviceInput
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiVirtualNetworkCreatevirtualnetworkserviceInput   {
+  @JsonProperty("end-point")
+  @Valid
+  private List<TapiVirtualNetworkVirtualNetworkServiceEndPoint> endPoint = null;
+
   @JsonProperty("name")
   @Valid
   private List<TapiCommonNameAndValue> name = null;
@@ -28,15 +32,38 @@ public class TapiVirtualNetworkCreatevirtualnetworkserviceInput   {
   @JsonProperty("schedule")
   private TapiCommonTimeRange schedule = null;
 
-  @JsonProperty("vnw-constraint")
-  private TapiVirtualNetworkVirtualNetworkConstraint vnwConstraint = null;
-
   @JsonProperty("uuid")
   private String uuid = null;
 
-  @JsonProperty("end-point")
+  @JsonProperty("vnw-constraint")
+  private TapiVirtualNetworkVirtualNetworkConstraint vnwConstraint = null;
+
+  public TapiVirtualNetworkCreatevirtualnetworkserviceInput endPoint(List<TapiVirtualNetworkVirtualNetworkServiceEndPoint> endPoint) {
+    this.endPoint = endPoint;
+    return this;
+  }
+
+  public TapiVirtualNetworkCreatevirtualnetworkserviceInput addEndPointItem(TapiVirtualNetworkVirtualNetworkServiceEndPoint endPointItem) {
+    if (this.endPoint == null) {
+      this.endPoint = new ArrayList<>();
+    }
+    this.endPoint.add(endPointItem);
+    return this;
+  }
+
+  /**
+   * none
+   * @return endPoint
+  **/
+  @ApiModelProperty(value = "none")
   @Valid
-  private List<TapiVirtualNetworkVirtualNetworkServiceEndPoint> endPoint = null;
+  public List<TapiVirtualNetworkVirtualNetworkServiceEndPoint> getEndPoint() {
+    return endPoint;
+  }
+
+  public void setEndPoint(List<TapiVirtualNetworkVirtualNetworkServiceEndPoint> endPoint) {
+    this.endPoint = endPoint;
+  }
 
   public TapiVirtualNetworkCreatevirtualnetworkserviceInput name(List<TapiCommonNameAndValue> name) {
     this.name = name;
@@ -45,7 +72,7 @@ public class TapiVirtualNetworkCreatevirtualnetworkserviceInput   {
 
   public TapiVirtualNetworkCreatevirtualnetworkserviceInput addNameItem(TapiCommonNameAndValue nameItem) {
     if (this.name == null) {
-      this.name = new ArrayList<TapiCommonNameAndValue>();
+      this.name = new ArrayList<>();
     }
     this.name.add(nameItem);
     return this;
@@ -85,6 +112,25 @@ public class TapiVirtualNetworkCreatevirtualnetworkserviceInput   {
     this.schedule = schedule;
   }
 
+  public TapiVirtualNetworkCreatevirtualnetworkserviceInput uuid(String uuid) {
+    this.uuid = uuid;
+    return this;
+  }
+
+  /**
+   * UUID: An identifier that is universally unique within an identifier space, where the identifier space is itself globally unique, and immutable.                      An UUID carries no semantics with respect to the purpose or state of the entity.                      UUID here uses string representation as defined in RFC 4122.  The canonical representation uses lowercase characters.                      Pattern: [0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-' + '[0-9a-fA-F]{4}-[0-9a-fA-F]{12}                       Example of a UUID in string representation: f81d4fae-7dec-11d0-a765-00a0c91e6bf6
+   * @return uuid
+  **/
+  @ApiModelProperty(value = "UUID: An identifier that is universally unique within an identifier space, where the identifier space is itself globally unique, and immutable.                      An UUID carries no semantics with respect to the purpose or state of the entity.                      UUID here uses string representation as defined in RFC 4122.  The canonical representation uses lowercase characters.                      Pattern: [0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-' + '[0-9a-fA-F]{4}-[0-9a-fA-F]{12}                       Example of a UUID in string representation: f81d4fae-7dec-11d0-a765-00a0c91e6bf6")
+
+  public String getUuid() {
+    return uuid;
+  }
+
+  public void setUuid(String uuid) {
+    this.uuid = uuid;
+  }
+
   public TapiVirtualNetworkCreatevirtualnetworkserviceInput vnwConstraint(TapiVirtualNetworkVirtualNetworkConstraint vnwConstraint) {
     this.vnwConstraint = vnwConstraint;
     return this;
@@ -105,52 +151,6 @@ public class TapiVirtualNetworkCreatevirtualnetworkserviceInput   {
     this.vnwConstraint = vnwConstraint;
   }
 
-  public TapiVirtualNetworkCreatevirtualnetworkserviceInput uuid(String uuid) {
-    this.uuid = uuid;
-    return this;
-  }
-
-  /**
-   * UUID: An identifier that is universally unique within an identifier space, where the identifier space is itself globally unique, and immutable.                      An UUID carries no semantics with respect to the purpose or state of the entity.                      UUID here uses string representation as defined in RFC 4122.  The canonical representation uses lowercase characters.                      Pattern: [0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-' + '[0-9a-fA-F]{4}-[0-9a-fA-F]{12}                       Example of a UUID in string representation: f81d4fae-7dec-11d0-a765-00a0c91e6bf6
-   * @return uuid
-  **/
-  @ApiModelProperty(value = "UUID: An identifier that is universally unique within an identifier space, where the identifier space is itself globally unique, and immutable.                      An UUID carries no semantics with respect to the purpose or state of the entity.                      UUID here uses string representation as defined in RFC 4122.  The canonical representation uses lowercase characters.                      Pattern: [0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-' + '[0-9a-fA-F]{4}-[0-9a-fA-F]{12}                       Example of a UUID in string representation: f81d4fae-7dec-11d0-a765-00a0c91e6bf6")
-
-  public String getUuid() {
-    return uuid;
-  }
-
-  public void setUuid(String uuid) {
-    this.uuid = uuid;
-  }
-
-  public TapiVirtualNetworkCreatevirtualnetworkserviceInput endPoint(List<TapiVirtualNetworkVirtualNetworkServiceEndPoint> endPoint) {
-    this.endPoint = endPoint;
-    return this;
-  }
-
-  public TapiVirtualNetworkCreatevirtualnetworkserviceInput addEndPointItem(TapiVirtualNetworkVirtualNetworkServiceEndPoint endPointItem) {
-    if (this.endPoint == null) {
-      this.endPoint = new ArrayList<TapiVirtualNetworkVirtualNetworkServiceEndPoint>();
-    }
-    this.endPoint.add(endPointItem);
-    return this;
-  }
-
-  /**
-   * none
-   * @return endPoint
-  **/
-  @ApiModelProperty(value = "none")
-  @Valid
-  public List<TapiVirtualNetworkVirtualNetworkServiceEndPoint> getEndPoint() {
-    return endPoint;
-  }
-
-  public void setEndPoint(List<TapiVirtualNetworkVirtualNetworkServiceEndPoint> endPoint) {
-    this.endPoint = endPoint;
-  }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -161,16 +161,16 @@ public class TapiVirtualNetworkCreatevirtualnetworkserviceInput   {
       return false;
     }
     TapiVirtualNetworkCreatevirtualnetworkserviceInput tapiVirtualNetworkCreatevirtualnetworkserviceInput = (TapiVirtualNetworkCreatevirtualnetworkserviceInput) o;
-    return Objects.equals(this.name, tapiVirtualNetworkCreatevirtualnetworkserviceInput.name) &&
+    return Objects.equals(this.endPoint, tapiVirtualNetworkCreatevirtualnetworkserviceInput.endPoint) &&
+        Objects.equals(this.name, tapiVirtualNetworkCreatevirtualnetworkserviceInput.name) &&
         Objects.equals(this.schedule, tapiVirtualNetworkCreatevirtualnetworkserviceInput.schedule) &&
-        Objects.equals(this.vnwConstraint, tapiVirtualNetworkCreatevirtualnetworkserviceInput.vnwConstraint) &&
         Objects.equals(this.uuid, tapiVirtualNetworkCreatevirtualnetworkserviceInput.uuid) &&
-        Objects.equals(this.endPoint, tapiVirtualNetworkCreatevirtualnetworkserviceInput.endPoint);
+        Objects.equals(this.vnwConstraint, tapiVirtualNetworkCreatevirtualnetworkserviceInput.vnwConstraint);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, schedule, vnwConstraint, uuid, endPoint);
+    return Objects.hash(endPoint, name, schedule, uuid, vnwConstraint);
   }
 
   @Override
@@ -178,11 +178,11 @@ public class TapiVirtualNetworkCreatevirtualnetworkserviceInput   {
     StringBuilder sb = new StringBuilder();
     sb.append("class TapiVirtualNetworkCreatevirtualnetworkserviceInput {\n");
     
+    sb.append("    endPoint: ").append(toIndentedString(endPoint)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    schedule: ").append(toIndentedString(schedule)).append("\n");
-    sb.append("    vnwConstraint: ").append(toIndentedString(vnwConstraint)).append("\n");
     sb.append("    uuid: ").append(toIndentedString(uuid)).append("\n");
-    sb.append("    endPoint: ").append(toIndentedString(endPoint)).append("\n");
+    sb.append("    vnwConstraint: ").append(toIndentedString(vnwConstraint)).append("\n");
     sb.append("}");
     return sb.toString();
   }

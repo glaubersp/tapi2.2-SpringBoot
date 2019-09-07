@@ -17,42 +17,15 @@ import javax.validation.constraints.*;
  * TapiEthEthLinkTraceResultData
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiEthEthLinkTraceResultData   {
-  @JsonProperty("result-list")
-  @Valid
-  private List<TapiEthLinkTraceResult> resultList = null;
-
   @JsonProperty("eth-cfm-link-trace-result-data")
   @Valid
   private List<TapiEthEthCfmLinkTraceResultData> ethCfmLinkTraceResultData = null;
 
-  public TapiEthEthLinkTraceResultData resultList(List<TapiEthLinkTraceResult> resultList) {
-    this.resultList = resultList;
-    return this;
-  }
-
-  public TapiEthEthLinkTraceResultData addResultListItem(TapiEthLinkTraceResult resultListItem) {
-    if (this.resultList == null) {
-      this.resultList = new ArrayList<TapiEthLinkTraceResult>();
-    }
-    this.resultList.add(resultListItem);
-    return this;
-  }
-
-  /**
-   * G.8052: This parameter returns the results of the LT process. It contains a list of the result received from the individual LTR frames.                  The result from the individual LTR frame include the Source Mac Address, the TTL, and TLV.
-   * @return resultList
-  **/
-  @ApiModelProperty(value = "G.8052: This parameter returns the results of the LT process. It contains a list of the result received from the individual LTR frames.                  The result from the individual LTR frame include the Source Mac Address, the TTL, and TLV.")
+  @JsonProperty("result-list")
   @Valid
-  public List<TapiEthLinkTraceResult> getResultList() {
-    return resultList;
-  }
-
-  public void setResultList(List<TapiEthLinkTraceResult> resultList) {
-    this.resultList = resultList;
-  }
+  private List<TapiEthLinkTraceResult> resultList = null;
 
   public TapiEthEthLinkTraceResultData ethCfmLinkTraceResultData(List<TapiEthEthCfmLinkTraceResultData> ethCfmLinkTraceResultData) {
     this.ethCfmLinkTraceResultData = ethCfmLinkTraceResultData;
@@ -61,7 +34,7 @@ public class TapiEthEthLinkTraceResultData   {
 
   public TapiEthEthLinkTraceResultData addEthCfmLinkTraceResultDataItem(TapiEthEthCfmLinkTraceResultData ethCfmLinkTraceResultDataItem) {
     if (this.ethCfmLinkTraceResultData == null) {
-      this.ethCfmLinkTraceResultData = new ArrayList<TapiEthEthCfmLinkTraceResultData>();
+      this.ethCfmLinkTraceResultData = new ArrayList<>();
     }
     this.ethCfmLinkTraceResultData.add(ethCfmLinkTraceResultDataItem);
     return this;
@@ -81,6 +54,33 @@ public class TapiEthEthLinkTraceResultData   {
     this.ethCfmLinkTraceResultData = ethCfmLinkTraceResultData;
   }
 
+  public TapiEthEthLinkTraceResultData resultList(List<TapiEthLinkTraceResult> resultList) {
+    this.resultList = resultList;
+    return this;
+  }
+
+  public TapiEthEthLinkTraceResultData addResultListItem(TapiEthLinkTraceResult resultListItem) {
+    if (this.resultList == null) {
+      this.resultList = new ArrayList<>();
+    }
+    this.resultList.add(resultListItem);
+    return this;
+  }
+
+  /**
+   * G.8052: This parameter returns the results of the LT process. It contains a list of the result received from the individual LTR frames.                  The result from the individual LTR frame include the Source Mac Address, the TTL, and TLV.
+   * @return resultList
+  **/
+  @ApiModelProperty(value = "G.8052: This parameter returns the results of the LT process. It contains a list of the result received from the individual LTR frames.                  The result from the individual LTR frame include the Source Mac Address, the TTL, and TLV.")
+  @Valid
+  public List<TapiEthLinkTraceResult> getResultList() {
+    return resultList;
+  }
+
+  public void setResultList(List<TapiEthLinkTraceResult> resultList) {
+    this.resultList = resultList;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -91,13 +91,13 @@ public class TapiEthEthLinkTraceResultData   {
       return false;
     }
     TapiEthEthLinkTraceResultData tapiEthEthLinkTraceResultData = (TapiEthEthLinkTraceResultData) o;
-    return Objects.equals(this.resultList, tapiEthEthLinkTraceResultData.resultList) &&
-        Objects.equals(this.ethCfmLinkTraceResultData, tapiEthEthLinkTraceResultData.ethCfmLinkTraceResultData);
+    return Objects.equals(this.ethCfmLinkTraceResultData, tapiEthEthLinkTraceResultData.ethCfmLinkTraceResultData) &&
+        Objects.equals(this.resultList, tapiEthEthLinkTraceResultData.resultList);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(resultList, ethCfmLinkTraceResultData);
+    return Objects.hash(ethCfmLinkTraceResultData, resultList);
   }
 
   @Override
@@ -105,8 +105,8 @@ public class TapiEthEthLinkTraceResultData   {
     StringBuilder sb = new StringBuilder();
     sb.append("class TapiEthEthLinkTraceResultData {\n");
     
-    sb.append("    resultList: ").append(toIndentedString(resultList)).append("\n");
     sb.append("    ethCfmLinkTraceResultData: ").append(toIndentedString(ethCfmLinkTraceResultData)).append("\n");
+    sb.append("    resultList: ").append(toIndentedString(resultList)).append("\n");
     sb.append("}");
     return sb.toString();
   }

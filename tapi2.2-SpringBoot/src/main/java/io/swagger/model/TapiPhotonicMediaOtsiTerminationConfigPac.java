@@ -19,7 +19,7 @@ import javax.validation.constraints.*;
  * TapiPhotonicMediaOtsiTerminationConfigPac
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiPhotonicMediaOtsiTerminationConfigPac   {
   @JsonProperty("application-identifier")
   private TapiPhotonicMediaApplicationIdentifier applicationIdentifier = null;
@@ -27,14 +27,14 @@ public class TapiPhotonicMediaOtsiTerminationConfigPac   {
   @JsonProperty("central-frequency")
   private TapiPhotonicMediaCentralFrequency centralFrequency = null;
 
+  @JsonProperty("laser-control")
+  private TapiPhotonicMediaLaserControlType laserControl = null;
+
   @JsonProperty("modulation")
   private TapiPhotonicMediaModulationTechnique modulation = null;
 
   @JsonProperty("spectrum")
   private TapiPhotonicMediaSpectrumBand spectrum = null;
-
-  @JsonProperty("laser-control")
-  private TapiPhotonicMediaLaserControlType laserControl = null;
 
   @JsonProperty("total-power-warn-threshold-lower")
   private String totalPowerWarnThresholdLower = null;
@@ -85,6 +85,26 @@ public class TapiPhotonicMediaOtsiTerminationConfigPac   {
     this.centralFrequency = centralFrequency;
   }
 
+  public TapiPhotonicMediaOtsiTerminationConfigPac laserControl(TapiPhotonicMediaLaserControlType laserControl) {
+    this.laserControl = laserControl;
+    return this;
+  }
+
+  /**
+   * Get laserControl
+   * @return laserControl
+  **/
+  @ApiModelProperty(value = "")
+
+  @Valid
+  public TapiPhotonicMediaLaserControlType getLaserControl() {
+    return laserControl;
+  }
+
+  public void setLaserControl(TapiPhotonicMediaLaserControlType laserControl) {
+    this.laserControl = laserControl;
+  }
+
   public TapiPhotonicMediaOtsiTerminationConfigPac modulation(TapiPhotonicMediaModulationTechnique modulation) {
     this.modulation = modulation;
     return this;
@@ -123,26 +143,6 @@ public class TapiPhotonicMediaOtsiTerminationConfigPac   {
 
   public void setSpectrum(TapiPhotonicMediaSpectrumBand spectrum) {
     this.spectrum = spectrum;
-  }
-
-  public TapiPhotonicMediaOtsiTerminationConfigPac laserControl(TapiPhotonicMediaLaserControlType laserControl) {
-    this.laserControl = laserControl;
-    return this;
-  }
-
-  /**
-   * Get laserControl
-   * @return laserControl
-  **/
-  @ApiModelProperty(value = "")
-
-  @Valid
-  public TapiPhotonicMediaLaserControlType getLaserControl() {
-    return laserControl;
-  }
-
-  public void setLaserControl(TapiPhotonicMediaLaserControlType laserControl) {
-    this.laserControl = laserControl;
   }
 
   public TapiPhotonicMediaOtsiTerminationConfigPac totalPowerWarnThresholdLower(String totalPowerWarnThresholdLower) {
@@ -215,9 +215,9 @@ public class TapiPhotonicMediaOtsiTerminationConfigPac   {
     TapiPhotonicMediaOtsiTerminationConfigPac tapiPhotonicMediaOtsiTerminationConfigPac = (TapiPhotonicMediaOtsiTerminationConfigPac) o;
     return Objects.equals(this.applicationIdentifier, tapiPhotonicMediaOtsiTerminationConfigPac.applicationIdentifier) &&
         Objects.equals(this.centralFrequency, tapiPhotonicMediaOtsiTerminationConfigPac.centralFrequency) &&
+        Objects.equals(this.laserControl, tapiPhotonicMediaOtsiTerminationConfigPac.laserControl) &&
         Objects.equals(this.modulation, tapiPhotonicMediaOtsiTerminationConfigPac.modulation) &&
         Objects.equals(this.spectrum, tapiPhotonicMediaOtsiTerminationConfigPac.spectrum) &&
-        Objects.equals(this.laserControl, tapiPhotonicMediaOtsiTerminationConfigPac.laserControl) &&
         Objects.equals(this.totalPowerWarnThresholdLower, tapiPhotonicMediaOtsiTerminationConfigPac.totalPowerWarnThresholdLower) &&
         Objects.equals(this.totalPowerWarnThresholdUpper, tapiPhotonicMediaOtsiTerminationConfigPac.totalPowerWarnThresholdUpper) &&
         Objects.equals(this.transmitPower, tapiPhotonicMediaOtsiTerminationConfigPac.transmitPower);
@@ -225,7 +225,7 @@ public class TapiPhotonicMediaOtsiTerminationConfigPac   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(applicationIdentifier, centralFrequency, modulation, spectrum, laserControl, totalPowerWarnThresholdLower, totalPowerWarnThresholdUpper, transmitPower);
+    return Objects.hash(applicationIdentifier, centralFrequency, laserControl, modulation, spectrum, totalPowerWarnThresholdLower, totalPowerWarnThresholdUpper, transmitPower);
   }
 
   @Override
@@ -235,9 +235,9 @@ public class TapiPhotonicMediaOtsiTerminationConfigPac   {
     
     sb.append("    applicationIdentifier: ").append(toIndentedString(applicationIdentifier)).append("\n");
     sb.append("    centralFrequency: ").append(toIndentedString(centralFrequency)).append("\n");
+    sb.append("    laserControl: ").append(toIndentedString(laserControl)).append("\n");
     sb.append("    modulation: ").append(toIndentedString(modulation)).append("\n");
     sb.append("    spectrum: ").append(toIndentedString(spectrum)).append("\n");
-    sb.append("    laserControl: ").append(toIndentedString(laserControl)).append("\n");
     sb.append("    totalPowerWarnThresholdLower: ").append(toIndentedString(totalPowerWarnThresholdLower)).append("\n");
     sb.append("    totalPowerWarnThresholdUpper: ").append(toIndentedString(totalPowerWarnThresholdUpper)).append("\n");
     sb.append("    transmitPower: ").append(toIndentedString(transmitPower)).append("\n");

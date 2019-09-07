@@ -15,86 +15,28 @@ import javax.validation.constraints.*;
  * TapiOduOduMipPac
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiOduOduMipPac   {
-  @JsonProperty("tim-det-mode")
-  private TapiOduTimDetMo timDetMode = null;
-
-  @JsonProperty("ex-dapi")
-  private String exDapi = null;
+  @JsonProperty("acti")
+  private String acti = null;
 
   @JsonProperty("deg-m")
   private Integer degM = null;
 
-  @JsonProperty("acti")
-  private String acti = null;
+  @JsonProperty("deg-thr")
+  private TapiOduDegThr degThr = null;
+
+  @JsonProperty("ex-dapi")
+  private String exDapi = null;
 
   @JsonProperty("ex-sapi")
   private String exSapi = null;
 
-  @JsonProperty("deg-thr")
-  private TapiOduDegThr degThr = null;
-
   @JsonProperty("tim-act-disabled")
   private Boolean timActDisabled = true;
 
-  public TapiOduOduMipPac timDetMode(TapiOduTimDetMo timDetMode) {
-    this.timDetMode = timDetMode;
-    return this;
-  }
-
-  /**
-   * Get timDetMode
-   * @return timDetMode
-  **/
-  @ApiModelProperty(value = "")
-
-  @Valid
-  public TapiOduTimDetMo getTimDetMode() {
-    return timDetMode;
-  }
-
-  public void setTimDetMode(TapiOduTimDetMo timDetMode) {
-    this.timDetMode = timDetMode;
-  }
-
-  public TapiOduOduMipPac exDapi(String exDapi) {
-    this.exDapi = exDapi;
-    return this;
-  }
-
-  /**
-   * The Expected Destination Access Point Identifier (ExDAPI), provisioned by the managing system, to be compared with the TTI accepted at the overhead position of the sink for the purpose of checking the integrity of connectivity.
-   * @return exDapi
-  **/
-  @ApiModelProperty(value = "The Expected Destination Access Point Identifier (ExDAPI), provisioned by the managing system, to be compared with the TTI accepted at the overhead position of the sink for the purpose of checking the integrity of connectivity.")
-
-  public String getExDapi() {
-    return exDapi;
-  }
-
-  public void setExDapi(String exDapi) {
-    this.exDapi = exDapi;
-  }
-
-  public TapiOduOduMipPac degM(Integer degM) {
-    this.degM = degM;
-    return this;
-  }
-
-  /**
-   * This attribute indicates the threshold level for declaring a Degraded Signal defect (dDEG). A dDEG shall be declared if DegM consecutive bad PM Seconds are detected.
-   * @return degM
-  **/
-  @ApiModelProperty(value = "This attribute indicates the threshold level for declaring a Degraded Signal defect (dDEG). A dDEG shall be declared if DegM consecutive bad PM Seconds are detected.")
-
-  public Integer getDegM() {
-    return degM;
-  }
-
-  public void setDegM(Integer degM) {
-    this.degM = degM;
-  }
+  @JsonProperty("tim-det-mode")
+  private TapiOduTimDetMo timDetMode = null;
 
   public TapiOduOduMipPac acti(String acti) {
     this.acti = acti;
@@ -115,23 +57,23 @@ public class TapiOduOduMipPac   {
     this.acti = acti;
   }
 
-  public TapiOduOduMipPac exSapi(String exSapi) {
-    this.exSapi = exSapi;
+  public TapiOduOduMipPac degM(Integer degM) {
+    this.degM = degM;
     return this;
   }
 
   /**
-   * The Expected Source Access Point Identifier (ExSAPI), provisioned by the managing system, to be compared with the TTI accepted at the overhead position of the sink for the purpose of checking the integrity of connectivity.                  
-   * @return exSapi
+   * This attribute indicates the threshold level for declaring a Degraded Signal defect (dDEG). A dDEG shall be declared if DegM consecutive bad PM Seconds are detected.
+   * @return degM
   **/
-  @ApiModelProperty(value = "The Expected Source Access Point Identifier (ExSAPI), provisioned by the managing system, to be compared with the TTI accepted at the overhead position of the sink for the purpose of checking the integrity of connectivity.                  ")
+  @ApiModelProperty(value = "This attribute indicates the threshold level for declaring a Degraded Signal defect (dDEG). A dDEG shall be declared if DegM consecutive bad PM Seconds are detected.")
 
-  public String getExSapi() {
-    return exSapi;
+  public Integer getDegM() {
+    return degM;
   }
 
-  public void setExSapi(String exSapi) {
-    this.exSapi = exSapi;
+  public void setDegM(Integer degM) {
+    this.degM = degM;
   }
 
   public TapiOduOduMipPac degThr(TapiOduDegThr degThr) {
@@ -154,6 +96,44 @@ public class TapiOduOduMipPac   {
     this.degThr = degThr;
   }
 
+  public TapiOduOduMipPac exDapi(String exDapi) {
+    this.exDapi = exDapi;
+    return this;
+  }
+
+  /**
+   * The Expected Destination Access Point Identifier (ExDAPI), provisioned by the managing system, to be compared with the TTI accepted at the overhead position of the sink for the purpose of checking the integrity of connectivity.
+   * @return exDapi
+  **/
+  @ApiModelProperty(value = "The Expected Destination Access Point Identifier (ExDAPI), provisioned by the managing system, to be compared with the TTI accepted at the overhead position of the sink for the purpose of checking the integrity of connectivity.")
+
+  public String getExDapi() {
+    return exDapi;
+  }
+
+  public void setExDapi(String exDapi) {
+    this.exDapi = exDapi;
+  }
+
+  public TapiOduOduMipPac exSapi(String exSapi) {
+    this.exSapi = exSapi;
+    return this;
+  }
+
+  /**
+   * The Expected Source Access Point Identifier (ExSAPI), provisioned by the managing system, to be compared with the TTI accepted at the overhead position of the sink for the purpose of checking the integrity of connectivity.                  
+   * @return exSapi
+  **/
+  @ApiModelProperty(value = "The Expected Source Access Point Identifier (ExSAPI), provisioned by the managing system, to be compared with the TTI accepted at the overhead position of the sink for the purpose of checking the integrity of connectivity.                  ")
+
+  public String getExSapi() {
+    return exSapi;
+  }
+
+  public void setExSapi(String exSapi) {
+    this.exSapi = exSapi;
+  }
+
   public TapiOduOduMipPac timActDisabled(Boolean timActDisabled) {
     this.timActDisabled = timActDisabled;
     return this;
@@ -173,6 +153,26 @@ public class TapiOduOduMipPac   {
     this.timActDisabled = timActDisabled;
   }
 
+  public TapiOduOduMipPac timDetMode(TapiOduTimDetMo timDetMode) {
+    this.timDetMode = timDetMode;
+    return this;
+  }
+
+  /**
+   * Get timDetMode
+   * @return timDetMode
+  **/
+  @ApiModelProperty(value = "")
+
+  @Valid
+  public TapiOduTimDetMo getTimDetMode() {
+    return timDetMode;
+  }
+
+  public void setTimDetMode(TapiOduTimDetMo timDetMode) {
+    this.timDetMode = timDetMode;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -183,18 +183,18 @@ public class TapiOduOduMipPac   {
       return false;
     }
     TapiOduOduMipPac tapiOduOduMipPac = (TapiOduOduMipPac) o;
-    return Objects.equals(this.timDetMode, tapiOduOduMipPac.timDetMode) &&
-        Objects.equals(this.exDapi, tapiOduOduMipPac.exDapi) &&
+    return Objects.equals(this.acti, tapiOduOduMipPac.acti) &&
         Objects.equals(this.degM, tapiOduOduMipPac.degM) &&
-        Objects.equals(this.acti, tapiOduOduMipPac.acti) &&
-        Objects.equals(this.exSapi, tapiOduOduMipPac.exSapi) &&
         Objects.equals(this.degThr, tapiOduOduMipPac.degThr) &&
-        Objects.equals(this.timActDisabled, tapiOduOduMipPac.timActDisabled);
+        Objects.equals(this.exDapi, tapiOduOduMipPac.exDapi) &&
+        Objects.equals(this.exSapi, tapiOduOduMipPac.exSapi) &&
+        Objects.equals(this.timActDisabled, tapiOduOduMipPac.timActDisabled) &&
+        Objects.equals(this.timDetMode, tapiOduOduMipPac.timDetMode);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(timDetMode, exDapi, degM, acti, exSapi, degThr, timActDisabled);
+    return Objects.hash(acti, degM, degThr, exDapi, exSapi, timActDisabled, timDetMode);
   }
 
   @Override
@@ -202,13 +202,13 @@ public class TapiOduOduMipPac   {
     StringBuilder sb = new StringBuilder();
     sb.append("class TapiOduOduMipPac {\n");
     
-    sb.append("    timDetMode: ").append(toIndentedString(timDetMode)).append("\n");
-    sb.append("    exDapi: ").append(toIndentedString(exDapi)).append("\n");
-    sb.append("    degM: ").append(toIndentedString(degM)).append("\n");
     sb.append("    acti: ").append(toIndentedString(acti)).append("\n");
-    sb.append("    exSapi: ").append(toIndentedString(exSapi)).append("\n");
+    sb.append("    degM: ").append(toIndentedString(degM)).append("\n");
     sb.append("    degThr: ").append(toIndentedString(degThr)).append("\n");
+    sb.append("    exDapi: ").append(toIndentedString(exDapi)).append("\n");
+    sb.append("    exSapi: ").append(toIndentedString(exSapi)).append("\n");
     sb.append("    timActDisabled: ").append(toIndentedString(timActDisabled)).append("\n");
+    sb.append("    timDetMode: ").append(toIndentedString(timDetMode)).append("\n");
     sb.append("}");
     return sb.toString();
   }

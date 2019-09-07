@@ -23,48 +23,28 @@ import javax.validation.constraints.*;
  * TapiVirtualNetworkVirtualNetworkService
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiVirtualNetworkVirtualNetworkService extends TapiCommonGlobalClass  {
-  @JsonProperty("schedule")
-  private TapiCommonTimeRange schedule = null;
-
   @JsonProperty("end-point")
   @Valid
   private List<TapiVirtualNetworkVirtualNetworkServiceEndPoint> endPoint = null;
-
-  @JsonProperty("topology")
-  private TapiTopologyTopologyRef topology = null;
 
   @JsonProperty("layer-protocol-name")
   @Valid
   private List<TapiCommonLayerProtocolName> layerProtocolName = null;
 
+  @JsonProperty("schedule")
+  private TapiCommonTimeRange schedule = null;
+
   @JsonProperty("state")
   private TapiCommonAdminStatePac state = null;
+
+  @JsonProperty("topology")
+  private TapiTopologyTopologyRef topology = null;
 
   @JsonProperty("vnw-constraint")
   @Valid
   private List<TapiVirtualNetworkVirtualNetworkConstraint> vnwConstraint = null;
-
-  public TapiVirtualNetworkVirtualNetworkService schedule(TapiCommonTimeRange schedule) {
-    this.schedule = schedule;
-    return this;
-  }
-
-  /**
-   * Get schedule
-   * @return schedule
-  **/
-  @ApiModelProperty(value = "")
-
-  @Valid
-  public TapiCommonTimeRange getSchedule() {
-    return schedule;
-  }
-
-  public void setSchedule(TapiCommonTimeRange schedule) {
-    this.schedule = schedule;
-  }
 
   public TapiVirtualNetworkVirtualNetworkService endPoint(List<TapiVirtualNetworkVirtualNetworkServiceEndPoint> endPoint) {
     this.endPoint = endPoint;
@@ -73,7 +53,7 @@ public class TapiVirtualNetworkVirtualNetworkService extends TapiCommonGlobalCla
 
   public TapiVirtualNetworkVirtualNetworkService addEndPointItem(TapiVirtualNetworkVirtualNetworkServiceEndPoint endPointItem) {
     if (this.endPoint == null) {
-      this.endPoint = new ArrayList<TapiVirtualNetworkVirtualNetworkServiceEndPoint>();
+      this.endPoint = new ArrayList<>();
     }
     this.endPoint.add(endPointItem);
     return this;
@@ -93,26 +73,6 @@ public class TapiVirtualNetworkVirtualNetworkService extends TapiCommonGlobalCla
     this.endPoint = endPoint;
   }
 
-  public TapiVirtualNetworkVirtualNetworkService topology(TapiTopologyTopologyRef topology) {
-    this.topology = topology;
-    return this;
-  }
-
-  /**
-   * Get topology
-   * @return topology
-  **/
-  @ApiModelProperty(value = "")
-
-  @Valid
-  public TapiTopologyTopologyRef getTopology() {
-    return topology;
-  }
-
-  public void setTopology(TapiTopologyTopologyRef topology) {
-    this.topology = topology;
-  }
-
   public TapiVirtualNetworkVirtualNetworkService layerProtocolName(List<TapiCommonLayerProtocolName> layerProtocolName) {
     this.layerProtocolName = layerProtocolName;
     return this;
@@ -120,7 +80,7 @@ public class TapiVirtualNetworkVirtualNetworkService extends TapiCommonGlobalCla
 
   public TapiVirtualNetworkVirtualNetworkService addLayerProtocolNameItem(TapiCommonLayerProtocolName layerProtocolNameItem) {
     if (this.layerProtocolName == null) {
-      this.layerProtocolName = new ArrayList<TapiCommonLayerProtocolName>();
+      this.layerProtocolName = new ArrayList<>();
     }
     this.layerProtocolName.add(layerProtocolNameItem);
     return this;
@@ -138,6 +98,26 @@ public class TapiVirtualNetworkVirtualNetworkService extends TapiCommonGlobalCla
 
   public void setLayerProtocolName(List<TapiCommonLayerProtocolName> layerProtocolName) {
     this.layerProtocolName = layerProtocolName;
+  }
+
+  public TapiVirtualNetworkVirtualNetworkService schedule(TapiCommonTimeRange schedule) {
+    this.schedule = schedule;
+    return this;
+  }
+
+  /**
+   * Get schedule
+   * @return schedule
+  **/
+  @ApiModelProperty(value = "")
+
+  @Valid
+  public TapiCommonTimeRange getSchedule() {
+    return schedule;
+  }
+
+  public void setSchedule(TapiCommonTimeRange schedule) {
+    this.schedule = schedule;
   }
 
   public TapiVirtualNetworkVirtualNetworkService state(TapiCommonAdminStatePac state) {
@@ -160,6 +140,26 @@ public class TapiVirtualNetworkVirtualNetworkService extends TapiCommonGlobalCla
     this.state = state;
   }
 
+  public TapiVirtualNetworkVirtualNetworkService topology(TapiTopologyTopologyRef topology) {
+    this.topology = topology;
+    return this;
+  }
+
+  /**
+   * Get topology
+   * @return topology
+  **/
+  @ApiModelProperty(value = "")
+
+  @Valid
+  public TapiTopologyTopologyRef getTopology() {
+    return topology;
+  }
+
+  public void setTopology(TapiTopologyTopologyRef topology) {
+    this.topology = topology;
+  }
+
   public TapiVirtualNetworkVirtualNetworkService vnwConstraint(List<TapiVirtualNetworkVirtualNetworkConstraint> vnwConstraint) {
     this.vnwConstraint = vnwConstraint;
     return this;
@@ -167,7 +167,7 @@ public class TapiVirtualNetworkVirtualNetworkService extends TapiCommonGlobalCla
 
   public TapiVirtualNetworkVirtualNetworkService addVnwConstraintItem(TapiVirtualNetworkVirtualNetworkConstraint vnwConstraintItem) {
     if (this.vnwConstraint == null) {
-      this.vnwConstraint = new ArrayList<TapiVirtualNetworkVirtualNetworkConstraint>();
+      this.vnwConstraint = new ArrayList<>();
     }
     this.vnwConstraint.add(vnwConstraintItem);
     return this;
@@ -197,18 +197,18 @@ public class TapiVirtualNetworkVirtualNetworkService extends TapiCommonGlobalCla
       return false;
     }
     TapiVirtualNetworkVirtualNetworkService tapiVirtualNetworkVirtualNetworkService = (TapiVirtualNetworkVirtualNetworkService) o;
-    return Objects.equals(this.schedule, tapiVirtualNetworkVirtualNetworkService.schedule) &&
-        Objects.equals(this.endPoint, tapiVirtualNetworkVirtualNetworkService.endPoint) &&
-        Objects.equals(this.topology, tapiVirtualNetworkVirtualNetworkService.topology) &&
+    return Objects.equals(this.endPoint, tapiVirtualNetworkVirtualNetworkService.endPoint) &&
         Objects.equals(this.layerProtocolName, tapiVirtualNetworkVirtualNetworkService.layerProtocolName) &&
+        Objects.equals(this.schedule, tapiVirtualNetworkVirtualNetworkService.schedule) &&
         Objects.equals(this.state, tapiVirtualNetworkVirtualNetworkService.state) &&
+        Objects.equals(this.topology, tapiVirtualNetworkVirtualNetworkService.topology) &&
         Objects.equals(this.vnwConstraint, tapiVirtualNetworkVirtualNetworkService.vnwConstraint) &&
         super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(schedule, endPoint, topology, layerProtocolName, state, vnwConstraint, super.hashCode());
+    return Objects.hash(endPoint, layerProtocolName, schedule, state, topology, vnwConstraint, super.hashCode());
   }
 
   @Override
@@ -216,11 +216,11 @@ public class TapiVirtualNetworkVirtualNetworkService extends TapiCommonGlobalCla
     StringBuilder sb = new StringBuilder();
     sb.append("class TapiVirtualNetworkVirtualNetworkService {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    schedule: ").append(toIndentedString(schedule)).append("\n");
     sb.append("    endPoint: ").append(toIndentedString(endPoint)).append("\n");
-    sb.append("    topology: ").append(toIndentedString(topology)).append("\n");
     sb.append("    layerProtocolName: ").append(toIndentedString(layerProtocolName)).append("\n");
+    sb.append("    schedule: ").append(toIndentedString(schedule)).append("\n");
     sb.append("    state: ").append(toIndentedString(state)).append("\n");
+    sb.append("    topology: ").append(toIndentedString(topology)).append("\n");
     sb.append("    vnwConstraint: ").append(toIndentedString(vnwConstraint)).append("\n");
     sb.append("}");
     return sb.toString();

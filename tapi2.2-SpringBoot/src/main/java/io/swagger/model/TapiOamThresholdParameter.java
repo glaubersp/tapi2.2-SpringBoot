@@ -15,22 +15,42 @@ import javax.validation.constraints.*;
  * TapiOamThresholdParameter
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiOamThresholdParameter   {
+  @JsonProperty("pm-parameter-above-thrs")
+  private TapiOamPmParameterValue pmParameterAboveThrs = null;
+
   @JsonProperty("pm-parameter-below-thrs")
   private TapiOamPmParameterValue pmParameterBelowThrs = null;
 
   @JsonProperty("pm-parameter-clear-thrs")
   private TapiOamPmParameterValue pmParameterClearThrs = null;
 
-  @JsonProperty("pm-parameter-above-thrs")
-  private TapiOamPmParameterValue pmParameterAboveThrs = null;
-
   @JsonProperty("pm-parameter-name")
   private String pmParameterName = null;
 
   @JsonProperty("threshold-location")
   private TapiOamThresholdCrossingQualifier thresholdLocation = null;
+
+  public TapiOamThresholdParameter pmParameterAboveThrs(TapiOamPmParameterValue pmParameterAboveThrs) {
+    this.pmParameterAboveThrs = pmParameterAboveThrs;
+    return this;
+  }
+
+  /**
+   * Get pmParameterAboveThrs
+   * @return pmParameterAboveThrs
+  **/
+  @ApiModelProperty(value = "")
+
+  @Valid
+  public TapiOamPmParameterValue getPmParameterAboveThrs() {
+    return pmParameterAboveThrs;
+  }
+
+  public void setPmParameterAboveThrs(TapiOamPmParameterValue pmParameterAboveThrs) {
+    this.pmParameterAboveThrs = pmParameterAboveThrs;
+  }
 
   public TapiOamThresholdParameter pmParameterBelowThrs(TapiOamPmParameterValue pmParameterBelowThrs) {
     this.pmParameterBelowThrs = pmParameterBelowThrs;
@@ -70,26 +90,6 @@ public class TapiOamThresholdParameter   {
 
   public void setPmParameterClearThrs(TapiOamPmParameterValue pmParameterClearThrs) {
     this.pmParameterClearThrs = pmParameterClearThrs;
-  }
-
-  public TapiOamThresholdParameter pmParameterAboveThrs(TapiOamPmParameterValue pmParameterAboveThrs) {
-    this.pmParameterAboveThrs = pmParameterAboveThrs;
-    return this;
-  }
-
-  /**
-   * Get pmParameterAboveThrs
-   * @return pmParameterAboveThrs
-  **/
-  @ApiModelProperty(value = "")
-
-  @Valid
-  public TapiOamPmParameterValue getPmParameterAboveThrs() {
-    return pmParameterAboveThrs;
-  }
-
-  public void setPmParameterAboveThrs(TapiOamPmParameterValue pmParameterAboveThrs) {
-    this.pmParameterAboveThrs = pmParameterAboveThrs;
   }
 
   public TapiOamThresholdParameter pmParameterName(String pmParameterName) {
@@ -141,16 +141,16 @@ public class TapiOamThresholdParameter   {
       return false;
     }
     TapiOamThresholdParameter tapiOamThresholdParameter = (TapiOamThresholdParameter) o;
-    return Objects.equals(this.pmParameterBelowThrs, tapiOamThresholdParameter.pmParameterBelowThrs) &&
+    return Objects.equals(this.pmParameterAboveThrs, tapiOamThresholdParameter.pmParameterAboveThrs) &&
+        Objects.equals(this.pmParameterBelowThrs, tapiOamThresholdParameter.pmParameterBelowThrs) &&
         Objects.equals(this.pmParameterClearThrs, tapiOamThresholdParameter.pmParameterClearThrs) &&
-        Objects.equals(this.pmParameterAboveThrs, tapiOamThresholdParameter.pmParameterAboveThrs) &&
         Objects.equals(this.pmParameterName, tapiOamThresholdParameter.pmParameterName) &&
         Objects.equals(this.thresholdLocation, tapiOamThresholdParameter.thresholdLocation);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pmParameterBelowThrs, pmParameterClearThrs, pmParameterAboveThrs, pmParameterName, thresholdLocation);
+    return Objects.hash(pmParameterAboveThrs, pmParameterBelowThrs, pmParameterClearThrs, pmParameterName, thresholdLocation);
   }
 
   @Override
@@ -158,9 +158,9 @@ public class TapiOamThresholdParameter   {
     StringBuilder sb = new StringBuilder();
     sb.append("class TapiOamThresholdParameter {\n");
     
+    sb.append("    pmParameterAboveThrs: ").append(toIndentedString(pmParameterAboveThrs)).append("\n");
     sb.append("    pmParameterBelowThrs: ").append(toIndentedString(pmParameterBelowThrs)).append("\n");
     sb.append("    pmParameterClearThrs: ").append(toIndentedString(pmParameterClearThrs)).append("\n");
-    sb.append("    pmParameterAboveThrs: ").append(toIndentedString(pmParameterAboveThrs)).append("\n");
     sb.append("    pmParameterName: ").append(toIndentedString(pmParameterName)).append("\n");
     sb.append("    thresholdLocation: ").append(toIndentedString(thresholdLocation)).append("\n");
     sb.append("}");

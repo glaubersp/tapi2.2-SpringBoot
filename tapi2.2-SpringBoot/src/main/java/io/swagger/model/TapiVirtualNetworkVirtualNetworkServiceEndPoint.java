@@ -20,10 +20,10 @@ import javax.validation.constraints.*;
  * TapiVirtualNetworkVirtualNetworkServiceEndPoint
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiVirtualNetworkVirtualNetworkServiceEndPoint extends TapiCommonLocalClass  {
-  @JsonProperty("service-layer")
-  private TapiCommonLayerProtocolName serviceLayer = null;
+  @JsonProperty("direction")
+  private TapiCommonPortDirection direction = null;
 
   @JsonProperty("role")
   private TapiCommonPortRole role = null;
@@ -31,27 +31,27 @@ public class TapiVirtualNetworkVirtualNetworkServiceEndPoint extends TapiCommonL
   @JsonProperty("service-interface-point")
   private TapiCommonServiceInterfacePointRef serviceInterfacePoint = null;
 
-  @JsonProperty("direction")
-  private TapiCommonPortDirection direction = null;
+  @JsonProperty("service-layer")
+  private TapiCommonLayerProtocolName serviceLayer = null;
 
-  public TapiVirtualNetworkVirtualNetworkServiceEndPoint serviceLayer(TapiCommonLayerProtocolName serviceLayer) {
-    this.serviceLayer = serviceLayer;
+  public TapiVirtualNetworkVirtualNetworkServiceEndPoint direction(TapiCommonPortDirection direction) {
+    this.direction = direction;
     return this;
   }
 
   /**
-   * Get serviceLayer
-   * @return serviceLayer
+   * Get direction
+   * @return direction
   **/
   @ApiModelProperty(value = "")
 
   @Valid
-  public TapiCommonLayerProtocolName getServiceLayer() {
-    return serviceLayer;
+  public TapiCommonPortDirection getDirection() {
+    return direction;
   }
 
-  public void setServiceLayer(TapiCommonLayerProtocolName serviceLayer) {
-    this.serviceLayer = serviceLayer;
+  public void setDirection(TapiCommonPortDirection direction) {
+    this.direction = direction;
   }
 
   public TapiVirtualNetworkVirtualNetworkServiceEndPoint role(TapiCommonPortRole role) {
@@ -94,24 +94,24 @@ public class TapiVirtualNetworkVirtualNetworkServiceEndPoint extends TapiCommonL
     this.serviceInterfacePoint = serviceInterfacePoint;
   }
 
-  public TapiVirtualNetworkVirtualNetworkServiceEndPoint direction(TapiCommonPortDirection direction) {
-    this.direction = direction;
+  public TapiVirtualNetworkVirtualNetworkServiceEndPoint serviceLayer(TapiCommonLayerProtocolName serviceLayer) {
+    this.serviceLayer = serviceLayer;
     return this;
   }
 
   /**
-   * Get direction
-   * @return direction
+   * Get serviceLayer
+   * @return serviceLayer
   **/
   @ApiModelProperty(value = "")
 
   @Valid
-  public TapiCommonPortDirection getDirection() {
-    return direction;
+  public TapiCommonLayerProtocolName getServiceLayer() {
+    return serviceLayer;
   }
 
-  public void setDirection(TapiCommonPortDirection direction) {
-    this.direction = direction;
+  public void setServiceLayer(TapiCommonLayerProtocolName serviceLayer) {
+    this.serviceLayer = serviceLayer;
   }
 
 
@@ -124,16 +124,16 @@ public class TapiVirtualNetworkVirtualNetworkServiceEndPoint extends TapiCommonL
       return false;
     }
     TapiVirtualNetworkVirtualNetworkServiceEndPoint tapiVirtualNetworkVirtualNetworkServiceEndPoint = (TapiVirtualNetworkVirtualNetworkServiceEndPoint) o;
-    return Objects.equals(this.serviceLayer, tapiVirtualNetworkVirtualNetworkServiceEndPoint.serviceLayer) &&
+    return Objects.equals(this.direction, tapiVirtualNetworkVirtualNetworkServiceEndPoint.direction) &&
         Objects.equals(this.role, tapiVirtualNetworkVirtualNetworkServiceEndPoint.role) &&
         Objects.equals(this.serviceInterfacePoint, tapiVirtualNetworkVirtualNetworkServiceEndPoint.serviceInterfacePoint) &&
-        Objects.equals(this.direction, tapiVirtualNetworkVirtualNetworkServiceEndPoint.direction) &&
+        Objects.equals(this.serviceLayer, tapiVirtualNetworkVirtualNetworkServiceEndPoint.serviceLayer) &&
         super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(serviceLayer, role, serviceInterfacePoint, direction, super.hashCode());
+    return Objects.hash(direction, role, serviceInterfacePoint, serviceLayer, super.hashCode());
   }
 
   @Override
@@ -141,10 +141,10 @@ public class TapiVirtualNetworkVirtualNetworkServiceEndPoint extends TapiCommonL
     StringBuilder sb = new StringBuilder();
     sb.append("class TapiVirtualNetworkVirtualNetworkServiceEndPoint {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    serviceLayer: ").append(toIndentedString(serviceLayer)).append("\n");
+    sb.append("    direction: ").append(toIndentedString(direction)).append("\n");
     sb.append("    role: ").append(toIndentedString(role)).append("\n");
     sb.append("    serviceInterfacePoint: ").append(toIndentedString(serviceInterfacePoint)).append("\n");
-    sb.append("    direction: ").append(toIndentedString(direction)).append("\n");
+    sb.append("    serviceLayer: ").append(toIndentedString(serviceLayer)).append("\n");
     sb.append("}");
     return sb.toString();
   }

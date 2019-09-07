@@ -13,32 +13,13 @@ import javax.validation.constraints.*;
  * TapiEthEthTestResultData
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiEthEthTestResultData   {
-  @JsonProperty("sent-tst-frames")
-  private Integer sentTstFrames = null;
-
   @JsonProperty("rec-tst-frames")
   private Integer recTstFrames = null;
 
-  public TapiEthEthTestResultData sentTstFrames(Integer sentTstFrames) {
-    this.sentTstFrames = sentTstFrames;
-    return this;
-  }
-
-  /**
-   * G.8052: This parameter returns the total number of sent TST frames.                  Optional in case of sink only MEP.
-   * @return sentTstFrames
-  **/
-  @ApiModelProperty(value = "G.8052: This parameter returns the total number of sent TST frames.                  Optional in case of sink only MEP.")
-
-  public Integer getSentTstFrames() {
-    return sentTstFrames;
-  }
-
-  public void setSentTstFrames(Integer sentTstFrames) {
-    this.sentTstFrames = sentTstFrames;
-  }
+  @JsonProperty("sent-tst-frames")
+  private Integer sentTstFrames = null;
 
   public TapiEthEthTestResultData recTstFrames(Integer recTstFrames) {
     this.recTstFrames = recTstFrames;
@@ -59,6 +40,25 @@ public class TapiEthEthTestResultData   {
     this.recTstFrames = recTstFrames;
   }
 
+  public TapiEthEthTestResultData sentTstFrames(Integer sentTstFrames) {
+    this.sentTstFrames = sentTstFrames;
+    return this;
+  }
+
+  /**
+   * G.8052: This parameter returns the total number of sent TST frames.                  Optional in case of sink only MEP.
+   * @return sentTstFrames
+  **/
+  @ApiModelProperty(value = "G.8052: This parameter returns the total number of sent TST frames.                  Optional in case of sink only MEP.")
+
+  public Integer getSentTstFrames() {
+    return sentTstFrames;
+  }
+
+  public void setSentTstFrames(Integer sentTstFrames) {
+    this.sentTstFrames = sentTstFrames;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -69,13 +69,13 @@ public class TapiEthEthTestResultData   {
       return false;
     }
     TapiEthEthTestResultData tapiEthEthTestResultData = (TapiEthEthTestResultData) o;
-    return Objects.equals(this.sentTstFrames, tapiEthEthTestResultData.sentTstFrames) &&
-        Objects.equals(this.recTstFrames, tapiEthEthTestResultData.recTstFrames);
+    return Objects.equals(this.recTstFrames, tapiEthEthTestResultData.recTstFrames) &&
+        Objects.equals(this.sentTstFrames, tapiEthEthTestResultData.sentTstFrames);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(sentTstFrames, recTstFrames);
+    return Objects.hash(recTstFrames, sentTstFrames);
   }
 
   @Override
@@ -83,8 +83,8 @@ public class TapiEthEthTestResultData   {
     StringBuilder sb = new StringBuilder();
     sb.append("class TapiEthEthTestResultData {\n");
     
-    sb.append("    sentTstFrames: ").append(toIndentedString(sentTstFrames)).append("\n");
     sb.append("    recTstFrames: ").append(toIndentedString(recTstFrames)).append("\n");
+    sb.append("    sentTstFrames: ").append(toIndentedString(sentTstFrames)).append("\n");
     sb.append("}");
     return sb.toString();
   }

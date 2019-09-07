@@ -17,18 +17,18 @@ import javax.validation.constraints.*;
  * TapiOamUpdateoamprofileInput
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiOamUpdateoamprofileInput   {
   @JsonProperty("name")
   @Valid
   private List<TapiCommonNameAndValue> name = null;
 
-  @JsonProperty("uuid")
-  private String uuid = null;
-
   @JsonProperty("pm-threshold-data")
   @Valid
   private List<TapiOamPmThresholdData> pmThresholdData = null;
+
+  @JsonProperty("uuid")
+  private String uuid = null;
 
   public TapiOamUpdateoamprofileInput name(List<TapiCommonNameAndValue> name) {
     this.name = name;
@@ -37,7 +37,7 @@ public class TapiOamUpdateoamprofileInput   {
 
   public TapiOamUpdateoamprofileInput addNameItem(TapiCommonNameAndValue nameItem) {
     if (this.name == null) {
-      this.name = new ArrayList<TapiCommonNameAndValue>();
+      this.name = new ArrayList<>();
     }
     this.name.add(nameItem);
     return this;
@@ -55,6 +55,33 @@ public class TapiOamUpdateoamprofileInput   {
 
   public void setName(List<TapiCommonNameAndValue> name) {
     this.name = name;
+  }
+
+  public TapiOamUpdateoamprofileInput pmThresholdData(List<TapiOamPmThresholdData> pmThresholdData) {
+    this.pmThresholdData = pmThresholdData;
+    return this;
+  }
+
+  public TapiOamUpdateoamprofileInput addPmThresholdDataItem(TapiOamPmThresholdData pmThresholdDataItem) {
+    if (this.pmThresholdData == null) {
+      this.pmThresholdData = new ArrayList<>();
+    }
+    this.pmThresholdData.add(pmThresholdDataItem);
+    return this;
+  }
+
+  /**
+   * none
+   * @return pmThresholdData
+  **/
+  @ApiModelProperty(value = "none")
+  @Valid
+  public List<TapiOamPmThresholdData> getPmThresholdData() {
+    return pmThresholdData;
+  }
+
+  public void setPmThresholdData(List<TapiOamPmThresholdData> pmThresholdData) {
+    this.pmThresholdData = pmThresholdData;
   }
 
   public TapiOamUpdateoamprofileInput uuid(String uuid) {
@@ -76,33 +103,6 @@ public class TapiOamUpdateoamprofileInput   {
     this.uuid = uuid;
   }
 
-  public TapiOamUpdateoamprofileInput pmThresholdData(List<TapiOamPmThresholdData> pmThresholdData) {
-    this.pmThresholdData = pmThresholdData;
-    return this;
-  }
-
-  public TapiOamUpdateoamprofileInput addPmThresholdDataItem(TapiOamPmThresholdData pmThresholdDataItem) {
-    if (this.pmThresholdData == null) {
-      this.pmThresholdData = new ArrayList<TapiOamPmThresholdData>();
-    }
-    this.pmThresholdData.add(pmThresholdDataItem);
-    return this;
-  }
-
-  /**
-   * none
-   * @return pmThresholdData
-  **/
-  @ApiModelProperty(value = "none")
-  @Valid
-  public List<TapiOamPmThresholdData> getPmThresholdData() {
-    return pmThresholdData;
-  }
-
-  public void setPmThresholdData(List<TapiOamPmThresholdData> pmThresholdData) {
-    this.pmThresholdData = pmThresholdData;
-  }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -114,13 +114,13 @@ public class TapiOamUpdateoamprofileInput   {
     }
     TapiOamUpdateoamprofileInput tapiOamUpdateoamprofileInput = (TapiOamUpdateoamprofileInput) o;
     return Objects.equals(this.name, tapiOamUpdateoamprofileInput.name) &&
-        Objects.equals(this.uuid, tapiOamUpdateoamprofileInput.uuid) &&
-        Objects.equals(this.pmThresholdData, tapiOamUpdateoamprofileInput.pmThresholdData);
+        Objects.equals(this.pmThresholdData, tapiOamUpdateoamprofileInput.pmThresholdData) &&
+        Objects.equals(this.uuid, tapiOamUpdateoamprofileInput.uuid);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, uuid, pmThresholdData);
+    return Objects.hash(name, pmThresholdData, uuid);
   }
 
   @Override
@@ -129,8 +129,8 @@ public class TapiOamUpdateoamprofileInput   {
     sb.append("class TapiOamUpdateoamprofileInput {\n");
     
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    uuid: ").append(toIndentedString(uuid)).append("\n");
     sb.append("    pmThresholdData: ").append(toIndentedString(pmThresholdData)).append("\n");
+    sb.append("    uuid: ").append(toIndentedString(uuid)).append("\n");
     sb.append("}");
     return sb.toString();
   }

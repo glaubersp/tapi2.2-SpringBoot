@@ -18,8 +18,15 @@ import javax.validation.constraints.*;
  * TapiNotificationSubscriptionFilter
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiNotificationSubscriptionFilter extends TapiCommonLocalClass  {
+  @JsonProperty("include-content")
+  private Boolean includeContent = false;
+
+  @JsonProperty("requested-layer-protocols")
+  @Valid
+  private List<TapiCommonLayerProtocolName> requestedLayerProtocols = null;
+
   @JsonProperty("requested-notification-types")
   @Valid
   private List<String> requestedNotificationTypes = null;
@@ -28,16 +35,55 @@ public class TapiNotificationSubscriptionFilter extends TapiCommonLocalClass  {
   @Valid
   private List<String> requestedObjectIdentifier = null;
 
-  @JsonProperty("requested-layer-protocols")
-  @Valid
-  private List<TapiCommonLayerProtocolName> requestedLayerProtocols = null;
-
-  @JsonProperty("include-content")
-  private Boolean includeContent = false;
-
   @JsonProperty("requested-object-types")
   @Valid
   private List<String> requestedObjectTypes = null;
+
+  public TapiNotificationSubscriptionFilter includeContent(Boolean includeContent) {
+    this.includeContent = includeContent;
+    return this;
+  }
+
+  /**
+   * Indicates whether the published Notification includes content or just the Notification Id (which enables retrieval of the notification at the later stage)
+   * @return includeContent
+  **/
+  @ApiModelProperty(value = "Indicates whether the published Notification includes content or just the Notification Id (which enables retrieval of the notification at the later stage)")
+
+  public Boolean isIncludeContent() {
+    return includeContent;
+  }
+
+  public void setIncludeContent(Boolean includeContent) {
+    this.includeContent = includeContent;
+  }
+
+  public TapiNotificationSubscriptionFilter requestedLayerProtocols(List<TapiCommonLayerProtocolName> requestedLayerProtocols) {
+    this.requestedLayerProtocols = requestedLayerProtocols;
+    return this;
+  }
+
+  public TapiNotificationSubscriptionFilter addRequestedLayerProtocolsItem(TapiCommonLayerProtocolName requestedLayerProtocolsItem) {
+    if (this.requestedLayerProtocols == null) {
+      this.requestedLayerProtocols = new ArrayList<>();
+    }
+    this.requestedLayerProtocols.add(requestedLayerProtocolsItem);
+    return this;
+  }
+
+  /**
+   * none
+   * @return requestedLayerProtocols
+  **/
+  @ApiModelProperty(value = "none")
+  @Valid
+  public List<TapiCommonLayerProtocolName> getRequestedLayerProtocols() {
+    return requestedLayerProtocols;
+  }
+
+  public void setRequestedLayerProtocols(List<TapiCommonLayerProtocolName> requestedLayerProtocols) {
+    this.requestedLayerProtocols = requestedLayerProtocols;
+  }
 
   public TapiNotificationSubscriptionFilter requestedNotificationTypes(List<String> requestedNotificationTypes) {
     this.requestedNotificationTypes = requestedNotificationTypes;
@@ -46,7 +92,7 @@ public class TapiNotificationSubscriptionFilter extends TapiCommonLocalClass  {
 
   public TapiNotificationSubscriptionFilter addRequestedNotificationTypesItem(String requestedNotificationTypesItem) {
     if (this.requestedNotificationTypes == null) {
-      this.requestedNotificationTypes = new ArrayList<String>();
+      this.requestedNotificationTypes = new ArrayList<>();
     }
     this.requestedNotificationTypes.add(requestedNotificationTypesItem);
     return this;
@@ -73,7 +119,7 @@ public class TapiNotificationSubscriptionFilter extends TapiCommonLocalClass  {
 
   public TapiNotificationSubscriptionFilter addRequestedObjectIdentifierItem(String requestedObjectIdentifierItem) {
     if (this.requestedObjectIdentifier == null) {
-      this.requestedObjectIdentifier = new ArrayList<String>();
+      this.requestedObjectIdentifier = new ArrayList<>();
     }
     this.requestedObjectIdentifier.add(requestedObjectIdentifierItem);
     return this;
@@ -93,52 +139,6 @@ public class TapiNotificationSubscriptionFilter extends TapiCommonLocalClass  {
     this.requestedObjectIdentifier = requestedObjectIdentifier;
   }
 
-  public TapiNotificationSubscriptionFilter requestedLayerProtocols(List<TapiCommonLayerProtocolName> requestedLayerProtocols) {
-    this.requestedLayerProtocols = requestedLayerProtocols;
-    return this;
-  }
-
-  public TapiNotificationSubscriptionFilter addRequestedLayerProtocolsItem(TapiCommonLayerProtocolName requestedLayerProtocolsItem) {
-    if (this.requestedLayerProtocols == null) {
-      this.requestedLayerProtocols = new ArrayList<TapiCommonLayerProtocolName>();
-    }
-    this.requestedLayerProtocols.add(requestedLayerProtocolsItem);
-    return this;
-  }
-
-  /**
-   * none
-   * @return requestedLayerProtocols
-  **/
-  @ApiModelProperty(value = "none")
-  @Valid
-  public List<TapiCommonLayerProtocolName> getRequestedLayerProtocols() {
-    return requestedLayerProtocols;
-  }
-
-  public void setRequestedLayerProtocols(List<TapiCommonLayerProtocolName> requestedLayerProtocols) {
-    this.requestedLayerProtocols = requestedLayerProtocols;
-  }
-
-  public TapiNotificationSubscriptionFilter includeContent(Boolean includeContent) {
-    this.includeContent = includeContent;
-    return this;
-  }
-
-  /**
-   * Indicates whether the published Notification includes content or just the Notification Id (which enables retrieval of the notification at the later stage)
-   * @return includeContent
-  **/
-  @ApiModelProperty(value = "Indicates whether the published Notification includes content or just the Notification Id (which enables retrieval of the notification at the later stage)")
-
-  public Boolean isIncludeContent() {
-    return includeContent;
-  }
-
-  public void setIncludeContent(Boolean includeContent) {
-    this.includeContent = includeContent;
-  }
-
   public TapiNotificationSubscriptionFilter requestedObjectTypes(List<String> requestedObjectTypes) {
     this.requestedObjectTypes = requestedObjectTypes;
     return this;
@@ -146,7 +146,7 @@ public class TapiNotificationSubscriptionFilter extends TapiCommonLocalClass  {
 
   public TapiNotificationSubscriptionFilter addRequestedObjectTypesItem(String requestedObjectTypesItem) {
     if (this.requestedObjectTypes == null) {
-      this.requestedObjectTypes = new ArrayList<String>();
+      this.requestedObjectTypes = new ArrayList<>();
     }
     this.requestedObjectTypes.add(requestedObjectTypesItem);
     return this;
@@ -176,17 +176,17 @@ public class TapiNotificationSubscriptionFilter extends TapiCommonLocalClass  {
       return false;
     }
     TapiNotificationSubscriptionFilter tapiNotificationSubscriptionFilter = (TapiNotificationSubscriptionFilter) o;
-    return Objects.equals(this.requestedNotificationTypes, tapiNotificationSubscriptionFilter.requestedNotificationTypes) &&
-        Objects.equals(this.requestedObjectIdentifier, tapiNotificationSubscriptionFilter.requestedObjectIdentifier) &&
+    return Objects.equals(this.includeContent, tapiNotificationSubscriptionFilter.includeContent) &&
         Objects.equals(this.requestedLayerProtocols, tapiNotificationSubscriptionFilter.requestedLayerProtocols) &&
-        Objects.equals(this.includeContent, tapiNotificationSubscriptionFilter.includeContent) &&
+        Objects.equals(this.requestedNotificationTypes, tapiNotificationSubscriptionFilter.requestedNotificationTypes) &&
+        Objects.equals(this.requestedObjectIdentifier, tapiNotificationSubscriptionFilter.requestedObjectIdentifier) &&
         Objects.equals(this.requestedObjectTypes, tapiNotificationSubscriptionFilter.requestedObjectTypes) &&
         super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(requestedNotificationTypes, requestedObjectIdentifier, requestedLayerProtocols, includeContent, requestedObjectTypes, super.hashCode());
+    return Objects.hash(includeContent, requestedLayerProtocols, requestedNotificationTypes, requestedObjectIdentifier, requestedObjectTypes, super.hashCode());
   }
 
   @Override
@@ -194,10 +194,10 @@ public class TapiNotificationSubscriptionFilter extends TapiCommonLocalClass  {
     StringBuilder sb = new StringBuilder();
     sb.append("class TapiNotificationSubscriptionFilter {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    includeContent: ").append(toIndentedString(includeContent)).append("\n");
+    sb.append("    requestedLayerProtocols: ").append(toIndentedString(requestedLayerProtocols)).append("\n");
     sb.append("    requestedNotificationTypes: ").append(toIndentedString(requestedNotificationTypes)).append("\n");
     sb.append("    requestedObjectIdentifier: ").append(toIndentedString(requestedObjectIdentifier)).append("\n");
-    sb.append("    requestedLayerProtocols: ").append(toIndentedString(requestedLayerProtocols)).append("\n");
-    sb.append("    includeContent: ").append(toIndentedString(includeContent)).append("\n");
     sb.append("    requestedObjectTypes: ").append(toIndentedString(requestedObjectTypes)).append("\n");
     sb.append("}");
     return sb.toString();

@@ -21,7 +21,7 @@ import javax.validation.constraints.*;
  * TapiNotificationNotificationSubscriptionService
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiNotificationNotificationSubscriptionService extends TapiCommonGlobalClass  {
   @JsonProperty("notification")
   @Valid
@@ -30,19 +30,19 @@ public class TapiNotificationNotificationSubscriptionService extends TapiCommonG
   @JsonProperty("notification-channel")
   private TapiNotificationNotificationChannel notificationChannel = null;
 
+  @JsonProperty("subscription-filter")
+  private TapiNotificationSubscriptionFilter subscriptionFilter = null;
+
   @JsonProperty("subscription-state")
   private TapiNotificationSubscriptionState subscriptionState = null;
-
-  @JsonProperty("supported-object-types")
-  @Valid
-  private List<String> supportedObjectTypes = null;
 
   @JsonProperty("supported-notification-types")
   @Valid
   private List<String> supportedNotificationTypes = null;
 
-  @JsonProperty("subscription-filter")
-  private TapiNotificationSubscriptionFilter subscriptionFilter = null;
+  @JsonProperty("supported-object-types")
+  @Valid
+  private List<String> supportedObjectTypes = null;
 
   public TapiNotificationNotificationSubscriptionService notification(List<TapiNotificationNotification> notification) {
     this.notification = notification;
@@ -51,7 +51,7 @@ public class TapiNotificationNotificationSubscriptionService extends TapiCommonG
 
   public TapiNotificationNotificationSubscriptionService addNotificationItem(TapiNotificationNotification notificationItem) {
     if (this.notification == null) {
-      this.notification = new ArrayList<TapiNotificationNotification>();
+      this.notification = new ArrayList<>();
     }
     this.notification.add(notificationItem);
     return this;
@@ -91,80 +91,6 @@ public class TapiNotificationNotificationSubscriptionService extends TapiCommonG
     this.notificationChannel = notificationChannel;
   }
 
-  public TapiNotificationNotificationSubscriptionService subscriptionState(TapiNotificationSubscriptionState subscriptionState) {
-    this.subscriptionState = subscriptionState;
-    return this;
-  }
-
-  /**
-   * Get subscriptionState
-   * @return subscriptionState
-  **/
-  @ApiModelProperty(value = "")
-
-  @Valid
-  public TapiNotificationSubscriptionState getSubscriptionState() {
-    return subscriptionState;
-  }
-
-  public void setSubscriptionState(TapiNotificationSubscriptionState subscriptionState) {
-    this.subscriptionState = subscriptionState;
-  }
-
-  public TapiNotificationNotificationSubscriptionService supportedObjectTypes(List<String> supportedObjectTypes) {
-    this.supportedObjectTypes = supportedObjectTypes;
-    return this;
-  }
-
-  public TapiNotificationNotificationSubscriptionService addSupportedObjectTypesItem(String supportedObjectTypesItem) {
-    if (this.supportedObjectTypes == null) {
-      this.supportedObjectTypes = new ArrayList<String>();
-    }
-    this.supportedObjectTypes.add(supportedObjectTypesItem);
-    return this;
-  }
-
-  /**
-   * none
-   * @return supportedObjectTypes
-  **/
-  @ApiModelProperty(value = "none")
-
-  public List<String> getSupportedObjectTypes() {
-    return supportedObjectTypes;
-  }
-
-  public void setSupportedObjectTypes(List<String> supportedObjectTypes) {
-    this.supportedObjectTypes = supportedObjectTypes;
-  }
-
-  public TapiNotificationNotificationSubscriptionService supportedNotificationTypes(List<String> supportedNotificationTypes) {
-    this.supportedNotificationTypes = supportedNotificationTypes;
-    return this;
-  }
-
-  public TapiNotificationNotificationSubscriptionService addSupportedNotificationTypesItem(String supportedNotificationTypesItem) {
-    if (this.supportedNotificationTypes == null) {
-      this.supportedNotificationTypes = new ArrayList<String>();
-    }
-    this.supportedNotificationTypes.add(supportedNotificationTypesItem);
-    return this;
-  }
-
-  /**
-   * none
-   * @return supportedNotificationTypes
-  **/
-  @ApiModelProperty(value = "none")
-
-  public List<String> getSupportedNotificationTypes() {
-    return supportedNotificationTypes;
-  }
-
-  public void setSupportedNotificationTypes(List<String> supportedNotificationTypes) {
-    this.supportedNotificationTypes = supportedNotificationTypes;
-  }
-
   public TapiNotificationNotificationSubscriptionService subscriptionFilter(TapiNotificationSubscriptionFilter subscriptionFilter) {
     this.subscriptionFilter = subscriptionFilter;
     return this;
@@ -185,6 +111,80 @@ public class TapiNotificationNotificationSubscriptionService extends TapiCommonG
     this.subscriptionFilter = subscriptionFilter;
   }
 
+  public TapiNotificationNotificationSubscriptionService subscriptionState(TapiNotificationSubscriptionState subscriptionState) {
+    this.subscriptionState = subscriptionState;
+    return this;
+  }
+
+  /**
+   * Get subscriptionState
+   * @return subscriptionState
+  **/
+  @ApiModelProperty(value = "")
+
+  @Valid
+  public TapiNotificationSubscriptionState getSubscriptionState() {
+    return subscriptionState;
+  }
+
+  public void setSubscriptionState(TapiNotificationSubscriptionState subscriptionState) {
+    this.subscriptionState = subscriptionState;
+  }
+
+  public TapiNotificationNotificationSubscriptionService supportedNotificationTypes(List<String> supportedNotificationTypes) {
+    this.supportedNotificationTypes = supportedNotificationTypes;
+    return this;
+  }
+
+  public TapiNotificationNotificationSubscriptionService addSupportedNotificationTypesItem(String supportedNotificationTypesItem) {
+    if (this.supportedNotificationTypes == null) {
+      this.supportedNotificationTypes = new ArrayList<>();
+    }
+    this.supportedNotificationTypes.add(supportedNotificationTypesItem);
+    return this;
+  }
+
+  /**
+   * none
+   * @return supportedNotificationTypes
+  **/
+  @ApiModelProperty(value = "none")
+
+  public List<String> getSupportedNotificationTypes() {
+    return supportedNotificationTypes;
+  }
+
+  public void setSupportedNotificationTypes(List<String> supportedNotificationTypes) {
+    this.supportedNotificationTypes = supportedNotificationTypes;
+  }
+
+  public TapiNotificationNotificationSubscriptionService supportedObjectTypes(List<String> supportedObjectTypes) {
+    this.supportedObjectTypes = supportedObjectTypes;
+    return this;
+  }
+
+  public TapiNotificationNotificationSubscriptionService addSupportedObjectTypesItem(String supportedObjectTypesItem) {
+    if (this.supportedObjectTypes == null) {
+      this.supportedObjectTypes = new ArrayList<>();
+    }
+    this.supportedObjectTypes.add(supportedObjectTypesItem);
+    return this;
+  }
+
+  /**
+   * none
+   * @return supportedObjectTypes
+  **/
+  @ApiModelProperty(value = "none")
+
+  public List<String> getSupportedObjectTypes() {
+    return supportedObjectTypes;
+  }
+
+  public void setSupportedObjectTypes(List<String> supportedObjectTypes) {
+    this.supportedObjectTypes = supportedObjectTypes;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -197,16 +197,16 @@ public class TapiNotificationNotificationSubscriptionService extends TapiCommonG
     TapiNotificationNotificationSubscriptionService tapiNotificationNotificationSubscriptionService = (TapiNotificationNotificationSubscriptionService) o;
     return Objects.equals(this.notification, tapiNotificationNotificationSubscriptionService.notification) &&
         Objects.equals(this.notificationChannel, tapiNotificationNotificationSubscriptionService.notificationChannel) &&
-        Objects.equals(this.subscriptionState, tapiNotificationNotificationSubscriptionService.subscriptionState) &&
-        Objects.equals(this.supportedObjectTypes, tapiNotificationNotificationSubscriptionService.supportedObjectTypes) &&
-        Objects.equals(this.supportedNotificationTypes, tapiNotificationNotificationSubscriptionService.supportedNotificationTypes) &&
         Objects.equals(this.subscriptionFilter, tapiNotificationNotificationSubscriptionService.subscriptionFilter) &&
+        Objects.equals(this.subscriptionState, tapiNotificationNotificationSubscriptionService.subscriptionState) &&
+        Objects.equals(this.supportedNotificationTypes, tapiNotificationNotificationSubscriptionService.supportedNotificationTypes) &&
+        Objects.equals(this.supportedObjectTypes, tapiNotificationNotificationSubscriptionService.supportedObjectTypes) &&
         super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(notification, notificationChannel, subscriptionState, supportedObjectTypes, supportedNotificationTypes, subscriptionFilter, super.hashCode());
+    return Objects.hash(notification, notificationChannel, subscriptionFilter, subscriptionState, supportedNotificationTypes, supportedObjectTypes, super.hashCode());
   }
 
   @Override
@@ -216,10 +216,10 @@ public class TapiNotificationNotificationSubscriptionService extends TapiCommonG
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
     sb.append("    notification: ").append(toIndentedString(notification)).append("\n");
     sb.append("    notificationChannel: ").append(toIndentedString(notificationChannel)).append("\n");
-    sb.append("    subscriptionState: ").append(toIndentedString(subscriptionState)).append("\n");
-    sb.append("    supportedObjectTypes: ").append(toIndentedString(supportedObjectTypes)).append("\n");
-    sb.append("    supportedNotificationTypes: ").append(toIndentedString(supportedNotificationTypes)).append("\n");
     sb.append("    subscriptionFilter: ").append(toIndentedString(subscriptionFilter)).append("\n");
+    sb.append("    subscriptionState: ").append(toIndentedString(subscriptionState)).append("\n");
+    sb.append("    supportedNotificationTypes: ").append(toIndentedString(supportedNotificationTypes)).append("\n");
+    sb.append("    supportedObjectTypes: ").append(toIndentedString(supportedObjectTypes)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -27,6 +27,29 @@ import io.swagger.model.TapiConnectivityRouteRef;
 import io.swagger.model.TapiConnectivitySwitch;
 import io.swagger.model.TapiConnectivitySwitchControl;
 import io.swagger.model.TapiConnectivitySwitchControlRef;
+import io.swagger.model.TapiEquipmentAbstractStrand;
+import io.swagger.model.TapiEquipmentAbstractStrandRef;
+import io.swagger.model.TapiEquipmentAccessPort;
+import io.swagger.model.TapiEquipmentAccessPortRef;
+import io.swagger.model.TapiEquipmentActualEquipment;
+import io.swagger.model.TapiEquipmentActualHolder;
+import io.swagger.model.TapiEquipmentActualNonFieldReplaceableModule;
+import io.swagger.model.TapiEquipmentCommonActualProperties;
+import io.swagger.model.TapiEquipmentCommonEquipmentProperties;
+import io.swagger.model.TapiEquipmentCommonHolderProperties;
+import io.swagger.model.TapiEquipmentConnectorPinAddress;
+import io.swagger.model.TapiEquipmentDevice;
+import io.swagger.model.TapiEquipmentEquipment;
+import io.swagger.model.TapiEquipmentEquipmentRef;
+import io.swagger.model.TapiEquipmentExpectedEquipment;
+import io.swagger.model.TapiEquipmentExpectedHolder;
+import io.swagger.model.TapiEquipmentExpectedNonFieldReplaceableModule;
+import io.swagger.model.TapiEquipmentHolder;
+import io.swagger.model.TapiEquipmentPhysicalContext;
+import io.swagger.model.TapiEquipmentPhysicalSpan;
+import io.swagger.model.TapiEquipmentPhysicalSpanRef;
+import io.swagger.model.TapiEquipmentSupportingAccessPort;
+import io.swagger.model.TapiEquipmentSupportingPhysicalSpan;
 import io.swagger.model.TapiEthBandwidthReport;
 import io.swagger.model.TapiEthControlFrameFilter;
 import io.swagger.model.TapiEthEthCfmLinkTracePac;
@@ -126,6 +149,27 @@ import io.swagger.model.TapiOamPmParameterValue;
 import io.swagger.model.TapiOamPmThresholdData;
 import io.swagger.model.TapiOamTcaInfo;
 import io.swagger.model.TapiOamThresholdParameter;
+import io.swagger.model.TapiOduDegThr;
+import io.swagger.model.TapiOduOduCommonPac;
+import io.swagger.model.TapiOduOduConnectionEndPointSpec;
+import io.swagger.model.TapiOduOduConnectivityServiceEndPointSpec;
+import io.swagger.model.TapiOduOduCtpPac;
+import io.swagger.model.TapiOduOduDefectPac;
+import io.swagger.model.TapiOduOduMegSpec;
+import io.swagger.model.TapiOduOduMepPac;
+import io.swagger.model.TapiOduOduMepSpec;
+import io.swagger.model.TapiOduOduMipPac;
+import io.swagger.model.TapiOduOduMipSpec;
+import io.swagger.model.TapiOduOduNcmPac;
+import io.swagger.model.TapiOduOduNodeEdgePointSpec;
+import io.swagger.model.TapiOduOduPayloadType;
+import io.swagger.model.TapiOduOduPmPac;
+import io.swagger.model.TapiOduOduPoolPac;
+import io.swagger.model.TapiOduOduProtectionPac;
+import io.swagger.model.TapiOduOduTcmMepPac;
+import io.swagger.model.TapiOduOduTcmMipPac;
+import io.swagger.model.TapiOduOduTerminationAndClientAdaptationPac;
+import io.swagger.model.TapiOduUasChoice;
 import io.swagger.model.TapiPathComputationPath;
 import io.swagger.model.TapiPathComputationPathComputationContext;
 import io.swagger.model.TapiPathComputationPathComputationService;
@@ -1425,6 +1469,48 @@ public class DataApiControllerIntegrationTest {
     }
 
     @Test
+    public void dataContextConnectivityContextConnectivityServiceuuidEndPointlocalIdOduConnectivityServiceEndPointSpecAcceptedPayloadTypeGetTest() throws Exception {
+        String uuid = "uuid_example";
+        String localId = "localId_example";
+        ResponseEntity<TapiOduOduPayloadType> responseEntity = api.dataContextConnectivityContextConnectivityServiceuuidEndPointlocalIdOduConnectivityServiceEndPointSpecAcceptedPayloadTypeGet(uuid, localId);
+        assertEquals(HttpStatus.NOT_IMPLEMENTED, responseEntity.getStatusCode());
+    }
+
+    @Test
+    public void dataContextConnectivityContextConnectivityServiceuuidEndPointlocalIdOduConnectivityServiceEndPointSpecDeleteTest() throws Exception {
+        String uuid = "uuid_example";
+        String localId = "localId_example";
+        ResponseEntity<Void> responseEntity = api.dataContextConnectivityContextConnectivityServiceuuidEndPointlocalIdOduConnectivityServiceEndPointSpecDelete(uuid, localId);
+        assertEquals(HttpStatus.NOT_IMPLEMENTED, responseEntity.getStatusCode());
+    }
+
+    @Test
+    public void dataContextConnectivityContextConnectivityServiceuuidEndPointlocalIdOduConnectivityServiceEndPointSpecGetTest() throws Exception {
+        String uuid = "uuid_example";
+        String localId = "localId_example";
+        ResponseEntity<TapiOduOduConnectivityServiceEndPointSpec> responseEntity = api.dataContextConnectivityContextConnectivityServiceuuidEndPointlocalIdOduConnectivityServiceEndPointSpecGet(uuid, localId);
+        assertEquals(HttpStatus.NOT_IMPLEMENTED, responseEntity.getStatusCode());
+    }
+
+    @Test
+    public void dataContextConnectivityContextConnectivityServiceuuidEndPointlocalIdOduConnectivityServiceEndPointSpecPostTest() throws Exception {
+        String uuid = "uuid_example";
+        String localId = "localId_example";
+        TapiOduOduConnectivityServiceEndPointSpec body = new TapiOduOduConnectivityServiceEndPointSpec();
+        ResponseEntity<Void> responseEntity = api.dataContextConnectivityContextConnectivityServiceuuidEndPointlocalIdOduConnectivityServiceEndPointSpecPost(uuid, localId, body);
+        assertEquals(HttpStatus.NOT_IMPLEMENTED, responseEntity.getStatusCode());
+    }
+
+    @Test
+    public void dataContextConnectivityContextConnectivityServiceuuidEndPointlocalIdOduConnectivityServiceEndPointSpecPutTest() throws Exception {
+        String uuid = "uuid_example";
+        String localId = "localId_example";
+        TapiOduOduConnectivityServiceEndPointSpec body = new TapiOduOduConnectivityServiceEndPointSpec();
+        ResponseEntity<Void> responseEntity = api.dataContextConnectivityContextConnectivityServiceuuidEndPointlocalIdOduConnectivityServiceEndPointSpecPut(uuid, localId, body);
+        assertEquals(HttpStatus.NOT_IMPLEMENTED, responseEntity.getStatusCode());
+    }
+
+    @Test
     public void dataContextConnectivityContextConnectivityServiceuuidEndPointlocalIdOtsiConnectivityServiceEndPointSpecDeleteTest() throws Exception {
         String uuid = "uuid_example";
         String localId = "localId_example";
@@ -2625,6 +2711,70 @@ public class DataApiControllerIntegrationTest {
     }
 
     @Test
+    public void dataContextOamContextMeguuidMeplocalIdOduMepSpecGetTest() throws Exception {
+        String uuid = "uuid_example";
+        String localId = "localId_example";
+        ResponseEntity<TapiOduOduMepSpec> responseEntity = api.dataContextOamContextMeguuidMeplocalIdOduMepSpecGet(uuid, localId);
+        assertEquals(HttpStatus.NOT_IMPLEMENTED, responseEntity.getStatusCode());
+    }
+
+    @Test
+    public void dataContextOamContextMeguuidMeplocalIdOduMepSpecOduDefectGetTest() throws Exception {
+        String uuid = "uuid_example";
+        String localId = "localId_example";
+        ResponseEntity<TapiOduOduDefectPac> responseEntity = api.dataContextOamContextMeguuidMeplocalIdOduMepSpecOduDefectGet(uuid, localId);
+        assertEquals(HttpStatus.NOT_IMPLEMENTED, responseEntity.getStatusCode());
+    }
+
+    @Test
+    public void dataContextOamContextMeguuidMeplocalIdOduMepSpecOduMepDegThrGetTest() throws Exception {
+        String uuid = "uuid_example";
+        String localId = "localId_example";
+        ResponseEntity<TapiOduDegThr> responseEntity = api.dataContextOamContextMeguuidMeplocalIdOduMepSpecOduMepDegThrGet(uuid, localId);
+        assertEquals(HttpStatus.NOT_IMPLEMENTED, responseEntity.getStatusCode());
+    }
+
+    @Test
+    public void dataContextOamContextMeguuidMeplocalIdOduMepSpecOduMepGetTest() throws Exception {
+        String uuid = "uuid_example";
+        String localId = "localId_example";
+        ResponseEntity<TapiOduOduMepPac> responseEntity = api.dataContextOamContextMeguuidMeplocalIdOduMepSpecOduMepGet(uuid, localId);
+        assertEquals(HttpStatus.NOT_IMPLEMENTED, responseEntity.getStatusCode());
+    }
+
+    @Test
+    public void dataContextOamContextMeguuidMeplocalIdOduMepSpecOduNcmGetTest() throws Exception {
+        String uuid = "uuid_example";
+        String localId = "localId_example";
+        ResponseEntity<TapiOduOduNcmPac> responseEntity = api.dataContextOamContextMeguuidMeplocalIdOduMepSpecOduNcmGet(uuid, localId);
+        assertEquals(HttpStatus.NOT_IMPLEMENTED, responseEntity.getStatusCode());
+    }
+
+    @Test
+    public void dataContextOamContextMeguuidMeplocalIdOduMepSpecOduPmGetTest() throws Exception {
+        String uuid = "uuid_example";
+        String localId = "localId_example";
+        ResponseEntity<TapiOduOduPmPac> responseEntity = api.dataContextOamContextMeguuidMeplocalIdOduMepSpecOduPmGet(uuid, localId);
+        assertEquals(HttpStatus.NOT_IMPLEMENTED, responseEntity.getStatusCode());
+    }
+
+    @Test
+    public void dataContextOamContextMeguuidMeplocalIdOduMepSpecOduPmUasGetTest() throws Exception {
+        String uuid = "uuid_example";
+        String localId = "localId_example";
+        ResponseEntity<TapiOduUasChoice> responseEntity = api.dataContextOamContextMeguuidMeplocalIdOduMepSpecOduPmUasGet(uuid, localId);
+        assertEquals(HttpStatus.NOT_IMPLEMENTED, responseEntity.getStatusCode());
+    }
+
+    @Test
+    public void dataContextOamContextMeguuidMeplocalIdOduMepSpecOduTcmGetTest() throws Exception {
+        String uuid = "uuid_example";
+        String localId = "localId_example";
+        ResponseEntity<TapiOduOduTcmMepPac> responseEntity = api.dataContextOamContextMeguuidMeplocalIdOduMepSpecOduTcmGet(uuid, localId);
+        assertEquals(HttpStatus.NOT_IMPLEMENTED, responseEntity.getStatusCode());
+    }
+
+    @Test
     public void dataContextOamContextMeguuidMiplocalIdEthMipSpecEthMipCommonGetTest() throws Exception {
         String uuid = "uuid_example";
         String localId = "localId_example";
@@ -2658,10 +2808,81 @@ public class DataApiControllerIntegrationTest {
     }
 
     @Test
+    public void dataContextOamContextMeguuidMiplocalIdOduMipSpecGetTest() throws Exception {
+        String uuid = "uuid_example";
+        String localId = "localId_example";
+        ResponseEntity<TapiOduOduMipSpec> responseEntity = api.dataContextOamContextMeguuidMiplocalIdOduMipSpecGet(uuid, localId);
+        assertEquals(HttpStatus.NOT_IMPLEMENTED, responseEntity.getStatusCode());
+    }
+
+    @Test
+    public void dataContextOamContextMeguuidMiplocalIdOduMipSpecOduDefectGetTest() throws Exception {
+        String uuid = "uuid_example";
+        String localId = "localId_example";
+        ResponseEntity<TapiOduOduDefectPac> responseEntity = api.dataContextOamContextMeguuidMiplocalIdOduMipSpecOduDefectGet(uuid, localId);
+        assertEquals(HttpStatus.NOT_IMPLEMENTED, responseEntity.getStatusCode());
+    }
+
+    @Test
+    public void dataContextOamContextMeguuidMiplocalIdOduMipSpecOduMipDegThrGetTest() throws Exception {
+        String uuid = "uuid_example";
+        String localId = "localId_example";
+        ResponseEntity<TapiOduDegThr> responseEntity = api.dataContextOamContextMeguuidMiplocalIdOduMipSpecOduMipDegThrGet(uuid, localId);
+        assertEquals(HttpStatus.NOT_IMPLEMENTED, responseEntity.getStatusCode());
+    }
+
+    @Test
+    public void dataContextOamContextMeguuidMiplocalIdOduMipSpecOduMipGetTest() throws Exception {
+        String uuid = "uuid_example";
+        String localId = "localId_example";
+        ResponseEntity<TapiOduOduMipPac> responseEntity = api.dataContextOamContextMeguuidMiplocalIdOduMipSpecOduMipGet(uuid, localId);
+        assertEquals(HttpStatus.NOT_IMPLEMENTED, responseEntity.getStatusCode());
+    }
+
+    @Test
+    public void dataContextOamContextMeguuidMiplocalIdOduMipSpecOduNcmGetTest() throws Exception {
+        String uuid = "uuid_example";
+        String localId = "localId_example";
+        ResponseEntity<TapiOduOduNcmPac> responseEntity = api.dataContextOamContextMeguuidMiplocalIdOduMipSpecOduNcmGet(uuid, localId);
+        assertEquals(HttpStatus.NOT_IMPLEMENTED, responseEntity.getStatusCode());
+    }
+
+    @Test
+    public void dataContextOamContextMeguuidMiplocalIdOduMipSpecOduPmGetTest() throws Exception {
+        String uuid = "uuid_example";
+        String localId = "localId_example";
+        ResponseEntity<TapiOduOduPmPac> responseEntity = api.dataContextOamContextMeguuidMiplocalIdOduMipSpecOduPmGet(uuid, localId);
+        assertEquals(HttpStatus.NOT_IMPLEMENTED, responseEntity.getStatusCode());
+    }
+
+    @Test
+    public void dataContextOamContextMeguuidMiplocalIdOduMipSpecOduPmUasGetTest() throws Exception {
+        String uuid = "uuid_example";
+        String localId = "localId_example";
+        ResponseEntity<TapiOduUasChoice> responseEntity = api.dataContextOamContextMeguuidMiplocalIdOduMipSpecOduPmUasGet(uuid, localId);
+        assertEquals(HttpStatus.NOT_IMPLEMENTED, responseEntity.getStatusCode());
+    }
+
+    @Test
+    public void dataContextOamContextMeguuidMiplocalIdOduMipSpecOduTcmGetTest() throws Exception {
+        String uuid = "uuid_example";
+        String localId = "localId_example";
+        ResponseEntity<TapiOduOduTcmMipPac> responseEntity = api.dataContextOamContextMeguuidMiplocalIdOduMipSpecOduTcmGet(uuid, localId);
+        assertEquals(HttpStatus.NOT_IMPLEMENTED, responseEntity.getStatusCode());
+    }
+
+    @Test
     public void dataContextOamContextMeguuidNamevalueNameGetTest() throws Exception {
         String uuid = "uuid_example";
         String valueName = "valueName_example";
         ResponseEntity<TapiCommonNameAndValue> responseEntity = api.dataContextOamContextMeguuidNamevalueNameGet(uuid, valueName);
+        assertEquals(HttpStatus.NOT_IMPLEMENTED, responseEntity.getStatusCode());
+    }
+
+    @Test
+    public void dataContextOamContextMeguuidOduMegSpecGetTest() throws Exception {
+        String uuid = "uuid_example";
+        ResponseEntity<TapiOduOduMegSpec> responseEntity = api.dataContextOamContextMeguuidOduMegSpecGet(uuid);
         assertEquals(HttpStatus.NOT_IMPLEMENTED, responseEntity.getStatusCode());
     }
 
@@ -5664,6 +5885,362 @@ public class DataApiControllerIntegrationTest {
     }
 
     @Test
+    public void dataContextPhysicalContextDeleteTest() throws Exception {
+        ResponseEntity<Void> responseEntity = api.dataContextPhysicalContextDelete();
+        assertEquals(HttpStatus.NOT_IMPLEMENTED, responseEntity.getStatusCode());
+    }
+
+    @Test
+    public void dataContextPhysicalContextDeviceuuidAccessPortaccessPortUuidConnectorPinconnectorIdentificationpinIdentificationequipmentUuidGetTest() throws Exception {
+        String uuid = "uuid_example";
+        String accessPortUuid = "accessPortUuid_example";
+        String connectorIdentification = "connectorIdentification_example";
+        String pinIdentification = "pinIdentification_example";
+        String equipmentUuid = "equipmentUuid_example";
+        ResponseEntity<TapiEquipmentConnectorPinAddress> responseEntity = api.dataContextPhysicalContextDeviceuuidAccessPortaccessPortUuidConnectorPinconnectorIdentificationpinIdentificationequipmentUuidGet(uuid, accessPortUuid, connectorIdentification, pinIdentification, equipmentUuid);
+        assertEquals(HttpStatus.NOT_IMPLEMENTED, responseEntity.getStatusCode());
+    }
+
+    @Test
+    public void dataContextPhysicalContextDeviceuuidAccessPortaccessPortUuidGetTest() throws Exception {
+        String uuid = "uuid_example";
+        String accessPortUuid = "accessPortUuid_example";
+        ResponseEntity<TapiEquipmentAccessPort> responseEntity = api.dataContextPhysicalContextDeviceuuidAccessPortaccessPortUuidGet(uuid, accessPortUuid);
+        assertEquals(HttpStatus.NOT_IMPLEMENTED, responseEntity.getStatusCode());
+    }
+
+    @Test
+    public void dataContextPhysicalContextDeviceuuidAccessPortaccessPortUuidNamevalueNameGetTest() throws Exception {
+        String uuid = "uuid_example";
+        String accessPortUuid = "accessPortUuid_example";
+        String valueName = "valueName_example";
+        ResponseEntity<TapiCommonNameAndValue> responseEntity = api.dataContextPhysicalContextDeviceuuidAccessPortaccessPortUuidNamevalueNameGet(uuid, accessPortUuid, valueName);
+        assertEquals(HttpStatus.NOT_IMPLEMENTED, responseEntity.getStatusCode());
+    }
+
+    @Test
+    public void dataContextPhysicalContextDeviceuuidEquipmentequipmentUuidActualEquipmentActualNonFieldReplaceableModuleCommonActualPropertiesGetTest() throws Exception {
+        String uuid = "uuid_example";
+        String equipmentUuid = "equipmentUuid_example";
+        ResponseEntity<TapiEquipmentCommonActualProperties> responseEntity = api.dataContextPhysicalContextDeviceuuidEquipmentequipmentUuidActualEquipmentActualNonFieldReplaceableModuleCommonActualPropertiesGet(uuid, equipmentUuid);
+        assertEquals(HttpStatus.NOT_IMPLEMENTED, responseEntity.getStatusCode());
+    }
+
+    @Test
+    public void dataContextPhysicalContextDeviceuuidEquipmentequipmentUuidActualEquipmentActualNonFieldReplaceableModuleCommonEquipmentPropertiesGetTest() throws Exception {
+        String uuid = "uuid_example";
+        String equipmentUuid = "equipmentUuid_example";
+        ResponseEntity<TapiEquipmentCommonEquipmentProperties> responseEntity = api.dataContextPhysicalContextDeviceuuidEquipmentequipmentUuidActualEquipmentActualNonFieldReplaceableModuleCommonEquipmentPropertiesGet(uuid, equipmentUuid);
+        assertEquals(HttpStatus.NOT_IMPLEMENTED, responseEntity.getStatusCode());
+    }
+
+    @Test
+    public void dataContextPhysicalContextDeviceuuidEquipmentequipmentUuidActualEquipmentActualNonFieldReplaceableModuleGetTest() throws Exception {
+        String uuid = "uuid_example";
+        String equipmentUuid = "equipmentUuid_example";
+        ResponseEntity<TapiEquipmentActualNonFieldReplaceableModule> responseEntity = api.dataContextPhysicalContextDeviceuuidEquipmentequipmentUuidActualEquipmentActualNonFieldReplaceableModuleGet(uuid, equipmentUuid);
+        assertEquals(HttpStatus.NOT_IMPLEMENTED, responseEntity.getStatusCode());
+    }
+
+    @Test
+    public void dataContextPhysicalContextDeviceuuidEquipmentequipmentUuidActualEquipmentCommonActualPropertiesGetTest() throws Exception {
+        String uuid = "uuid_example";
+        String equipmentUuid = "equipmentUuid_example";
+        ResponseEntity<TapiEquipmentCommonActualProperties> responseEntity = api.dataContextPhysicalContextDeviceuuidEquipmentequipmentUuidActualEquipmentCommonActualPropertiesGet(uuid, equipmentUuid);
+        assertEquals(HttpStatus.NOT_IMPLEMENTED, responseEntity.getStatusCode());
+    }
+
+    @Test
+    public void dataContextPhysicalContextDeviceuuidEquipmentequipmentUuidActualEquipmentCommonEquipmentPropertiesGetTest() throws Exception {
+        String uuid = "uuid_example";
+        String equipmentUuid = "equipmentUuid_example";
+        ResponseEntity<TapiEquipmentCommonEquipmentProperties> responseEntity = api.dataContextPhysicalContextDeviceuuidEquipmentequipmentUuidActualEquipmentCommonEquipmentPropertiesGet(uuid, equipmentUuid);
+        assertEquals(HttpStatus.NOT_IMPLEMENTED, responseEntity.getStatusCode());
+    }
+
+    @Test
+    public void dataContextPhysicalContextDeviceuuidEquipmentequipmentUuidActualEquipmentGetTest() throws Exception {
+        String uuid = "uuid_example";
+        String equipmentUuid = "equipmentUuid_example";
+        ResponseEntity<TapiEquipmentActualEquipment> responseEntity = api.dataContextPhysicalContextDeviceuuidEquipmentequipmentUuidActualEquipmentGet(uuid, equipmentUuid);
+        assertEquals(HttpStatus.NOT_IMPLEMENTED, responseEntity.getStatusCode());
+    }
+
+    @Test
+    public void dataContextPhysicalContextDeviceuuidEquipmentequipmentUuidContainedHoldercontainedHolderUuidActualHolderCommonHolderPropertiesGetTest() throws Exception {
+        String uuid = "uuid_example";
+        String equipmentUuid = "equipmentUuid_example";
+        String containedHolderUuid = "containedHolderUuid_example";
+        ResponseEntity<TapiEquipmentCommonHolderProperties> responseEntity = api.dataContextPhysicalContextDeviceuuidEquipmentequipmentUuidContainedHoldercontainedHolderUuidActualHolderCommonHolderPropertiesGet(uuid, equipmentUuid, containedHolderUuid);
+        assertEquals(HttpStatus.NOT_IMPLEMENTED, responseEntity.getStatusCode());
+    }
+
+    @Test
+    public void dataContextPhysicalContextDeviceuuidEquipmentequipmentUuidContainedHoldercontainedHolderUuidActualHolderGetTest() throws Exception {
+        String uuid = "uuid_example";
+        String equipmentUuid = "equipmentUuid_example";
+        String containedHolderUuid = "containedHolderUuid_example";
+        ResponseEntity<TapiEquipmentActualHolder> responseEntity = api.dataContextPhysicalContextDeviceuuidEquipmentequipmentUuidContainedHoldercontainedHolderUuidActualHolderGet(uuid, equipmentUuid, containedHolderUuid);
+        assertEquals(HttpStatus.NOT_IMPLEMENTED, responseEntity.getStatusCode());
+    }
+
+    @Test
+    public void dataContextPhysicalContextDeviceuuidEquipmentequipmentUuidContainedHoldercontainedHolderUuidExpectedHolderCommonHolderPropertiesGetTest() throws Exception {
+        String uuid = "uuid_example";
+        String equipmentUuid = "equipmentUuid_example";
+        String containedHolderUuid = "containedHolderUuid_example";
+        ResponseEntity<TapiEquipmentCommonHolderProperties> responseEntity = api.dataContextPhysicalContextDeviceuuidEquipmentequipmentUuidContainedHoldercontainedHolderUuidExpectedHolderCommonHolderPropertiesGet(uuid, equipmentUuid, containedHolderUuid);
+        assertEquals(HttpStatus.NOT_IMPLEMENTED, responseEntity.getStatusCode());
+    }
+
+    @Test
+    public void dataContextPhysicalContextDeviceuuidEquipmentequipmentUuidContainedHoldercontainedHolderUuidExpectedHolderGetTest() throws Exception {
+        String uuid = "uuid_example";
+        String equipmentUuid = "equipmentUuid_example";
+        String containedHolderUuid = "containedHolderUuid_example";
+        ResponseEntity<TapiEquipmentExpectedHolder> responseEntity = api.dataContextPhysicalContextDeviceuuidEquipmentequipmentUuidContainedHoldercontainedHolderUuidExpectedHolderGet(uuid, equipmentUuid, containedHolderUuid);
+        assertEquals(HttpStatus.NOT_IMPLEMENTED, responseEntity.getStatusCode());
+    }
+
+    @Test
+    public void dataContextPhysicalContextDeviceuuidEquipmentequipmentUuidContainedHoldercontainedHolderUuidGetTest() throws Exception {
+        String uuid = "uuid_example";
+        String equipmentUuid = "equipmentUuid_example";
+        String containedHolderUuid = "containedHolderUuid_example";
+        ResponseEntity<TapiEquipmentHolder> responseEntity = api.dataContextPhysicalContextDeviceuuidEquipmentequipmentUuidContainedHoldercontainedHolderUuidGet(uuid, equipmentUuid, containedHolderUuid);
+        assertEquals(HttpStatus.NOT_IMPLEMENTED, responseEntity.getStatusCode());
+    }
+
+    @Test
+    public void dataContextPhysicalContextDeviceuuidEquipmentequipmentUuidContainedHoldercontainedHolderUuidNamevalueNameGetTest() throws Exception {
+        String uuid = "uuid_example";
+        String equipmentUuid = "equipmentUuid_example";
+        String containedHolderUuid = "containedHolderUuid_example";
+        String valueName = "valueName_example";
+        ResponseEntity<TapiCommonNameAndValue> responseEntity = api.dataContextPhysicalContextDeviceuuidEquipmentequipmentUuidContainedHoldercontainedHolderUuidNamevalueNameGet(uuid, equipmentUuid, containedHolderUuid, valueName);
+        assertEquals(HttpStatus.NOT_IMPLEMENTED, responseEntity.getStatusCode());
+    }
+
+    @Test
+    public void dataContextPhysicalContextDeviceuuidEquipmentequipmentUuidContainedHoldercontainedHolderUuidOccupyingFruGetTest() throws Exception {
+        String uuid = "uuid_example";
+        String equipmentUuid = "equipmentUuid_example";
+        String containedHolderUuid = "containedHolderUuid_example";
+        ResponseEntity<TapiEquipmentEquipmentRef> responseEntity = api.dataContextPhysicalContextDeviceuuidEquipmentequipmentUuidContainedHoldercontainedHolderUuidOccupyingFruGet(uuid, equipmentUuid, containedHolderUuid);
+        assertEquals(HttpStatus.NOT_IMPLEMENTED, responseEntity.getStatusCode());
+    }
+
+    @Test
+    public void dataContextPhysicalContextDeviceuuidEquipmentequipmentUuidExpectedEquipmentCommonEquipmentPropertiesGetTest() throws Exception {
+        String uuid = "uuid_example";
+        String equipmentUuid = "equipmentUuid_example";
+        ResponseEntity<TapiEquipmentCommonEquipmentProperties> responseEntity = api.dataContextPhysicalContextDeviceuuidEquipmentequipmentUuidExpectedEquipmentCommonEquipmentPropertiesGet(uuid, equipmentUuid);
+        assertEquals(HttpStatus.NOT_IMPLEMENTED, responseEntity.getStatusCode());
+    }
+
+    @Test
+    public void dataContextPhysicalContextDeviceuuidEquipmentequipmentUuidExpectedEquipmentExpectedHolderCommonHolderPropertiesGetTest() throws Exception {
+        String uuid = "uuid_example";
+        String equipmentUuid = "equipmentUuid_example";
+        ResponseEntity<TapiEquipmentCommonHolderProperties> responseEntity = api.dataContextPhysicalContextDeviceuuidEquipmentequipmentUuidExpectedEquipmentExpectedHolderCommonHolderPropertiesGet(uuid, equipmentUuid);
+        assertEquals(HttpStatus.NOT_IMPLEMENTED, responseEntity.getStatusCode());
+    }
+
+    @Test
+    public void dataContextPhysicalContextDeviceuuidEquipmentequipmentUuidExpectedEquipmentExpectedHolderGetTest() throws Exception {
+        String uuid = "uuid_example";
+        String equipmentUuid = "equipmentUuid_example";
+        ResponseEntity<TapiEquipmentExpectedHolder> responseEntity = api.dataContextPhysicalContextDeviceuuidEquipmentequipmentUuidExpectedEquipmentExpectedHolderGet(uuid, equipmentUuid);
+        assertEquals(HttpStatus.NOT_IMPLEMENTED, responseEntity.getStatusCode());
+    }
+
+    @Test
+    public void dataContextPhysicalContextDeviceuuidEquipmentequipmentUuidExpectedEquipmentExpectedNonFieldReplaceableModuleCommonEquipmentPropertiesGetTest() throws Exception {
+        String uuid = "uuid_example";
+        String equipmentUuid = "equipmentUuid_example";
+        ResponseEntity<TapiEquipmentCommonEquipmentProperties> responseEntity = api.dataContextPhysicalContextDeviceuuidEquipmentequipmentUuidExpectedEquipmentExpectedNonFieldReplaceableModuleCommonEquipmentPropertiesGet(uuid, equipmentUuid);
+        assertEquals(HttpStatus.NOT_IMPLEMENTED, responseEntity.getStatusCode());
+    }
+
+    @Test
+    public void dataContextPhysicalContextDeviceuuidEquipmentequipmentUuidExpectedEquipmentExpectedNonFieldReplaceableModuleGetTest() throws Exception {
+        String uuid = "uuid_example";
+        String equipmentUuid = "equipmentUuid_example";
+        ResponseEntity<TapiEquipmentExpectedNonFieldReplaceableModule> responseEntity = api.dataContextPhysicalContextDeviceuuidEquipmentequipmentUuidExpectedEquipmentExpectedNonFieldReplaceableModuleGet(uuid, equipmentUuid);
+        assertEquals(HttpStatus.NOT_IMPLEMENTED, responseEntity.getStatusCode());
+    }
+
+    @Test
+    public void dataContextPhysicalContextDeviceuuidEquipmentequipmentUuidExpectedEquipmentGetTest() throws Exception {
+        String uuid = "uuid_example";
+        String equipmentUuid = "equipmentUuid_example";
+        ResponseEntity<TapiEquipmentExpectedEquipment> responseEntity = api.dataContextPhysicalContextDeviceuuidEquipmentequipmentUuidExpectedEquipmentGet(uuid, equipmentUuid);
+        assertEquals(HttpStatus.NOT_IMPLEMENTED, responseEntity.getStatusCode());
+    }
+
+    @Test
+    public void dataContextPhysicalContextDeviceuuidEquipmentequipmentUuidGetTest() throws Exception {
+        String uuid = "uuid_example";
+        String equipmentUuid = "equipmentUuid_example";
+        ResponseEntity<TapiEquipmentEquipment> responseEntity = api.dataContextPhysicalContextDeviceuuidEquipmentequipmentUuidGet(uuid, equipmentUuid);
+        assertEquals(HttpStatus.NOT_IMPLEMENTED, responseEntity.getStatusCode());
+    }
+
+    @Test
+    public void dataContextPhysicalContextDeviceuuidEquipmentequipmentUuidNamevalueNameGetTest() throws Exception {
+        String uuid = "uuid_example";
+        String equipmentUuid = "equipmentUuid_example";
+        String valueName = "valueName_example";
+        ResponseEntity<TapiCommonNameAndValue> responseEntity = api.dataContextPhysicalContextDeviceuuidEquipmentequipmentUuidNamevalueNameGet(uuid, equipmentUuid, valueName);
+        assertEquals(HttpStatus.NOT_IMPLEMENTED, responseEntity.getStatusCode());
+    }
+
+    @Test
+    public void dataContextPhysicalContextDeviceuuidGetTest() throws Exception {
+        String uuid = "uuid_example";
+        ResponseEntity<TapiEquipmentDevice> responseEntity = api.dataContextPhysicalContextDeviceuuidGet(uuid);
+        assertEquals(HttpStatus.NOT_IMPLEMENTED, responseEntity.getStatusCode());
+    }
+
+    @Test
+    public void dataContextPhysicalContextDeviceuuidNamevalueNameGetTest() throws Exception {
+        String uuid = "uuid_example";
+        String valueName = "valueName_example";
+        ResponseEntity<TapiCommonNameAndValue> responseEntity = api.dataContextPhysicalContextDeviceuuidNamevalueNameGet(uuid, valueName);
+        assertEquals(HttpStatus.NOT_IMPLEMENTED, responseEntity.getStatusCode());
+    }
+
+    @Test
+    public void dataContextPhysicalContextGetTest() throws Exception {
+        ResponseEntity<TapiEquipmentPhysicalContext> responseEntity = api.dataContextPhysicalContextGet();
+        assertEquals(HttpStatus.NOT_IMPLEMENTED, responseEntity.getStatusCode());
+    }
+
+    @Test
+    public void dataContextPhysicalContextNamePostTest() throws Exception {
+        TapiCommonNameAndValue body = new TapiCommonNameAndValue();
+        ResponseEntity<Void> responseEntity = api.dataContextPhysicalContextNamePost(body);
+        assertEquals(HttpStatus.NOT_IMPLEMENTED, responseEntity.getStatusCode());
+    }
+
+    @Test
+    public void dataContextPhysicalContextNamevalueNameDeleteTest() throws Exception {
+        String valueName = "valueName_example";
+        ResponseEntity<Void> responseEntity = api.dataContextPhysicalContextNamevalueNameDelete(valueName);
+        assertEquals(HttpStatus.NOT_IMPLEMENTED, responseEntity.getStatusCode());
+    }
+
+    @Test
+    public void dataContextPhysicalContextNamevalueNameGetTest() throws Exception {
+        String valueName = "valueName_example";
+        ResponseEntity<TapiCommonNameAndValue> responseEntity = api.dataContextPhysicalContextNamevalueNameGet(valueName);
+        assertEquals(HttpStatus.NOT_IMPLEMENTED, responseEntity.getStatusCode());
+    }
+
+    @Test
+    public void dataContextPhysicalContextNamevalueNamePutTest() throws Exception {
+        String valueName = "valueName_example";
+        TapiCommonNameAndValue body = new TapiCommonNameAndValue();
+        ResponseEntity<Void> responseEntity = api.dataContextPhysicalContextNamevalueNamePut(valueName, body);
+        assertEquals(HttpStatus.NOT_IMPLEMENTED, responseEntity.getStatusCode());
+    }
+
+    @Test
+    public void dataContextPhysicalContextPhysicalSpanuuidAbstractStrandlocalIdAdjacentStrandphysicalSpanUuidabstractStrandLocalIdGetTest() throws Exception {
+        String uuid = "uuid_example";
+        String localId = "localId_example";
+        String physicalSpanUuid = "physicalSpanUuid_example";
+        String abstractStrandLocalId = "abstractStrandLocalId_example";
+        ResponseEntity<TapiEquipmentAbstractStrandRef> responseEntity = api.dataContextPhysicalContextPhysicalSpanuuidAbstractStrandlocalIdAdjacentStrandphysicalSpanUuidabstractStrandLocalIdGet(uuid, localId, physicalSpanUuid, abstractStrandLocalId);
+        assertEquals(HttpStatus.NOT_IMPLEMENTED, responseEntity.getStatusCode());
+    }
+
+    @Test
+    public void dataContextPhysicalContextPhysicalSpanuuidAbstractStrandlocalIdConnectorPinconnectorIdentificationpinIdentificationequipmentUuidGetTest() throws Exception {
+        String uuid = "uuid_example";
+        String localId = "localId_example";
+        String connectorIdentification = "connectorIdentification_example";
+        String pinIdentification = "pinIdentification_example";
+        String equipmentUuid = "equipmentUuid_example";
+        ResponseEntity<TapiEquipmentConnectorPinAddress> responseEntity = api.dataContextPhysicalContextPhysicalSpanuuidAbstractStrandlocalIdConnectorPinconnectorIdentificationpinIdentificationequipmentUuidGet(uuid, localId, connectorIdentification, pinIdentification, equipmentUuid);
+        assertEquals(HttpStatus.NOT_IMPLEMENTED, responseEntity.getStatusCode());
+    }
+
+    @Test
+    public void dataContextPhysicalContextPhysicalSpanuuidAbstractStrandlocalIdGetTest() throws Exception {
+        String uuid = "uuid_example";
+        String localId = "localId_example";
+        ResponseEntity<TapiEquipmentAbstractStrand> responseEntity = api.dataContextPhysicalContextPhysicalSpanuuidAbstractStrandlocalIdGet(uuid, localId);
+        assertEquals(HttpStatus.NOT_IMPLEMENTED, responseEntity.getStatusCode());
+    }
+
+    @Test
+    public void dataContextPhysicalContextPhysicalSpanuuidAbstractStrandlocalIdNamevalueNameGetTest() throws Exception {
+        String uuid = "uuid_example";
+        String localId = "localId_example";
+        String valueName = "valueName_example";
+        ResponseEntity<TapiCommonNameAndValue> responseEntity = api.dataContextPhysicalContextPhysicalSpanuuidAbstractStrandlocalIdNamevalueNameGet(uuid, localId, valueName);
+        assertEquals(HttpStatus.NOT_IMPLEMENTED, responseEntity.getStatusCode());
+    }
+
+    @Test
+    public void dataContextPhysicalContextPhysicalSpanuuidAbstractStrandlocalIdSplicedStrandphysicalSpanUuidabstractStrandLocalIdGetTest() throws Exception {
+        String uuid = "uuid_example";
+        String localId = "localId_example";
+        String physicalSpanUuid = "physicalSpanUuid_example";
+        String abstractStrandLocalId = "abstractStrandLocalId_example";
+        ResponseEntity<TapiEquipmentAbstractStrandRef> responseEntity = api.dataContextPhysicalContextPhysicalSpanuuidAbstractStrandlocalIdSplicedStrandphysicalSpanUuidabstractStrandLocalIdGet(uuid, localId, physicalSpanUuid, abstractStrandLocalId);
+        assertEquals(HttpStatus.NOT_IMPLEMENTED, responseEntity.getStatusCode());
+    }
+
+    @Test
+    public void dataContextPhysicalContextPhysicalSpanuuidAbstractStrandlocalIdStrandMediaCharacteristicsvalueNameGetTest() throws Exception {
+        String uuid = "uuid_example";
+        String localId = "localId_example";
+        String valueName = "valueName_example";
+        ResponseEntity<TapiCommonNameAndValue> responseEntity = api.dataContextPhysicalContextPhysicalSpanuuidAbstractStrandlocalIdStrandMediaCharacteristicsvalueNameGet(uuid, localId, valueName);
+        assertEquals(HttpStatus.NOT_IMPLEMENTED, responseEntity.getStatusCode());
+    }
+
+    @Test
+    public void dataContextPhysicalContextPhysicalSpanuuidAccessPortdeviceUuidaccessPortUuidGetTest() throws Exception {
+        String uuid = "uuid_example";
+        String deviceUuid = "deviceUuid_example";
+        String accessPortUuid = "accessPortUuid_example";
+        ResponseEntity<TapiEquipmentAccessPortRef> responseEntity = api.dataContextPhysicalContextPhysicalSpanuuidAccessPortdeviceUuidaccessPortUuidGet(uuid, deviceUuid, accessPortUuid);
+        assertEquals(HttpStatus.NOT_IMPLEMENTED, responseEntity.getStatusCode());
+    }
+
+    @Test
+    public void dataContextPhysicalContextPhysicalSpanuuidGetTest() throws Exception {
+        String uuid = "uuid_example";
+        ResponseEntity<TapiEquipmentPhysicalSpan> responseEntity = api.dataContextPhysicalContextPhysicalSpanuuidGet(uuid);
+        assertEquals(HttpStatus.NOT_IMPLEMENTED, responseEntity.getStatusCode());
+    }
+
+    @Test
+    public void dataContextPhysicalContextPhysicalSpanuuidNamevalueNameGetTest() throws Exception {
+        String uuid = "uuid_example";
+        String valueName = "valueName_example";
+        ResponseEntity<TapiCommonNameAndValue> responseEntity = api.dataContextPhysicalContextPhysicalSpanuuidNamevalueNameGet(uuid, valueName);
+        assertEquals(HttpStatus.NOT_IMPLEMENTED, responseEntity.getStatusCode());
+    }
+
+    @Test
+    public void dataContextPhysicalContextPostTest() throws Exception {
+        TapiEquipmentPhysicalContext body = new TapiEquipmentPhysicalContext();
+        ResponseEntity<Void> responseEntity = api.dataContextPhysicalContextPost(body);
+        assertEquals(HttpStatus.NOT_IMPLEMENTED, responseEntity.getStatusCode());
+    }
+
+    @Test
+    public void dataContextPhysicalContextPutTest() throws Exception {
+        TapiEquipmentPhysicalContext body = new TapiEquipmentPhysicalContext();
+        ResponseEntity<Void> responseEntity = api.dataContextPhysicalContextPut(body);
+        assertEquals(HttpStatus.NOT_IMPLEMENTED, responseEntity.getStatusCode());
+    }
+
+    @Test
     public void dataContextPostTest() throws Exception {
         TapiCommonContext body = new TapiCommonContext();
         ResponseEntity<Void> responseEntity = api.dataContextPost(body);
@@ -6828,6 +7405,66 @@ public class DataApiControllerIntegrationTest {
     }
 
     @Test
+    public void dataContextTopologyContextTopologyuuidNodenodeUuidNodeEdgePointnodeEdgePointUuidCepListConnectionEndPointconnectionEndPointUuidOduConnectionEndPointSpecGetTest() throws Exception {
+        String uuid = "uuid_example";
+        String nodeUuid = "nodeUuid_example";
+        String nodeEdgePointUuid = "nodeEdgePointUuid_example";
+        String connectionEndPointUuid = "connectionEndPointUuid_example";
+        ResponseEntity<TapiOduOduConnectionEndPointSpec> responseEntity = api.dataContextTopologyContextTopologyuuidNodenodeUuidNodeEdgePointnodeEdgePointUuidCepListConnectionEndPointconnectionEndPointUuidOduConnectionEndPointSpecGet(uuid, nodeUuid, nodeEdgePointUuid, connectionEndPointUuid);
+        assertEquals(HttpStatus.NOT_IMPLEMENTED, responseEntity.getStatusCode());
+    }
+
+    @Test
+    public void dataContextTopologyContextTopologyuuidNodenodeUuidNodeEdgePointnodeEdgePointUuidCepListConnectionEndPointconnectionEndPointUuidOduConnectionEndPointSpecOduCommonGetTest() throws Exception {
+        String uuid = "uuid_example";
+        String nodeUuid = "nodeUuid_example";
+        String nodeEdgePointUuid = "nodeEdgePointUuid_example";
+        String connectionEndPointUuid = "connectionEndPointUuid_example";
+        ResponseEntity<TapiOduOduCommonPac> responseEntity = api.dataContextTopologyContextTopologyuuidNodenodeUuidNodeEdgePointnodeEdgePointUuidCepListConnectionEndPointconnectionEndPointUuidOduConnectionEndPointSpecOduCommonGet(uuid, nodeUuid, nodeEdgePointUuid, connectionEndPointUuid);
+        assertEquals(HttpStatus.NOT_IMPLEMENTED, responseEntity.getStatusCode());
+    }
+
+    @Test
+    public void dataContextTopologyContextTopologyuuidNodenodeUuidNodeEdgePointnodeEdgePointUuidCepListConnectionEndPointconnectionEndPointUuidOduConnectionEndPointSpecOduCtpGetTest() throws Exception {
+        String uuid = "uuid_example";
+        String nodeUuid = "nodeUuid_example";
+        String nodeEdgePointUuid = "nodeEdgePointUuid_example";
+        String connectionEndPointUuid = "connectionEndPointUuid_example";
+        ResponseEntity<TapiOduOduCtpPac> responseEntity = api.dataContextTopologyContextTopologyuuidNodenodeUuidNodeEdgePointnodeEdgePointUuidCepListConnectionEndPointconnectionEndPointUuidOduConnectionEndPointSpecOduCtpGet(uuid, nodeUuid, nodeEdgePointUuid, connectionEndPointUuid);
+        assertEquals(HttpStatus.NOT_IMPLEMENTED, responseEntity.getStatusCode());
+    }
+
+    @Test
+    public void dataContextTopologyContextTopologyuuidNodenodeUuidNodeEdgePointnodeEdgePointUuidCepListConnectionEndPointconnectionEndPointUuidOduConnectionEndPointSpecOduProtectionGetTest() throws Exception {
+        String uuid = "uuid_example";
+        String nodeUuid = "nodeUuid_example";
+        String nodeEdgePointUuid = "nodeEdgePointUuid_example";
+        String connectionEndPointUuid = "connectionEndPointUuid_example";
+        ResponseEntity<TapiOduOduProtectionPac> responseEntity = api.dataContextTopologyContextTopologyuuidNodenodeUuidNodeEdgePointnodeEdgePointUuidCepListConnectionEndPointconnectionEndPointUuidOduConnectionEndPointSpecOduProtectionGet(uuid, nodeUuid, nodeEdgePointUuid, connectionEndPointUuid);
+        assertEquals(HttpStatus.NOT_IMPLEMENTED, responseEntity.getStatusCode());
+    }
+
+    @Test
+    public void dataContextTopologyContextTopologyuuidNodenodeUuidNodeEdgePointnodeEdgePointUuidCepListConnectionEndPointconnectionEndPointUuidOduConnectionEndPointSpecOduTermAndAdapterAcceptedPayloadTypeGetTest() throws Exception {
+        String uuid = "uuid_example";
+        String nodeUuid = "nodeUuid_example";
+        String nodeEdgePointUuid = "nodeEdgePointUuid_example";
+        String connectionEndPointUuid = "connectionEndPointUuid_example";
+        ResponseEntity<TapiOduOduPayloadType> responseEntity = api.dataContextTopologyContextTopologyuuidNodenodeUuidNodeEdgePointnodeEdgePointUuidCepListConnectionEndPointconnectionEndPointUuidOduConnectionEndPointSpecOduTermAndAdapterAcceptedPayloadTypeGet(uuid, nodeUuid, nodeEdgePointUuid, connectionEndPointUuid);
+        assertEquals(HttpStatus.NOT_IMPLEMENTED, responseEntity.getStatusCode());
+    }
+
+    @Test
+    public void dataContextTopologyContextTopologyuuidNodenodeUuidNodeEdgePointnodeEdgePointUuidCepListConnectionEndPointconnectionEndPointUuidOduConnectionEndPointSpecOduTermAndAdapterGetTest() throws Exception {
+        String uuid = "uuid_example";
+        String nodeUuid = "nodeUuid_example";
+        String nodeEdgePointUuid = "nodeEdgePointUuid_example";
+        String connectionEndPointUuid = "connectionEndPointUuid_example";
+        ResponseEntity<TapiOduOduTerminationAndClientAdaptationPac> responseEntity = api.dataContextTopologyContextTopologyuuidNodenodeUuidNodeEdgePointnodeEdgePointUuidCepListConnectionEndPointconnectionEndPointUuidOduConnectionEndPointSpecOduTermAndAdapterGet(uuid, nodeUuid, nodeEdgePointUuid, connectionEndPointUuid);
+        assertEquals(HttpStatus.NOT_IMPLEMENTED, responseEntity.getStatusCode());
+    }
+
+    @Test
     public void dataContextTopologyContextTopologyuuidNodenodeUuidNodeEdgePointnodeEdgePointUuidCepListConnectionEndPointconnectionEndPointUuidOtsiAssemblyConnectionEndPointSpecGetTest() throws Exception {
         String uuid = "uuid_example";
         String nodeUuid = "nodeUuid_example";
@@ -7086,6 +7723,42 @@ public class DataApiControllerIntegrationTest {
         String nodeEdgePointUuid = "nodeEdgePointUuid_example";
         String valueName = "valueName_example";
         ResponseEntity<TapiCommonNameAndValue> responseEntity = api.dataContextTopologyContextTopologyuuidNodenodeUuidNodeEdgePointnodeEdgePointUuidNamevalueNameGet(uuid, nodeUuid, nodeEdgePointUuid, valueName);
+        assertEquals(HttpStatus.NOT_IMPLEMENTED, responseEntity.getStatusCode());
+    }
+
+    @Test
+    public void dataContextTopologyContextTopologyuuidNodenodeUuidNodeEdgePointnodeEdgePointUuidOduNodeEdgePointSpecGetTest() throws Exception {
+        String uuid = "uuid_example";
+        String nodeUuid = "nodeUuid_example";
+        String nodeEdgePointUuid = "nodeEdgePointUuid_example";
+        ResponseEntity<TapiOduOduNodeEdgePointSpec> responseEntity = api.dataContextTopologyContextTopologyuuidNodenodeUuidNodeEdgePointnodeEdgePointUuidOduNodeEdgePointSpecGet(uuid, nodeUuid, nodeEdgePointUuid);
+        assertEquals(HttpStatus.NOT_IMPLEMENTED, responseEntity.getStatusCode());
+    }
+
+    @Test
+    public void dataContextTopologyContextTopologyuuidNodenodeUuidNodeEdgePointnodeEdgePointUuidOduNodeEdgePointSpecOduPoolGetTest() throws Exception {
+        String uuid = "uuid_example";
+        String nodeUuid = "nodeUuid_example";
+        String nodeEdgePointUuid = "nodeEdgePointUuid_example";
+        ResponseEntity<TapiOduOduPoolPac> responseEntity = api.dataContextTopologyContextTopologyuuidNodenodeUuidNodeEdgePointnodeEdgePointUuidOduNodeEdgePointSpecOduPoolGet(uuid, nodeUuid, nodeEdgePointUuid);
+        assertEquals(HttpStatus.NOT_IMPLEMENTED, responseEntity.getStatusCode());
+    }
+
+    @Test
+    public void dataContextTopologyContextTopologyuuidNodenodeUuidNodeEdgePointnodeEdgePointUuidSupportingAccessPortAccessPortGetTest() throws Exception {
+        String uuid = "uuid_example";
+        String nodeUuid = "nodeUuid_example";
+        String nodeEdgePointUuid = "nodeEdgePointUuid_example";
+        ResponseEntity<TapiEquipmentAccessPortRef> responseEntity = api.dataContextTopologyContextTopologyuuidNodenodeUuidNodeEdgePointnodeEdgePointUuidSupportingAccessPortAccessPortGet(uuid, nodeUuid, nodeEdgePointUuid);
+        assertEquals(HttpStatus.NOT_IMPLEMENTED, responseEntity.getStatusCode());
+    }
+
+    @Test
+    public void dataContextTopologyContextTopologyuuidNodenodeUuidNodeEdgePointnodeEdgePointUuidSupportingAccessPortGetTest() throws Exception {
+        String uuid = "uuid_example";
+        String nodeUuid = "nodeUuid_example";
+        String nodeEdgePointUuid = "nodeEdgePointUuid_example";
+        ResponseEntity<TapiEquipmentSupportingAccessPort> responseEntity = api.dataContextTopologyContextTopologyuuidNodenodeUuidNodeEdgePointnodeEdgePointUuidSupportingAccessPortGet(uuid, nodeUuid, nodeEdgePointUuid);
         assertEquals(HttpStatus.NOT_IMPLEMENTED, responseEntity.getStatusCode());
     }
 
@@ -7364,6 +8037,22 @@ public class DataApiControllerIntegrationTest {
         String nodeUuid = "nodeUuid_example";
         String nodeRuleGroupUuid = "nodeRuleGroupUuid_example";
         ResponseEntity<TapiCommonCapacityValue> responseEntity = api.dataContextTopologyContextTopologyuuidNodenodeUuidNodeRuleGroupnodeRuleGroupUuidTotalPotentialCapacityTotalSizeGet(uuid, nodeUuid, nodeRuleGroupUuid);
+        assertEquals(HttpStatus.NOT_IMPLEMENTED, responseEntity.getStatusCode());
+    }
+
+    @Test
+    public void dataContextTopologyContextTopologyuuidNodenodeUuidSupportingPhysicalSpanGetTest() throws Exception {
+        String uuid = "uuid_example";
+        String nodeUuid = "nodeUuid_example";
+        ResponseEntity<TapiEquipmentSupportingPhysicalSpan> responseEntity = api.dataContextTopologyContextTopologyuuidNodenodeUuidSupportingPhysicalSpanGet(uuid, nodeUuid);
+        assertEquals(HttpStatus.NOT_IMPLEMENTED, responseEntity.getStatusCode());
+    }
+
+    @Test
+    public void dataContextTopologyContextTopologyuuidNodenodeUuidSupportingPhysicalSpanPhysicalSpanGetTest() throws Exception {
+        String uuid = "uuid_example";
+        String nodeUuid = "nodeUuid_example";
+        ResponseEntity<TapiEquipmentPhysicalSpanRef> responseEntity = api.dataContextTopologyContextTopologyuuidNodenodeUuidSupportingPhysicalSpanPhysicalSpanGet(uuid, nodeUuid);
         assertEquals(HttpStatus.NOT_IMPLEMENTED, responseEntity.getStatusCode());
     }
 

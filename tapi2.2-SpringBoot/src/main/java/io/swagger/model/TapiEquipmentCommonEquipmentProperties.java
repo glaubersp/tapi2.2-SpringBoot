@@ -13,65 +13,46 @@ import javax.validation.constraints.*;
  * TapiEquipmentCommonEquipmentProperties
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiEquipmentCommonEquipmentProperties   {
-  @JsonProperty("equipment-type-version")
-  private String equipmentTypeVersion = null;
-
-  @JsonProperty("manufacturer-name")
-  private String manufacturerName = null;
+  @JsonProperty("asset-type-identifier")
+  private String assetTypeIdentifier = null;
 
   @JsonProperty("equipment-type-description")
   private String equipmentTypeDescription = null;
 
-  @JsonProperty("manufacturer-identifier")
-  private String manufacturerIdentifier = null;
+  @JsonProperty("equipment-type-identifier")
+  private String equipmentTypeIdentifier = null;
 
   @JsonProperty("equipment-type-name")
   private String equipmentTypeName = null;
 
-  @JsonProperty("equipment-type-identifier")
-  private String equipmentTypeIdentifier = null;
+  @JsonProperty("equipment-type-version")
+  private String equipmentTypeVersion = null;
 
-  @JsonProperty("asset-type-identifier")
-  private String assetTypeIdentifier = null;
+  @JsonProperty("manufacturer-identifier")
+  private String manufacturerIdentifier = null;
 
-  public TapiEquipmentCommonEquipmentProperties equipmentTypeVersion(String equipmentTypeVersion) {
-    this.equipmentTypeVersion = equipmentTypeVersion;
+  @JsonProperty("manufacturer-name")
+  private String manufacturerName = null;
+
+  public TapiEquipmentCommonEquipmentProperties assetTypeIdentifier(String assetTypeIdentifier) {
+    this.assetTypeIdentifier = assetTypeIdentifier;
     return this;
   }
 
   /**
-   * This attribute identifies the version of the equipment.
-   * @return equipmentTypeVersion
+   * Represents the invariant properties of the equipment asset allocated by the operator that define and characterize the type.
+   * @return assetTypeIdentifier
   **/
-  @ApiModelProperty(value = "This attribute identifies the version of the equipment.")
+  @ApiModelProperty(value = "Represents the invariant properties of the equipment asset allocated by the operator that define and characterize the type.")
 
-  public String getEquipmentTypeVersion() {
-    return equipmentTypeVersion;
+  public String getAssetTypeIdentifier() {
+    return assetTypeIdentifier;
   }
 
-  public void setEquipmentTypeVersion(String equipmentTypeVersion) {
-    this.equipmentTypeVersion = equipmentTypeVersion;
-  }
-
-  public TapiEquipmentCommonEquipmentProperties manufacturerName(String manufacturerName) {
-    this.manufacturerName = manufacturerName;
-    return this;
-  }
-
-  /**
-   * The formal name of the manufacturer of the Equipment.
-   * @return manufacturerName
-  **/
-  @ApiModelProperty(value = "The formal name of the manufacturer of the Equipment.")
-
-  public String getManufacturerName() {
-    return manufacturerName;
-  }
-
-  public void setManufacturerName(String manufacturerName) {
-    this.manufacturerName = manufacturerName;
+  public void setAssetTypeIdentifier(String assetTypeIdentifier) {
+    this.assetTypeIdentifier = assetTypeIdentifier;
   }
 
   public TapiEquipmentCommonEquipmentProperties equipmentTypeDescription(String equipmentTypeDescription) {
@@ -93,23 +74,23 @@ public class TapiEquipmentCommonEquipmentProperties   {
     this.equipmentTypeDescription = equipmentTypeDescription;
   }
 
-  public TapiEquipmentCommonEquipmentProperties manufacturerIdentifier(String manufacturerIdentifier) {
-    this.manufacturerIdentifier = manufacturerIdentifier;
+  public TapiEquipmentCommonEquipmentProperties equipmentTypeIdentifier(String equipmentTypeIdentifier) {
+    this.equipmentTypeIdentifier = equipmentTypeIdentifier;
     return this;
   }
 
   /**
-   * The formal unique identifier of the manufacturer.
-   * @return manufacturerIdentifier
+   * This attribute identifies the part type of the equipment.
+   * @return equipmentTypeIdentifier
   **/
-  @ApiModelProperty(value = "The formal unique identifier of the manufacturer.")
+  @ApiModelProperty(value = "This attribute identifies the part type of the equipment.")
 
-  public String getManufacturerIdentifier() {
-    return manufacturerIdentifier;
+  public String getEquipmentTypeIdentifier() {
+    return equipmentTypeIdentifier;
   }
 
-  public void setManufacturerIdentifier(String manufacturerIdentifier) {
-    this.manufacturerIdentifier = manufacturerIdentifier;
+  public void setEquipmentTypeIdentifier(String equipmentTypeIdentifier) {
+    this.equipmentTypeIdentifier = equipmentTypeIdentifier;
   }
 
   public TapiEquipmentCommonEquipmentProperties equipmentTypeName(String equipmentTypeName) {
@@ -131,42 +112,61 @@ public class TapiEquipmentCommonEquipmentProperties   {
     this.equipmentTypeName = equipmentTypeName;
   }
 
-  public TapiEquipmentCommonEquipmentProperties equipmentTypeIdentifier(String equipmentTypeIdentifier) {
-    this.equipmentTypeIdentifier = equipmentTypeIdentifier;
+  public TapiEquipmentCommonEquipmentProperties equipmentTypeVersion(String equipmentTypeVersion) {
+    this.equipmentTypeVersion = equipmentTypeVersion;
     return this;
   }
 
   /**
-   * This attribute identifies the part type of the equipment.
-   * @return equipmentTypeIdentifier
+   * This attribute identifies the version of the equipment.
+   * @return equipmentTypeVersion
   **/
-  @ApiModelProperty(value = "This attribute identifies the part type of the equipment.")
+  @ApiModelProperty(value = "This attribute identifies the version of the equipment.")
 
-  public String getEquipmentTypeIdentifier() {
-    return equipmentTypeIdentifier;
+  public String getEquipmentTypeVersion() {
+    return equipmentTypeVersion;
   }
 
-  public void setEquipmentTypeIdentifier(String equipmentTypeIdentifier) {
-    this.equipmentTypeIdentifier = equipmentTypeIdentifier;
+  public void setEquipmentTypeVersion(String equipmentTypeVersion) {
+    this.equipmentTypeVersion = equipmentTypeVersion;
   }
 
-  public TapiEquipmentCommonEquipmentProperties assetTypeIdentifier(String assetTypeIdentifier) {
-    this.assetTypeIdentifier = assetTypeIdentifier;
+  public TapiEquipmentCommonEquipmentProperties manufacturerIdentifier(String manufacturerIdentifier) {
+    this.manufacturerIdentifier = manufacturerIdentifier;
     return this;
   }
 
   /**
-   * Represents the invariant properties of the equipment asset allocated by the operator that define and characterize the type.
-   * @return assetTypeIdentifier
+   * The formal unique identifier of the manufacturer.
+   * @return manufacturerIdentifier
   **/
-  @ApiModelProperty(value = "Represents the invariant properties of the equipment asset allocated by the operator that define and characterize the type.")
+  @ApiModelProperty(value = "The formal unique identifier of the manufacturer.")
 
-  public String getAssetTypeIdentifier() {
-    return assetTypeIdentifier;
+  public String getManufacturerIdentifier() {
+    return manufacturerIdentifier;
   }
 
-  public void setAssetTypeIdentifier(String assetTypeIdentifier) {
-    this.assetTypeIdentifier = assetTypeIdentifier;
+  public void setManufacturerIdentifier(String manufacturerIdentifier) {
+    this.manufacturerIdentifier = manufacturerIdentifier;
+  }
+
+  public TapiEquipmentCommonEquipmentProperties manufacturerName(String manufacturerName) {
+    this.manufacturerName = manufacturerName;
+    return this;
+  }
+
+  /**
+   * The formal name of the manufacturer of the Equipment.
+   * @return manufacturerName
+  **/
+  @ApiModelProperty(value = "The formal name of the manufacturer of the Equipment.")
+
+  public String getManufacturerName() {
+    return manufacturerName;
+  }
+
+  public void setManufacturerName(String manufacturerName) {
+    this.manufacturerName = manufacturerName;
   }
 
 
@@ -179,18 +179,18 @@ public class TapiEquipmentCommonEquipmentProperties   {
       return false;
     }
     TapiEquipmentCommonEquipmentProperties tapiEquipmentCommonEquipmentProperties = (TapiEquipmentCommonEquipmentProperties) o;
-    return Objects.equals(this.equipmentTypeVersion, tapiEquipmentCommonEquipmentProperties.equipmentTypeVersion) &&
-        Objects.equals(this.manufacturerName, tapiEquipmentCommonEquipmentProperties.manufacturerName) &&
+    return Objects.equals(this.assetTypeIdentifier, tapiEquipmentCommonEquipmentProperties.assetTypeIdentifier) &&
         Objects.equals(this.equipmentTypeDescription, tapiEquipmentCommonEquipmentProperties.equipmentTypeDescription) &&
-        Objects.equals(this.manufacturerIdentifier, tapiEquipmentCommonEquipmentProperties.manufacturerIdentifier) &&
-        Objects.equals(this.equipmentTypeName, tapiEquipmentCommonEquipmentProperties.equipmentTypeName) &&
         Objects.equals(this.equipmentTypeIdentifier, tapiEquipmentCommonEquipmentProperties.equipmentTypeIdentifier) &&
-        Objects.equals(this.assetTypeIdentifier, tapiEquipmentCommonEquipmentProperties.assetTypeIdentifier);
+        Objects.equals(this.equipmentTypeName, tapiEquipmentCommonEquipmentProperties.equipmentTypeName) &&
+        Objects.equals(this.equipmentTypeVersion, tapiEquipmentCommonEquipmentProperties.equipmentTypeVersion) &&
+        Objects.equals(this.manufacturerIdentifier, tapiEquipmentCommonEquipmentProperties.manufacturerIdentifier) &&
+        Objects.equals(this.manufacturerName, tapiEquipmentCommonEquipmentProperties.manufacturerName);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(equipmentTypeVersion, manufacturerName, equipmentTypeDescription, manufacturerIdentifier, equipmentTypeName, equipmentTypeIdentifier, assetTypeIdentifier);
+    return Objects.hash(assetTypeIdentifier, equipmentTypeDescription, equipmentTypeIdentifier, equipmentTypeName, equipmentTypeVersion, manufacturerIdentifier, manufacturerName);
   }
 
   @Override
@@ -198,13 +198,13 @@ public class TapiEquipmentCommonEquipmentProperties   {
     StringBuilder sb = new StringBuilder();
     sb.append("class TapiEquipmentCommonEquipmentProperties {\n");
     
-    sb.append("    equipmentTypeVersion: ").append(toIndentedString(equipmentTypeVersion)).append("\n");
-    sb.append("    manufacturerName: ").append(toIndentedString(manufacturerName)).append("\n");
-    sb.append("    equipmentTypeDescription: ").append(toIndentedString(equipmentTypeDescription)).append("\n");
-    sb.append("    manufacturerIdentifier: ").append(toIndentedString(manufacturerIdentifier)).append("\n");
-    sb.append("    equipmentTypeName: ").append(toIndentedString(equipmentTypeName)).append("\n");
-    sb.append("    equipmentTypeIdentifier: ").append(toIndentedString(equipmentTypeIdentifier)).append("\n");
     sb.append("    assetTypeIdentifier: ").append(toIndentedString(assetTypeIdentifier)).append("\n");
+    sb.append("    equipmentTypeDescription: ").append(toIndentedString(equipmentTypeDescription)).append("\n");
+    sb.append("    equipmentTypeIdentifier: ").append(toIndentedString(equipmentTypeIdentifier)).append("\n");
+    sb.append("    equipmentTypeName: ").append(toIndentedString(equipmentTypeName)).append("\n");
+    sb.append("    equipmentTypeVersion: ").append(toIndentedString(equipmentTypeVersion)).append("\n");
+    sb.append("    manufacturerIdentifier: ").append(toIndentedString(manufacturerIdentifier)).append("\n");
+    sb.append("    manufacturerName: ").append(toIndentedString(manufacturerName)).append("\n");
     sb.append("}");
     return sb.toString();
   }

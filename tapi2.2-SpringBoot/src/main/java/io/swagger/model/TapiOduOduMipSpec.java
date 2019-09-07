@@ -18,22 +18,42 @@ import javax.validation.constraints.*;
  * TapiOduOduMipSpec
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiOduOduMipSpec   {
+  @JsonProperty("odu-defect")
+  private TapiOduOduDefectPac oduDefect = null;
+
   @JsonProperty("odu-mip")
   private TapiOduOduMipPac oduMip = null;
-
-  @JsonProperty("odu-pm")
-  private TapiOduOduPmPac oduPm = null;
 
   @JsonProperty("odu-ncm")
   private TapiOduOduNcmPac oduNcm = null;
 
+  @JsonProperty("odu-pm")
+  private TapiOduOduPmPac oduPm = null;
+
   @JsonProperty("odu-tcm")
   private TapiOduOduTcmMipPac oduTcm = null;
 
-  @JsonProperty("odu-defect")
-  private TapiOduOduDefectPac oduDefect = null;
+  public TapiOduOduMipSpec oduDefect(TapiOduOduDefectPac oduDefect) {
+    this.oduDefect = oduDefect;
+    return this;
+  }
+
+  /**
+   * Get oduDefect
+   * @return oduDefect
+  **/
+  @ApiModelProperty(value = "")
+
+  @Valid
+  public TapiOduOduDefectPac getOduDefect() {
+    return oduDefect;
+  }
+
+  public void setOduDefect(TapiOduOduDefectPac oduDefect) {
+    this.oduDefect = oduDefect;
+  }
 
   public TapiOduOduMipSpec oduMip(TapiOduOduMipPac oduMip) {
     this.oduMip = oduMip;
@@ -53,26 +73,6 @@ public class TapiOduOduMipSpec   {
 
   public void setOduMip(TapiOduOduMipPac oduMip) {
     this.oduMip = oduMip;
-  }
-
-  public TapiOduOduMipSpec oduPm(TapiOduOduPmPac oduPm) {
-    this.oduPm = oduPm;
-    return this;
-  }
-
-  /**
-   * Get oduPm
-   * @return oduPm
-  **/
-  @ApiModelProperty(value = "")
-
-  @Valid
-  public TapiOduOduPmPac getOduPm() {
-    return oduPm;
-  }
-
-  public void setOduPm(TapiOduOduPmPac oduPm) {
-    this.oduPm = oduPm;
   }
 
   public TapiOduOduMipSpec oduNcm(TapiOduOduNcmPac oduNcm) {
@@ -95,6 +95,26 @@ public class TapiOduOduMipSpec   {
     this.oduNcm = oduNcm;
   }
 
+  public TapiOduOduMipSpec oduPm(TapiOduOduPmPac oduPm) {
+    this.oduPm = oduPm;
+    return this;
+  }
+
+  /**
+   * Get oduPm
+   * @return oduPm
+  **/
+  @ApiModelProperty(value = "")
+
+  @Valid
+  public TapiOduOduPmPac getOduPm() {
+    return oduPm;
+  }
+
+  public void setOduPm(TapiOduOduPmPac oduPm) {
+    this.oduPm = oduPm;
+  }
+
   public TapiOduOduMipSpec oduTcm(TapiOduOduTcmMipPac oduTcm) {
     this.oduTcm = oduTcm;
     return this;
@@ -115,26 +135,6 @@ public class TapiOduOduMipSpec   {
     this.oduTcm = oduTcm;
   }
 
-  public TapiOduOduMipSpec oduDefect(TapiOduOduDefectPac oduDefect) {
-    this.oduDefect = oduDefect;
-    return this;
-  }
-
-  /**
-   * Get oduDefect
-   * @return oduDefect
-  **/
-  @ApiModelProperty(value = "")
-
-  @Valid
-  public TapiOduOduDefectPac getOduDefect() {
-    return oduDefect;
-  }
-
-  public void setOduDefect(TapiOduOduDefectPac oduDefect) {
-    this.oduDefect = oduDefect;
-  }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -145,16 +145,16 @@ public class TapiOduOduMipSpec   {
       return false;
     }
     TapiOduOduMipSpec tapiOduOduMipSpec = (TapiOduOduMipSpec) o;
-    return Objects.equals(this.oduMip, tapiOduOduMipSpec.oduMip) &&
-        Objects.equals(this.oduPm, tapiOduOduMipSpec.oduPm) &&
+    return Objects.equals(this.oduDefect, tapiOduOduMipSpec.oduDefect) &&
+        Objects.equals(this.oduMip, tapiOduOduMipSpec.oduMip) &&
         Objects.equals(this.oduNcm, tapiOduOduMipSpec.oduNcm) &&
-        Objects.equals(this.oduTcm, tapiOduOduMipSpec.oduTcm) &&
-        Objects.equals(this.oduDefect, tapiOduOduMipSpec.oduDefect);
+        Objects.equals(this.oduPm, tapiOduOduMipSpec.oduPm) &&
+        Objects.equals(this.oduTcm, tapiOduOduMipSpec.oduTcm);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(oduMip, oduPm, oduNcm, oduTcm, oduDefect);
+    return Objects.hash(oduDefect, oduMip, oduNcm, oduPm, oduTcm);
   }
 
   @Override
@@ -162,11 +162,11 @@ public class TapiOduOduMipSpec   {
     StringBuilder sb = new StringBuilder();
     sb.append("class TapiOduOduMipSpec {\n");
     
-    sb.append("    oduMip: ").append(toIndentedString(oduMip)).append("\n");
-    sb.append("    oduPm: ").append(toIndentedString(oduPm)).append("\n");
-    sb.append("    oduNcm: ").append(toIndentedString(oduNcm)).append("\n");
-    sb.append("    oduTcm: ").append(toIndentedString(oduTcm)).append("\n");
     sb.append("    oduDefect: ").append(toIndentedString(oduDefect)).append("\n");
+    sb.append("    oduMip: ").append(toIndentedString(oduMip)).append("\n");
+    sb.append("    oduNcm: ").append(toIndentedString(oduNcm)).append("\n");
+    sb.append("    oduPm: ").append(toIndentedString(oduPm)).append("\n");
+    sb.append("    oduTcm: ").append(toIndentedString(oduTcm)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -16,7 +16,7 @@ import javax.validation.constraints.*;
  * TapiCommonGlobalClass
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiCommonGlobalClass   {
   @JsonProperty("name")
   @Valid
@@ -32,7 +32,7 @@ public class TapiCommonGlobalClass   {
 
   public TapiCommonGlobalClass addNameItem(TapiCommonNameAndValue nameItem) {
     if (this.name == null) {
-      this.name = new ArrayList<TapiCommonNameAndValue>();
+      this.name = new ArrayList<>();
     }
     this.name.add(nameItem);
     return this;

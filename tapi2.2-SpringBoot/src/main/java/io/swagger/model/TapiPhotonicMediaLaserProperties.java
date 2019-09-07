@@ -15,7 +15,7 @@ import javax.validation.constraints.*;
  * TapiPhotonicMediaLaserProperties
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiPhotonicMediaLaserProperties   {
   @JsonProperty("laser-application-type")
   private TapiPhotonicMediaLaserType laserApplicationType = null;
@@ -23,11 +23,11 @@ public class TapiPhotonicMediaLaserProperties   {
   @JsonProperty("laser-bias-current")
   private String laserBiasCurrent = null;
 
-  @JsonProperty("laser-temperature")
-  private String laserTemperature = null;
-
   @JsonProperty("laser-status")
   private TapiPhotonicMediaLaserControlStatusType laserStatus = null;
+
+  @JsonProperty("laser-temperature")
+  private String laserTemperature = null;
 
   public TapiPhotonicMediaLaserProperties laserApplicationType(TapiPhotonicMediaLaserType laserApplicationType) {
     this.laserApplicationType = laserApplicationType;
@@ -68,25 +68,6 @@ public class TapiPhotonicMediaLaserProperties   {
     this.laserBiasCurrent = laserBiasCurrent;
   }
 
-  public TapiPhotonicMediaLaserProperties laserTemperature(String laserTemperature) {
-    this.laserTemperature = laserTemperature;
-    return this;
-  }
-
-  /**
-   * The temperature of the laser
-   * @return laserTemperature
-  **/
-  @ApiModelProperty(value = "The temperature of the laser")
-
-  public String getLaserTemperature() {
-    return laserTemperature;
-  }
-
-  public void setLaserTemperature(String laserTemperature) {
-    this.laserTemperature = laserTemperature;
-  }
-
   public TapiPhotonicMediaLaserProperties laserStatus(TapiPhotonicMediaLaserControlStatusType laserStatus) {
     this.laserStatus = laserStatus;
     return this;
@@ -107,6 +88,25 @@ public class TapiPhotonicMediaLaserProperties   {
     this.laserStatus = laserStatus;
   }
 
+  public TapiPhotonicMediaLaserProperties laserTemperature(String laserTemperature) {
+    this.laserTemperature = laserTemperature;
+    return this;
+  }
+
+  /**
+   * The temperature of the laser
+   * @return laserTemperature
+  **/
+  @ApiModelProperty(value = "The temperature of the laser")
+
+  public String getLaserTemperature() {
+    return laserTemperature;
+  }
+
+  public void setLaserTemperature(String laserTemperature) {
+    this.laserTemperature = laserTemperature;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -119,13 +119,13 @@ public class TapiPhotonicMediaLaserProperties   {
     TapiPhotonicMediaLaserProperties tapiPhotonicMediaLaserProperties = (TapiPhotonicMediaLaserProperties) o;
     return Objects.equals(this.laserApplicationType, tapiPhotonicMediaLaserProperties.laserApplicationType) &&
         Objects.equals(this.laserBiasCurrent, tapiPhotonicMediaLaserProperties.laserBiasCurrent) &&
-        Objects.equals(this.laserTemperature, tapiPhotonicMediaLaserProperties.laserTemperature) &&
-        Objects.equals(this.laserStatus, tapiPhotonicMediaLaserProperties.laserStatus);
+        Objects.equals(this.laserStatus, tapiPhotonicMediaLaserProperties.laserStatus) &&
+        Objects.equals(this.laserTemperature, tapiPhotonicMediaLaserProperties.laserTemperature);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(laserApplicationType, laserBiasCurrent, laserTemperature, laserStatus);
+    return Objects.hash(laserApplicationType, laserBiasCurrent, laserStatus, laserTemperature);
   }
 
   @Override
@@ -135,8 +135,8 @@ public class TapiPhotonicMediaLaserProperties   {
     
     sb.append("    laserApplicationType: ").append(toIndentedString(laserApplicationType)).append("\n");
     sb.append("    laserBiasCurrent: ").append(toIndentedString(laserBiasCurrent)).append("\n");
-    sb.append("    laserTemperature: ").append(toIndentedString(laserTemperature)).append("\n");
     sb.append("    laserStatus: ").append(toIndentedString(laserStatus)).append("\n");
+    sb.append("    laserTemperature: ").append(toIndentedString(laserTemperature)).append("\n");
     sb.append("}");
     return sb.toString();
   }

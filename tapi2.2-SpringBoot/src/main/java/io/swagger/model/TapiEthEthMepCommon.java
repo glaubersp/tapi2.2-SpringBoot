@@ -14,10 +14,16 @@ import javax.validation.constraints.*;
  * TapiEthEthMepCommon
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiEthEthMepCommon   {
+  @JsonProperty("cc-priority")
+  private Integer ccPriority = 7;
+
   @JsonProperty("codirectional")
   private Boolean codirectional = true;
+
+  @JsonProperty("lck-period")
+  private TapiEthOamPeriod lckPeriod = null;
 
   @JsonProperty("lck-priority")
   private Integer lckPriority = 7;
@@ -25,11 +31,24 @@ public class TapiEthEthMepCommon   {
   @JsonProperty("mep-identifier")
   private Integer mepIdentifier = null;
 
-  @JsonProperty("lck-period")
-  private TapiEthOamPeriod lckPeriod = null;
+  public TapiEthEthMepCommon ccPriority(Integer ccPriority) {
+    this.ccPriority = ccPriority;
+    return this;
+  }
 
-  @JsonProperty("cc-priority")
-  private Integer ccPriority = 7;
+  /**
+   * This attribute models the MI_CC_Pri signal defined in G.8021 and configured as specified in G8051. It is the priority at which the CCM message should be sent.
+   * @return ccPriority
+  **/
+  @ApiModelProperty(value = "This attribute models the MI_CC_Pri signal defined in G.8021 and configured as specified in G8051. It is the priority at which the CCM message should be sent.")
+
+  public Integer getCcPriority() {
+    return ccPriority;
+  }
+
+  public void setCcPriority(Integer ccPriority) {
+    this.ccPriority = ccPriority;
+  }
 
   public TapiEthEthMepCommon codirectional(Boolean codirectional) {
     this.codirectional = codirectional;
@@ -48,6 +67,26 @@ public class TapiEthEthMepCommon   {
 
   public void setCodirectional(Boolean codirectional) {
     this.codirectional = codirectional;
+  }
+
+  public TapiEthEthMepCommon lckPeriod(TapiEthOamPeriod lckPeriod) {
+    this.lckPeriod = lckPeriod;
+    return this;
+  }
+
+  /**
+   * Get lckPeriod
+   * @return lckPeriod
+  **/
+  @ApiModelProperty(value = "")
+
+  @Valid
+  public TapiEthOamPeriod getLckPeriod() {
+    return lckPeriod;
+  }
+
+  public void setLckPeriod(TapiEthOamPeriod lckPeriod) {
+    this.lckPeriod = lckPeriod;
   }
 
   public TapiEthEthMepCommon lckPriority(Integer lckPriority) {
@@ -88,45 +127,6 @@ public class TapiEthEthMepCommon   {
     this.mepIdentifier = mepIdentifier;
   }
 
-  public TapiEthEthMepCommon lckPeriod(TapiEthOamPeriod lckPeriod) {
-    this.lckPeriod = lckPeriod;
-    return this;
-  }
-
-  /**
-   * Get lckPeriod
-   * @return lckPeriod
-  **/
-  @ApiModelProperty(value = "")
-
-  @Valid
-  public TapiEthOamPeriod getLckPeriod() {
-    return lckPeriod;
-  }
-
-  public void setLckPeriod(TapiEthOamPeriod lckPeriod) {
-    this.lckPeriod = lckPeriod;
-  }
-
-  public TapiEthEthMepCommon ccPriority(Integer ccPriority) {
-    this.ccPriority = ccPriority;
-    return this;
-  }
-
-  /**
-   * This attribute models the MI_CC_Pri signal defined in G.8021 and configured as specified in G8051. It is the priority at which the CCM message should be sent.
-   * @return ccPriority
-  **/
-  @ApiModelProperty(value = "This attribute models the MI_CC_Pri signal defined in G.8021 and configured as specified in G8051. It is the priority at which the CCM message should be sent.")
-
-  public Integer getCcPriority() {
-    return ccPriority;
-  }
-
-  public void setCcPriority(Integer ccPriority) {
-    this.ccPriority = ccPriority;
-  }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -137,16 +137,16 @@ public class TapiEthEthMepCommon   {
       return false;
     }
     TapiEthEthMepCommon tapiEthEthMepCommon = (TapiEthEthMepCommon) o;
-    return Objects.equals(this.codirectional, tapiEthEthMepCommon.codirectional) &&
-        Objects.equals(this.lckPriority, tapiEthEthMepCommon.lckPriority) &&
-        Objects.equals(this.mepIdentifier, tapiEthEthMepCommon.mepIdentifier) &&
+    return Objects.equals(this.ccPriority, tapiEthEthMepCommon.ccPriority) &&
+        Objects.equals(this.codirectional, tapiEthEthMepCommon.codirectional) &&
         Objects.equals(this.lckPeriod, tapiEthEthMepCommon.lckPeriod) &&
-        Objects.equals(this.ccPriority, tapiEthEthMepCommon.ccPriority);
+        Objects.equals(this.lckPriority, tapiEthEthMepCommon.lckPriority) &&
+        Objects.equals(this.mepIdentifier, tapiEthEthMepCommon.mepIdentifier);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(codirectional, lckPriority, mepIdentifier, lckPeriod, ccPriority);
+    return Objects.hash(ccPriority, codirectional, lckPeriod, lckPriority, mepIdentifier);
   }
 
   @Override
@@ -154,11 +154,11 @@ public class TapiEthEthMepCommon   {
     StringBuilder sb = new StringBuilder();
     sb.append("class TapiEthEthMepCommon {\n");
     
+    sb.append("    ccPriority: ").append(toIndentedString(ccPriority)).append("\n");
     sb.append("    codirectional: ").append(toIndentedString(codirectional)).append("\n");
+    sb.append("    lckPeriod: ").append(toIndentedString(lckPeriod)).append("\n");
     sb.append("    lckPriority: ").append(toIndentedString(lckPriority)).append("\n");
     sb.append("    mepIdentifier: ").append(toIndentedString(mepIdentifier)).append("\n");
-    sb.append("    lckPeriod: ").append(toIndentedString(lckPeriod)).append("\n");
-    sb.append("    ccPriority: ").append(toIndentedString(ccPriority)).append("\n");
     sb.append("}");
     return sb.toString();
   }

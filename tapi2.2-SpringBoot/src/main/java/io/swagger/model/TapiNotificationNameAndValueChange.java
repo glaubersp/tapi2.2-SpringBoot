@@ -13,34 +13,34 @@ import javax.validation.constraints.*;
  * TapiNotificationNameAndValueChange
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiNotificationNameAndValueChange   {
-  @JsonProperty("value-name")
-  private String valueName = null;
+  @JsonProperty("new-value")
+  private String newValue = null;
 
   @JsonProperty("old-value")
   private String oldValue = null;
 
-  @JsonProperty("new-value")
-  private String newValue = null;
+  @JsonProperty("value-name")
+  private String valueName = null;
 
-  public TapiNotificationNameAndValueChange valueName(String valueName) {
-    this.valueName = valueName;
+  public TapiNotificationNameAndValueChange newValue(String newValue) {
+    this.newValue = newValue;
     return this;
   }
 
   /**
-   * The name of the value. The value need not have a name.
-   * @return valueName
+   * The value
+   * @return newValue
   **/
-  @ApiModelProperty(value = "The name of the value. The value need not have a name.")
+  @ApiModelProperty(value = "The value")
 
-  public String getValueName() {
-    return valueName;
+  public String getNewValue() {
+    return newValue;
   }
 
-  public void setValueName(String valueName) {
-    this.valueName = valueName;
+  public void setNewValue(String newValue) {
+    this.newValue = newValue;
   }
 
   public TapiNotificationNameAndValueChange oldValue(String oldValue) {
@@ -62,23 +62,23 @@ public class TapiNotificationNameAndValueChange   {
     this.oldValue = oldValue;
   }
 
-  public TapiNotificationNameAndValueChange newValue(String newValue) {
-    this.newValue = newValue;
+  public TapiNotificationNameAndValueChange valueName(String valueName) {
+    this.valueName = valueName;
     return this;
   }
 
   /**
-   * The value
-   * @return newValue
+   * The name of the value. The value need not have a name.
+   * @return valueName
   **/
-  @ApiModelProperty(value = "The value")
+  @ApiModelProperty(value = "The name of the value. The value need not have a name.")
 
-  public String getNewValue() {
-    return newValue;
+  public String getValueName() {
+    return valueName;
   }
 
-  public void setNewValue(String newValue) {
-    this.newValue = newValue;
+  public void setValueName(String valueName) {
+    this.valueName = valueName;
   }
 
 
@@ -91,14 +91,14 @@ public class TapiNotificationNameAndValueChange   {
       return false;
     }
     TapiNotificationNameAndValueChange tapiNotificationNameAndValueChange = (TapiNotificationNameAndValueChange) o;
-    return Objects.equals(this.valueName, tapiNotificationNameAndValueChange.valueName) &&
+    return Objects.equals(this.newValue, tapiNotificationNameAndValueChange.newValue) &&
         Objects.equals(this.oldValue, tapiNotificationNameAndValueChange.oldValue) &&
-        Objects.equals(this.newValue, tapiNotificationNameAndValueChange.newValue);
+        Objects.equals(this.valueName, tapiNotificationNameAndValueChange.valueName);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(valueName, oldValue, newValue);
+    return Objects.hash(newValue, oldValue, valueName);
   }
 
   @Override
@@ -106,9 +106,9 @@ public class TapiNotificationNameAndValueChange   {
     StringBuilder sb = new StringBuilder();
     sb.append("class TapiNotificationNameAndValueChange {\n");
     
-    sb.append("    valueName: ").append(toIndentedString(valueName)).append("\n");
-    sb.append("    oldValue: ").append(toIndentedString(oldValue)).append("\n");
     sb.append("    newValue: ").append(toIndentedString(newValue)).append("\n");
+    sb.append("    oldValue: ").append(toIndentedString(oldValue)).append("\n");
+    sb.append("    valueName: ").append(toIndentedString(valueName)).append("\n");
     sb.append("}");
     return sb.toString();
   }

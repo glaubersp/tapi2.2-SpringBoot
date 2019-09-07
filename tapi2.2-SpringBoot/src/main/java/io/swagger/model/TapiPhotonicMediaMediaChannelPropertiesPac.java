@@ -15,36 +15,16 @@ import javax.validation.constraints.*;
  * TapiPhotonicMediaMediaChannelPropertiesPac
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiPhotonicMediaMediaChannelPropertiesPac   {
-  @JsonProperty("occupied-spectrum")
-  private TapiPhotonicMediaSpectrumBand occupiedSpectrum = null;
-
   @JsonProperty("measured-power-egress")
   private TapiPhotonicMediaPowerProperties measuredPowerEgress = null;
 
   @JsonProperty("measured-power-ingress")
   private TapiPhotonicMediaPowerProperties measuredPowerIngress = null;
 
-  public TapiPhotonicMediaMediaChannelPropertiesPac occupiedSpectrum(TapiPhotonicMediaSpectrumBand occupiedSpectrum) {
-    this.occupiedSpectrum = occupiedSpectrum;
-    return this;
-  }
-
-  /**
-   * Get occupiedSpectrum
-   * @return occupiedSpectrum
-  **/
-  @ApiModelProperty(value = "")
-
-  @Valid
-  public TapiPhotonicMediaSpectrumBand getOccupiedSpectrum() {
-    return occupiedSpectrum;
-  }
-
-  public void setOccupiedSpectrum(TapiPhotonicMediaSpectrumBand occupiedSpectrum) {
-    this.occupiedSpectrum = occupiedSpectrum;
-  }
+  @JsonProperty("occupied-spectrum")
+  private TapiPhotonicMediaSpectrumBand occupiedSpectrum = null;
 
   public TapiPhotonicMediaMediaChannelPropertiesPac measuredPowerEgress(TapiPhotonicMediaPowerProperties measuredPowerEgress) {
     this.measuredPowerEgress = measuredPowerEgress;
@@ -86,6 +66,26 @@ public class TapiPhotonicMediaMediaChannelPropertiesPac   {
     this.measuredPowerIngress = measuredPowerIngress;
   }
 
+  public TapiPhotonicMediaMediaChannelPropertiesPac occupiedSpectrum(TapiPhotonicMediaSpectrumBand occupiedSpectrum) {
+    this.occupiedSpectrum = occupiedSpectrum;
+    return this;
+  }
+
+  /**
+   * Get occupiedSpectrum
+   * @return occupiedSpectrum
+  **/
+  @ApiModelProperty(value = "")
+
+  @Valid
+  public TapiPhotonicMediaSpectrumBand getOccupiedSpectrum() {
+    return occupiedSpectrum;
+  }
+
+  public void setOccupiedSpectrum(TapiPhotonicMediaSpectrumBand occupiedSpectrum) {
+    this.occupiedSpectrum = occupiedSpectrum;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -96,14 +96,14 @@ public class TapiPhotonicMediaMediaChannelPropertiesPac   {
       return false;
     }
     TapiPhotonicMediaMediaChannelPropertiesPac tapiPhotonicMediaMediaChannelPropertiesPac = (TapiPhotonicMediaMediaChannelPropertiesPac) o;
-    return Objects.equals(this.occupiedSpectrum, tapiPhotonicMediaMediaChannelPropertiesPac.occupiedSpectrum) &&
-        Objects.equals(this.measuredPowerEgress, tapiPhotonicMediaMediaChannelPropertiesPac.measuredPowerEgress) &&
-        Objects.equals(this.measuredPowerIngress, tapiPhotonicMediaMediaChannelPropertiesPac.measuredPowerIngress);
+    return Objects.equals(this.measuredPowerEgress, tapiPhotonicMediaMediaChannelPropertiesPac.measuredPowerEgress) &&
+        Objects.equals(this.measuredPowerIngress, tapiPhotonicMediaMediaChannelPropertiesPac.measuredPowerIngress) &&
+        Objects.equals(this.occupiedSpectrum, tapiPhotonicMediaMediaChannelPropertiesPac.occupiedSpectrum);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(occupiedSpectrum, measuredPowerEgress, measuredPowerIngress);
+    return Objects.hash(measuredPowerEgress, measuredPowerIngress, occupiedSpectrum);
   }
 
   @Override
@@ -111,9 +111,9 @@ public class TapiPhotonicMediaMediaChannelPropertiesPac   {
     StringBuilder sb = new StringBuilder();
     sb.append("class TapiPhotonicMediaMediaChannelPropertiesPac {\n");
     
-    sb.append("    occupiedSpectrum: ").append(toIndentedString(occupiedSpectrum)).append("\n");
     sb.append("    measuredPowerEgress: ").append(toIndentedString(measuredPowerEgress)).append("\n");
     sb.append("    measuredPowerIngress: ").append(toIndentedString(measuredPowerIngress)).append("\n");
+    sb.append("    occupiedSpectrum: ").append(toIndentedString(occupiedSpectrum)).append("\n");
     sb.append("}");
     return sb.toString();
   }

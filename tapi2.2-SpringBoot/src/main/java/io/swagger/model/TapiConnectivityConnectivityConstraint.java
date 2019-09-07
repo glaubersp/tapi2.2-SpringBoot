@@ -19,17 +19,20 @@ import javax.validation.constraints.*;
  * TapiConnectivityConnectivityConstraint
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiConnectivityConnectivityConstraint   {
-  @JsonProperty("schedule")
-  private TapiCommonTimeRange schedule = null;
-
-  @JsonProperty("requested-capacity")
-  private TapiCommonCapacity requestedCapacity = null;
+  @JsonProperty("coroute-inclusion")
+  private TapiConnectivityConnectivityServiceRef corouteInclusion = null;
 
   @JsonProperty("diversity-exclusion")
   @Valid
   private List<TapiConnectivityConnectivityServiceRef> diversityExclusion = null;
+
+  @JsonProperty("requested-capacity")
+  private TapiCommonCapacity requestedCapacity = null;
+
+  @JsonProperty("schedule")
+  private TapiCommonTimeRange schedule = null;
 
   @JsonProperty("service-level")
   private String serviceLevel = null;
@@ -37,27 +40,51 @@ public class TapiConnectivityConnectivityConstraint   {
   @JsonProperty("service-type")
   private TapiConnectivityServiceType serviceType = null;
 
-  @JsonProperty("coroute-inclusion")
-  private TapiConnectivityConnectivityServiceRef corouteInclusion = null;
-
-  public TapiConnectivityConnectivityConstraint schedule(TapiCommonTimeRange schedule) {
-    this.schedule = schedule;
+  public TapiConnectivityConnectivityConstraint corouteInclusion(TapiConnectivityConnectivityServiceRef corouteInclusion) {
+    this.corouteInclusion = corouteInclusion;
     return this;
   }
 
   /**
-   * Get schedule
-   * @return schedule
+   * Get corouteInclusion
+   * @return corouteInclusion
   **/
   @ApiModelProperty(value = "")
 
   @Valid
-  public TapiCommonTimeRange getSchedule() {
-    return schedule;
+  public TapiConnectivityConnectivityServiceRef getCorouteInclusion() {
+    return corouteInclusion;
   }
 
-  public void setSchedule(TapiCommonTimeRange schedule) {
-    this.schedule = schedule;
+  public void setCorouteInclusion(TapiConnectivityConnectivityServiceRef corouteInclusion) {
+    this.corouteInclusion = corouteInclusion;
+  }
+
+  public TapiConnectivityConnectivityConstraint diversityExclusion(List<TapiConnectivityConnectivityServiceRef> diversityExclusion) {
+    this.diversityExclusion = diversityExclusion;
+    return this;
+  }
+
+  public TapiConnectivityConnectivityConstraint addDiversityExclusionItem(TapiConnectivityConnectivityServiceRef diversityExclusionItem) {
+    if (this.diversityExclusion == null) {
+      this.diversityExclusion = new ArrayList<>();
+    }
+    this.diversityExclusion.add(diversityExclusionItem);
+    return this;
+  }
+
+  /**
+   * none
+   * @return diversityExclusion
+  **/
+  @ApiModelProperty(value = "none")
+  @Valid
+  public List<TapiConnectivityConnectivityServiceRef> getDiversityExclusion() {
+    return diversityExclusion;
+  }
+
+  public void setDiversityExclusion(List<TapiConnectivityConnectivityServiceRef> diversityExclusion) {
+    this.diversityExclusion = diversityExclusion;
   }
 
   public TapiConnectivityConnectivityConstraint requestedCapacity(TapiCommonCapacity requestedCapacity) {
@@ -80,31 +107,24 @@ public class TapiConnectivityConnectivityConstraint   {
     this.requestedCapacity = requestedCapacity;
   }
 
-  public TapiConnectivityConnectivityConstraint diversityExclusion(List<TapiConnectivityConnectivityServiceRef> diversityExclusion) {
-    this.diversityExclusion = diversityExclusion;
-    return this;
-  }
-
-  public TapiConnectivityConnectivityConstraint addDiversityExclusionItem(TapiConnectivityConnectivityServiceRef diversityExclusionItem) {
-    if (this.diversityExclusion == null) {
-      this.diversityExclusion = new ArrayList<TapiConnectivityConnectivityServiceRef>();
-    }
-    this.diversityExclusion.add(diversityExclusionItem);
+  public TapiConnectivityConnectivityConstraint schedule(TapiCommonTimeRange schedule) {
+    this.schedule = schedule;
     return this;
   }
 
   /**
-   * none
-   * @return diversityExclusion
+   * Get schedule
+   * @return schedule
   **/
-  @ApiModelProperty(value = "none")
+  @ApiModelProperty(value = "")
+
   @Valid
-  public List<TapiConnectivityConnectivityServiceRef> getDiversityExclusion() {
-    return diversityExclusion;
+  public TapiCommonTimeRange getSchedule() {
+    return schedule;
   }
 
-  public void setDiversityExclusion(List<TapiConnectivityConnectivityServiceRef> diversityExclusion) {
-    this.diversityExclusion = diversityExclusion;
+  public void setSchedule(TapiCommonTimeRange schedule) {
+    this.schedule = schedule;
   }
 
   public TapiConnectivityConnectivityConstraint serviceLevel(String serviceLevel) {
@@ -146,26 +166,6 @@ public class TapiConnectivityConnectivityConstraint   {
     this.serviceType = serviceType;
   }
 
-  public TapiConnectivityConnectivityConstraint corouteInclusion(TapiConnectivityConnectivityServiceRef corouteInclusion) {
-    this.corouteInclusion = corouteInclusion;
-    return this;
-  }
-
-  /**
-   * Get corouteInclusion
-   * @return corouteInclusion
-  **/
-  @ApiModelProperty(value = "")
-
-  @Valid
-  public TapiConnectivityConnectivityServiceRef getCorouteInclusion() {
-    return corouteInclusion;
-  }
-
-  public void setCorouteInclusion(TapiConnectivityConnectivityServiceRef corouteInclusion) {
-    this.corouteInclusion = corouteInclusion;
-  }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -176,17 +176,17 @@ public class TapiConnectivityConnectivityConstraint   {
       return false;
     }
     TapiConnectivityConnectivityConstraint tapiConnectivityConnectivityConstraint = (TapiConnectivityConnectivityConstraint) o;
-    return Objects.equals(this.schedule, tapiConnectivityConnectivityConstraint.schedule) &&
-        Objects.equals(this.requestedCapacity, tapiConnectivityConnectivityConstraint.requestedCapacity) &&
+    return Objects.equals(this.corouteInclusion, tapiConnectivityConnectivityConstraint.corouteInclusion) &&
         Objects.equals(this.diversityExclusion, tapiConnectivityConnectivityConstraint.diversityExclusion) &&
+        Objects.equals(this.requestedCapacity, tapiConnectivityConnectivityConstraint.requestedCapacity) &&
+        Objects.equals(this.schedule, tapiConnectivityConnectivityConstraint.schedule) &&
         Objects.equals(this.serviceLevel, tapiConnectivityConnectivityConstraint.serviceLevel) &&
-        Objects.equals(this.serviceType, tapiConnectivityConnectivityConstraint.serviceType) &&
-        Objects.equals(this.corouteInclusion, tapiConnectivityConnectivityConstraint.corouteInclusion);
+        Objects.equals(this.serviceType, tapiConnectivityConnectivityConstraint.serviceType);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(schedule, requestedCapacity, diversityExclusion, serviceLevel, serviceType, corouteInclusion);
+    return Objects.hash(corouteInclusion, diversityExclusion, requestedCapacity, schedule, serviceLevel, serviceType);
   }
 
   @Override
@@ -194,12 +194,12 @@ public class TapiConnectivityConnectivityConstraint   {
     StringBuilder sb = new StringBuilder();
     sb.append("class TapiConnectivityConnectivityConstraint {\n");
     
-    sb.append("    schedule: ").append(toIndentedString(schedule)).append("\n");
-    sb.append("    requestedCapacity: ").append(toIndentedString(requestedCapacity)).append("\n");
+    sb.append("    corouteInclusion: ").append(toIndentedString(corouteInclusion)).append("\n");
     sb.append("    diversityExclusion: ").append(toIndentedString(diversityExclusion)).append("\n");
+    sb.append("    requestedCapacity: ").append(toIndentedString(requestedCapacity)).append("\n");
+    sb.append("    schedule: ").append(toIndentedString(schedule)).append("\n");
     sb.append("    serviceLevel: ").append(toIndentedString(serviceLevel)).append("\n");
     sb.append("    serviceType: ").append(toIndentedString(serviceType)).append("\n");
-    sb.append("    corouteInclusion: ").append(toIndentedString(corouteInclusion)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -16,7 +16,7 @@ import javax.validation.constraints.*;
  * TapiVirtualNetworkVirtualNetworkContext
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiVirtualNetworkVirtualNetworkContext   {
   @JsonProperty("virtual-nw-service")
   @Valid
@@ -29,7 +29,7 @@ public class TapiVirtualNetworkVirtualNetworkContext   {
 
   public TapiVirtualNetworkVirtualNetworkContext addVirtualNwServiceItem(TapiVirtualNetworkVirtualNetworkService virtualNwServiceItem) {
     if (this.virtualNwService == null) {
-      this.virtualNwService = new ArrayList<TapiVirtualNetworkVirtualNetworkService>();
+      this.virtualNwService = new ArrayList<>();
     }
     this.virtualNwService.add(virtualNwServiceItem);
     return this;

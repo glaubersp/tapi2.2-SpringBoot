@@ -19,21 +19,48 @@ import javax.validation.constraints.*;
  * TapiOamPmThresholdData
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiOamPmThresholdData extends TapiCommonLocalClass  {
+  @JsonProperty("applicable-job-type")
+  @Valid
+  private List<String> applicableJobType = null;
+
   @JsonProperty("granularity-period")
   private TapiCommonTimePeriod granularityPeriod = null;
+
+  @JsonProperty("is-transient")
+  private Boolean isTransient = false;
 
   @JsonProperty("threshold-parameter")
   @Valid
   private List<TapiOamThresholdParameter> thresholdParameter = null;
 
-  @JsonProperty("is-transient")
-  private Boolean isTransient = false;
+  public TapiOamPmThresholdData applicableJobType(List<String> applicableJobType) {
+    this.applicableJobType = applicableJobType;
+    return this;
+  }
 
-  @JsonProperty("applicable-job-type")
-  @Valid
-  private List<String> applicableJobType = null;
+  public TapiOamPmThresholdData addApplicableJobTypeItem(String applicableJobTypeItem) {
+    if (this.applicableJobType == null) {
+      this.applicableJobType = new ArrayList<>();
+    }
+    this.applicableJobType.add(applicableJobTypeItem);
+    return this;
+  }
+
+  /**
+   * This attribute allows an PMThresholdData instance to be constrained to specific job types. If an PMThresholdData instance is so configured to be applicable to more than one job type (worst case ALL), only the parameters relevant for the job instance will be used (non-applicable profile parameters will be ignored)
+   * @return applicableJobType
+  **/
+  @ApiModelProperty(value = "This attribute allows an PMThresholdData instance to be constrained to specific job types. If an PMThresholdData instance is so configured to be applicable to more than one job type (worst case ALL), only the parameters relevant for the job instance will be used (non-applicable profile parameters will be ignored)")
+
+  public List<String> getApplicableJobType() {
+    return applicableJobType;
+  }
+
+  public void setApplicableJobType(List<String> applicableJobType) {
+    this.applicableJobType = applicableJobType;
+  }
 
   public TapiOamPmThresholdData granularityPeriod(TapiCommonTimePeriod granularityPeriod) {
     this.granularityPeriod = granularityPeriod;
@@ -55,33 +82,6 @@ public class TapiOamPmThresholdData extends TapiCommonLocalClass  {
     this.granularityPeriod = granularityPeriod;
   }
 
-  public TapiOamPmThresholdData thresholdParameter(List<TapiOamThresholdParameter> thresholdParameter) {
-    this.thresholdParameter = thresholdParameter;
-    return this;
-  }
-
-  public TapiOamPmThresholdData addThresholdParameterItem(TapiOamThresholdParameter thresholdParameterItem) {
-    if (this.thresholdParameter == null) {
-      this.thresholdParameter = new ArrayList<TapiOamThresholdParameter>();
-    }
-    this.thresholdParameter.add(thresholdParameterItem);
-    return this;
-  }
-
-  /**
-   * none
-   * @return thresholdParameter
-  **/
-  @ApiModelProperty(value = "none")
-  @Valid
-  public List<TapiOamThresholdParameter> getThresholdParameter() {
-    return thresholdParameter;
-  }
-
-  public void setThresholdParameter(List<TapiOamThresholdParameter> thresholdParameter) {
-    this.thresholdParameter = thresholdParameter;
-  }
-
   public TapiOamPmThresholdData isTransient(Boolean isTransient) {
     this.isTransient = isTransient;
     return this;
@@ -101,31 +101,31 @@ public class TapiOamPmThresholdData extends TapiCommonLocalClass  {
     this.isTransient = isTransient;
   }
 
-  public TapiOamPmThresholdData applicableJobType(List<String> applicableJobType) {
-    this.applicableJobType = applicableJobType;
+  public TapiOamPmThresholdData thresholdParameter(List<TapiOamThresholdParameter> thresholdParameter) {
+    this.thresholdParameter = thresholdParameter;
     return this;
   }
 
-  public TapiOamPmThresholdData addApplicableJobTypeItem(String applicableJobTypeItem) {
-    if (this.applicableJobType == null) {
-      this.applicableJobType = new ArrayList<String>();
+  public TapiOamPmThresholdData addThresholdParameterItem(TapiOamThresholdParameter thresholdParameterItem) {
+    if (this.thresholdParameter == null) {
+      this.thresholdParameter = new ArrayList<>();
     }
-    this.applicableJobType.add(applicableJobTypeItem);
+    this.thresholdParameter.add(thresholdParameterItem);
     return this;
   }
 
   /**
-   * This attribute allows an PMThresholdData instance to be constrained to specific job types. If an PMThresholdData instance is so configured to be applicable to more than one job type (worst case ALL), only the parameters relevant for the job instance will be used (non-applicable profile parameters will be ignored)
-   * @return applicableJobType
+   * none
+   * @return thresholdParameter
   **/
-  @ApiModelProperty(value = "This attribute allows an PMThresholdData instance to be constrained to specific job types. If an PMThresholdData instance is so configured to be applicable to more than one job type (worst case ALL), only the parameters relevant for the job instance will be used (non-applicable profile parameters will be ignored)")
-
-  public List<String> getApplicableJobType() {
-    return applicableJobType;
+  @ApiModelProperty(value = "none")
+  @Valid
+  public List<TapiOamThresholdParameter> getThresholdParameter() {
+    return thresholdParameter;
   }
 
-  public void setApplicableJobType(List<String> applicableJobType) {
-    this.applicableJobType = applicableJobType;
+  public void setThresholdParameter(List<TapiOamThresholdParameter> thresholdParameter) {
+    this.thresholdParameter = thresholdParameter;
   }
 
 
@@ -138,16 +138,16 @@ public class TapiOamPmThresholdData extends TapiCommonLocalClass  {
       return false;
     }
     TapiOamPmThresholdData tapiOamPmThresholdData = (TapiOamPmThresholdData) o;
-    return Objects.equals(this.granularityPeriod, tapiOamPmThresholdData.granularityPeriod) &&
-        Objects.equals(this.thresholdParameter, tapiOamPmThresholdData.thresholdParameter) &&
+    return Objects.equals(this.applicableJobType, tapiOamPmThresholdData.applicableJobType) &&
+        Objects.equals(this.granularityPeriod, tapiOamPmThresholdData.granularityPeriod) &&
         Objects.equals(this.isTransient, tapiOamPmThresholdData.isTransient) &&
-        Objects.equals(this.applicableJobType, tapiOamPmThresholdData.applicableJobType) &&
+        Objects.equals(this.thresholdParameter, tapiOamPmThresholdData.thresholdParameter) &&
         super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(granularityPeriod, thresholdParameter, isTransient, applicableJobType, super.hashCode());
+    return Objects.hash(applicableJobType, granularityPeriod, isTransient, thresholdParameter, super.hashCode());
   }
 
   @Override
@@ -155,10 +155,10 @@ public class TapiOamPmThresholdData extends TapiCommonLocalClass  {
     StringBuilder sb = new StringBuilder();
     sb.append("class TapiOamPmThresholdData {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    granularityPeriod: ").append(toIndentedString(granularityPeriod)).append("\n");
-    sb.append("    thresholdParameter: ").append(toIndentedString(thresholdParameter)).append("\n");
-    sb.append("    isTransient: ").append(toIndentedString(isTransient)).append("\n");
     sb.append("    applicableJobType: ").append(toIndentedString(applicableJobType)).append("\n");
+    sb.append("    granularityPeriod: ").append(toIndentedString(granularityPeriod)).append("\n");
+    sb.append("    isTransient: ").append(toIndentedString(isTransient)).append("\n");
+    sb.append("    thresholdParameter: ").append(toIndentedString(thresholdParameter)).append("\n");
     sb.append("}");
     return sb.toString();
   }

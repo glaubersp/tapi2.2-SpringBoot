@@ -13,100 +13,43 @@ import javax.validation.constraints.*;
  * TapiPhotonicMediaTotalPowerThresholdPac
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiPhotonicMediaTotalPowerThresholdPac   {
-  @JsonProperty("total-power-upper-warn-threshold-default")
-  private String totalPowerUpperWarnThresholdDefault = null;
-
-  @JsonProperty("total-power-lower-warn-threshold-min")
-  private String totalPowerLowerWarnThresholdMin = null;
-
-  @JsonProperty("total-power-upper-warn-threshold-min")
-  private String totalPowerUpperWarnThresholdMin = null;
-
-  @JsonProperty("total-power-upper-warn-threshold-max")
-  private String totalPowerUpperWarnThresholdMax = null;
+  @JsonProperty("total-power-lower-warn-threshold-default")
+  private String totalPowerLowerWarnThresholdDefault = null;
 
   @JsonProperty("total-power-lower-warn-threshold-max")
   private String totalPowerLowerWarnThresholdMax = null;
 
-  @JsonProperty("total-power-lower-warn-threshold-default")
-  private String totalPowerLowerWarnThresholdDefault = null;
+  @JsonProperty("total-power-lower-warn-threshold-min")
+  private String totalPowerLowerWarnThresholdMin = null;
 
-  public TapiPhotonicMediaTotalPowerThresholdPac totalPowerUpperWarnThresholdDefault(String totalPowerUpperWarnThresholdDefault) {
-    this.totalPowerUpperWarnThresholdDefault = totalPowerUpperWarnThresholdDefault;
+  @JsonProperty("total-power-upper-warn-threshold-default")
+  private String totalPowerUpperWarnThresholdDefault = null;
+
+  @JsonProperty("total-power-upper-warn-threshold-max")
+  private String totalPowerUpperWarnThresholdMax = null;
+
+  @JsonProperty("total-power-upper-warn-threshold-min")
+  private String totalPowerUpperWarnThresholdMin = null;
+
+  public TapiPhotonicMediaTotalPowerThresholdPac totalPowerLowerWarnThresholdDefault(String totalPowerLowerWarnThresholdDefault) {
+    this.totalPowerLowerWarnThresholdDefault = totalPowerLowerWarnThresholdDefault;
     return this;
   }
 
   /**
    * Can read the value of the default  threshold that was set
-   * @return totalPowerUpperWarnThresholdDefault
+   * @return totalPowerLowerWarnThresholdDefault
   **/
   @ApiModelProperty(value = "Can read the value of the default  threshold that was set")
 
-  public String getTotalPowerUpperWarnThresholdDefault() {
-    return totalPowerUpperWarnThresholdDefault;
+  public String getTotalPowerLowerWarnThresholdDefault() {
+    return totalPowerLowerWarnThresholdDefault;
   }
 
-  public void setTotalPowerUpperWarnThresholdDefault(String totalPowerUpperWarnThresholdDefault) {
-    this.totalPowerUpperWarnThresholdDefault = totalPowerUpperWarnThresholdDefault;
-  }
-
-  public TapiPhotonicMediaTotalPowerThresholdPac totalPowerLowerWarnThresholdMin(String totalPowerLowerWarnThresholdMin) {
-    this.totalPowerLowerWarnThresholdMin = totalPowerLowerWarnThresholdMin;
-    return this;
-  }
-
-  /**
-   * Can read the value of the lower threshold that was set
-   * @return totalPowerLowerWarnThresholdMin
-  **/
-  @ApiModelProperty(value = "Can read the value of the lower threshold that was set")
-
-  public String getTotalPowerLowerWarnThresholdMin() {
-    return totalPowerLowerWarnThresholdMin;
-  }
-
-  public void setTotalPowerLowerWarnThresholdMin(String totalPowerLowerWarnThresholdMin) {
-    this.totalPowerLowerWarnThresholdMin = totalPowerLowerWarnThresholdMin;
-  }
-
-  public TapiPhotonicMediaTotalPowerThresholdPac totalPowerUpperWarnThresholdMin(String totalPowerUpperWarnThresholdMin) {
-    this.totalPowerUpperWarnThresholdMin = totalPowerUpperWarnThresholdMin;
-    return this;
-  }
-
-  /**
-   * Can read the value of the lower threshold that was set
-   * @return totalPowerUpperWarnThresholdMin
-  **/
-  @ApiModelProperty(value = "Can read the value of the lower threshold that was set")
-
-  public String getTotalPowerUpperWarnThresholdMin() {
-    return totalPowerUpperWarnThresholdMin;
-  }
-
-  public void setTotalPowerUpperWarnThresholdMin(String totalPowerUpperWarnThresholdMin) {
-    this.totalPowerUpperWarnThresholdMin = totalPowerUpperWarnThresholdMin;
-  }
-
-  public TapiPhotonicMediaTotalPowerThresholdPac totalPowerUpperWarnThresholdMax(String totalPowerUpperWarnThresholdMax) {
-    this.totalPowerUpperWarnThresholdMax = totalPowerUpperWarnThresholdMax;
-    return this;
-  }
-
-  /**
-   * Can  read the value of the upper threshold that was set
-   * @return totalPowerUpperWarnThresholdMax
-  **/
-  @ApiModelProperty(value = "Can  read the value of the upper threshold that was set")
-
-  public String getTotalPowerUpperWarnThresholdMax() {
-    return totalPowerUpperWarnThresholdMax;
-  }
-
-  public void setTotalPowerUpperWarnThresholdMax(String totalPowerUpperWarnThresholdMax) {
-    this.totalPowerUpperWarnThresholdMax = totalPowerUpperWarnThresholdMax;
+  public void setTotalPowerLowerWarnThresholdDefault(String totalPowerLowerWarnThresholdDefault) {
+    this.totalPowerLowerWarnThresholdDefault = totalPowerLowerWarnThresholdDefault;
   }
 
   public TapiPhotonicMediaTotalPowerThresholdPac totalPowerLowerWarnThresholdMax(String totalPowerLowerWarnThresholdMax) {
@@ -128,23 +71,80 @@ public class TapiPhotonicMediaTotalPowerThresholdPac   {
     this.totalPowerLowerWarnThresholdMax = totalPowerLowerWarnThresholdMax;
   }
 
-  public TapiPhotonicMediaTotalPowerThresholdPac totalPowerLowerWarnThresholdDefault(String totalPowerLowerWarnThresholdDefault) {
-    this.totalPowerLowerWarnThresholdDefault = totalPowerLowerWarnThresholdDefault;
+  public TapiPhotonicMediaTotalPowerThresholdPac totalPowerLowerWarnThresholdMin(String totalPowerLowerWarnThresholdMin) {
+    this.totalPowerLowerWarnThresholdMin = totalPowerLowerWarnThresholdMin;
+    return this;
+  }
+
+  /**
+   * Can read the value of the lower threshold that was set
+   * @return totalPowerLowerWarnThresholdMin
+  **/
+  @ApiModelProperty(value = "Can read the value of the lower threshold that was set")
+
+  public String getTotalPowerLowerWarnThresholdMin() {
+    return totalPowerLowerWarnThresholdMin;
+  }
+
+  public void setTotalPowerLowerWarnThresholdMin(String totalPowerLowerWarnThresholdMin) {
+    this.totalPowerLowerWarnThresholdMin = totalPowerLowerWarnThresholdMin;
+  }
+
+  public TapiPhotonicMediaTotalPowerThresholdPac totalPowerUpperWarnThresholdDefault(String totalPowerUpperWarnThresholdDefault) {
+    this.totalPowerUpperWarnThresholdDefault = totalPowerUpperWarnThresholdDefault;
     return this;
   }
 
   /**
    * Can read the value of the default  threshold that was set
-   * @return totalPowerLowerWarnThresholdDefault
+   * @return totalPowerUpperWarnThresholdDefault
   **/
   @ApiModelProperty(value = "Can read the value of the default  threshold that was set")
 
-  public String getTotalPowerLowerWarnThresholdDefault() {
-    return totalPowerLowerWarnThresholdDefault;
+  public String getTotalPowerUpperWarnThresholdDefault() {
+    return totalPowerUpperWarnThresholdDefault;
   }
 
-  public void setTotalPowerLowerWarnThresholdDefault(String totalPowerLowerWarnThresholdDefault) {
-    this.totalPowerLowerWarnThresholdDefault = totalPowerLowerWarnThresholdDefault;
+  public void setTotalPowerUpperWarnThresholdDefault(String totalPowerUpperWarnThresholdDefault) {
+    this.totalPowerUpperWarnThresholdDefault = totalPowerUpperWarnThresholdDefault;
+  }
+
+  public TapiPhotonicMediaTotalPowerThresholdPac totalPowerUpperWarnThresholdMax(String totalPowerUpperWarnThresholdMax) {
+    this.totalPowerUpperWarnThresholdMax = totalPowerUpperWarnThresholdMax;
+    return this;
+  }
+
+  /**
+   * Can  read the value of the upper threshold that was set
+   * @return totalPowerUpperWarnThresholdMax
+  **/
+  @ApiModelProperty(value = "Can  read the value of the upper threshold that was set")
+
+  public String getTotalPowerUpperWarnThresholdMax() {
+    return totalPowerUpperWarnThresholdMax;
+  }
+
+  public void setTotalPowerUpperWarnThresholdMax(String totalPowerUpperWarnThresholdMax) {
+    this.totalPowerUpperWarnThresholdMax = totalPowerUpperWarnThresholdMax;
+  }
+
+  public TapiPhotonicMediaTotalPowerThresholdPac totalPowerUpperWarnThresholdMin(String totalPowerUpperWarnThresholdMin) {
+    this.totalPowerUpperWarnThresholdMin = totalPowerUpperWarnThresholdMin;
+    return this;
+  }
+
+  /**
+   * Can read the value of the lower threshold that was set
+   * @return totalPowerUpperWarnThresholdMin
+  **/
+  @ApiModelProperty(value = "Can read the value of the lower threshold that was set")
+
+  public String getTotalPowerUpperWarnThresholdMin() {
+    return totalPowerUpperWarnThresholdMin;
+  }
+
+  public void setTotalPowerUpperWarnThresholdMin(String totalPowerUpperWarnThresholdMin) {
+    this.totalPowerUpperWarnThresholdMin = totalPowerUpperWarnThresholdMin;
   }
 
 
@@ -157,17 +157,17 @@ public class TapiPhotonicMediaTotalPowerThresholdPac   {
       return false;
     }
     TapiPhotonicMediaTotalPowerThresholdPac tapiPhotonicMediaTotalPowerThresholdPac = (TapiPhotonicMediaTotalPowerThresholdPac) o;
-    return Objects.equals(this.totalPowerUpperWarnThresholdDefault, tapiPhotonicMediaTotalPowerThresholdPac.totalPowerUpperWarnThresholdDefault) &&
-        Objects.equals(this.totalPowerLowerWarnThresholdMin, tapiPhotonicMediaTotalPowerThresholdPac.totalPowerLowerWarnThresholdMin) &&
-        Objects.equals(this.totalPowerUpperWarnThresholdMin, tapiPhotonicMediaTotalPowerThresholdPac.totalPowerUpperWarnThresholdMin) &&
-        Objects.equals(this.totalPowerUpperWarnThresholdMax, tapiPhotonicMediaTotalPowerThresholdPac.totalPowerUpperWarnThresholdMax) &&
+    return Objects.equals(this.totalPowerLowerWarnThresholdDefault, tapiPhotonicMediaTotalPowerThresholdPac.totalPowerLowerWarnThresholdDefault) &&
         Objects.equals(this.totalPowerLowerWarnThresholdMax, tapiPhotonicMediaTotalPowerThresholdPac.totalPowerLowerWarnThresholdMax) &&
-        Objects.equals(this.totalPowerLowerWarnThresholdDefault, tapiPhotonicMediaTotalPowerThresholdPac.totalPowerLowerWarnThresholdDefault);
+        Objects.equals(this.totalPowerLowerWarnThresholdMin, tapiPhotonicMediaTotalPowerThresholdPac.totalPowerLowerWarnThresholdMin) &&
+        Objects.equals(this.totalPowerUpperWarnThresholdDefault, tapiPhotonicMediaTotalPowerThresholdPac.totalPowerUpperWarnThresholdDefault) &&
+        Objects.equals(this.totalPowerUpperWarnThresholdMax, tapiPhotonicMediaTotalPowerThresholdPac.totalPowerUpperWarnThresholdMax) &&
+        Objects.equals(this.totalPowerUpperWarnThresholdMin, tapiPhotonicMediaTotalPowerThresholdPac.totalPowerUpperWarnThresholdMin);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(totalPowerUpperWarnThresholdDefault, totalPowerLowerWarnThresholdMin, totalPowerUpperWarnThresholdMin, totalPowerUpperWarnThresholdMax, totalPowerLowerWarnThresholdMax, totalPowerLowerWarnThresholdDefault);
+    return Objects.hash(totalPowerLowerWarnThresholdDefault, totalPowerLowerWarnThresholdMax, totalPowerLowerWarnThresholdMin, totalPowerUpperWarnThresholdDefault, totalPowerUpperWarnThresholdMax, totalPowerUpperWarnThresholdMin);
   }
 
   @Override
@@ -175,12 +175,12 @@ public class TapiPhotonicMediaTotalPowerThresholdPac   {
     StringBuilder sb = new StringBuilder();
     sb.append("class TapiPhotonicMediaTotalPowerThresholdPac {\n");
     
-    sb.append("    totalPowerUpperWarnThresholdDefault: ").append(toIndentedString(totalPowerUpperWarnThresholdDefault)).append("\n");
-    sb.append("    totalPowerLowerWarnThresholdMin: ").append(toIndentedString(totalPowerLowerWarnThresholdMin)).append("\n");
-    sb.append("    totalPowerUpperWarnThresholdMin: ").append(toIndentedString(totalPowerUpperWarnThresholdMin)).append("\n");
-    sb.append("    totalPowerUpperWarnThresholdMax: ").append(toIndentedString(totalPowerUpperWarnThresholdMax)).append("\n");
-    sb.append("    totalPowerLowerWarnThresholdMax: ").append(toIndentedString(totalPowerLowerWarnThresholdMax)).append("\n");
     sb.append("    totalPowerLowerWarnThresholdDefault: ").append(toIndentedString(totalPowerLowerWarnThresholdDefault)).append("\n");
+    sb.append("    totalPowerLowerWarnThresholdMax: ").append(toIndentedString(totalPowerLowerWarnThresholdMax)).append("\n");
+    sb.append("    totalPowerLowerWarnThresholdMin: ").append(toIndentedString(totalPowerLowerWarnThresholdMin)).append("\n");
+    sb.append("    totalPowerUpperWarnThresholdDefault: ").append(toIndentedString(totalPowerUpperWarnThresholdDefault)).append("\n");
+    sb.append("    totalPowerUpperWarnThresholdMax: ").append(toIndentedString(totalPowerUpperWarnThresholdMax)).append("\n");
+    sb.append("    totalPowerUpperWarnThresholdMin: ").append(toIndentedString(totalPowerUpperWarnThresholdMin)).append("\n");
     sb.append("}");
     return sb.toString();
   }

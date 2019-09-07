@@ -15,19 +15,58 @@ import javax.validation.constraints.*;
  * TapiEthEthMepSource
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiEthEthMepSource   {
+  @JsonProperty("aps-priority")
+  private Integer apsPriority = 7;
+
+  @JsonProperty("csf-config")
+  private TapiEthCsfConfig csfConfig = null;
+
   @JsonProperty("csf-period")
   private TapiEthOamPeriod csfPeriod = null;
 
   @JsonProperty("csf-priority")
   private Integer csfPriority = 7;
 
-  @JsonProperty("csf-config")
-  private TapiEthCsfConfig csfConfig = null;
+  public TapiEthEthMepSource apsPriority(Integer apsPriority) {
+    this.apsPriority = apsPriority;
+    return this;
+  }
 
-  @JsonProperty("aps-priority")
-  private Integer apsPriority = 7;
+  /**
+   * This attribute specifies the priority of the APS messages.                  See section 8.1.5    APS insert process in G.8021.
+   * @return apsPriority
+  **/
+  @ApiModelProperty(value = "This attribute specifies the priority of the APS messages.                  See section 8.1.5    APS insert process in G.8021.")
+
+  public Integer getApsPriority() {
+    return apsPriority;
+  }
+
+  public void setApsPriority(Integer apsPriority) {
+    this.apsPriority = apsPriority;
+  }
+
+  public TapiEthEthMepSource csfConfig(TapiEthCsfConfig csfConfig) {
+    this.csfConfig = csfConfig;
+    return this;
+  }
+
+  /**
+   * Get csfConfig
+   * @return csfConfig
+  **/
+  @ApiModelProperty(value = "")
+
+  @Valid
+  public TapiEthCsfConfig getCsfConfig() {
+    return csfConfig;
+  }
+
+  public void setCsfConfig(TapiEthCsfConfig csfConfig) {
+    this.csfConfig = csfConfig;
+  }
 
   public TapiEthEthMepSource csfPeriod(TapiEthOamPeriod csfPeriod) {
     this.csfPeriod = csfPeriod;
@@ -68,45 +107,6 @@ public class TapiEthEthMepSource   {
     this.csfPriority = csfPriority;
   }
 
-  public TapiEthEthMepSource csfConfig(TapiEthCsfConfig csfConfig) {
-    this.csfConfig = csfConfig;
-    return this;
-  }
-
-  /**
-   * Get csfConfig
-   * @return csfConfig
-  **/
-  @ApiModelProperty(value = "")
-
-  @Valid
-  public TapiEthCsfConfig getCsfConfig() {
-    return csfConfig;
-  }
-
-  public void setCsfConfig(TapiEthCsfConfig csfConfig) {
-    this.csfConfig = csfConfig;
-  }
-
-  public TapiEthEthMepSource apsPriority(Integer apsPriority) {
-    this.apsPriority = apsPriority;
-    return this;
-  }
-
-  /**
-   * This attribute specifies the priority of the APS messages.                  See section 8.1.5    APS insert process in G.8021.
-   * @return apsPriority
-  **/
-  @ApiModelProperty(value = "This attribute specifies the priority of the APS messages.                  See section 8.1.5    APS insert process in G.8021.")
-
-  public Integer getApsPriority() {
-    return apsPriority;
-  }
-
-  public void setApsPriority(Integer apsPriority) {
-    this.apsPriority = apsPriority;
-  }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -117,15 +117,15 @@ public class TapiEthEthMepSource   {
       return false;
     }
     TapiEthEthMepSource tapiEthEthMepSource = (TapiEthEthMepSource) o;
-    return Objects.equals(this.csfPeriod, tapiEthEthMepSource.csfPeriod) &&
-        Objects.equals(this.csfPriority, tapiEthEthMepSource.csfPriority) &&
+    return Objects.equals(this.apsPriority, tapiEthEthMepSource.apsPriority) &&
         Objects.equals(this.csfConfig, tapiEthEthMepSource.csfConfig) &&
-        Objects.equals(this.apsPriority, tapiEthEthMepSource.apsPriority);
+        Objects.equals(this.csfPeriod, tapiEthEthMepSource.csfPeriod) &&
+        Objects.equals(this.csfPriority, tapiEthEthMepSource.csfPriority);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(csfPeriod, csfPriority, csfConfig, apsPriority);
+    return Objects.hash(apsPriority, csfConfig, csfPeriod, csfPriority);
   }
 
   @Override
@@ -133,10 +133,10 @@ public class TapiEthEthMepSource   {
     StringBuilder sb = new StringBuilder();
     sb.append("class TapiEthEthMepSource {\n");
     
+    sb.append("    apsPriority: ").append(toIndentedString(apsPriority)).append("\n");
+    sb.append("    csfConfig: ").append(toIndentedString(csfConfig)).append("\n");
     sb.append("    csfPeriod: ").append(toIndentedString(csfPeriod)).append("\n");
     sb.append("    csfPriority: ").append(toIndentedString(csfPriority)).append("\n");
-    sb.append("    csfConfig: ").append(toIndentedString(csfConfig)).append("\n");
-    sb.append("    apsPriority: ").append(toIndentedString(apsPriority)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -17,42 +17,22 @@ import javax.validation.constraints.*;
  * TapiPathComputationPathObjectiveFunction
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiPathComputationPathObjectiveFunction extends TapiCommonLocalClass  {
-  @JsonProperty("link-utilization")
-  private TapiCommonDirectiveValue linkUtilization = null;
-
   @JsonProperty("bandwidth-optimization")
   private TapiCommonDirectiveValue bandwidthOptimization = null;
-
-  @JsonProperty("cost-optimization")
-  private TapiCommonDirectiveValue costOptimization = null;
-
-  @JsonProperty("resource-sharing")
-  private TapiCommonDirectiveValue resourceSharing = null;
 
   @JsonProperty("concurrent-paths")
   private TapiCommonDirectiveValue concurrentPaths = null;
 
-  public TapiPathComputationPathObjectiveFunction linkUtilization(TapiCommonDirectiveValue linkUtilization) {
-    this.linkUtilization = linkUtilization;
-    return this;
-  }
+  @JsonProperty("cost-optimization")
+  private TapiCommonDirectiveValue costOptimization = null;
 
-  /**
-   * Get linkUtilization
-   * @return linkUtilization
-  **/
-  @ApiModelProperty(value = "")
+  @JsonProperty("link-utilization")
+  private TapiCommonDirectiveValue linkUtilization = null;
 
-  @Valid
-  public TapiCommonDirectiveValue getLinkUtilization() {
-    return linkUtilization;
-  }
-
-  public void setLinkUtilization(TapiCommonDirectiveValue linkUtilization) {
-    this.linkUtilization = linkUtilization;
-  }
+  @JsonProperty("resource-sharing")
+  private TapiCommonDirectiveValue resourceSharing = null;
 
   public TapiPathComputationPathObjectiveFunction bandwidthOptimization(TapiCommonDirectiveValue bandwidthOptimization) {
     this.bandwidthOptimization = bandwidthOptimization;
@@ -72,46 +52,6 @@ public class TapiPathComputationPathObjectiveFunction extends TapiCommonLocalCla
 
   public void setBandwidthOptimization(TapiCommonDirectiveValue bandwidthOptimization) {
     this.bandwidthOptimization = bandwidthOptimization;
-  }
-
-  public TapiPathComputationPathObjectiveFunction costOptimization(TapiCommonDirectiveValue costOptimization) {
-    this.costOptimization = costOptimization;
-    return this;
-  }
-
-  /**
-   * Get costOptimization
-   * @return costOptimization
-  **/
-  @ApiModelProperty(value = "")
-
-  @Valid
-  public TapiCommonDirectiveValue getCostOptimization() {
-    return costOptimization;
-  }
-
-  public void setCostOptimization(TapiCommonDirectiveValue costOptimization) {
-    this.costOptimization = costOptimization;
-  }
-
-  public TapiPathComputationPathObjectiveFunction resourceSharing(TapiCommonDirectiveValue resourceSharing) {
-    this.resourceSharing = resourceSharing;
-    return this;
-  }
-
-  /**
-   * Get resourceSharing
-   * @return resourceSharing
-  **/
-  @ApiModelProperty(value = "")
-
-  @Valid
-  public TapiCommonDirectiveValue getResourceSharing() {
-    return resourceSharing;
-  }
-
-  public void setResourceSharing(TapiCommonDirectiveValue resourceSharing) {
-    this.resourceSharing = resourceSharing;
   }
 
   public TapiPathComputationPathObjectiveFunction concurrentPaths(TapiCommonDirectiveValue concurrentPaths) {
@@ -134,6 +74,66 @@ public class TapiPathComputationPathObjectiveFunction extends TapiCommonLocalCla
     this.concurrentPaths = concurrentPaths;
   }
 
+  public TapiPathComputationPathObjectiveFunction costOptimization(TapiCommonDirectiveValue costOptimization) {
+    this.costOptimization = costOptimization;
+    return this;
+  }
+
+  /**
+   * Get costOptimization
+   * @return costOptimization
+  **/
+  @ApiModelProperty(value = "")
+
+  @Valid
+  public TapiCommonDirectiveValue getCostOptimization() {
+    return costOptimization;
+  }
+
+  public void setCostOptimization(TapiCommonDirectiveValue costOptimization) {
+    this.costOptimization = costOptimization;
+  }
+
+  public TapiPathComputationPathObjectiveFunction linkUtilization(TapiCommonDirectiveValue linkUtilization) {
+    this.linkUtilization = linkUtilization;
+    return this;
+  }
+
+  /**
+   * Get linkUtilization
+   * @return linkUtilization
+  **/
+  @ApiModelProperty(value = "")
+
+  @Valid
+  public TapiCommonDirectiveValue getLinkUtilization() {
+    return linkUtilization;
+  }
+
+  public void setLinkUtilization(TapiCommonDirectiveValue linkUtilization) {
+    this.linkUtilization = linkUtilization;
+  }
+
+  public TapiPathComputationPathObjectiveFunction resourceSharing(TapiCommonDirectiveValue resourceSharing) {
+    this.resourceSharing = resourceSharing;
+    return this;
+  }
+
+  /**
+   * Get resourceSharing
+   * @return resourceSharing
+  **/
+  @ApiModelProperty(value = "")
+
+  @Valid
+  public TapiCommonDirectiveValue getResourceSharing() {
+    return resourceSharing;
+  }
+
+  public void setResourceSharing(TapiCommonDirectiveValue resourceSharing) {
+    this.resourceSharing = resourceSharing;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -144,17 +144,17 @@ public class TapiPathComputationPathObjectiveFunction extends TapiCommonLocalCla
       return false;
     }
     TapiPathComputationPathObjectiveFunction tapiPathComputationPathObjectiveFunction = (TapiPathComputationPathObjectiveFunction) o;
-    return Objects.equals(this.linkUtilization, tapiPathComputationPathObjectiveFunction.linkUtilization) &&
-        Objects.equals(this.bandwidthOptimization, tapiPathComputationPathObjectiveFunction.bandwidthOptimization) &&
-        Objects.equals(this.costOptimization, tapiPathComputationPathObjectiveFunction.costOptimization) &&
-        Objects.equals(this.resourceSharing, tapiPathComputationPathObjectiveFunction.resourceSharing) &&
+    return Objects.equals(this.bandwidthOptimization, tapiPathComputationPathObjectiveFunction.bandwidthOptimization) &&
         Objects.equals(this.concurrentPaths, tapiPathComputationPathObjectiveFunction.concurrentPaths) &&
+        Objects.equals(this.costOptimization, tapiPathComputationPathObjectiveFunction.costOptimization) &&
+        Objects.equals(this.linkUtilization, tapiPathComputationPathObjectiveFunction.linkUtilization) &&
+        Objects.equals(this.resourceSharing, tapiPathComputationPathObjectiveFunction.resourceSharing) &&
         super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(linkUtilization, bandwidthOptimization, costOptimization, resourceSharing, concurrentPaths, super.hashCode());
+    return Objects.hash(bandwidthOptimization, concurrentPaths, costOptimization, linkUtilization, resourceSharing, super.hashCode());
   }
 
   @Override
@@ -162,11 +162,11 @@ public class TapiPathComputationPathObjectiveFunction extends TapiCommonLocalCla
     StringBuilder sb = new StringBuilder();
     sb.append("class TapiPathComputationPathObjectiveFunction {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    linkUtilization: ").append(toIndentedString(linkUtilization)).append("\n");
     sb.append("    bandwidthOptimization: ").append(toIndentedString(bandwidthOptimization)).append("\n");
-    sb.append("    costOptimization: ").append(toIndentedString(costOptimization)).append("\n");
-    sb.append("    resourceSharing: ").append(toIndentedString(resourceSharing)).append("\n");
     sb.append("    concurrentPaths: ").append(toIndentedString(concurrentPaths)).append("\n");
+    sb.append("    costOptimization: ").append(toIndentedString(costOptimization)).append("\n");
+    sb.append("    linkUtilization: ").append(toIndentedString(linkUtilization)).append("\n");
+    sb.append("    resourceSharing: ").append(toIndentedString(resourceSharing)).append("\n");
     sb.append("}");
     return sb.toString();
   }

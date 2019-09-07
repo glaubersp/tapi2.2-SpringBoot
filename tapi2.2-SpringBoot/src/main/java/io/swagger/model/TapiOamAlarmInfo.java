@@ -15,8 +15,11 @@ import javax.validation.constraints.*;
  * TapiOamAlarmInfo
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiOamAlarmInfo   {
+  @JsonProperty("is-transient")
+  private Boolean isTransient = false;
+
   @JsonProperty("perceived-severity")
   private TapiOamPerceivedSeverityType perceivedSeverity = null;
 
@@ -26,8 +29,24 @@ public class TapiOamAlarmInfo   {
   @JsonProperty("service-affecting")
   private TapiOamServiceAffecting serviceAffecting = null;
 
-  @JsonProperty("is-transient")
-  private Boolean isTransient = false;
+  public TapiOamAlarmInfo isTransient(Boolean isTransient) {
+    this.isTransient = isTransient;
+    return this;
+  }
+
+  /**
+   * none
+   * @return isTransient
+  **/
+  @ApiModelProperty(value = "none")
+
+  public Boolean isIsTransient() {
+    return isTransient;
+  }
+
+  public void setIsTransient(Boolean isTransient) {
+    this.isTransient = isTransient;
+  }
 
   public TapiOamAlarmInfo perceivedSeverity(TapiOamPerceivedSeverityType perceivedSeverity) {
     this.perceivedSeverity = perceivedSeverity;
@@ -88,25 +107,6 @@ public class TapiOamAlarmInfo   {
     this.serviceAffecting = serviceAffecting;
   }
 
-  public TapiOamAlarmInfo isTransient(Boolean isTransient) {
-    this.isTransient = isTransient;
-    return this;
-  }
-
-  /**
-   * none
-   * @return isTransient
-  **/
-  @ApiModelProperty(value = "none")
-
-  public Boolean isIsTransient() {
-    return isTransient;
-  }
-
-  public void setIsTransient(Boolean isTransient) {
-    this.isTransient = isTransient;
-  }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -117,15 +117,15 @@ public class TapiOamAlarmInfo   {
       return false;
     }
     TapiOamAlarmInfo tapiOamAlarmInfo = (TapiOamAlarmInfo) o;
-    return Objects.equals(this.perceivedSeverity, tapiOamAlarmInfo.perceivedSeverity) &&
+    return Objects.equals(this.isTransient, tapiOamAlarmInfo.isTransient) &&
+        Objects.equals(this.perceivedSeverity, tapiOamAlarmInfo.perceivedSeverity) &&
         Objects.equals(this.probableCause, tapiOamAlarmInfo.probableCause) &&
-        Objects.equals(this.serviceAffecting, tapiOamAlarmInfo.serviceAffecting) &&
-        Objects.equals(this.isTransient, tapiOamAlarmInfo.isTransient);
+        Objects.equals(this.serviceAffecting, tapiOamAlarmInfo.serviceAffecting);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(perceivedSeverity, probableCause, serviceAffecting, isTransient);
+    return Objects.hash(isTransient, perceivedSeverity, probableCause, serviceAffecting);
   }
 
   @Override
@@ -133,10 +133,10 @@ public class TapiOamAlarmInfo   {
     StringBuilder sb = new StringBuilder();
     sb.append("class TapiOamAlarmInfo {\n");
     
+    sb.append("    isTransient: ").append(toIndentedString(isTransient)).append("\n");
     sb.append("    perceivedSeverity: ").append(toIndentedString(perceivedSeverity)).append("\n");
     sb.append("    probableCause: ").append(toIndentedString(probableCause)).append("\n");
     sb.append("    serviceAffecting: ").append(toIndentedString(serviceAffecting)).append("\n");
-    sb.append("    isTransient: ").append(toIndentedString(isTransient)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -15,7 +15,7 @@ import javax.validation.constraints.*;
  * TapiOduOduCtpPac
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiOduOduCtpPac   {
   @JsonProperty("accepted-msi")
   private String acceptedMsi = null;
@@ -72,7 +72,7 @@ public class TapiOduOduCtpPac   {
 
   public TapiOduOduCtpPac addTributarySlotListItem(Integer tributarySlotListItem) {
     if (this.tributarySlotList == null) {
-      this.tributarySlotList = new ArrayList<Integer>();
+      this.tributarySlotList = new ArrayList<>();
     }
     this.tributarySlotList.add(tributarySlotListItem);
     return this;

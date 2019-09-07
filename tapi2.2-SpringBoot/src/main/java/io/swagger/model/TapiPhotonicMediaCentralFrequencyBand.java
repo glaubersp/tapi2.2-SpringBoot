@@ -14,54 +14,16 @@ import javax.validation.constraints.*;
  * TapiPhotonicMediaCentralFrequencyBand
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiPhotonicMediaCentralFrequencyBand   {
-  @JsonProperty("upper-central-frequency")
-  private Integer upperCentralFrequency = null;
+  @JsonProperty("frequency-constraint")
+  private TapiPhotonicMediaFrequencyConstraint frequencyConstraint = null;
 
   @JsonProperty("lower-central-frequency")
   private Integer lowerCentralFrequency = null;
 
-  @JsonProperty("frequency-constraint")
-  private TapiPhotonicMediaFrequencyConstraint frequencyConstraint = null;
-
-  public TapiPhotonicMediaCentralFrequencyBand upperCentralFrequency(Integer upperCentralFrequency) {
-    this.upperCentralFrequency = upperCentralFrequency;
-    return this;
-  }
-
-  /**
-   * The upper central frequency that can be tuned in the laser specified in MHz.                  It is the oscillation frequency of the corresponding electromagnetic wave. 
-   * @return upperCentralFrequency
-  **/
-  @ApiModelProperty(value = "The upper central frequency that can be tuned in the laser specified in MHz.                  It is the oscillation frequency of the corresponding electromagnetic wave. ")
-
-  public Integer getUpperCentralFrequency() {
-    return upperCentralFrequency;
-  }
-
-  public void setUpperCentralFrequency(Integer upperCentralFrequency) {
-    this.upperCentralFrequency = upperCentralFrequency;
-  }
-
-  public TapiPhotonicMediaCentralFrequencyBand lowerCentralFrequency(Integer lowerCentralFrequency) {
-    this.lowerCentralFrequency = lowerCentralFrequency;
-    return this;
-  }
-
-  /**
-   * The lower central frequency that can be tuned in the laser specified in MHz.                  It is the oscillation frequency of the corresponding electromagnetic wave. 
-   * @return lowerCentralFrequency
-  **/
-  @ApiModelProperty(value = "The lower central frequency that can be tuned in the laser specified in MHz.                  It is the oscillation frequency of the corresponding electromagnetic wave. ")
-
-  public Integer getLowerCentralFrequency() {
-    return lowerCentralFrequency;
-  }
-
-  public void setLowerCentralFrequency(Integer lowerCentralFrequency) {
-    this.lowerCentralFrequency = lowerCentralFrequency;
-  }
+  @JsonProperty("upper-central-frequency")
+  private Integer upperCentralFrequency = null;
 
   public TapiPhotonicMediaCentralFrequencyBand frequencyConstraint(TapiPhotonicMediaFrequencyConstraint frequencyConstraint) {
     this.frequencyConstraint = frequencyConstraint;
@@ -83,6 +45,44 @@ public class TapiPhotonicMediaCentralFrequencyBand   {
     this.frequencyConstraint = frequencyConstraint;
   }
 
+  public TapiPhotonicMediaCentralFrequencyBand lowerCentralFrequency(Integer lowerCentralFrequency) {
+    this.lowerCentralFrequency = lowerCentralFrequency;
+    return this;
+  }
+
+  /**
+   * The lower central frequency that can be tuned in the laser specified in MHz.                  It is the oscillation frequency of the corresponding electromagnetic wave. 
+   * @return lowerCentralFrequency
+  **/
+  @ApiModelProperty(value = "The lower central frequency that can be tuned in the laser specified in MHz.                  It is the oscillation frequency of the corresponding electromagnetic wave. ")
+
+  public Integer getLowerCentralFrequency() {
+    return lowerCentralFrequency;
+  }
+
+  public void setLowerCentralFrequency(Integer lowerCentralFrequency) {
+    this.lowerCentralFrequency = lowerCentralFrequency;
+  }
+
+  public TapiPhotonicMediaCentralFrequencyBand upperCentralFrequency(Integer upperCentralFrequency) {
+    this.upperCentralFrequency = upperCentralFrequency;
+    return this;
+  }
+
+  /**
+   * The upper central frequency that can be tuned in the laser specified in MHz.                  It is the oscillation frequency of the corresponding electromagnetic wave. 
+   * @return upperCentralFrequency
+  **/
+  @ApiModelProperty(value = "The upper central frequency that can be tuned in the laser specified in MHz.                  It is the oscillation frequency of the corresponding electromagnetic wave. ")
+
+  public Integer getUpperCentralFrequency() {
+    return upperCentralFrequency;
+  }
+
+  public void setUpperCentralFrequency(Integer upperCentralFrequency) {
+    this.upperCentralFrequency = upperCentralFrequency;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -93,14 +93,14 @@ public class TapiPhotonicMediaCentralFrequencyBand   {
       return false;
     }
     TapiPhotonicMediaCentralFrequencyBand tapiPhotonicMediaCentralFrequencyBand = (TapiPhotonicMediaCentralFrequencyBand) o;
-    return Objects.equals(this.upperCentralFrequency, tapiPhotonicMediaCentralFrequencyBand.upperCentralFrequency) &&
+    return Objects.equals(this.frequencyConstraint, tapiPhotonicMediaCentralFrequencyBand.frequencyConstraint) &&
         Objects.equals(this.lowerCentralFrequency, tapiPhotonicMediaCentralFrequencyBand.lowerCentralFrequency) &&
-        Objects.equals(this.frequencyConstraint, tapiPhotonicMediaCentralFrequencyBand.frequencyConstraint);
+        Objects.equals(this.upperCentralFrequency, tapiPhotonicMediaCentralFrequencyBand.upperCentralFrequency);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(upperCentralFrequency, lowerCentralFrequency, frequencyConstraint);
+    return Objects.hash(frequencyConstraint, lowerCentralFrequency, upperCentralFrequency);
   }
 
   @Override
@@ -108,9 +108,9 @@ public class TapiPhotonicMediaCentralFrequencyBand   {
     StringBuilder sb = new StringBuilder();
     sb.append("class TapiPhotonicMediaCentralFrequencyBand {\n");
     
-    sb.append("    upperCentralFrequency: ").append(toIndentedString(upperCentralFrequency)).append("\n");
-    sb.append("    lowerCentralFrequency: ").append(toIndentedString(lowerCentralFrequency)).append("\n");
     sb.append("    frequencyConstraint: ").append(toIndentedString(frequencyConstraint)).append("\n");
+    sb.append("    lowerCentralFrequency: ").append(toIndentedString(lowerCentralFrequency)).append("\n");
+    sb.append("    upperCentralFrequency: ").append(toIndentedString(upperCentralFrequency)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -13,16 +13,16 @@ import javax.validation.constraints.*;
  * TapiOduOduPoolPac
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiOduOduPoolPac   {
   @JsonProperty("client-capacity")
   private Integer clientCapacity = null;
 
-  @JsonProperty("max-client-size")
-  private Integer maxClientSize = null;
-
   @JsonProperty("max-client-instances")
   private Integer maxClientInstances = null;
+
+  @JsonProperty("max-client-size")
+  private Integer maxClientSize = null;
 
   public TapiOduOduPoolPac clientCapacity(Integer clientCapacity) {
     this.clientCapacity = clientCapacity;
@@ -41,25 +41,6 @@ public class TapiOduOduPoolPac   {
 
   public void setClientCapacity(Integer clientCapacity) {
     this.clientCapacity = clientCapacity;
-  }
-
-  public TapiOduOduPoolPac maxClientSize(Integer maxClientSize) {
-    this.maxClientSize = maxClientSize;
-    return this;
-  }
-
-  /**
-   * none
-   * @return maxClientSize
-  **/
-  @ApiModelProperty(value = "none")
-
-  public Integer getMaxClientSize() {
-    return maxClientSize;
-  }
-
-  public void setMaxClientSize(Integer maxClientSize) {
-    this.maxClientSize = maxClientSize;
   }
 
   public TapiOduOduPoolPac maxClientInstances(Integer maxClientInstances) {
@@ -81,6 +62,25 @@ public class TapiOduOduPoolPac   {
     this.maxClientInstances = maxClientInstances;
   }
 
+  public TapiOduOduPoolPac maxClientSize(Integer maxClientSize) {
+    this.maxClientSize = maxClientSize;
+    return this;
+  }
+
+  /**
+   * none
+   * @return maxClientSize
+  **/
+  @ApiModelProperty(value = "none")
+
+  public Integer getMaxClientSize() {
+    return maxClientSize;
+  }
+
+  public void setMaxClientSize(Integer maxClientSize) {
+    this.maxClientSize = maxClientSize;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -92,13 +92,13 @@ public class TapiOduOduPoolPac   {
     }
     TapiOduOduPoolPac tapiOduOduPoolPac = (TapiOduOduPoolPac) o;
     return Objects.equals(this.clientCapacity, tapiOduOduPoolPac.clientCapacity) &&
-        Objects.equals(this.maxClientSize, tapiOduOduPoolPac.maxClientSize) &&
-        Objects.equals(this.maxClientInstances, tapiOduOduPoolPac.maxClientInstances);
+        Objects.equals(this.maxClientInstances, tapiOduOduPoolPac.maxClientInstances) &&
+        Objects.equals(this.maxClientSize, tapiOduOduPoolPac.maxClientSize);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(clientCapacity, maxClientSize, maxClientInstances);
+    return Objects.hash(clientCapacity, maxClientInstances, maxClientSize);
   }
 
   @Override
@@ -107,8 +107,8 @@ public class TapiOduOduPoolPac   {
     sb.append("class TapiOduOduPoolPac {\n");
     
     sb.append("    clientCapacity: ").append(toIndentedString(clientCapacity)).append("\n");
-    sb.append("    maxClientSize: ").append(toIndentedString(maxClientSize)).append("\n");
     sb.append("    maxClientInstances: ").append(toIndentedString(maxClientInstances)).append("\n");
+    sb.append("    maxClientSize: ").append(toIndentedString(maxClientSize)).append("\n");
     sb.append("}");
     return sb.toString();
   }

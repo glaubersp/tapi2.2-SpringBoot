@@ -15,7 +15,7 @@ import javax.validation.constraints.*;
  * TapiEthEthProActiveLmPerformanceData
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiEthEthProActiveLmPerformanceData   {
   @JsonProperty("bidir-unavailable-intervals")
   private Integer bidirUnavailableIntervals = null;
@@ -26,11 +26,11 @@ public class TapiEthEthProActiveLmPerformanceData   {
   @JsonProperty("statistical-near-end-lm-parameters")
   private TapiEthStatisticalLmPerformanceParameters statisticalNearEndLmParameters = null;
 
-  @JsonProperty("total-counters-near-end-lm-parameters")
-  private TapiEthTotalCountersLmPerformanceParameters totalCountersNearEndLmParameters = null;
-
   @JsonProperty("total-counters-far-end-lm-parameters")
   private TapiEthTotalCountersLmPerformanceParameters totalCountersFarEndLmParameters = null;
+
+  @JsonProperty("total-counters-near-end-lm-parameters")
+  private TapiEthTotalCountersLmPerformanceParameters totalCountersNearEndLmParameters = null;
 
   public TapiEthEthProActiveLmPerformanceData bidirUnavailableIntervals(Integer bidirUnavailableIntervals) {
     this.bidirUnavailableIntervals = bidirUnavailableIntervals;
@@ -91,26 +91,6 @@ public class TapiEthEthProActiveLmPerformanceData   {
     this.statisticalNearEndLmParameters = statisticalNearEndLmParameters;
   }
 
-  public TapiEthEthProActiveLmPerformanceData totalCountersNearEndLmParameters(TapiEthTotalCountersLmPerformanceParameters totalCountersNearEndLmParameters) {
-    this.totalCountersNearEndLmParameters = totalCountersNearEndLmParameters;
-    return this;
-  }
-
-  /**
-   * Get totalCountersNearEndLmParameters
-   * @return totalCountersNearEndLmParameters
-  **/
-  @ApiModelProperty(value = "")
-
-  @Valid
-  public TapiEthTotalCountersLmPerformanceParameters getTotalCountersNearEndLmParameters() {
-    return totalCountersNearEndLmParameters;
-  }
-
-  public void setTotalCountersNearEndLmParameters(TapiEthTotalCountersLmPerformanceParameters totalCountersNearEndLmParameters) {
-    this.totalCountersNearEndLmParameters = totalCountersNearEndLmParameters;
-  }
-
   public TapiEthEthProActiveLmPerformanceData totalCountersFarEndLmParameters(TapiEthTotalCountersLmPerformanceParameters totalCountersFarEndLmParameters) {
     this.totalCountersFarEndLmParameters = totalCountersFarEndLmParameters;
     return this;
@@ -131,6 +111,26 @@ public class TapiEthEthProActiveLmPerformanceData   {
     this.totalCountersFarEndLmParameters = totalCountersFarEndLmParameters;
   }
 
+  public TapiEthEthProActiveLmPerformanceData totalCountersNearEndLmParameters(TapiEthTotalCountersLmPerformanceParameters totalCountersNearEndLmParameters) {
+    this.totalCountersNearEndLmParameters = totalCountersNearEndLmParameters;
+    return this;
+  }
+
+  /**
+   * Get totalCountersNearEndLmParameters
+   * @return totalCountersNearEndLmParameters
+  **/
+  @ApiModelProperty(value = "")
+
+  @Valid
+  public TapiEthTotalCountersLmPerformanceParameters getTotalCountersNearEndLmParameters() {
+    return totalCountersNearEndLmParameters;
+  }
+
+  public void setTotalCountersNearEndLmParameters(TapiEthTotalCountersLmPerformanceParameters totalCountersNearEndLmParameters) {
+    this.totalCountersNearEndLmParameters = totalCountersNearEndLmParameters;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -144,13 +144,13 @@ public class TapiEthEthProActiveLmPerformanceData   {
     return Objects.equals(this.bidirUnavailableIntervals, tapiEthEthProActiveLmPerformanceData.bidirUnavailableIntervals) &&
         Objects.equals(this.statisticalFarEndLmParameters, tapiEthEthProActiveLmPerformanceData.statisticalFarEndLmParameters) &&
         Objects.equals(this.statisticalNearEndLmParameters, tapiEthEthProActiveLmPerformanceData.statisticalNearEndLmParameters) &&
-        Objects.equals(this.totalCountersNearEndLmParameters, tapiEthEthProActiveLmPerformanceData.totalCountersNearEndLmParameters) &&
-        Objects.equals(this.totalCountersFarEndLmParameters, tapiEthEthProActiveLmPerformanceData.totalCountersFarEndLmParameters);
+        Objects.equals(this.totalCountersFarEndLmParameters, tapiEthEthProActiveLmPerformanceData.totalCountersFarEndLmParameters) &&
+        Objects.equals(this.totalCountersNearEndLmParameters, tapiEthEthProActiveLmPerformanceData.totalCountersNearEndLmParameters);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(bidirUnavailableIntervals, statisticalFarEndLmParameters, statisticalNearEndLmParameters, totalCountersNearEndLmParameters, totalCountersFarEndLmParameters);
+    return Objects.hash(bidirUnavailableIntervals, statisticalFarEndLmParameters, statisticalNearEndLmParameters, totalCountersFarEndLmParameters, totalCountersNearEndLmParameters);
   }
 
   @Override
@@ -161,8 +161,8 @@ public class TapiEthEthProActiveLmPerformanceData   {
     sb.append("    bidirUnavailableIntervals: ").append(toIndentedString(bidirUnavailableIntervals)).append("\n");
     sb.append("    statisticalFarEndLmParameters: ").append(toIndentedString(statisticalFarEndLmParameters)).append("\n");
     sb.append("    statisticalNearEndLmParameters: ").append(toIndentedString(statisticalNearEndLmParameters)).append("\n");
-    sb.append("    totalCountersNearEndLmParameters: ").append(toIndentedString(totalCountersNearEndLmParameters)).append("\n");
     sb.append("    totalCountersFarEndLmParameters: ").append(toIndentedString(totalCountersFarEndLmParameters)).append("\n");
+    sb.append("    totalCountersNearEndLmParameters: ").append(toIndentedString(totalCountersNearEndLmParameters)).append("\n");
     sb.append("}");
     return sb.toString();
   }

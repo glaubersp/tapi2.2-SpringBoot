@@ -14,66 +14,28 @@ import javax.validation.constraints.*;
  * TapiEthTrafficConditioningConfiguration
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiEthTrafficConditioningConfiguration   {
-  @JsonProperty("queue-id")
-  private Integer queueId = null;
-
-  @JsonProperty("coupling-flag")
-  private Boolean couplingFlag = false;
-
   @JsonProperty("cbs")
   private Integer cbs = null;
-
-  @JsonProperty("ebs")
-  private Integer ebs = null;
-
-  @JsonProperty("colour-mode")
-  private TapiEthColourMode colourMode = null;
 
   @JsonProperty("cir")
   private Integer cir = null;
 
+  @JsonProperty("colour-mode")
+  private TapiEthColourMode colourMode = null;
+
+  @JsonProperty("coupling-flag")
+  private Boolean couplingFlag = false;
+
+  @JsonProperty("ebs")
+  private Integer ebs = null;
+
   @JsonProperty("eir")
   private Integer eir = null;
 
-  public TapiEthTrafficConditioningConfiguration queueId(Integer queueId) {
-    this.queueId = queueId;
-    return this;
-  }
-
-  /**
-   * This attribute indicates the queue id.
-   * @return queueId
-  **/
-  @ApiModelProperty(value = "This attribute indicates the queue id.")
-
-  public Integer getQueueId() {
-    return queueId;
-  }
-
-  public void setQueueId(Integer queueId) {
-    this.queueId = queueId;
-  }
-
-  public TapiEthTrafficConditioningConfiguration couplingFlag(Boolean couplingFlag) {
-    this.couplingFlag = couplingFlag;
-    return this;
-  }
-
-  /**
-   * This attribute indicates the coupling flag.
-   * @return couplingFlag
-  **/
-  @ApiModelProperty(value = "This attribute indicates the coupling flag.")
-
-  public Boolean isCouplingFlag() {
-    return couplingFlag;
-  }
-
-  public void setCouplingFlag(Boolean couplingFlag) {
-    this.couplingFlag = couplingFlag;
-  }
+  @JsonProperty("queue-id")
+  private Integer queueId = null;
 
   public TapiEthTrafficConditioningConfiguration cbs(Integer cbs) {
     this.cbs = cbs;
@@ -94,23 +56,23 @@ public class TapiEthTrafficConditioningConfiguration   {
     this.cbs = cbs;
   }
 
-  public TapiEthTrafficConditioningConfiguration ebs(Integer ebs) {
-    this.ebs = ebs;
+  public TapiEthTrafficConditioningConfiguration cir(Integer cir) {
+    this.cir = cir;
     return this;
   }
 
   /**
-   * This attribute indicates the Excess Burst Size in bytes.
-   * @return ebs
+   * This attribute indicates the Committed Information Rate in bits/s.
+   * @return cir
   **/
-  @ApiModelProperty(value = "This attribute indicates the Excess Burst Size in bytes.")
+  @ApiModelProperty(value = "This attribute indicates the Committed Information Rate in bits/s.")
 
-  public Integer getEbs() {
-    return ebs;
+  public Integer getCir() {
+    return cir;
   }
 
-  public void setEbs(Integer ebs) {
-    this.ebs = ebs;
+  public void setCir(Integer cir) {
+    this.cir = cir;
   }
 
   public TapiEthTrafficConditioningConfiguration colourMode(TapiEthColourMode colourMode) {
@@ -133,23 +95,42 @@ public class TapiEthTrafficConditioningConfiguration   {
     this.colourMode = colourMode;
   }
 
-  public TapiEthTrafficConditioningConfiguration cir(Integer cir) {
-    this.cir = cir;
+  public TapiEthTrafficConditioningConfiguration couplingFlag(Boolean couplingFlag) {
+    this.couplingFlag = couplingFlag;
     return this;
   }
 
   /**
-   * This attribute indicates the Committed Information Rate in bits/s.
-   * @return cir
+   * This attribute indicates the coupling flag.
+   * @return couplingFlag
   **/
-  @ApiModelProperty(value = "This attribute indicates the Committed Information Rate in bits/s.")
+  @ApiModelProperty(value = "This attribute indicates the coupling flag.")
 
-  public Integer getCir() {
-    return cir;
+  public Boolean isCouplingFlag() {
+    return couplingFlag;
   }
 
-  public void setCir(Integer cir) {
-    this.cir = cir;
+  public void setCouplingFlag(Boolean couplingFlag) {
+    this.couplingFlag = couplingFlag;
+  }
+
+  public TapiEthTrafficConditioningConfiguration ebs(Integer ebs) {
+    this.ebs = ebs;
+    return this;
+  }
+
+  /**
+   * This attribute indicates the Excess Burst Size in bytes.
+   * @return ebs
+  **/
+  @ApiModelProperty(value = "This attribute indicates the Excess Burst Size in bytes.")
+
+  public Integer getEbs() {
+    return ebs;
+  }
+
+  public void setEbs(Integer ebs) {
+    this.ebs = ebs;
   }
 
   public TapiEthTrafficConditioningConfiguration eir(Integer eir) {
@@ -171,6 +152,25 @@ public class TapiEthTrafficConditioningConfiguration   {
     this.eir = eir;
   }
 
+  public TapiEthTrafficConditioningConfiguration queueId(Integer queueId) {
+    this.queueId = queueId;
+    return this;
+  }
+
+  /**
+   * This attribute indicates the queue id.
+   * @return queueId
+  **/
+  @ApiModelProperty(value = "This attribute indicates the queue id.")
+
+  public Integer getQueueId() {
+    return queueId;
+  }
+
+  public void setQueueId(Integer queueId) {
+    this.queueId = queueId;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -181,18 +181,18 @@ public class TapiEthTrafficConditioningConfiguration   {
       return false;
     }
     TapiEthTrafficConditioningConfiguration tapiEthTrafficConditioningConfiguration = (TapiEthTrafficConditioningConfiguration) o;
-    return Objects.equals(this.queueId, tapiEthTrafficConditioningConfiguration.queueId) &&
-        Objects.equals(this.couplingFlag, tapiEthTrafficConditioningConfiguration.couplingFlag) &&
-        Objects.equals(this.cbs, tapiEthTrafficConditioningConfiguration.cbs) &&
-        Objects.equals(this.ebs, tapiEthTrafficConditioningConfiguration.ebs) &&
-        Objects.equals(this.colourMode, tapiEthTrafficConditioningConfiguration.colourMode) &&
+    return Objects.equals(this.cbs, tapiEthTrafficConditioningConfiguration.cbs) &&
         Objects.equals(this.cir, tapiEthTrafficConditioningConfiguration.cir) &&
-        Objects.equals(this.eir, tapiEthTrafficConditioningConfiguration.eir);
+        Objects.equals(this.colourMode, tapiEthTrafficConditioningConfiguration.colourMode) &&
+        Objects.equals(this.couplingFlag, tapiEthTrafficConditioningConfiguration.couplingFlag) &&
+        Objects.equals(this.ebs, tapiEthTrafficConditioningConfiguration.ebs) &&
+        Objects.equals(this.eir, tapiEthTrafficConditioningConfiguration.eir) &&
+        Objects.equals(this.queueId, tapiEthTrafficConditioningConfiguration.queueId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(queueId, couplingFlag, cbs, ebs, colourMode, cir, eir);
+    return Objects.hash(cbs, cir, colourMode, couplingFlag, ebs, eir, queueId);
   }
 
   @Override
@@ -200,13 +200,13 @@ public class TapiEthTrafficConditioningConfiguration   {
     StringBuilder sb = new StringBuilder();
     sb.append("class TapiEthTrafficConditioningConfiguration {\n");
     
-    sb.append("    queueId: ").append(toIndentedString(queueId)).append("\n");
-    sb.append("    couplingFlag: ").append(toIndentedString(couplingFlag)).append("\n");
     sb.append("    cbs: ").append(toIndentedString(cbs)).append("\n");
-    sb.append("    ebs: ").append(toIndentedString(ebs)).append("\n");
-    sb.append("    colourMode: ").append(toIndentedString(colourMode)).append("\n");
     sb.append("    cir: ").append(toIndentedString(cir)).append("\n");
+    sb.append("    colourMode: ").append(toIndentedString(colourMode)).append("\n");
+    sb.append("    couplingFlag: ").append(toIndentedString(couplingFlag)).append("\n");
+    sb.append("    ebs: ").append(toIndentedString(ebs)).append("\n");
     sb.append("    eir: ").append(toIndentedString(eir)).append("\n");
+    sb.append("    queueId: ").append(toIndentedString(queueId)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -14,7 +14,7 @@ import javax.validation.constraints.*;
  * TapiOamCreateOamService
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiOamCreateOamService   {
   @JsonProperty("output")
   private TapiOamCreateoamserviceOutput output = null;

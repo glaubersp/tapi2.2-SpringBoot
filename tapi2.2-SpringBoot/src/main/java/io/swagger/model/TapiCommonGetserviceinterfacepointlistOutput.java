@@ -16,7 +16,7 @@ import javax.validation.constraints.*;
  * TapiCommonGetserviceinterfacepointlistOutput
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiCommonGetserviceinterfacepointlistOutput   {
   @JsonProperty("sip")
   @Valid
@@ -29,7 +29,7 @@ public class TapiCommonGetserviceinterfacepointlistOutput   {
 
   public TapiCommonGetserviceinterfacepointlistOutput addSipItem(TapiCommonGetserviceinterfacepointlistOutputSip sipItem) {
     if (this.sip == null) {
-      this.sip = new ArrayList<TapiCommonGetserviceinterfacepointlistOutputSip>();
+      this.sip = new ArrayList<>();
     }
     this.sip.add(sipItem);
     return this;

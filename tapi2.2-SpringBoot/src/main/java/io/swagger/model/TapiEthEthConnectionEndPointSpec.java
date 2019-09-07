@@ -16,16 +16,36 @@ import javax.validation.constraints.*;
  * TapiEthEthConnectionEndPointSpec
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiEthEthConnectionEndPointSpec   {
+  @JsonProperty("eth-ctp")
+  private TapiEthEthCtpPac ethCtp = null;
+
   @JsonProperty("eth-term")
   private TapiEthEthTerminationPac ethTerm = null;
 
   @JsonProperty("ety-term")
   private TapiEthEtyTerminationPac etyTerm = null;
 
-  @JsonProperty("eth-ctp")
-  private TapiEthEthCtpPac ethCtp = null;
+  public TapiEthEthConnectionEndPointSpec ethCtp(TapiEthEthCtpPac ethCtp) {
+    this.ethCtp = ethCtp;
+    return this;
+  }
+
+  /**
+   * Get ethCtp
+   * @return ethCtp
+  **/
+  @ApiModelProperty(value = "")
+
+  @Valid
+  public TapiEthEthCtpPac getEthCtp() {
+    return ethCtp;
+  }
+
+  public void setEthCtp(TapiEthEthCtpPac ethCtp) {
+    this.ethCtp = ethCtp;
+  }
 
   public TapiEthEthConnectionEndPointSpec ethTerm(TapiEthEthTerminationPac ethTerm) {
     this.ethTerm = ethTerm;
@@ -67,26 +87,6 @@ public class TapiEthEthConnectionEndPointSpec   {
     this.etyTerm = etyTerm;
   }
 
-  public TapiEthEthConnectionEndPointSpec ethCtp(TapiEthEthCtpPac ethCtp) {
-    this.ethCtp = ethCtp;
-    return this;
-  }
-
-  /**
-   * Get ethCtp
-   * @return ethCtp
-  **/
-  @ApiModelProperty(value = "")
-
-  @Valid
-  public TapiEthEthCtpPac getEthCtp() {
-    return ethCtp;
-  }
-
-  public void setEthCtp(TapiEthEthCtpPac ethCtp) {
-    this.ethCtp = ethCtp;
-  }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -97,14 +97,14 @@ public class TapiEthEthConnectionEndPointSpec   {
       return false;
     }
     TapiEthEthConnectionEndPointSpec tapiEthEthConnectionEndPointSpec = (TapiEthEthConnectionEndPointSpec) o;
-    return Objects.equals(this.ethTerm, tapiEthEthConnectionEndPointSpec.ethTerm) &&
-        Objects.equals(this.etyTerm, tapiEthEthConnectionEndPointSpec.etyTerm) &&
-        Objects.equals(this.ethCtp, tapiEthEthConnectionEndPointSpec.ethCtp);
+    return Objects.equals(this.ethCtp, tapiEthEthConnectionEndPointSpec.ethCtp) &&
+        Objects.equals(this.ethTerm, tapiEthEthConnectionEndPointSpec.ethTerm) &&
+        Objects.equals(this.etyTerm, tapiEthEthConnectionEndPointSpec.etyTerm);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(ethTerm, etyTerm, ethCtp);
+    return Objects.hash(ethCtp, ethTerm, etyTerm);
   }
 
   @Override
@@ -112,9 +112,9 @@ public class TapiEthEthConnectionEndPointSpec   {
     StringBuilder sb = new StringBuilder();
     sb.append("class TapiEthEthConnectionEndPointSpec {\n");
     
+    sb.append("    ethCtp: ").append(toIndentedString(ethCtp)).append("\n");
     sb.append("    ethTerm: ").append(toIndentedString(ethTerm)).append("\n");
     sb.append("    etyTerm: ").append(toIndentedString(etyTerm)).append("\n");
-    sb.append("    ethCtp: ").append(toIndentedString(ethCtp)).append("\n");
     sb.append("}");
     return sb.toString();
   }

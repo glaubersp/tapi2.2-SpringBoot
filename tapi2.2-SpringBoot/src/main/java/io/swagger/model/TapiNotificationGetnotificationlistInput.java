@@ -14,13 +14,32 @@ import javax.validation.constraints.*;
  * TapiNotificationGetnotificationlistInput
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiNotificationGetnotificationlistInput   {
+  @JsonProperty("subscription-id")
+  private String subscriptionId = null;
+
   @JsonProperty("time-range")
   private TapiCommonTimeRange timeRange = null;
 
-  @JsonProperty("subscription-id")
-  private String subscriptionId = null;
+  public TapiNotificationGetnotificationlistInput subscriptionId(String subscriptionId) {
+    this.subscriptionId = subscriptionId;
+    return this;
+  }
+
+  /**
+   * UUID of the associated Notification Subscription Service: An identifier that is universally unique within an identifier space, where the identifier space is itself globally unique, and immutable.                      An UUID carries no semantics with respect to the purpose or state of the entity.                      UUID here uses string representation as defined in RFC 4122.  The canonical representation uses lowercase characters.                      Pattern: [0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-' + '[0-9a-fA-F]{4}-[0-9a-fA-F]{12}                       Example of a UUID in string representation: f81d4fae-7dec-11d0-a765-00a0c91e6bf6
+   * @return subscriptionId
+  **/
+  @ApiModelProperty(value = "UUID of the associated Notification Subscription Service: An identifier that is universally unique within an identifier space, where the identifier space is itself globally unique, and immutable.                      An UUID carries no semantics with respect to the purpose or state of the entity.                      UUID here uses string representation as defined in RFC 4122.  The canonical representation uses lowercase characters.                      Pattern: [0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-' + '[0-9a-fA-F]{4}-[0-9a-fA-F]{12}                       Example of a UUID in string representation: f81d4fae-7dec-11d0-a765-00a0c91e6bf6")
+
+  public String getSubscriptionId() {
+    return subscriptionId;
+  }
+
+  public void setSubscriptionId(String subscriptionId) {
+    this.subscriptionId = subscriptionId;
+  }
 
   public TapiNotificationGetnotificationlistInput timeRange(TapiCommonTimeRange timeRange) {
     this.timeRange = timeRange;
@@ -42,25 +61,6 @@ public class TapiNotificationGetnotificationlistInput   {
     this.timeRange = timeRange;
   }
 
-  public TapiNotificationGetnotificationlistInput subscriptionId(String subscriptionId) {
-    this.subscriptionId = subscriptionId;
-    return this;
-  }
-
-  /**
-   * UUID of the associated Notification Subscription Service: An identifier that is universally unique within an identifier space, where the identifier space is itself globally unique, and immutable.                      An UUID carries no semantics with respect to the purpose or state of the entity.                      UUID here uses string representation as defined in RFC 4122.  The canonical representation uses lowercase characters.                      Pattern: [0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-' + '[0-9a-fA-F]{4}-[0-9a-fA-F]{12}                       Example of a UUID in string representation: f81d4fae-7dec-11d0-a765-00a0c91e6bf6
-   * @return subscriptionId
-  **/
-  @ApiModelProperty(value = "UUID of the associated Notification Subscription Service: An identifier that is universally unique within an identifier space, where the identifier space is itself globally unique, and immutable.                      An UUID carries no semantics with respect to the purpose or state of the entity.                      UUID here uses string representation as defined in RFC 4122.  The canonical representation uses lowercase characters.                      Pattern: [0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-' + '[0-9a-fA-F]{4}-[0-9a-fA-F]{12}                       Example of a UUID in string representation: f81d4fae-7dec-11d0-a765-00a0c91e6bf6")
-
-  public String getSubscriptionId() {
-    return subscriptionId;
-  }
-
-  public void setSubscriptionId(String subscriptionId) {
-    this.subscriptionId = subscriptionId;
-  }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -71,13 +71,13 @@ public class TapiNotificationGetnotificationlistInput   {
       return false;
     }
     TapiNotificationGetnotificationlistInput tapiNotificationGetnotificationlistInput = (TapiNotificationGetnotificationlistInput) o;
-    return Objects.equals(this.timeRange, tapiNotificationGetnotificationlistInput.timeRange) &&
-        Objects.equals(this.subscriptionId, tapiNotificationGetnotificationlistInput.subscriptionId);
+    return Objects.equals(this.subscriptionId, tapiNotificationGetnotificationlistInput.subscriptionId) &&
+        Objects.equals(this.timeRange, tapiNotificationGetnotificationlistInput.timeRange);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(timeRange, subscriptionId);
+    return Objects.hash(subscriptionId, timeRange);
   }
 
   @Override
@@ -85,8 +85,8 @@ public class TapiNotificationGetnotificationlistInput   {
     StringBuilder sb = new StringBuilder();
     sb.append("class TapiNotificationGetnotificationlistInput {\n");
     
-    sb.append("    timeRange: ").append(toIndentedString(timeRange)).append("\n");
     sb.append("    subscriptionId: ").append(toIndentedString(subscriptionId)).append("\n");
+    sb.append("    timeRange: ").append(toIndentedString(timeRange)).append("\n");
     sb.append("}");
     return sb.toString();
   }

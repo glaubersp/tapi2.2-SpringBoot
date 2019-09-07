@@ -15,8 +15,12 @@ import javax.validation.constraints.*;
  * TapiEthSamplesDmPerformanceParameters
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiEthSamplesDmPerformanceParameters   {
+  @JsonProperty("frame-delay-list")
+  @Valid
+  private List<Integer> frameDelayList = null;
+
   @JsonProperty("frame-delay-variation-list")
   @Valid
   private List<Integer> frameDelayVariationList = null;
@@ -24,9 +28,32 @@ public class TapiEthSamplesDmPerformanceParameters   {
   @JsonProperty("number-of-samples")
   private Integer numberOfSamples = null;
 
-  @JsonProperty("frame-delay-list")
-  @Valid
-  private List<Integer> frameDelayList = null;
+  public TapiEthSamplesDmPerformanceParameters frameDelayList(List<Integer> frameDelayList) {
+    this.frameDelayList = frameDelayList;
+    return this;
+  }
+
+  public TapiEthSamplesDmPerformanceParameters addFrameDelayListItem(Integer frameDelayListItem) {
+    if (this.frameDelayList == null) {
+      this.frameDelayList = new ArrayList<>();
+    }
+    this.frameDelayList.add(frameDelayListItem);
+    return this;
+  }
+
+  /**
+   * This attribute contains the frame delays measured in ns (nano second, 1x10e-9 seconds). The multiplicity is defined by the numberOfSamples attribute.
+   * @return frameDelayList
+  **/
+  @ApiModelProperty(value = "This attribute contains the frame delays measured in ns (nano second, 1x10e-9 seconds). The multiplicity is defined by the numberOfSamples attribute.")
+
+  public List<Integer> getFrameDelayList() {
+    return frameDelayList;
+  }
+
+  public void setFrameDelayList(List<Integer> frameDelayList) {
+    this.frameDelayList = frameDelayList;
+  }
 
   public TapiEthSamplesDmPerformanceParameters frameDelayVariationList(List<Integer> frameDelayVariationList) {
     this.frameDelayVariationList = frameDelayVariationList;
@@ -35,7 +62,7 @@ public class TapiEthSamplesDmPerformanceParameters   {
 
   public TapiEthSamplesDmPerformanceParameters addFrameDelayVariationListItem(Integer frameDelayVariationListItem) {
     if (this.frameDelayVariationList == null) {
-      this.frameDelayVariationList = new ArrayList<Integer>();
+      this.frameDelayVariationList = new ArrayList<>();
     }
     this.frameDelayVariationList.add(frameDelayVariationListItem);
     return this;
@@ -74,33 +101,6 @@ public class TapiEthSamplesDmPerformanceParameters   {
     this.numberOfSamples = numberOfSamples;
   }
 
-  public TapiEthSamplesDmPerformanceParameters frameDelayList(List<Integer> frameDelayList) {
-    this.frameDelayList = frameDelayList;
-    return this;
-  }
-
-  public TapiEthSamplesDmPerformanceParameters addFrameDelayListItem(Integer frameDelayListItem) {
-    if (this.frameDelayList == null) {
-      this.frameDelayList = new ArrayList<Integer>();
-    }
-    this.frameDelayList.add(frameDelayListItem);
-    return this;
-  }
-
-  /**
-   * This attribute contains the frame delays measured in ns (nano second, 1x10e-9 seconds). The multiplicity is defined by the numberOfSamples attribute.
-   * @return frameDelayList
-  **/
-  @ApiModelProperty(value = "This attribute contains the frame delays measured in ns (nano second, 1x10e-9 seconds). The multiplicity is defined by the numberOfSamples attribute.")
-
-  public List<Integer> getFrameDelayList() {
-    return frameDelayList;
-  }
-
-  public void setFrameDelayList(List<Integer> frameDelayList) {
-    this.frameDelayList = frameDelayList;
-  }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -111,14 +111,14 @@ public class TapiEthSamplesDmPerformanceParameters   {
       return false;
     }
     TapiEthSamplesDmPerformanceParameters tapiEthSamplesDmPerformanceParameters = (TapiEthSamplesDmPerformanceParameters) o;
-    return Objects.equals(this.frameDelayVariationList, tapiEthSamplesDmPerformanceParameters.frameDelayVariationList) &&
-        Objects.equals(this.numberOfSamples, tapiEthSamplesDmPerformanceParameters.numberOfSamples) &&
-        Objects.equals(this.frameDelayList, tapiEthSamplesDmPerformanceParameters.frameDelayList);
+    return Objects.equals(this.frameDelayList, tapiEthSamplesDmPerformanceParameters.frameDelayList) &&
+        Objects.equals(this.frameDelayVariationList, tapiEthSamplesDmPerformanceParameters.frameDelayVariationList) &&
+        Objects.equals(this.numberOfSamples, tapiEthSamplesDmPerformanceParameters.numberOfSamples);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(frameDelayVariationList, numberOfSamples, frameDelayList);
+    return Objects.hash(frameDelayList, frameDelayVariationList, numberOfSamples);
   }
 
   @Override
@@ -126,9 +126,9 @@ public class TapiEthSamplesDmPerformanceParameters   {
     StringBuilder sb = new StringBuilder();
     sb.append("class TapiEthSamplesDmPerformanceParameters {\n");
     
+    sb.append("    frameDelayList: ").append(toIndentedString(frameDelayList)).append("\n");
     sb.append("    frameDelayVariationList: ").append(toIndentedString(frameDelayVariationList)).append("\n");
     sb.append("    numberOfSamples: ").append(toIndentedString(numberOfSamples)).append("\n");
-    sb.append("    frameDelayList: ").append(toIndentedString(frameDelayList)).append("\n");
     sb.append("}");
     return sb.toString();
   }

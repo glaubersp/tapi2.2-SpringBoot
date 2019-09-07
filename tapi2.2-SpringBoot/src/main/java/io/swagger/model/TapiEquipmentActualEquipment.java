@@ -18,17 +18,44 @@ import javax.validation.constraints.*;
  * TapiEquipmentActualEquipment
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiEquipmentActualEquipment   {
-  @JsonProperty("common-actual-properties")
-  private TapiEquipmentCommonActualProperties commonActualProperties = null;
-
   @JsonProperty("actual-non-field-replaceable-module")
   @Valid
   private List<TapiEquipmentActualNonFieldReplaceableModule> actualNonFieldReplaceableModule = null;
 
+  @JsonProperty("common-actual-properties")
+  private TapiEquipmentCommonActualProperties commonActualProperties = null;
+
   @JsonProperty("common-equipment-properties")
   private TapiEquipmentCommonEquipmentProperties commonEquipmentProperties = null;
+
+  public TapiEquipmentActualEquipment actualNonFieldReplaceableModule(List<TapiEquipmentActualNonFieldReplaceableModule> actualNonFieldReplaceableModule) {
+    this.actualNonFieldReplaceableModule = actualNonFieldReplaceableModule;
+    return this;
+  }
+
+  public TapiEquipmentActualEquipment addActualNonFieldReplaceableModuleItem(TapiEquipmentActualNonFieldReplaceableModule actualNonFieldReplaceableModuleItem) {
+    if (this.actualNonFieldReplaceableModule == null) {
+      this.actualNonFieldReplaceableModule = new ArrayList<>();
+    }
+    this.actualNonFieldReplaceableModule.add(actualNonFieldReplaceableModuleItem);
+    return this;
+  }
+
+  /**
+   * none
+   * @return actualNonFieldReplaceableModule
+  **/
+  @ApiModelProperty(value = "none")
+  @Valid
+  public List<TapiEquipmentActualNonFieldReplaceableModule> getActualNonFieldReplaceableModule() {
+    return actualNonFieldReplaceableModule;
+  }
+
+  public void setActualNonFieldReplaceableModule(List<TapiEquipmentActualNonFieldReplaceableModule> actualNonFieldReplaceableModule) {
+    this.actualNonFieldReplaceableModule = actualNonFieldReplaceableModule;
+  }
 
   public TapiEquipmentActualEquipment commonActualProperties(TapiEquipmentCommonActualProperties commonActualProperties) {
     this.commonActualProperties = commonActualProperties;
@@ -48,33 +75,6 @@ public class TapiEquipmentActualEquipment   {
 
   public void setCommonActualProperties(TapiEquipmentCommonActualProperties commonActualProperties) {
     this.commonActualProperties = commonActualProperties;
-  }
-
-  public TapiEquipmentActualEquipment actualNonFieldReplaceableModule(List<TapiEquipmentActualNonFieldReplaceableModule> actualNonFieldReplaceableModule) {
-    this.actualNonFieldReplaceableModule = actualNonFieldReplaceableModule;
-    return this;
-  }
-
-  public TapiEquipmentActualEquipment addActualNonFieldReplaceableModuleItem(TapiEquipmentActualNonFieldReplaceableModule actualNonFieldReplaceableModuleItem) {
-    if (this.actualNonFieldReplaceableModule == null) {
-      this.actualNonFieldReplaceableModule = new ArrayList<TapiEquipmentActualNonFieldReplaceableModule>();
-    }
-    this.actualNonFieldReplaceableModule.add(actualNonFieldReplaceableModuleItem);
-    return this;
-  }
-
-  /**
-   * none
-   * @return actualNonFieldReplaceableModule
-  **/
-  @ApiModelProperty(value = "none")
-  @Valid
-  public List<TapiEquipmentActualNonFieldReplaceableModule> getActualNonFieldReplaceableModule() {
-    return actualNonFieldReplaceableModule;
-  }
-
-  public void setActualNonFieldReplaceableModule(List<TapiEquipmentActualNonFieldReplaceableModule> actualNonFieldReplaceableModule) {
-    this.actualNonFieldReplaceableModule = actualNonFieldReplaceableModule;
   }
 
   public TapiEquipmentActualEquipment commonEquipmentProperties(TapiEquipmentCommonEquipmentProperties commonEquipmentProperties) {
@@ -107,14 +107,14 @@ public class TapiEquipmentActualEquipment   {
       return false;
     }
     TapiEquipmentActualEquipment tapiEquipmentActualEquipment = (TapiEquipmentActualEquipment) o;
-    return Objects.equals(this.commonActualProperties, tapiEquipmentActualEquipment.commonActualProperties) &&
-        Objects.equals(this.actualNonFieldReplaceableModule, tapiEquipmentActualEquipment.actualNonFieldReplaceableModule) &&
+    return Objects.equals(this.actualNonFieldReplaceableModule, tapiEquipmentActualEquipment.actualNonFieldReplaceableModule) &&
+        Objects.equals(this.commonActualProperties, tapiEquipmentActualEquipment.commonActualProperties) &&
         Objects.equals(this.commonEquipmentProperties, tapiEquipmentActualEquipment.commonEquipmentProperties);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(commonActualProperties, actualNonFieldReplaceableModule, commonEquipmentProperties);
+    return Objects.hash(actualNonFieldReplaceableModule, commonActualProperties, commonEquipmentProperties);
   }
 
   @Override
@@ -122,8 +122,8 @@ public class TapiEquipmentActualEquipment   {
     StringBuilder sb = new StringBuilder();
     sb.append("class TapiEquipmentActualEquipment {\n");
     
-    sb.append("    commonActualProperties: ").append(toIndentedString(commonActualProperties)).append("\n");
     sb.append("    actualNonFieldReplaceableModule: ").append(toIndentedString(actualNonFieldReplaceableModule)).append("\n");
+    sb.append("    commonActualProperties: ").append(toIndentedString(commonActualProperties)).append("\n");
     sb.append("    commonEquipmentProperties: ").append(toIndentedString(commonEquipmentProperties)).append("\n");
     sb.append("}");
     return sb.toString();

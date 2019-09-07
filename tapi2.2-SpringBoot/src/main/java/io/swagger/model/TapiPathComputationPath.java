@@ -21,8 +21,11 @@ import javax.validation.constraints.*;
  * TapiPathComputationPath
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiPathComputationPath extends TapiCommonGlobalClass  {
+  @JsonProperty("direction")
+  private TapiCommonForwardingDirection direction = null;
+
   @JsonProperty("layer-protocol-name")
   private TapiCommonLayerProtocolName layerProtocolName = null;
 
@@ -33,8 +36,25 @@ public class TapiPathComputationPath extends TapiCommonGlobalClass  {
   @JsonProperty("routing-constraint")
   private TapiPathComputationRoutingConstraint routingConstraint = null;
 
-  @JsonProperty("direction")
-  private TapiCommonForwardingDirection direction = null;
+  public TapiPathComputationPath direction(TapiCommonForwardingDirection direction) {
+    this.direction = direction;
+    return this;
+  }
+
+  /**
+   * Get direction
+   * @return direction
+  **/
+  @ApiModelProperty(value = "")
+
+  @Valid
+  public TapiCommonForwardingDirection getDirection() {
+    return direction;
+  }
+
+  public void setDirection(TapiCommonForwardingDirection direction) {
+    this.direction = direction;
+  }
 
   public TapiPathComputationPath layerProtocolName(TapiCommonLayerProtocolName layerProtocolName) {
     this.layerProtocolName = layerProtocolName;
@@ -63,7 +83,7 @@ public class TapiPathComputationPath extends TapiCommonGlobalClass  {
 
   public TapiPathComputationPath addLinkItem(TapiTopologyLinkRef linkItem) {
     if (this.link == null) {
-      this.link = new ArrayList<TapiTopologyLinkRef>();
+      this.link = new ArrayList<>();
     }
     this.link.add(linkItem);
     return this;
@@ -103,26 +123,6 @@ public class TapiPathComputationPath extends TapiCommonGlobalClass  {
     this.routingConstraint = routingConstraint;
   }
 
-  public TapiPathComputationPath direction(TapiCommonForwardingDirection direction) {
-    this.direction = direction;
-    return this;
-  }
-
-  /**
-   * Get direction
-   * @return direction
-  **/
-  @ApiModelProperty(value = "")
-
-  @Valid
-  public TapiCommonForwardingDirection getDirection() {
-    return direction;
-  }
-
-  public void setDirection(TapiCommonForwardingDirection direction) {
-    this.direction = direction;
-  }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -133,16 +133,16 @@ public class TapiPathComputationPath extends TapiCommonGlobalClass  {
       return false;
     }
     TapiPathComputationPath tapiPathComputationPath = (TapiPathComputationPath) o;
-    return Objects.equals(this.layerProtocolName, tapiPathComputationPath.layerProtocolName) &&
+    return Objects.equals(this.direction, tapiPathComputationPath.direction) &&
+        Objects.equals(this.layerProtocolName, tapiPathComputationPath.layerProtocolName) &&
         Objects.equals(this.link, tapiPathComputationPath.link) &&
         Objects.equals(this.routingConstraint, tapiPathComputationPath.routingConstraint) &&
-        Objects.equals(this.direction, tapiPathComputationPath.direction) &&
         super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(layerProtocolName, link, routingConstraint, direction, super.hashCode());
+    return Objects.hash(direction, layerProtocolName, link, routingConstraint, super.hashCode());
   }
 
   @Override
@@ -150,10 +150,10 @@ public class TapiPathComputationPath extends TapiCommonGlobalClass  {
     StringBuilder sb = new StringBuilder();
     sb.append("class TapiPathComputationPath {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    direction: ").append(toIndentedString(direction)).append("\n");
     sb.append("    layerProtocolName: ").append(toIndentedString(layerProtocolName)).append("\n");
     sb.append("    link: ").append(toIndentedString(link)).append("\n");
     sb.append("    routingConstraint: ").append(toIndentedString(routingConstraint)).append("\n");
-    sb.append("    direction: ").append(toIndentedString(direction)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -18,10 +18,16 @@ import javax.validation.constraints.*;
  * TapiOduOduConnectivityServiceEndPointSpec
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiOduOduConnectivityServiceEndPointSpec   {
   @JsonProperty("accepted-payload-type")
   private TapiOduOduPayloadType acceptedPayloadType = null;
+
+  @JsonProperty("configured-mapping-type")
+  private TapiOduMappingType configuredMappingType = null;
+
+  @JsonProperty("odu-type")
+  private String oduType = null;
 
   @JsonProperty("opu-tributary-slot-size")
   private TapiOduOduSlotSize opuTributarySlotSize = null;
@@ -32,12 +38,6 @@ public class TapiOduOduConnectivityServiceEndPointSpec   {
   @JsonProperty("tributary-slot-list")
   @Valid
   private List<Integer> tributarySlotList = null;
-
-  @JsonProperty("configured-mapping-type")
-  private TapiOduMappingType configuredMappingType = null;
-
-  @JsonProperty("odu-type")
-  private String oduType = null;
 
   public TapiOduOduConnectivityServiceEndPointSpec acceptedPayloadType(TapiOduOduPayloadType acceptedPayloadType) {
     this.acceptedPayloadType = acceptedPayloadType;
@@ -57,6 +57,45 @@ public class TapiOduOduConnectivityServiceEndPointSpec   {
 
   public void setAcceptedPayloadType(TapiOduOduPayloadType acceptedPayloadType) {
     this.acceptedPayloadType = acceptedPayloadType;
+  }
+
+  public TapiOduOduConnectivityServiceEndPointSpec configuredMappingType(TapiOduMappingType configuredMappingType) {
+    this.configuredMappingType = configuredMappingType;
+    return this;
+  }
+
+  /**
+   * Get configuredMappingType
+   * @return configuredMappingType
+  **/
+  @ApiModelProperty(value = "")
+
+  @Valid
+  public TapiOduMappingType getConfiguredMappingType() {
+    return configuredMappingType;
+  }
+
+  public void setConfiguredMappingType(TapiOduMappingType configuredMappingType) {
+    this.configuredMappingType = configuredMappingType;
+  }
+
+  public TapiOduOduConnectivityServiceEndPointSpec oduType(String oduType) {
+    this.oduType = oduType;
+    return this;
+  }
+
+  /**
+   * This attribute specifies the type of the ODU termination point.
+   * @return oduType
+  **/
+  @ApiModelProperty(value = "This attribute specifies the type of the ODU termination point.")
+
+  public String getOduType() {
+    return oduType;
+  }
+
+  public void setOduType(String oduType) {
+    this.oduType = oduType;
   }
 
   public TapiOduOduConnectivityServiceEndPointSpec opuTributarySlotSize(TapiOduOduSlotSize opuTributarySlotSize) {
@@ -105,7 +144,7 @@ public class TapiOduOduConnectivityServiceEndPointSpec   {
 
   public TapiOduOduConnectivityServiceEndPointSpec addTributarySlotListItem(Integer tributarySlotListItem) {
     if (this.tributarySlotList == null) {
-      this.tributarySlotList = new ArrayList<Integer>();
+      this.tributarySlotList = new ArrayList<>();
     }
     this.tributarySlotList.add(tributarySlotListItem);
     return this;
@@ -125,45 +164,6 @@ public class TapiOduOduConnectivityServiceEndPointSpec   {
     this.tributarySlotList = tributarySlotList;
   }
 
-  public TapiOduOduConnectivityServiceEndPointSpec configuredMappingType(TapiOduMappingType configuredMappingType) {
-    this.configuredMappingType = configuredMappingType;
-    return this;
-  }
-
-  /**
-   * Get configuredMappingType
-   * @return configuredMappingType
-  **/
-  @ApiModelProperty(value = "")
-
-  @Valid
-  public TapiOduMappingType getConfiguredMappingType() {
-    return configuredMappingType;
-  }
-
-  public void setConfiguredMappingType(TapiOduMappingType configuredMappingType) {
-    this.configuredMappingType = configuredMappingType;
-  }
-
-  public TapiOduOduConnectivityServiceEndPointSpec oduType(String oduType) {
-    this.oduType = oduType;
-    return this;
-  }
-
-  /**
-   * This attribute specifies the type of the ODU termination point.
-   * @return oduType
-  **/
-  @ApiModelProperty(value = "This attribute specifies the type of the ODU termination point.")
-
-  public String getOduType() {
-    return oduType;
-  }
-
-  public void setOduType(String oduType) {
-    this.oduType = oduType;
-  }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -175,16 +175,16 @@ public class TapiOduOduConnectivityServiceEndPointSpec   {
     }
     TapiOduOduConnectivityServiceEndPointSpec tapiOduOduConnectivityServiceEndPointSpec = (TapiOduOduConnectivityServiceEndPointSpec) o;
     return Objects.equals(this.acceptedPayloadType, tapiOduOduConnectivityServiceEndPointSpec.acceptedPayloadType) &&
+        Objects.equals(this.configuredMappingType, tapiOduOduConnectivityServiceEndPointSpec.configuredMappingType) &&
+        Objects.equals(this.oduType, tapiOduOduConnectivityServiceEndPointSpec.oduType) &&
         Objects.equals(this.opuTributarySlotSize, tapiOduOduConnectivityServiceEndPointSpec.opuTributarySlotSize) &&
         Objects.equals(this.tributaryPortNumber, tapiOduOduConnectivityServiceEndPointSpec.tributaryPortNumber) &&
-        Objects.equals(this.tributarySlotList, tapiOduOduConnectivityServiceEndPointSpec.tributarySlotList) &&
-        Objects.equals(this.configuredMappingType, tapiOduOduConnectivityServiceEndPointSpec.configuredMappingType) &&
-        Objects.equals(this.oduType, tapiOduOduConnectivityServiceEndPointSpec.oduType);
+        Objects.equals(this.tributarySlotList, tapiOduOduConnectivityServiceEndPointSpec.tributarySlotList);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(acceptedPayloadType, opuTributarySlotSize, tributaryPortNumber, tributarySlotList, configuredMappingType, oduType);
+    return Objects.hash(acceptedPayloadType, configuredMappingType, oduType, opuTributarySlotSize, tributaryPortNumber, tributarySlotList);
   }
 
   @Override
@@ -193,11 +193,11 @@ public class TapiOduOduConnectivityServiceEndPointSpec   {
     sb.append("class TapiOduOduConnectivityServiceEndPointSpec {\n");
     
     sb.append("    acceptedPayloadType: ").append(toIndentedString(acceptedPayloadType)).append("\n");
+    sb.append("    configuredMappingType: ").append(toIndentedString(configuredMappingType)).append("\n");
+    sb.append("    oduType: ").append(toIndentedString(oduType)).append("\n");
     sb.append("    opuTributarySlotSize: ").append(toIndentedString(opuTributarySlotSize)).append("\n");
     sb.append("    tributaryPortNumber: ").append(toIndentedString(tributaryPortNumber)).append("\n");
     sb.append("    tributarySlotList: ").append(toIndentedString(tributarySlotList)).append("\n");
-    sb.append("    configuredMappingType: ").append(toIndentedString(configuredMappingType)).append("\n");
-    sb.append("    oduType: ").append(toIndentedString(oduType)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -20,20 +20,20 @@ import javax.validation.constraints.*;
  * TapiOamCurrentData
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiOamCurrentData extends TapiCommonLocalClass  {
   @JsonProperty("elapsed-time")
   private TapiCommonTimeInterval elapsedTime = null;
+
+  @JsonProperty("history-data")
+  @Valid
+  private List<TapiOamHistoryData> historyData = null;
 
   @JsonProperty("period-start-time")
   private String periodStartTime = null;
 
   @JsonProperty("pm-data-pac")
   private TapiOamPmDataPac pmDataPac = null;
-
-  @JsonProperty("history-data")
-  @Valid
-  private List<TapiOamHistoryData> historyData = null;
 
   public TapiOamCurrentData elapsedTime(TapiCommonTimeInterval elapsedTime) {
     this.elapsedTime = elapsedTime;
@@ -53,6 +53,33 @@ public class TapiOamCurrentData extends TapiCommonLocalClass  {
 
   public void setElapsedTime(TapiCommonTimeInterval elapsedTime) {
     this.elapsedTime = elapsedTime;
+  }
+
+  public TapiOamCurrentData historyData(List<TapiOamHistoryData> historyData) {
+    this.historyData = historyData;
+    return this;
+  }
+
+  public TapiOamCurrentData addHistoryDataItem(TapiOamHistoryData historyDataItem) {
+    if (this.historyData == null) {
+      this.historyData = new ArrayList<>();
+    }
+    this.historyData.add(historyDataItem);
+    return this;
+  }
+
+  /**
+   * in case of 24hr Current Data, at least 1 History Data.                  In case of 15min Current Data, at least 16 History Data.                  In case of <15min, the number of History Data shall be able to cover a span of 4 hours.
+   * @return historyData
+  **/
+  @ApiModelProperty(value = "in case of 24hr Current Data, at least 1 History Data.                  In case of 15min Current Data, at least 16 History Data.                  In case of <15min, the number of History Data shall be able to cover a span of 4 hours.")
+  @Valid
+  public List<TapiOamHistoryData> getHistoryData() {
+    return historyData;
+  }
+
+  public void setHistoryData(List<TapiOamHistoryData> historyData) {
+    this.historyData = historyData;
   }
 
   public TapiOamCurrentData periodStartTime(String periodStartTime) {
@@ -94,33 +121,6 @@ public class TapiOamCurrentData extends TapiCommonLocalClass  {
     this.pmDataPac = pmDataPac;
   }
 
-  public TapiOamCurrentData historyData(List<TapiOamHistoryData> historyData) {
-    this.historyData = historyData;
-    return this;
-  }
-
-  public TapiOamCurrentData addHistoryDataItem(TapiOamHistoryData historyDataItem) {
-    if (this.historyData == null) {
-      this.historyData = new ArrayList<TapiOamHistoryData>();
-    }
-    this.historyData.add(historyDataItem);
-    return this;
-  }
-
-  /**
-   * in case of 24hr Current Data, at least 1 History Data.                  In case of 15min Current Data, at least 16 History Data.                  In case of <15min, the number of History Data shall be able to cover a span of 4 hours.
-   * @return historyData
-  **/
-  @ApiModelProperty(value = "in case of 24hr Current Data, at least 1 History Data.                  In case of 15min Current Data, at least 16 History Data.                  In case of <15min, the number of History Data shall be able to cover a span of 4 hours.")
-  @Valid
-  public List<TapiOamHistoryData> getHistoryData() {
-    return historyData;
-  }
-
-  public void setHistoryData(List<TapiOamHistoryData> historyData) {
-    this.historyData = historyData;
-  }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -132,15 +132,15 @@ public class TapiOamCurrentData extends TapiCommonLocalClass  {
     }
     TapiOamCurrentData tapiOamCurrentData = (TapiOamCurrentData) o;
     return Objects.equals(this.elapsedTime, tapiOamCurrentData.elapsedTime) &&
+        Objects.equals(this.historyData, tapiOamCurrentData.historyData) &&
         Objects.equals(this.periodStartTime, tapiOamCurrentData.periodStartTime) &&
         Objects.equals(this.pmDataPac, tapiOamCurrentData.pmDataPac) &&
-        Objects.equals(this.historyData, tapiOamCurrentData.historyData) &&
         super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(elapsedTime, periodStartTime, pmDataPac, historyData, super.hashCode());
+    return Objects.hash(elapsedTime, historyData, periodStartTime, pmDataPac, super.hashCode());
   }
 
   @Override
@@ -149,9 +149,9 @@ public class TapiOamCurrentData extends TapiCommonLocalClass  {
     sb.append("class TapiOamCurrentData {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
     sb.append("    elapsedTime: ").append(toIndentedString(elapsedTime)).append("\n");
+    sb.append("    historyData: ").append(toIndentedString(historyData)).append("\n");
     sb.append("    periodStartTime: ").append(toIndentedString(periodStartTime)).append("\n");
     sb.append("    pmDataPac: ").append(toIndentedString(pmDataPac)).append("\n");
-    sb.append("    historyData: ").append(toIndentedString(historyData)).append("\n");
     sb.append("}");
     return sb.toString();
   }

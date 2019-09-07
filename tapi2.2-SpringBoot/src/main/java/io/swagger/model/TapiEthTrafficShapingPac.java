@@ -17,21 +17,21 @@ import javax.validation.constraints.*;
  * TapiEthTrafficShapingPac
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiEthTrafficShapingPac   {
   @JsonProperty("codirectional")
   private Boolean codirectional = false;
 
-  @JsonProperty("sched-config")
-  private String schedConfig = null;
+  @JsonProperty("prio-config-list")
+  @Valid
+  private List<TapiEthPriorityConfiguration> prioConfigList = null;
 
   @JsonProperty("queue-config-list")
   @Valid
   private List<TapiEthQueueConfiguration> queueConfigList = null;
 
-  @JsonProperty("prio-config-list")
-  @Valid
-  private List<TapiEthPriorityConfiguration> prioConfigList = null;
+  @JsonProperty("sched-config")
+  private String schedConfig = null;
 
   public TapiEthTrafficShapingPac codirectional(Boolean codirectional) {
     this.codirectional = codirectional;
@@ -50,6 +50,60 @@ public class TapiEthTrafficShapingPac   {
 
   public void setCodirectional(Boolean codirectional) {
     this.codirectional = codirectional;
+  }
+
+  public TapiEthTrafficShapingPac prioConfigList(List<TapiEthPriorityConfiguration> prioConfigList) {
+    this.prioConfigList = prioConfigList;
+    return this;
+  }
+
+  public TapiEthTrafficShapingPac addPrioConfigListItem(TapiEthPriorityConfiguration prioConfigListItem) {
+    if (this.prioConfigList == null) {
+      this.prioConfigList = new ArrayList<>();
+    }
+    this.prioConfigList.add(prioConfigListItem);
+    return this;
+  }
+
+  /**
+   * This attribute configures the Priority Splitter function for the mapping of the Ethernet frame priority (ETH_CI_P) values to the output queue.
+   * @return prioConfigList
+  **/
+  @ApiModelProperty(value = "This attribute configures the Priority Splitter function for the mapping of the Ethernet frame priority (ETH_CI_P) values to the output queue.")
+  @Valid
+  public List<TapiEthPriorityConfiguration> getPrioConfigList() {
+    return prioConfigList;
+  }
+
+  public void setPrioConfigList(List<TapiEthPriorityConfiguration> prioConfigList) {
+    this.prioConfigList = prioConfigList;
+  }
+
+  public TapiEthTrafficShapingPac queueConfigList(List<TapiEthQueueConfiguration> queueConfigList) {
+    this.queueConfigList = queueConfigList;
+    return this;
+  }
+
+  public TapiEthTrafficShapingPac addQueueConfigListItem(TapiEthQueueConfiguration queueConfigListItem) {
+    if (this.queueConfigList == null) {
+      this.queueConfigList = new ArrayList<>();
+    }
+    this.queueConfigList.add(queueConfigListItem);
+    return this;
+  }
+
+  /**
+   * This attribute configures the Queue depth and Dropping threshold parameters of the Queue process. The Queue depth sets the maximum size of the queue in bytes. An incoming ETH_CI traffic unit is dropped if there is insufficient space in the queue to hold the whole unit. The Dropping threshold sets the threshold of the queue. If the queue is filled beyond this threshold, incoming ETH_CI traffic units accompanied by the ETH_CI_DE signal set are dropped.
+   * @return queueConfigList
+  **/
+  @ApiModelProperty(value = "This attribute configures the Queue depth and Dropping threshold parameters of the Queue process. The Queue depth sets the maximum size of the queue in bytes. An incoming ETH_CI traffic unit is dropped if there is insufficient space in the queue to hold the whole unit. The Dropping threshold sets the threshold of the queue. If the queue is filled beyond this threshold, incoming ETH_CI traffic units accompanied by the ETH_CI_DE signal set are dropped.")
+  @Valid
+  public List<TapiEthQueueConfiguration> getQueueConfigList() {
+    return queueConfigList;
+  }
+
+  public void setQueueConfigList(List<TapiEthQueueConfiguration> queueConfigList) {
+    this.queueConfigList = queueConfigList;
   }
 
   public TapiEthTrafficShapingPac schedConfig(String schedConfig) {
@@ -71,60 +125,6 @@ public class TapiEthTrafficShapingPac   {
     this.schedConfig = schedConfig;
   }
 
-  public TapiEthTrafficShapingPac queueConfigList(List<TapiEthQueueConfiguration> queueConfigList) {
-    this.queueConfigList = queueConfigList;
-    return this;
-  }
-
-  public TapiEthTrafficShapingPac addQueueConfigListItem(TapiEthQueueConfiguration queueConfigListItem) {
-    if (this.queueConfigList == null) {
-      this.queueConfigList = new ArrayList<TapiEthQueueConfiguration>();
-    }
-    this.queueConfigList.add(queueConfigListItem);
-    return this;
-  }
-
-  /**
-   * This attribute configures the Queue depth and Dropping threshold parameters of the Queue process. The Queue depth sets the maximum size of the queue in bytes. An incoming ETH_CI traffic unit is dropped if there is insufficient space in the queue to hold the whole unit. The Dropping threshold sets the threshold of the queue. If the queue is filled beyond this threshold, incoming ETH_CI traffic units accompanied by the ETH_CI_DE signal set are dropped.
-   * @return queueConfigList
-  **/
-  @ApiModelProperty(value = "This attribute configures the Queue depth and Dropping threshold parameters of the Queue process. The Queue depth sets the maximum size of the queue in bytes. An incoming ETH_CI traffic unit is dropped if there is insufficient space in the queue to hold the whole unit. The Dropping threshold sets the threshold of the queue. If the queue is filled beyond this threshold, incoming ETH_CI traffic units accompanied by the ETH_CI_DE signal set are dropped.")
-  @Valid
-  public List<TapiEthQueueConfiguration> getQueueConfigList() {
-    return queueConfigList;
-  }
-
-  public void setQueueConfigList(List<TapiEthQueueConfiguration> queueConfigList) {
-    this.queueConfigList = queueConfigList;
-  }
-
-  public TapiEthTrafficShapingPac prioConfigList(List<TapiEthPriorityConfiguration> prioConfigList) {
-    this.prioConfigList = prioConfigList;
-    return this;
-  }
-
-  public TapiEthTrafficShapingPac addPrioConfigListItem(TapiEthPriorityConfiguration prioConfigListItem) {
-    if (this.prioConfigList == null) {
-      this.prioConfigList = new ArrayList<TapiEthPriorityConfiguration>();
-    }
-    this.prioConfigList.add(prioConfigListItem);
-    return this;
-  }
-
-  /**
-   * This attribute configures the Priority Splitter function for the mapping of the Ethernet frame priority (ETH_CI_P) values to the output queue.
-   * @return prioConfigList
-  **/
-  @ApiModelProperty(value = "This attribute configures the Priority Splitter function for the mapping of the Ethernet frame priority (ETH_CI_P) values to the output queue.")
-  @Valid
-  public List<TapiEthPriorityConfiguration> getPrioConfigList() {
-    return prioConfigList;
-  }
-
-  public void setPrioConfigList(List<TapiEthPriorityConfiguration> prioConfigList) {
-    this.prioConfigList = prioConfigList;
-  }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -136,14 +136,14 @@ public class TapiEthTrafficShapingPac   {
     }
     TapiEthTrafficShapingPac tapiEthTrafficShapingPac = (TapiEthTrafficShapingPac) o;
     return Objects.equals(this.codirectional, tapiEthTrafficShapingPac.codirectional) &&
-        Objects.equals(this.schedConfig, tapiEthTrafficShapingPac.schedConfig) &&
+        Objects.equals(this.prioConfigList, tapiEthTrafficShapingPac.prioConfigList) &&
         Objects.equals(this.queueConfigList, tapiEthTrafficShapingPac.queueConfigList) &&
-        Objects.equals(this.prioConfigList, tapiEthTrafficShapingPac.prioConfigList);
+        Objects.equals(this.schedConfig, tapiEthTrafficShapingPac.schedConfig);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(codirectional, schedConfig, queueConfigList, prioConfigList);
+    return Objects.hash(codirectional, prioConfigList, queueConfigList, schedConfig);
   }
 
   @Override
@@ -152,9 +152,9 @@ public class TapiEthTrafficShapingPac   {
     sb.append("class TapiEthTrafficShapingPac {\n");
     
     sb.append("    codirectional: ").append(toIndentedString(codirectional)).append("\n");
-    sb.append("    schedConfig: ").append(toIndentedString(schedConfig)).append("\n");
-    sb.append("    queueConfigList: ").append(toIndentedString(queueConfigList)).append("\n");
     sb.append("    prioConfigList: ").append(toIndentedString(prioConfigList)).append("\n");
+    sb.append("    queueConfigList: ").append(toIndentedString(queueConfigList)).append("\n");
+    sb.append("    schedConfig: ").append(toIndentedString(schedConfig)).append("\n");
     sb.append("}");
     return sb.toString();
   }

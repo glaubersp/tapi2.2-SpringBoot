@@ -15,13 +15,7 @@ import io.swagger.model.TapiEthEthOnDemandSingleEndedMeasurementJob;
 import io.swagger.model.TapiEthEthProActiveDualEndedMeasurementJob;
 import io.swagger.model.TapiEthEthProActiveSingleEndedMeasurementJob;
 import io.swagger.model.TapiEthEthTestJob;
-import io.swagger.model.TapiEthInputAugmentation1;
 import io.swagger.model.TapiEthInputAugmentation2;
-import io.swagger.model.TapiEthInputAugmentation3;
-import io.swagger.model.TapiEthInputAugmentation4;
-import io.swagger.model.TapiEthInputAugmentation5;
-import io.swagger.model.TapiEthInputAugmentation6;
-import io.swagger.model.TapiEthInputAugmentation7;
 import java.util.ArrayList;
 import java.util.List;
 import org.springframework.validation.annotation.Validated;
@@ -32,41 +26,32 @@ import javax.validation.constraints.*;
  * TapiOamCreateoamjobInput
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
-public class TapiOamCreateoamjobInput extends TapiEthInputAugmentation1  {
-  @JsonProperty("eth-test-job")
-  private TapiEthEthTestJob ethTestJob = null;
-
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
+public class TapiOamCreateoamjobInput extends TapiEthInputAugmentation2  {
   @JsonProperty("eth-loopback-job")
   private TapiEthEthLoopbackJob ethLoopbackJob = null;
 
   @JsonProperty("eth-on-demand-dual-ended-measurement-job")
   private TapiEthEthOnDemandDualEndedMeasurementJob ethOnDemandDualEndedMeasurementJob = null;
 
-  @JsonProperty("eth-pro-active-single-ended-measurement-job")
-  private TapiEthEthProActiveSingleEndedMeasurementJob ethProActiveSingleEndedMeasurementJob = null;
+  @JsonProperty("eth-on-demand-single-ended-measurement-job")
+  private TapiEthEthOnDemandSingleEndedMeasurementJob ethOnDemandSingleEndedMeasurementJob = null;
 
   @JsonProperty("eth-pro-active-dual-ended-measurement-job")
   private TapiEthEthProActiveDualEndedMeasurementJob ethProActiveDualEndedMeasurementJob = null;
 
-  @JsonProperty("eth-on-demand-single-ended-measurement-job")
-  private TapiEthEthOnDemandSingleEndedMeasurementJob ethOnDemandSingleEndedMeasurementJob = null;
+  @JsonProperty("eth-pro-active-single-ended-measurement-job")
+  private TapiEthEthProActiveSingleEndedMeasurementJob ethProActiveSingleEndedMeasurementJob = null;
 
-  @JsonProperty("schedule")
-  private TapiCommonTimeRange schedule = null;
+  @JsonProperty("eth-test-job")
+  private TapiEthEthTestJob ethTestJob = null;
 
   @JsonProperty("name")
   @Valid
   private List<TapiCommonNameAndValue> name = null;
 
-  @JsonProperty("oam-service-point-id")
-  private String oamServicePointId = null;
-
   @JsonProperty("oam-job-type")
   private String oamJobType = null;
-
-  @JsonProperty("state")
-  private TapiCommonAdministrativeState state = null;
 
   @JsonProperty("oam-profile-id")
   private String oamProfileId = null;
@@ -74,28 +59,17 @@ public class TapiOamCreateoamjobInput extends TapiEthInputAugmentation1  {
   @JsonProperty("oam-service-id")
   private String oamServiceId = null;
 
+  @JsonProperty("oam-service-point-id")
+  private String oamServicePointId = null;
+
+  @JsonProperty("schedule")
+  private TapiCommonTimeRange schedule = null;
+
+  @JsonProperty("state")
+  private TapiCommonAdministrativeState state = null;
+
   @JsonProperty("uuid")
   private String uuid = null;
-
-  public TapiOamCreateoamjobInput ethTestJob(TapiEthEthTestJob ethTestJob) {
-    this.ethTestJob = ethTestJob;
-    return this;
-  }
-
-  /**
-   * Get ethTestJob
-   * @return ethTestJob
-  **/
-  @ApiModelProperty(value = "")
-
-  @Valid
-  public TapiEthEthTestJob getEthTestJob() {
-    return ethTestJob;
-  }
-
-  public void setEthTestJob(TapiEthEthTestJob ethTestJob) {
-    this.ethTestJob = ethTestJob;
-  }
 
   public TapiOamCreateoamjobInput ethLoopbackJob(TapiEthEthLoopbackJob ethLoopbackJob) {
     this.ethLoopbackJob = ethLoopbackJob;
@@ -137,24 +111,24 @@ public class TapiOamCreateoamjobInput extends TapiEthInputAugmentation1  {
     this.ethOnDemandDualEndedMeasurementJob = ethOnDemandDualEndedMeasurementJob;
   }
 
-  public TapiOamCreateoamjobInput ethProActiveSingleEndedMeasurementJob(TapiEthEthProActiveSingleEndedMeasurementJob ethProActiveSingleEndedMeasurementJob) {
-    this.ethProActiveSingleEndedMeasurementJob = ethProActiveSingleEndedMeasurementJob;
+  public TapiOamCreateoamjobInput ethOnDemandSingleEndedMeasurementJob(TapiEthEthOnDemandSingleEndedMeasurementJob ethOnDemandSingleEndedMeasurementJob) {
+    this.ethOnDemandSingleEndedMeasurementJob = ethOnDemandSingleEndedMeasurementJob;
     return this;
   }
 
   /**
-   * Get ethProActiveSingleEndedMeasurementJob
-   * @return ethProActiveSingleEndedMeasurementJob
+   * Get ethOnDemandSingleEndedMeasurementJob
+   * @return ethOnDemandSingleEndedMeasurementJob
   **/
   @ApiModelProperty(value = "")
 
   @Valid
-  public TapiEthEthProActiveSingleEndedMeasurementJob getEthProActiveSingleEndedMeasurementJob() {
-    return ethProActiveSingleEndedMeasurementJob;
+  public TapiEthEthOnDemandSingleEndedMeasurementJob getEthOnDemandSingleEndedMeasurementJob() {
+    return ethOnDemandSingleEndedMeasurementJob;
   }
 
-  public void setEthProActiveSingleEndedMeasurementJob(TapiEthEthProActiveSingleEndedMeasurementJob ethProActiveSingleEndedMeasurementJob) {
-    this.ethProActiveSingleEndedMeasurementJob = ethProActiveSingleEndedMeasurementJob;
+  public void setEthOnDemandSingleEndedMeasurementJob(TapiEthEthOnDemandSingleEndedMeasurementJob ethOnDemandSingleEndedMeasurementJob) {
+    this.ethOnDemandSingleEndedMeasurementJob = ethOnDemandSingleEndedMeasurementJob;
   }
 
   public TapiOamCreateoamjobInput ethProActiveDualEndedMeasurementJob(TapiEthEthProActiveDualEndedMeasurementJob ethProActiveDualEndedMeasurementJob) {
@@ -177,44 +151,44 @@ public class TapiOamCreateoamjobInput extends TapiEthInputAugmentation1  {
     this.ethProActiveDualEndedMeasurementJob = ethProActiveDualEndedMeasurementJob;
   }
 
-  public TapiOamCreateoamjobInput ethOnDemandSingleEndedMeasurementJob(TapiEthEthOnDemandSingleEndedMeasurementJob ethOnDemandSingleEndedMeasurementJob) {
-    this.ethOnDemandSingleEndedMeasurementJob = ethOnDemandSingleEndedMeasurementJob;
+  public TapiOamCreateoamjobInput ethProActiveSingleEndedMeasurementJob(TapiEthEthProActiveSingleEndedMeasurementJob ethProActiveSingleEndedMeasurementJob) {
+    this.ethProActiveSingleEndedMeasurementJob = ethProActiveSingleEndedMeasurementJob;
     return this;
   }
 
   /**
-   * Get ethOnDemandSingleEndedMeasurementJob
-   * @return ethOnDemandSingleEndedMeasurementJob
+   * Get ethProActiveSingleEndedMeasurementJob
+   * @return ethProActiveSingleEndedMeasurementJob
   **/
   @ApiModelProperty(value = "")
 
   @Valid
-  public TapiEthEthOnDemandSingleEndedMeasurementJob getEthOnDemandSingleEndedMeasurementJob() {
-    return ethOnDemandSingleEndedMeasurementJob;
+  public TapiEthEthProActiveSingleEndedMeasurementJob getEthProActiveSingleEndedMeasurementJob() {
+    return ethProActiveSingleEndedMeasurementJob;
   }
 
-  public void setEthOnDemandSingleEndedMeasurementJob(TapiEthEthOnDemandSingleEndedMeasurementJob ethOnDemandSingleEndedMeasurementJob) {
-    this.ethOnDemandSingleEndedMeasurementJob = ethOnDemandSingleEndedMeasurementJob;
+  public void setEthProActiveSingleEndedMeasurementJob(TapiEthEthProActiveSingleEndedMeasurementJob ethProActiveSingleEndedMeasurementJob) {
+    this.ethProActiveSingleEndedMeasurementJob = ethProActiveSingleEndedMeasurementJob;
   }
 
-  public TapiOamCreateoamjobInput schedule(TapiCommonTimeRange schedule) {
-    this.schedule = schedule;
+  public TapiOamCreateoamjobInput ethTestJob(TapiEthEthTestJob ethTestJob) {
+    this.ethTestJob = ethTestJob;
     return this;
   }
 
   /**
-   * Get schedule
-   * @return schedule
+   * Get ethTestJob
+   * @return ethTestJob
   **/
   @ApiModelProperty(value = "")
 
   @Valid
-  public TapiCommonTimeRange getSchedule() {
-    return schedule;
+  public TapiEthEthTestJob getEthTestJob() {
+    return ethTestJob;
   }
 
-  public void setSchedule(TapiCommonTimeRange schedule) {
-    this.schedule = schedule;
+  public void setEthTestJob(TapiEthEthTestJob ethTestJob) {
+    this.ethTestJob = ethTestJob;
   }
 
   public TapiOamCreateoamjobInput name(List<TapiCommonNameAndValue> name) {
@@ -224,7 +198,7 @@ public class TapiOamCreateoamjobInput extends TapiEthInputAugmentation1  {
 
   public TapiOamCreateoamjobInput addNameItem(TapiCommonNameAndValue nameItem) {
     if (this.name == null) {
-      this.name = new ArrayList<TapiCommonNameAndValue>();
+      this.name = new ArrayList<>();
     }
     this.name.add(nameItem);
     return this;
@@ -244,25 +218,6 @@ public class TapiOamCreateoamjobInput extends TapiEthInputAugmentation1  {
     this.name = name;
   }
 
-  public TapiOamCreateoamjobInput oamServicePointId(String oamServicePointId) {
-    this.oamServicePointId = oamServicePointId;
-    return this;
-  }
-
-  /**
-   * UUID of the associated OSEPs: An identifier that is universally unique within an identifier space, where the identifier space is itself globally unique, and immutable.                      An UUID carries no semantics with respect to the purpose or state of the entity.                      UUID here uses string representation as defined in RFC 4122.  The canonical representation uses lowercase characters.                      Pattern: [0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-' + '[0-9a-fA-F]{4}-[0-9a-fA-F]{12}                       Example of a UUID in string representation: f81d4fae-7dec-11d0-a765-00a0c91e6bf6
-   * @return oamServicePointId
-  **/
-  @ApiModelProperty(value = "UUID of the associated OSEPs: An identifier that is universally unique within an identifier space, where the identifier space is itself globally unique, and immutable.                      An UUID carries no semantics with respect to the purpose or state of the entity.                      UUID here uses string representation as defined in RFC 4122.  The canonical representation uses lowercase characters.                      Pattern: [0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-' + '[0-9a-fA-F]{4}-[0-9a-fA-F]{12}                       Example of a UUID in string representation: f81d4fae-7dec-11d0-a765-00a0c91e6bf6")
-
-  public String getOamServicePointId() {
-    return oamServicePointId;
-  }
-
-  public void setOamServicePointId(String oamServicePointId) {
-    this.oamServicePointId = oamServicePointId;
-  }
-
   public TapiOamCreateoamjobInput oamJobType(String oamJobType) {
     this.oamJobType = oamJobType;
     return this;
@@ -280,26 +235,6 @@ public class TapiOamCreateoamjobInput extends TapiEthInputAugmentation1  {
 
   public void setOamJobType(String oamJobType) {
     this.oamJobType = oamJobType;
-  }
-
-  public TapiOamCreateoamjobInput state(TapiCommonAdministrativeState state) {
-    this.state = state;
-    return this;
-  }
-
-  /**
-   * Get state
-   * @return state
-  **/
-  @ApiModelProperty(value = "")
-
-  @Valid
-  public TapiCommonAdministrativeState getState() {
-    return state;
-  }
-
-  public void setState(TapiCommonAdministrativeState state) {
-    this.state = state;
   }
 
   public TapiOamCreateoamjobInput oamProfileId(String oamProfileId) {
@@ -340,6 +275,65 @@ public class TapiOamCreateoamjobInput extends TapiEthInputAugmentation1  {
     this.oamServiceId = oamServiceId;
   }
 
+  public TapiOamCreateoamjobInput oamServicePointId(String oamServicePointId) {
+    this.oamServicePointId = oamServicePointId;
+    return this;
+  }
+
+  /**
+   * UUID of the associated OSEPs: An identifier that is universally unique within an identifier space, where the identifier space is itself globally unique, and immutable.                      An UUID carries no semantics with respect to the purpose or state of the entity.                      UUID here uses string representation as defined in RFC 4122.  The canonical representation uses lowercase characters.                      Pattern: [0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-' + '[0-9a-fA-F]{4}-[0-9a-fA-F]{12}                       Example of a UUID in string representation: f81d4fae-7dec-11d0-a765-00a0c91e6bf6
+   * @return oamServicePointId
+  **/
+  @ApiModelProperty(value = "UUID of the associated OSEPs: An identifier that is universally unique within an identifier space, where the identifier space is itself globally unique, and immutable.                      An UUID carries no semantics with respect to the purpose or state of the entity.                      UUID here uses string representation as defined in RFC 4122.  The canonical representation uses lowercase characters.                      Pattern: [0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-' + '[0-9a-fA-F]{4}-[0-9a-fA-F]{12}                       Example of a UUID in string representation: f81d4fae-7dec-11d0-a765-00a0c91e6bf6")
+
+  public String getOamServicePointId() {
+    return oamServicePointId;
+  }
+
+  public void setOamServicePointId(String oamServicePointId) {
+    this.oamServicePointId = oamServicePointId;
+  }
+
+  public TapiOamCreateoamjobInput schedule(TapiCommonTimeRange schedule) {
+    this.schedule = schedule;
+    return this;
+  }
+
+  /**
+   * Get schedule
+   * @return schedule
+  **/
+  @ApiModelProperty(value = "")
+
+  @Valid
+  public TapiCommonTimeRange getSchedule() {
+    return schedule;
+  }
+
+  public void setSchedule(TapiCommonTimeRange schedule) {
+    this.schedule = schedule;
+  }
+
+  public TapiOamCreateoamjobInput state(TapiCommonAdministrativeState state) {
+    this.state = state;
+    return this;
+  }
+
+  /**
+   * Get state
+   * @return state
+  **/
+  @ApiModelProperty(value = "")
+
+  @Valid
+  public TapiCommonAdministrativeState getState() {
+    return state;
+  }
+
+  public void setState(TapiCommonAdministrativeState state) {
+    this.state = state;
+  }
+
   public TapiOamCreateoamjobInput uuid(String uuid) {
     this.uuid = uuid;
     return this;
@@ -369,26 +363,26 @@ public class TapiOamCreateoamjobInput extends TapiEthInputAugmentation1  {
       return false;
     }
     TapiOamCreateoamjobInput tapiOamCreateoamjobInput = (TapiOamCreateoamjobInput) o;
-    return Objects.equals(this.ethTestJob, tapiOamCreateoamjobInput.ethTestJob) &&
-        Objects.equals(this.ethLoopbackJob, tapiOamCreateoamjobInput.ethLoopbackJob) &&
+    return Objects.equals(this.ethLoopbackJob, tapiOamCreateoamjobInput.ethLoopbackJob) &&
         Objects.equals(this.ethOnDemandDualEndedMeasurementJob, tapiOamCreateoamjobInput.ethOnDemandDualEndedMeasurementJob) &&
-        Objects.equals(this.ethProActiveSingleEndedMeasurementJob, tapiOamCreateoamjobInput.ethProActiveSingleEndedMeasurementJob) &&
-        Objects.equals(this.ethProActiveDualEndedMeasurementJob, tapiOamCreateoamjobInput.ethProActiveDualEndedMeasurementJob) &&
         Objects.equals(this.ethOnDemandSingleEndedMeasurementJob, tapiOamCreateoamjobInput.ethOnDemandSingleEndedMeasurementJob) &&
-        Objects.equals(this.schedule, tapiOamCreateoamjobInput.schedule) &&
+        Objects.equals(this.ethProActiveDualEndedMeasurementJob, tapiOamCreateoamjobInput.ethProActiveDualEndedMeasurementJob) &&
+        Objects.equals(this.ethProActiveSingleEndedMeasurementJob, tapiOamCreateoamjobInput.ethProActiveSingleEndedMeasurementJob) &&
+        Objects.equals(this.ethTestJob, tapiOamCreateoamjobInput.ethTestJob) &&
         Objects.equals(this.name, tapiOamCreateoamjobInput.name) &&
-        Objects.equals(this.oamServicePointId, tapiOamCreateoamjobInput.oamServicePointId) &&
         Objects.equals(this.oamJobType, tapiOamCreateoamjobInput.oamJobType) &&
-        Objects.equals(this.state, tapiOamCreateoamjobInput.state) &&
         Objects.equals(this.oamProfileId, tapiOamCreateoamjobInput.oamProfileId) &&
         Objects.equals(this.oamServiceId, tapiOamCreateoamjobInput.oamServiceId) &&
+        Objects.equals(this.oamServicePointId, tapiOamCreateoamjobInput.oamServicePointId) &&
+        Objects.equals(this.schedule, tapiOamCreateoamjobInput.schedule) &&
+        Objects.equals(this.state, tapiOamCreateoamjobInput.state) &&
         Objects.equals(this.uuid, tapiOamCreateoamjobInput.uuid) &&
         super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(ethTestJob, ethLoopbackJob, ethOnDemandDualEndedMeasurementJob, ethProActiveSingleEndedMeasurementJob, ethProActiveDualEndedMeasurementJob, ethOnDemandSingleEndedMeasurementJob, schedule, name, oamServicePointId, oamJobType, state, oamProfileId, oamServiceId, uuid, super.hashCode());
+    return Objects.hash(ethLoopbackJob, ethOnDemandDualEndedMeasurementJob, ethOnDemandSingleEndedMeasurementJob, ethProActiveDualEndedMeasurementJob, ethProActiveSingleEndedMeasurementJob, ethTestJob, name, oamJobType, oamProfileId, oamServiceId, oamServicePointId, schedule, state, uuid, super.hashCode());
   }
 
   @Override
@@ -396,19 +390,19 @@ public class TapiOamCreateoamjobInput extends TapiEthInputAugmentation1  {
     StringBuilder sb = new StringBuilder();
     sb.append("class TapiOamCreateoamjobInput {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    ethTestJob: ").append(toIndentedString(ethTestJob)).append("\n");
     sb.append("    ethLoopbackJob: ").append(toIndentedString(ethLoopbackJob)).append("\n");
     sb.append("    ethOnDemandDualEndedMeasurementJob: ").append(toIndentedString(ethOnDemandDualEndedMeasurementJob)).append("\n");
-    sb.append("    ethProActiveSingleEndedMeasurementJob: ").append(toIndentedString(ethProActiveSingleEndedMeasurementJob)).append("\n");
-    sb.append("    ethProActiveDualEndedMeasurementJob: ").append(toIndentedString(ethProActiveDualEndedMeasurementJob)).append("\n");
     sb.append("    ethOnDemandSingleEndedMeasurementJob: ").append(toIndentedString(ethOnDemandSingleEndedMeasurementJob)).append("\n");
-    sb.append("    schedule: ").append(toIndentedString(schedule)).append("\n");
+    sb.append("    ethProActiveDualEndedMeasurementJob: ").append(toIndentedString(ethProActiveDualEndedMeasurementJob)).append("\n");
+    sb.append("    ethProActiveSingleEndedMeasurementJob: ").append(toIndentedString(ethProActiveSingleEndedMeasurementJob)).append("\n");
+    sb.append("    ethTestJob: ").append(toIndentedString(ethTestJob)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    oamServicePointId: ").append(toIndentedString(oamServicePointId)).append("\n");
     sb.append("    oamJobType: ").append(toIndentedString(oamJobType)).append("\n");
-    sb.append("    state: ").append(toIndentedString(state)).append("\n");
     sb.append("    oamProfileId: ").append(toIndentedString(oamProfileId)).append("\n");
     sb.append("    oamServiceId: ").append(toIndentedString(oamServiceId)).append("\n");
+    sb.append("    oamServicePointId: ").append(toIndentedString(oamServicePointId)).append("\n");
+    sb.append("    schedule: ").append(toIndentedString(schedule)).append("\n");
+    sb.append("    state: ").append(toIndentedString(state)).append("\n");
     sb.append("    uuid: ").append(toIndentedString(uuid)).append("\n");
     sb.append("}");
     return sb.toString();

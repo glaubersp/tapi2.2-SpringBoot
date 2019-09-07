@@ -20,23 +20,17 @@ import javax.validation.constraints.*;
  * TapiPathComputationRoutingConstraint
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiPathComputationRoutingConstraint   {
-  @JsonProperty("is-exclusive")
-  private Boolean isExclusive = true;
-
-  @JsonProperty("tolerable-impact")
-  private String tolerableImpact = null;
+  @JsonProperty("cost-characteristic")
+  @Valid
+  private List<TapiTopologyCostCharacteristic> costCharacteristic = null;
 
   @JsonProperty("diversity-policy")
   private TapiPathComputationDiversityPolicy diversityPolicy = null;
 
-  @JsonProperty("route-objective-function")
-  private TapiPathComputationRouteObjectiveFunction routeObjectiveFunction = null;
-
-  @JsonProperty("cost-characteristic")
-  @Valid
-  private List<TapiTopologyCostCharacteristic> costCharacteristic = null;
+  @JsonProperty("is-exclusive")
+  private Boolean isExclusive = true;
 
   @JsonProperty("latency-characteristic")
   @Valid
@@ -46,42 +40,37 @@ public class TapiPathComputationRoutingConstraint   {
   @Valid
   private List<TapiTopologyRiskCharacteristic> riskDiversityCharacteristic = null;
 
-  public TapiPathComputationRoutingConstraint isExclusive(Boolean isExclusive) {
-    this.isExclusive = isExclusive;
+  @JsonProperty("route-objective-function")
+  private TapiPathComputationRouteObjectiveFunction routeObjectiveFunction = null;
+
+  @JsonProperty("tolerable-impact")
+  private String tolerableImpact = null;
+
+  public TapiPathComputationRoutingConstraint costCharacteristic(List<TapiTopologyCostCharacteristic> costCharacteristic) {
+    this.costCharacteristic = costCharacteristic;
+    return this;
+  }
+
+  public TapiPathComputationRoutingConstraint addCostCharacteristicItem(TapiTopologyCostCharacteristic costCharacteristicItem) {
+    if (this.costCharacteristic == null) {
+      this.costCharacteristic = new ArrayList<>();
+    }
+    this.costCharacteristic.add(costCharacteristicItem);
     return this;
   }
 
   /**
-   * To distinguish if the resources are to be exclusive to the service
-   * @return isExclusive
+   * The list of costs where each cost relates to some aspect of the TopologicalEntity.
+   * @return costCharacteristic
   **/
-  @ApiModelProperty(value = "To distinguish if the resources are to be exclusive to the service")
-
-  public Boolean isIsExclusive() {
-    return isExclusive;
+  @ApiModelProperty(value = "The list of costs where each cost relates to some aspect of the TopologicalEntity.")
+  @Valid
+  public List<TapiTopologyCostCharacteristic> getCostCharacteristic() {
+    return costCharacteristic;
   }
 
-  public void setIsExclusive(Boolean isExclusive) {
-    this.isExclusive = isExclusive;
-  }
-
-  public TapiPathComputationRoutingConstraint tolerableImpact(String tolerableImpact) {
-    this.tolerableImpact = tolerableImpact;
-    return this;
-  }
-
-  /**
-   * Grades of maximum tolerable disruption to traffic.
-   * @return tolerableImpact
-  **/
-  @ApiModelProperty(value = "Grades of maximum tolerable disruption to traffic.")
-
-  public String getTolerableImpact() {
-    return tolerableImpact;
-  }
-
-  public void setTolerableImpact(String tolerableImpact) {
-    this.tolerableImpact = tolerableImpact;
+  public void setCostCharacteristic(List<TapiTopologyCostCharacteristic> costCharacteristic) {
+    this.costCharacteristic = costCharacteristic;
   }
 
   public TapiPathComputationRoutingConstraint diversityPolicy(TapiPathComputationDiversityPolicy diversityPolicy) {
@@ -104,51 +93,23 @@ public class TapiPathComputationRoutingConstraint   {
     this.diversityPolicy = diversityPolicy;
   }
 
-  public TapiPathComputationRoutingConstraint routeObjectiveFunction(TapiPathComputationRouteObjectiveFunction routeObjectiveFunction) {
-    this.routeObjectiveFunction = routeObjectiveFunction;
+  public TapiPathComputationRoutingConstraint isExclusive(Boolean isExclusive) {
+    this.isExclusive = isExclusive;
     return this;
   }
 
   /**
-   * Get routeObjectiveFunction
-   * @return routeObjectiveFunction
+   * To distinguish if the resources are to be exclusive to the service
+   * @return isExclusive
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "To distinguish if the resources are to be exclusive to the service")
 
-  @Valid
-  public TapiPathComputationRouteObjectiveFunction getRouteObjectiveFunction() {
-    return routeObjectiveFunction;
+  public Boolean isIsExclusive() {
+    return isExclusive;
   }
 
-  public void setRouteObjectiveFunction(TapiPathComputationRouteObjectiveFunction routeObjectiveFunction) {
-    this.routeObjectiveFunction = routeObjectiveFunction;
-  }
-
-  public TapiPathComputationRoutingConstraint costCharacteristic(List<TapiTopologyCostCharacteristic> costCharacteristic) {
-    this.costCharacteristic = costCharacteristic;
-    return this;
-  }
-
-  public TapiPathComputationRoutingConstraint addCostCharacteristicItem(TapiTopologyCostCharacteristic costCharacteristicItem) {
-    if (this.costCharacteristic == null) {
-      this.costCharacteristic = new ArrayList<TapiTopologyCostCharacteristic>();
-    }
-    this.costCharacteristic.add(costCharacteristicItem);
-    return this;
-  }
-
-  /**
-   * The list of costs where each cost relates to some aspect of the TopologicalEntity.
-   * @return costCharacteristic
-  **/
-  @ApiModelProperty(value = "The list of costs where each cost relates to some aspect of the TopologicalEntity.")
-  @Valid
-  public List<TapiTopologyCostCharacteristic> getCostCharacteristic() {
-    return costCharacteristic;
-  }
-
-  public void setCostCharacteristic(List<TapiTopologyCostCharacteristic> costCharacteristic) {
-    this.costCharacteristic = costCharacteristic;
+  public void setIsExclusive(Boolean isExclusive) {
+    this.isExclusive = isExclusive;
   }
 
   public TapiPathComputationRoutingConstraint latencyCharacteristic(List<TapiTopologyLatencyCharacteristic> latencyCharacteristic) {
@@ -158,7 +119,7 @@ public class TapiPathComputationRoutingConstraint   {
 
   public TapiPathComputationRoutingConstraint addLatencyCharacteristicItem(TapiTopologyLatencyCharacteristic latencyCharacteristicItem) {
     if (this.latencyCharacteristic == null) {
-      this.latencyCharacteristic = new ArrayList<TapiTopologyLatencyCharacteristic>();
+      this.latencyCharacteristic = new ArrayList<>();
     }
     this.latencyCharacteristic.add(latencyCharacteristicItem);
     return this;
@@ -185,7 +146,7 @@ public class TapiPathComputationRoutingConstraint   {
 
   public TapiPathComputationRoutingConstraint addRiskDiversityCharacteristicItem(TapiTopologyRiskCharacteristic riskDiversityCharacteristicItem) {
     if (this.riskDiversityCharacteristic == null) {
-      this.riskDiversityCharacteristic = new ArrayList<TapiTopologyRiskCharacteristic>();
+      this.riskDiversityCharacteristic = new ArrayList<>();
     }
     this.riskDiversityCharacteristic.add(riskDiversityCharacteristicItem);
     return this;
@@ -205,6 +166,45 @@ public class TapiPathComputationRoutingConstraint   {
     this.riskDiversityCharacteristic = riskDiversityCharacteristic;
   }
 
+  public TapiPathComputationRoutingConstraint routeObjectiveFunction(TapiPathComputationRouteObjectiveFunction routeObjectiveFunction) {
+    this.routeObjectiveFunction = routeObjectiveFunction;
+    return this;
+  }
+
+  /**
+   * Get routeObjectiveFunction
+   * @return routeObjectiveFunction
+  **/
+  @ApiModelProperty(value = "")
+
+  @Valid
+  public TapiPathComputationRouteObjectiveFunction getRouteObjectiveFunction() {
+    return routeObjectiveFunction;
+  }
+
+  public void setRouteObjectiveFunction(TapiPathComputationRouteObjectiveFunction routeObjectiveFunction) {
+    this.routeObjectiveFunction = routeObjectiveFunction;
+  }
+
+  public TapiPathComputationRoutingConstraint tolerableImpact(String tolerableImpact) {
+    this.tolerableImpact = tolerableImpact;
+    return this;
+  }
+
+  /**
+   * Grades of maximum tolerable disruption to traffic.
+   * @return tolerableImpact
+  **/
+  @ApiModelProperty(value = "Grades of maximum tolerable disruption to traffic.")
+
+  public String getTolerableImpact() {
+    return tolerableImpact;
+  }
+
+  public void setTolerableImpact(String tolerableImpact) {
+    this.tolerableImpact = tolerableImpact;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -215,18 +215,18 @@ public class TapiPathComputationRoutingConstraint   {
       return false;
     }
     TapiPathComputationRoutingConstraint tapiPathComputationRoutingConstraint = (TapiPathComputationRoutingConstraint) o;
-    return Objects.equals(this.isExclusive, tapiPathComputationRoutingConstraint.isExclusive) &&
-        Objects.equals(this.tolerableImpact, tapiPathComputationRoutingConstraint.tolerableImpact) &&
+    return Objects.equals(this.costCharacteristic, tapiPathComputationRoutingConstraint.costCharacteristic) &&
         Objects.equals(this.diversityPolicy, tapiPathComputationRoutingConstraint.diversityPolicy) &&
-        Objects.equals(this.routeObjectiveFunction, tapiPathComputationRoutingConstraint.routeObjectiveFunction) &&
-        Objects.equals(this.costCharacteristic, tapiPathComputationRoutingConstraint.costCharacteristic) &&
+        Objects.equals(this.isExclusive, tapiPathComputationRoutingConstraint.isExclusive) &&
         Objects.equals(this.latencyCharacteristic, tapiPathComputationRoutingConstraint.latencyCharacteristic) &&
-        Objects.equals(this.riskDiversityCharacteristic, tapiPathComputationRoutingConstraint.riskDiversityCharacteristic);
+        Objects.equals(this.riskDiversityCharacteristic, tapiPathComputationRoutingConstraint.riskDiversityCharacteristic) &&
+        Objects.equals(this.routeObjectiveFunction, tapiPathComputationRoutingConstraint.routeObjectiveFunction) &&
+        Objects.equals(this.tolerableImpact, tapiPathComputationRoutingConstraint.tolerableImpact);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(isExclusive, tolerableImpact, diversityPolicy, routeObjectiveFunction, costCharacteristic, latencyCharacteristic, riskDiversityCharacteristic);
+    return Objects.hash(costCharacteristic, diversityPolicy, isExclusive, latencyCharacteristic, riskDiversityCharacteristic, routeObjectiveFunction, tolerableImpact);
   }
 
   @Override
@@ -234,13 +234,13 @@ public class TapiPathComputationRoutingConstraint   {
     StringBuilder sb = new StringBuilder();
     sb.append("class TapiPathComputationRoutingConstraint {\n");
     
-    sb.append("    isExclusive: ").append(toIndentedString(isExclusive)).append("\n");
-    sb.append("    tolerableImpact: ").append(toIndentedString(tolerableImpact)).append("\n");
-    sb.append("    diversityPolicy: ").append(toIndentedString(diversityPolicy)).append("\n");
-    sb.append("    routeObjectiveFunction: ").append(toIndentedString(routeObjectiveFunction)).append("\n");
     sb.append("    costCharacteristic: ").append(toIndentedString(costCharacteristic)).append("\n");
+    sb.append("    diversityPolicy: ").append(toIndentedString(diversityPolicy)).append("\n");
+    sb.append("    isExclusive: ").append(toIndentedString(isExclusive)).append("\n");
     sb.append("    latencyCharacteristic: ").append(toIndentedString(latencyCharacteristic)).append("\n");
     sb.append("    riskDiversityCharacteristic: ").append(toIndentedString(riskDiversityCharacteristic)).append("\n");
+    sb.append("    routeObjectiveFunction: ").append(toIndentedString(routeObjectiveFunction)).append("\n");
+    sb.append("    tolerableImpact: ").append(toIndentedString(tolerableImpact)).append("\n");
     sb.append("}");
     return sb.toString();
   }

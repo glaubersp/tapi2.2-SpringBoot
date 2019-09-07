@@ -21,7 +21,7 @@ import javax.validation.constraints.*;
  * TapiConnectivitySwitch
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-08-08T12:17:00.417-03:00[America/Sao_Paulo]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2019-09-07T12:33:48.081-03:00[America/Sao_Paulo]")
 public class TapiConnectivitySwitch extends TapiCommonLocalClass  {
   @JsonProperty("selected-connection-end-point")
   @Valid
@@ -44,7 +44,7 @@ public class TapiConnectivitySwitch extends TapiCommonLocalClass  {
 
   public TapiConnectivitySwitch addSelectedConnectionEndPointItem(TapiConnectivityConnectionEndPointRef selectedConnectionEndPointItem) {
     if (this.selectedConnectionEndPoint == null) {
-      this.selectedConnectionEndPoint = new ArrayList<TapiConnectivityConnectionEndPointRef>();
+      this.selectedConnectionEndPoint = new ArrayList<>();
     }
     this.selectedConnectionEndPoint.add(selectedConnectionEndPointItem);
     return this;
@@ -71,7 +71,7 @@ public class TapiConnectivitySwitch extends TapiCommonLocalClass  {
 
   public TapiConnectivitySwitch addSelectedRouteItem(TapiConnectivityRouteRef selectedRouteItem) {
     if (this.selectedRoute == null) {
-      this.selectedRoute = new ArrayList<TapiConnectivityRouteRef>();
+      this.selectedRoute = new ArrayList<>();
     }
     this.selectedRoute.add(selectedRouteItem);
     return this;
